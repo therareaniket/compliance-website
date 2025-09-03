@@ -1,0 +1,26 @@
+@media (pointer: coarse) {}
+
+@media screen and (min-width: 1360px) {
+    .container { max-width: calc(1240px  + 36px); }
+}
+/*MIN 1360 ENDS*/
+
+@media screen and (min-width: 1440px) {
+    .container { max-width: calc(1364px + 36px); }
+}
+/*MIN 1440 ENDS*/
+
+@media screen and (min-width: 1600px) {
+    .container { max-width: calc(1400px + 36px); }
+}
+/*MIN 1600 ENDS*/
+
+@media screen and (min-width: 1800px) {
+    .container { max-width: calc(1600px + 36px); background-color: red; }
+}
+/*MIN 1800 ENDS*/
+
+
+/*
+********
+*/
