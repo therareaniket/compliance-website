@@ -16,7 +16,7 @@
 /*MIN 1600 ENDS*/
 
 @media screen and (min-width: 1800px) {
-    .container { max-width: calc(1600px + 36px); background-color: red; }
+    .container { max-width: calc(1600px + 36px); }
 }
 /*MIN 1800 ENDS*/
 
