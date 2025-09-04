@@ -10,7 +10,7 @@ export function Footer() {
                     <div className="comp-intro">
                         <Image src='/images/footer/logo-footer.svg' alt='logo' width={217} height={31} priority={true} draggable={false} style={{ marginBottom: '20px' }}></Image>
 
-                        <p>Simplifying compliance through smarter monitoring and reporting [REMOVE ME]</p>
+                        <p>Simplifying compliance through smarter monitoring and reporting</p>
                     </div>
                     <div className="footer-links">
                         <div className='quick-links text-md'>
