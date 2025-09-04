@@ -35,12 +35,12 @@ export function Footer() {
                             <p className='text-16 text-md'>Contact Info</p>
                             <ul>
                                 <div className='email-info'>
-                                    <Image src='/images/email.svg' alt='email-svg' width={16} height={16} priority={true}></Image>
+                                    <Image src='/images/footer/email.svg' alt='email-svg' width={16} height={16} priority={true}></Image>
                                      <a href="mailto:info@dhatucomply.com" className='text-16 text-rg'>info@dhatucomply.com</a>
                                 </div>
 
                                 <div className='email-info mobile-info'>
-                                    <Image src='/images/call.svg' alt='call-svg' width={16} height={16} priority={true}></Image>
+                                    <Image src='/images/footer/call.svg' alt='call-svg' width={16} height={16} priority={true}></Image>
                                     <a href="" className='text-16 text-rg'>+1 (555) 123-4567</a>
                                 </div>
                             </ul>
