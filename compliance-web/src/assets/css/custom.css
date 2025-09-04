@@ -19,3 +19,12 @@
 /* FOOTER */
 .footer { padding: 40px 0; background-color: var(--footer-bg); color: var(--off-white); }
 .comp-intro { width: 330px; }
+.footer-wrapper{ display: flex; justify-content: space-between;}
+.footer-links{display: flex; gap: 50px;}
+.quick-links{width: 280px;}
+.quick-links p{margin-bottom: 16px;}
+.quick-links ul{display: flex; flex-direction: column; gap: 8px;}
+.email-info{display: flex; align-items: center; text-align: center; gap: 8px;}
+.quick-links ul li a:hover{text-decoration: underline;}
+.copyright{display: flex; justify-content: center;}
+.copyright-box{width: 1216px; margin-top: 40px; padding-top: 30px; border-top: 1px solid #B8B8B8; display: flex; justify-content: center; gap: 30px;}
