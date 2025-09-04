@@ -1,2 +1,21 @@
+:root {
+    --primary: #4B0081;
+
+    --footer-bg: #200036;
+    
+    --white: #FFFFFF;
+    --off-white: #FAFAFA;
+    --black: #000000;
+}
+
 /* HEADER */
 .navbar-wrapper { padding: 30px 0; }
+.navbar-wrapper { display: flex; align-items: center; justify-content: space-between; }
+.navbar-links { display: flex; align-items: center; gap: 60px; }
+.navbar-links ul { display: flex; gap: 40px; }
+.nav-signup { padding: 12px 30px; background-color: var(--primary); color: var(--white); }
+
+
+/* FOOTER */
+.footer { padding: 40px 0; background-color: var(--footer-bg); color: var(--off-white); }
+.comp-intro { width: 330px; }
