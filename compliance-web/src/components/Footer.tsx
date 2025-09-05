@@ -1,5 +1,6 @@
 // "use client"
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export function Footer() {
@@ -16,18 +17,18 @@ export function Footer() {
                         <div className='quick-links text-md'>
                             <p className='text-16 text-md'>Quick Links</p>
                             <ul>
-                                <li><a href="#" title='About Us' className='text-16 text-rg'>About</a></li>
-                                <li><a href="#" title='User & Access' className='text-16 text-rg'>User & Access</a></li>
-                                <li><a href="#" title='Compliance' className='text-16 text-rg'>Compliance</a></li>
-                                <li><a href="#" title='Contact' className='text-16 text-rg'>Contact</a></li>
+                                <li><Link href="#" title='' className='text-16 text-rg'>About</Link></li>
+                                <li><Link href="#" title='' className='text-16 text-rg'>User & Access</Link></li>
+                                <li><Link href="#" title='' className='text-16 text-rg'>Compliance</Link></li>
+                                <li><Link href="#" title='' className='text-16 text-rg'>Contact</Link></li>
                             </ul>
                         </div>
 
                         <div className='quick-links legal-info text-md'>
                             <p className='text-16 text-md'>Legal Informations</p>
                             <ul>
-                                <li><a href="#" title='Privacy & Policy' className='text-16 text-rg'>Privacy & Policy</a></li>
-                                <li><a href="#" title='Terms & Conditions' className='text-16 text-rg'>Terms & Conditions</a></li>
+                                <li><Link href="#" title='' className='text-16 text-rg'>Privacy & Policy</Link></li>
+                                <li><Link href="#" title='' className='text-16 text-rg'>Terms & Conditions</Link></li>
                             </ul>
                         </div>
 
@@ -36,12 +37,12 @@ export function Footer() {
                             <ul>
                                 <div className='email-info'>
                                     <Image src='/images/footer/email.svg' alt='email-svg' width={16} height={16} priority={true}></Image>
-                                     <a href="mailto:info@dhatucomply.com" title='email-us' className='text-16 text-rg'>info@dhatucomply.com</a>
+                                     <Link href="mailto:info@dhatucomply.com" title='' className='text-16 text-rg'>info@dhatucomply.com</Link>
                                 </div>
 
                                 <div className='email-info mobile-info'>
                                     <Image src='/images/footer/call.svg' alt='call-svg' width={16} height={16} priority={true}></Image>
-                                    <a href="#" title='contacct-us' className='text-16 text-rg'>+1 (555) 123-4567</a>
+                                    <Link href="#" title='' className='text-16 text-rg'>+1 (555) 123-4567</Link>
                                 </div>
                             </ul>
                         </div>
