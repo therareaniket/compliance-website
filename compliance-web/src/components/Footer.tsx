@@ -16,18 +16,18 @@ export function Footer() {
                         <div className='quick-links text-md'>
                             <p className='text-16 text-md'>Quick Links</p>
                             <ul>
-                                <li><a href="" className='text-16 text-rg'>About</a></li>
-                                <li><a href="" className='text-16 text-rg'>User & Access</a></li>
-                                <li><a href="" className='text-16 text-rg'>Compliance</a></li>
-                                <li><a href="" className='text-16 text-rg'>Contact</a></li>
+                                <li><a href="#" title='About Us' className='text-16 text-rg'>About</a></li>
+                                <li><a href="#" title='User & Access' className='text-16 text-rg'>User & Access</a></li>
+                                <li><a href="#" title='Compliance' className='text-16 text-rg'>Compliance</a></li>
+                                <li><a href="#" title='Contact' className='text-16 text-rg'>Contact</a></li>
                             </ul>
                         </div>
 
                         <div className='quick-links legal-info text-md'>
                             <p className='text-16 text-md'>Legal Informations</p>
                             <ul>
-                                <li><a href="" className='text-16 text-rg'>Privacy & Policy</a></li>
-                                <li><a href="" className='text-16 text-rg'>Terms & Conditions</a></li>
+                                <li><a href="#" title='Privacy & Policy' className='text-16 text-rg'>Privacy & Policy</a></li>
+                                <li><a href="#" title='Terms & Conditions' className='text-16 text-rg'>Terms & Conditions</a></li>
                             </ul>
                         </div>
 
@@ -36,12 +36,12 @@ export function Footer() {
                             <ul>
                                 <div className='email-info'>
                                     <Image src='/images/footer/email.svg' alt='email-svg' width={16} height={16} priority={true}></Image>
-                                     <a href="mailto:info@dhatucomply.com" className='text-16 text-rg'>info@dhatucomply.com</a>
+                                     <a href="mailto:info@dhatucomply.com" title='email-us' className='text-16 text-rg'>info@dhatucomply.com</a>
                                 </div>
 
                                 <div className='email-info mobile-info'>
                                     <Image src='/images/footer/call.svg' alt='call-svg' width={16} height={16} priority={true}></Image>
-                                    <a href="" className='text-16 text-rg'>+1 (555) 123-4567</a>
+                                    <a href="#" title='contacct-us' className='text-16 text-rg'>+1 (555) 123-4567</a>
                                 </div>
                             </ul>
                         </div>
