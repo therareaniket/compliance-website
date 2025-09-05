@@ -17,7 +17,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <body>
             <Header />
         
-            {/* {children} */}
+            {children}
 
             <Footer />
       </body>
