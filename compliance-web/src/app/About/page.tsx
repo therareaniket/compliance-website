@@ -42,7 +42,7 @@ export function AboutUs() {
                             <div className='cards'>
                                 <div className='card-row'>
                                     <div className='card-lists'>
-                                        <Image className='mission-svg' src='/images/aboutUs/rebase.svg' alt='rebase' width={33} height={37} priority={false} ></Image>
+                                        <Image className='mission-svg' src='/images/aboutUs/rebase-icon.svg' alt='rebase' width={33} height={37} priority={false} ></Image>
 
                                         <p className='h6'>Simplify Workflows</p>
 
@@ -50,7 +50,7 @@ export function AboutUs() {
                                     </div>
 
                                     <div className='card-lists'>
-                                        <Image className='mission-svg' src='/images/aboutUs/process.svg' alt='process' width={40} height={40} priority={false} ></Image>
+                                        <Image className='mission-svg' src='/images/aboutUs/process-icon.svg' alt='process' width={40} height={40} priority={false} ></Image>
 
                                         <p className='h6'>Strengthen Processes</p>
 
@@ -95,7 +95,7 @@ export function AboutUs() {
                                 </div>
 
                                 <div className="vision-card">
-                                    <Image className='vision-img' src='/images/aboutUs/article.svg' alt='article' width={30} height={30} priority={false} ></Image>
+                                    <Image className='vision-img' src='/images/aboutUs/proactive-readiness-icon.svg' alt='article' width={30} height={30} priority={false} ></Image>
                                   
                                     <p className='h6'>Proactive Readiness</p>
                                    
@@ -127,7 +127,7 @@ export function AboutUs() {
 
                             <p>Our mission is to streamline and strengthen compliance with automation and actionable insights.</p>
 
-                            <Image src='/images/aboutUs/vision-heading.webp' alt='vision-heading' width={453} height={289}></Image>
+                            <Image src='/images/aboutUs/vision-heading.webp' alt='vision-heading' width={453} height={289} priority={false}></Image>
                         </div>
                     </div>
                 </div>
