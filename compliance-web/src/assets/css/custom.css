@@ -1,12 +1,20 @@
 :root {
     --primary: #4B0081;
+    --secondary: #6FB018;
 
     --footer-bg: #200036;
     
     --white: #FFFFFF;
     --off-white: #FAFAFA;
     --black: #000000;
+
+    --grey: #7E7E7E
 }
+
+.text-grey { color: var(--grey); }
+.btn-padding { padding: 12px 30px; }
+.btn-primary { background-color: var(--primary); color: var(--white); }
+.btn-white { background-color: transparent; color: var(--black); border: 1px solid var(--black); }
 
 /* HEADER */
 .navbar-wrapper { padding: 30px 0; }
@@ -29,6 +37,15 @@
 .copyright { display: flex; justify-content: center; }
 .copyright-box { width: 1216px; margin-top: 40px; padding-top: 30px; border-top: 1px solid #B8B8B8; display: flex; justify-content: center; gap: 30px; }
 
+
+/* HOME PAGE */
+.hm-hero { min-height: 100vh; height: auto; background-image: url('/images/homepage/hero-background.webp'); }
+.hm-hero-content { padding-top: 100px; }
+.hm-hero-content p { width: 1115px; margin: 0 auto; margin-top: 20px; margin-bottom: 40px; }
+.hm-hero-btns { display: flex; align-items: center; justify-content: center; }
+.hm-hero-btns .btn-primary { margin-right: 20px; }
+
+
 /* AboutUS-page */
 .abt-hero {
     display: flex;
@@ -44,49 +61,3 @@
 .hero-head span{ color: var(--primary); }
 .hero-head p{ color: rgba(126, 126, 126, 1); margin-bottom: 20px; }
 .hero-head-button button{ width: 210px; height: 52px; border-radius: 10px; background: var(--primary); color: var(--white); }
-
-.mission-section{ margin: 100px 0; }
-.mission-main{ display: flex; justify-content: space-between; align-items: center; }
-.mission-heading{ display: flex; flex-direction: column; gap: 25px; }
-.mission-heading h2{ width: 70%; }
-.mission-svg{ margin-bottom: 10px; }
-.mission-heading p{ width: 60%; color: rgba(126, 126, 126, 1); }
-.cards{ display: flex; flex-direction: column; gap: 40px; }
-.card-row{ display: flex; gap: 40px; }
-.card-lists{ display: flex; flex-direction: column; gap: 15px; border-right: 4px solid rgba(172, 138, 197, 1); border-radius: 10px; padding: 20px; }
-.card-lists p + p{ color: rgba(126, 126, 126, 1); }
-
-.our-vision-main{ margin: 100px 0; }
-.our-vision{ display: flex; align-items: center; gap: 40px; }
-.our-vision-cards{ display: flex; flex-direction: column; gap: 40px; }
-.vision-card-row{ display: flex; gap: 30px; }
-.vision-card{ display: flex; flex-direction: column; width: 376px; gap: 15px; border-left: 4px solid rgba(189, 219, 149, 1); border-radius: 10px; padding: 20px; }
-.vision-img{ margin-bottom: 10px; }
-.vision-card p + p{ color: rgba(126, 126, 126, 1); }
-.vision-heading{ display: flex; flex-direction: column; align-items: flex-start; gap: 25px; width: 692px;  }
-
-.our-platforms{  display: flex; gap: 84px; margin: 100px 0px;background-color: rgba(254, 228, 210, 1);  border-radius: 10px; position: relative; padding: 100px 0px; overflow: hidden; }
-.platform-images{ display: flex; }
-.platform-card-left{ transform: translate(30%, 60%); z-index: 1; }
-.platform-card-right{ transform: translateY(31%); }
-.our-platform-text{ display: flex; flex-direction: column; gap: 10px; }
-.our-platform-text h2{ width: 70%; }
-.our-platform-text p{ width: 70%; color: rgba(126, 126, 126, 1); }
-.platform-tools{ display: flex; gap: 100px; margin-top: 20px; }
-.platform-tools ul li{ display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-.platform-tools ul li p{ width: 100%; }
-.platform-btn button{ margin-top: 40px; background-color: var(--primary); color: var(--white); width: 160px; height: 52px; border-radius: 10px; }
-
-.core-feature-section{ margin: 100px 0px; }
-.core-feature-heading{ display: flex; align-items: flex-start; justify-content: space-between; gap: 105px; }
-.core-feature-heading p{ width: 70%; color: rgba(126, 126, 126, 1); }
-.feature-cards{ display: flex; margin-top: 60px; gap: 20px; }
-.featurecard{ width: 380px; height: 388px; background-color: rgba(245, 247, 255, 1); border-radius: 10px; padding: 20px; }
-.audit-card{ background-color: rgba(246, 251, 246, 1); }
-.training-sop-card{ background: rgba(255, 252, 245, 1); }
-.risk-management-card{ background-color: rgba(248, 246, 255, 1); }
-.feature-frame p{ margin-top: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(205, 216, 255, 1); }
-.audit-frame p{ border-bottom: 1px solid rgba(209, 234, 211, 1); }
-.training-frame p{ border-bottom: 1px solid rgba(255, 239, 205, 1); }
-.risk-frame p{ border-bottom: 1px solid rgba(221, 210, 254, 1); } 
-.feature-lists ul{ margin-top: 20px; display: flex; flex-direction: column; gap: 10px; color: rgba(126, 126, 126, 1); }
