@@ -1,12 +1,10 @@
 import Image from "next/image";
-import { AboutUs } from "./About/page";
+import AboutUs from "./About/page";
 
 export default function Home() {
   return (
     <div>
-        {/* <main>Hello I am Main</main> */}
-
-        <AboutUs/>
+        <main>Hello I am Main</main>
     </div>
   );
 }

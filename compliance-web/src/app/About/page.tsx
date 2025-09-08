@@ -3,7 +3,7 @@ import Image from 'next/image'
 // import Link from 'next/link'
 import React from 'react'
 
-export function AboutUs() {
+export default function AboutUs() {
     return (
         <>
             <section className='abt-hero'>
@@ -110,7 +110,7 @@ export function AboutUs() {
                                     <p className='h6'>Trust & Transparency</p>
                                    
                                     <p className='text-rg'>Build confidence with secure, efficient workflows.</p>
-                                </div>    
+                                </div>
 
                                 <div className="vision-card">
                                     <Image className='vision-img' src='/images/aboutUs/emoji-objects.svg' alt='emoji-objects' width={24} height={33} priority={false} ></Image>
@@ -249,7 +249,7 @@ export function AboutUs() {
                                 <div className='feature-frame risk-frame'>
                                     <Image src='/images/aboutUs/risk-management-icon.svg' alt='risk-management-icon' width={60} height={60} priority={false} ></Image>
 
-                                    <p className='text-20 text-md'>CAPA & Risk Management</p>   
+                                    <p className='text-20 text-md'>CAPA & Risk Management</p>
                                 </div>
 
                                 <div className="feature-lists">

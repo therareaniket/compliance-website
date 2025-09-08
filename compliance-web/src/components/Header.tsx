@@ -17,7 +17,7 @@ export function Header() {
                     <div className="navbar-links">
                         <ul className='text-18'>
                             <li>
-                                <Link href='#' title='About'>About</Link>
+                                <Link href='/About' title='About'>About</Link>
                             </li>
                             <li>
                                 <Link href='#' title='User & Access'>User & Access</Link>
