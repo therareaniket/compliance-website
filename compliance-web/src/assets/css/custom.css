@@ -31,8 +31,8 @@
 
 /* AboutUS-page */
 
-/* hero-section */
-.Hero {
+
+.hero {
     display: flex;
     align-items: center;
     position: relative;
@@ -54,7 +54,7 @@
 .mission-heading h2{ width: 70%; }
 .missionSvg{ margin-bottom: 10px; }
 .mission-heading p{ width: 60%; color: rgba(126, 126, 126, 1); }
-.Cards{ display: flex; flex-direction: column; gap: 40px; }
+.cards{ display: flex; flex-direction: column; gap: 40px; }
 .card-rw-1{ display: flex; gap: 40px; }
 .card-1{ display: flex; flex-direction: column; gap: 15px; border-right: 4px solid rgba(172, 138, 197, 1); border-radius: 10px; padding: 20px; }
 .card-1 p + p{ color: rgba(126, 126, 126, 1); }
@@ -93,8 +93,8 @@
 .featurecard-2{ background-color: rgba(246, 251, 246, 1); }
 .featurecard-3{ background: rgba(255, 252, 245, 1); }
 .featurecard-4{ background-color: rgba(248, 246, 255, 1); }
-.Frame1 p{ margin-top: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(205, 216, 255, 1); }
+.frame1 p{ margin-top: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(205, 216, 255, 1); }
 .feature-lists ul{ margin-top: 20px; display: flex; flex-direction: column; gap: 10px; color: rgba(126, 126, 126, 1); }
-.Frame2 p{ border-bottom: 1px solid rgba(209, 234, 211, 1); }
-.Frame3 p{ border-bottom: 1px solid rgba(255, 239, 205, 1); }
-.Frame4 p{ border-bottom: 1px solid rgba(221, 210, 254, 1); } 
+.frame2 p{ border-bottom: 1px solid rgba(209, 234, 211, 1); }
+.frame3 p{ border-bottom: 1px solid rgba(255, 239, 205, 1); }
+.frame4 p{ border-bottom: 1px solid rgba(221, 210, 254, 1); } 

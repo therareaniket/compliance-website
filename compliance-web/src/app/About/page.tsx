@@ -6,7 +6,7 @@ import React from 'react'
 export function AboutUs() {
     return (
         <main>
-            <section className='Hero'>
+            <section className='hero'>
                 <div className="container">
                     <div className="hero-wrapper">
                         <div className="hero-head">
@@ -39,7 +39,7 @@ export function AboutUs() {
                         </div>
 
                         <div className="heading-cards">
-                            <div className='Cards'>
+                            <div className='cards'>
                                 <div className='card-rw-1'>
                                     <div className='card-1'>
                                         <Image className='missionSvg' src='/images/aboutUs/rebase.svg' alt='rebase' width={33} height={37} priority={false} ></Image>
@@ -176,7 +176,7 @@ export function AboutUs() {
 
                         <div className='feature-cards'>
                             <div className="featurecard-1">
-                                <div className='Frame1'>
+                                <div className='frame1'>
                                     <Image src='/images/aboutUs/Frame-1.svg' alt='PlatformImg' width={60} height={60} priority={false} ></Image>
 
                                     <p className='text-20 text-md'>Document Management</p>
@@ -194,7 +194,7 @@ export function AboutUs() {
                             </div>
 
                             <div className="featurecard-1 featurecard-2">
-                                <div className='Frame1 Frame2'>
+                                <div className='frame1 frame2'>
                                     <Image src='/images/aboutUs/Frame-2.svg' alt='PlatformImg' width={60} height={60} priority={false} ></Image>
 
                                     <p className='text-20 text-md'>Audit Trails</p>
@@ -212,7 +212,7 @@ export function AboutUs() {
                             </div>
 
                             <div className="featurecard-1 featurecard-3">
-                                <div className='Frame1 Frame3'>
+                                <div className='frame1 frame3'>
                                     <Image src='/images/aboutUs/Frame-3.svg' alt='PlatformImg' width={60} height={60} priority={false} ></Image>
 
                                     <p className='text-20 text-md'>Training & SOPs</p>
@@ -230,7 +230,7 @@ export function AboutUs() {
                             </div>
 
                             <div className="featurecard-1 featurecard-4">
-                                <div className='Frame1 Frame4'>
+                                <div className='frame1 frame4'>
                                     <Image src='/images/aboutUs/Frame-4.svg' alt='PlatformImg' width={60} height={60} priority={false} ></Image>
 
                                     <p className='text-20 text-md'>CAPA & Risk Management</p>   
