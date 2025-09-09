@@ -1,8 +1,13 @@
-import Image from "next/image";
-import AboutUs from "./About/page";
+
+"use client"
+
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Home() {
+
+    const [active, setActive] = useState<'smrt' | 'features'>('smrt');
+
   return (
     <div>
         <>
@@ -20,6 +25,30 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section className="hm-click-expand">
+                <div className="container">
+                    <div className="expnd-contnt-wrapper">
+                        <div className={`click-box click-smrt-compliance ${active === 'smrt' ? 'active' : ''}`}
+                            onClick={() => setActive('smrt')}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('smrt')}
+                            aria-pressed={active === 'smrt'}>
+
+                        </div>
+
+                        <div className={`click-box click-key-features ${active === 'features' ? 'active' : ''}`}
+                            onClick={() => setActive('features')}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('features')}
+                            aria-pressed={active === 'features'}>
+
+                        </div>
+                      </div>
+                  </div>
             </section>
         </>
     </div>

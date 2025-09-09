@@ -45,6 +45,11 @@
 .hm-hero-btns { display: flex; align-items: center; justify-content: center; }
 .hm-hero-btns .btn-primary { margin-right: 20px; }
 
+.expnd-contnt-wrapper { display: flex; gap: 20px; align-items: center; }
+.click-box { width: 600px; height: 100px; background-color: red; transition: width 600ms ease; cursor: pointer; }
+.click-box + .click-box { background-color: green; }
+.click-box.active { width: calc(100% - 600px); cursor: auto; }
+
 
 /* AboutUS-page */
 .abt-hero {
