@@ -2,6 +2,10 @@
     --primary: #4B0081;
     --secondary: #6FB018;
 
+    --foundational-primary: #EDE6F2;
+    --foundational-secondary: #F1F7E8;
+
+    --alt-background: #F5F6F9;
     --footer-bg: #200036;
     
     --white: #FFFFFF;
@@ -11,6 +15,7 @@
     --grey: #7E7E7E
 }
 
+.section { padding: 100px 0; }
 .text-grey { color: var(--grey); }
 .btn-padding { padding: 12px 30px; }
 .btn-primary { background-color: var(--primary); color: var(--white); }
@@ -46,9 +51,35 @@
 .hm-hero-btns .btn-primary { margin-right: 20px; }
 
 .expnd-contnt-wrapper { display: flex; gap: 20px; align-items: center; }
-.click-box { width: 600px; height: 100px; background-color: red; transition: width 600ms ease; cursor: pointer; }
-.click-box + .click-box { background-color: green; }
-.click-box.active { width: calc(100% - 600px); cursor: auto; }
+.click-box { width: 600px; height: 800px; padding: 40px; background-color: var(--primary); transition: all 600ms ease; cursor: pointer; position: relative; }
+.smrt-img, .key-img { position: absolute; bottom: 0; right: 0; transition: all 300ms ease; }
+.click-box + .click-box { background-color: var(--secondary); }
+.click-box.active { width: calc(100% - 600px); cursor: auto; color: var(--white); }
+.click-box.smrt-not-active { background-color: var(--foundational-primary); }
+.click-box.key-not-active { background-color: var(--foundational-secondary); }
+.box-content { width: 520px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.box-content .cont-head .h3 { margin-bottom: 20px; }
+.smart-usp-lists { vertical-align: middle; }
+.smart-usp-lists span { margin-right: 14px; }
+.click-box.smrt-not-active .smart-usp-lists { color: var(--primary); }
+.click-box.key-not-active .key-usp-lists { color: var(--secondary); }
+.click-box.smrt-not-active .smrt-img { opacity: 0; }      
+.click-box.key-not-active .key-img { opacity: 0; }      
+
+.hm-compli-steps { padding: 60px 0; background-color: var(--alt-background); }
+.steps-head { display: flex; justify-content: space-between; }
+.steps-head .h3 { width: 630px; }
+.steps-head p { width: 900px; }
+.steps-path-view { padding: 127px 0 100px 0; position: relative; }
+.steps-path-img { margin: 0 auto; }
+.step-1-img { position: absolute; top: 0; transform: translateY(50%); }
+.step-2-img { position: absolute; bottom: 0; left: 50%; transform: translateX(-70%); }
+.step-3-img { position: absolute; top: 20px; left: 50%; }
+.step-4-img { position: absolute; right: 20px; bottom: 40px; }
+
+.why-us-content { width: 800px; }
+.why-us-head .h3 { margin-bottom: 20px; }
+
 
 
 /* AboutUS-page */
