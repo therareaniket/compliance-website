@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import SwiperComponent from "@/components/SwiperComponent";
 
 export default function AboutUs() {
     return (
@@ -173,127 +174,8 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section>
-                <div className="container">
-                    <div className='core-feature-section'>
-                        <div className="core-feature-heading">
-                            <h2 className='h4'>Core Features That Power Compliance</h2>
 
-                            <p className='text-20 text-rg'>Discover the essential tools that simplify compliance from document control and training to real-time alerts and reporting designed to keep your organization efficient, secure, and audit-ready.</p>
-                        </div>
-
-                        <div className='feature-cards'>
-                            <div className="featurecard background-blue-tint">
-                                <div className='feature-frame'>
-                                    <Image src='/images/aboutUs/document-management-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
-
-                                    <p className='feature-card-head text-20 text-md'>Document Management</p>
-                                </div>
-
-                                <div className="feature-lists">
-                                    <ul>
-                                        <li className='text-18 text-rg'>Upload and store compliance documents securely.</li>
-
-                                        <li className='text-18 text-rg'>Supports version control for accuracy.</li>
-
-                                        <li className='text-18 text-rg'>Enables e-signatures for approvals.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="featurecard background-green-tint">
-                                <div className='feature-frame'>
-                                    <Image src='/images/aboutUs/audit-trails-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
-
-                                    <p className='feature-card-head text-20 text-md'>Audit Trails</p>
-                                </div>
-
-                                <div className="feature-lists">
-                                    <ul>
-                                        <li className='text-18 text-rg'>Automatically logs all user actions.</li>
-
-                                        <li className='text-18 text-rg'>Maintains transparency and accountability.</li>
-
-                                        <li className='text-18 text-rg'>Essential for regulatory inspections.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="featurecard background-yellow-tint">
-                                <div className='feature-frame'>
-                                    <Image src='/images/aboutUs/training-sop-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
-
-                                    <p className='feature-card-head text-20 text-md'>Training & SOPs</p>
-                                </div>
-
-                                <div className="feature-lists">
-                                    <ul>
-                                        <li className='text-18 text-rg'>Assign training modules and SOPs to users.</li>
-
-                                        <li className='text-18 text-rg'>Track completion and progress in real time.</li>
-
-                                        <li className='text-18 text-rg'>Certify compliance readiness of staff.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="featurecard background-purple-tint">
-                                <div className='feature-frame'>
-                                    <Image src='/images/aboutUs/risk-management-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
-
-                                    <p className='feature-card-head text-20 text-md'>CAPA & Risk Management</p>
-                                </div>
-
-                                <div className="feature-lists">
-                                    <ul>
-                                        <li className='text-18 text-rg'>Track deviations and incidents effectively.</li>
-
-                                        <li className='text-18 text-rg'>Implement corrective and preventive actions.</li>
-
-                                        <li className='text-18 text-rg'>Manage risks with structured workflows.</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* <div className="featurecard background-blue-tint">
-                                <div className='feature-frame'>
-                                    <Image src='/images/aboutUs/document-management-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
-
-                                    <p className='feature-card-head text-20 text-md'>Document Management</p>
-                                </div>
-
-                                <div className="feature-lists">
-                                    <ul>
-                                        <li className='text-18 text-rg'>Upload and store compliance documents securely.</li>
-
-                                        <li className='text-18 text-rg'>Supports version control for accuracy.</li>
-
-                                        <li className='text-18 text-rg'>Enables e-signatures for approvals.</li>
-                                    </ul>
-                                </div>
-                            </div> */}
-{/* 
-                            <div className="featurecard background-blue-tint">
-                                <div className='feature-frame'>
-                                    <Image src='/images/aboutUs/document-management-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
-
-                                    <p className='feature-card-head text-20 text-md'>Document Management</p>
-                                </div>
-
-                                <div className="feature-lists">
-                                    <ul>
-                                        <li className='text-18 text-rg'>Upload and store compliance documents securely.</li>
-
-                                        <li className='text-18 text-rg'>Supports version control for accuracy.</li>
-
-                                        <li className='text-18 text-rg'>Enables e-signatures for approvals.</li>
-                                    </ul>
-                                </div>
-                            </div> */}
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <SwiperComponent />
         </>
     )
 }

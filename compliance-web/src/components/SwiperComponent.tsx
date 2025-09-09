@@ -1,0 +1,168 @@
+"use client";
+
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+export default function SwiperComponents() {
+    return (
+        <section>
+            <div className="container">
+                <div className="core-feature-section">
+                    <div className="core-feature-heading">
+                        <h2 className="h4">Core Features That Power Compliance</h2>
+                        <p className="text-20 text-rg">
+                            Discover the essential tools that simplify compliance from document
+                            control and training to real-time alerts and reporting designed to keep
+                            your organization efficient, secure, and audit-ready.
+                        </p>
+                    </div>
+
+                    {/* Swiper wrapper */}
+                    <Swiper
+                        className="feature-cards"
+                        modules={[Pagination, Autoplay]}
+                        spaceBetween={20}
+                        loop
+                        pagination={{ clickable: true }}
+                        autoplay={{ delay: 2500, disableOnInteraction: true }}
+                        slidesPerView={4}
+                        slidesPerGroup={1}
+                        breakpoints={{
+                            0: { slidesPerView: 1, slidesPerGroup: 1 },
+                            768: { slidesPerView: 2, slidesPerGroup: 1 },
+                            1024: { slidesPerView: 3, slidesPerGroup: 1 },
+                            1440: { slidesPerView: 4, slidesPerGroup: 1 },
+                        }}
+                    >
+
+                        <SwiperSlide>
+                            <div className="featurecard bg-blue">
+                                <div className="feature-frame">
+                                    <Image src="/images/aboutUs/document-management-icon.svg" alt="document-management-icon" width={60} height={60} />
+                                    <p className="feature-card-head text-20 text-md">  Document Management </p>
+                                </div>
+                                <div className="feature-lists">
+                                    <ul>
+                                        <li className="text-18 text-rg"> Upload and store compliance documents securely.</li>
+
+                                        <li className="text-18 text-rg">Supports version control for accuracy.</li>
+
+                                        <li className="text-18 text-rg">Enables e-signatures for approvals.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="featurecard bg-green">
+                                <div className='feature-frame border-green'>
+                                    <Image src='/images/aboutUs/audit-trails-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+
+                                    <p className='feature-card-head text-20 text-md'>Audit Trails</p>
+                                </div>
+
+                                <div className="feature-lists">
+                                    <ul>
+                                        <li className='text-18 text-rg'>Automatically logs all user actions.</li>
+
+                                        <li className='text-18 text-rg'>Maintains transparency and accountability.</li>
+
+                                        <li className='text-18 text-rg'>Essential for regulatory inspections.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="featurecard bg-yellow">
+                                <div className='feature-frame border-yellow'>
+                                    <Image src='/images/aboutUs/training-sop-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+
+                                    <p className='feature-card-head text-20 text-md'>Training & SOPs</p>
+                                </div>
+
+                                <div className="feature-lists">
+                                    <ul>
+                                        <li className='text-18 text-rg'>Assign training modules and SOPs to users.</li>
+
+                                        <li className='text-18 text-rg'>Track completion and progress in real time.</li>
+
+                                        <li className='text-18 text-rg'>Certify compliance readiness of staff.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="featurecard bg-purple">
+                                <div className='feature-frame border-purple'>
+                                    <Image src='/images/aboutUs/risk-management-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+
+                                    <p className='feature-card-head text-20 text-md'>CAPA & Risk Management</p>
+                                </div>
+
+                                <div className="feature-lists">
+                                    <ul>
+                                        <li className='text-18 text-rg'>Track deviations and incidents effectively.</li>
+
+                                        <li className='text-18 text-rg'>Implement corrective and preventive actions.</li>
+
+                                        <li className='text-18 text-rg'>Manage risks with structured workflows.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="featurecard bg-red">
+                                <div className='feature-frame border-red'>
+                                    <Image src='/images/aboutUs/regulatory-alert-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+
+                                    <p className='feature-card-head text-20 text-md'>Regulatory Alerts</p>
+                                </div>
+
+                                <div className="feature-lists">
+                                    <ul>
+                                        <li className='text-18 text-rg'>Real-time updates on new changed regulations.</li>
+
+                                        <li className='text-18 text-rg'>Automatic notifications for critical deadlines.</li>
+
+                                        <li className='text-18 text-rg'>Helps stay proactive and compliant.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="featurecard bg-purplish">
+                                <div className='feature-frame border-purplish'>
+                                    <Image src='/images/aboutUs/dashboard-report-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+
+                                    <p className='feature-card-head text-20 text-md'>Dashboards & Reports</p>
+                                </div>
+
+                                <div className="feature-lists">
+                                    <ul>
+                                        <li className='text-18 text-rg'>Visualize compliance status with clear metrics.</li>
+
+                                        <li className='text-18 text-rg'>Generate audit-ready reports instantly.</li>
+
+                                        <li className='text-18 text-rg'>Provides management insights at a glance.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+
+
