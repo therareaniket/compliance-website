@@ -8,17 +8,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
 
-export default function SwiperComponents() {
+export default function AboutUsSwiperComponents() {
     return (
         <section>
             <div className="container">
                 <div className="core-feature-section">
                     <div className="core-feature-heading">
-                        <h2 className="h4">Core Features That Power Compliance</h2>
-                        <p className="text-20 text-rg">
-                            Discover the essential tools that simplify compliance from document
-                            control and training to real-time alerts and reporting designed to keep
-                            your organization efficient, secure, and audit-ready.
+                        <h2 className="h4">Core Features That Power Clinical Trial Compliance</h2>
+                        <p className="core-feature-para text-20 text-rg">
+                            Explore essential tools—from document control and training to real-time alerts and reporting—designed to keep your trial operations efficient, secure, and audit-ready.
                         </p>
                     </div>
 
@@ -27,17 +25,20 @@ export default function SwiperComponents() {
                         className="feature-cards"
                         modules={[Pagination, Autoplay]}
                         spaceBetween={20}
-                        loop
+                        loop={true}
                         pagination={{ clickable: true }}
-                        autoplay={{ delay: 2500, disableOnInteraction: true }}
+                        autoplay={{ delay: 1000, disableOnInteraction: false }}
                         slidesPerView={4}
                         slidesPerGroup={1}
                         breakpoints={{
-                            0: { slidesPerView: 1, slidesPerGroup: 1 },
-                            768: { slidesPerView: 2, slidesPerGroup: 1 },
-                            1024: { slidesPerView: 3, slidesPerGroup: 1 },
-                            1440: { slidesPerView: 4, slidesPerGroup: 1 },
+                            0: { slidesPerView: "auto", centeredSlides: true, slidesPerGroup: 1 },
+                            680: { slidesPerView: 2, slidesPerGroup: 1, },
+                            991: { slidesPerView: 2.4, centeredSlides: false, slidesPerGroup: 1, },
+                            1024: { slidesPerView: 3, centeredSlides: false, slidesPerGroup: 1, },
+                            1440: { slidesPerView: 4, centeredSlides: false, slidesPerGroup: 1, },
                         }}
+                        
+                        speed={3000}
                     >
 
                         <SwiperSlide>

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import SwiperComponent from "@/components/SwiperComponent";
+import AboutUsSwiperComponents from "@/components/SwiperComponent";
 
 export default function AboutUs() {
     return (
@@ -11,10 +11,9 @@ export default function AboutUs() {
                 <div className="container">
                     <div className="abt-hero-wrapper">
                         <div className="abt-hero-head">
-                            <h1>Redefining <span>Compliance</span> for a Smarter Future</h1>
+                            <h1>Redefining Clinical Trial <span>Compliance</span> for a Smarter Future</h1>
 
-                            <p className='text-rg text-20'>We simplify regulatory complexities with solutions built on security and efficiency. Our platform keeps organizations audit-ready,
-                                builds trust, and drives long-term success.</p>
+                            <p className='text-rg text-20'>We simplify regulatory complexities with secure, efficient solutions. Our platform keeps trial teams audit-ready, builds trust, and supports long-term success across every phase of clinical research. </p>
 
                             <div className='abt-hero-head-button' >
                                 <Link href='#' title="connect-with-us" className="btn-primary btn-padding text-md text-18 site-radius-10">Connect With Us</Link>
@@ -32,47 +31,47 @@ export default function AboutUs() {
                 <div className="container">
                     <div className="mis-vis-section">
                         <div className="mis-vis-heading">
-                            <h2 className='h3'>Our Mission is to simplify and streamline compliance workflows.</h2>
+                            <h2 className='h3'>Our Mission</h2>
 
-                            <p className='text-20 text-rg'>Our mission is to streamline and strengthen compliance with automation and actionable insights.</p>
+                            <p className='text-20 text-rg'>To simplify and strengthen clinical trial compliance through automation and actionable insights. </p>
 
                             <Image src='/images/aboutUs/mission-heading.webp' alt='mission-heading' width={307} height={289} priority={false}></Image>
                         </div>
 
                         <div className="mis-vis-card-lists">
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card">
+                                <div className="mis-vis-card primary-box-shadow">
                                     <Image src='/images/aboutUs/rebase-icon.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Simplify Workflows</p>
 
-                                    <p>Streamline tasks with automation that saves time, reduces errors.</p>
+                                    <p>Automate routine tasks to save time and reduce errors in trial operations.</p>
                                 </div>
 
-                                <div className="mis-vis-card">
+                                <div className="mis-vis-card primary-box-shadow">
                                     <Image src='/images/aboutUs/process-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
 
-                                    <p className='mis-vis-para text-md text-20'>Strengthen Processes</p>
+                                    <p className='mis-vis-para text-md text-20'>Empower Organizations</p>
 
-                                    <p>Ensure accuracy and reliability across all compliance activities.</p>
+                                    <p>Help Sponsors, CROs, and Sites stay audit-ready and confident at every stage.</p>
                                 </div>
                             </div>
 
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card">
+                                <div className="mis-vis-card primary-box-shadow">
                                     <Image src='/images/aboutUs/approval-delegation.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
 
-                                    <p className='mis-vis-para text-md text-20'>Empower Organizations</p>
+                                    <p className='mis-vis-para text-md text-20'>Strengthen Processes</p>
 
-                                    <p>Help businesses stay audit-ready and confident at all times.</p>
+                                    <p>Ensure accuracy and reliability across all clinical compliance activities.</p>
                                 </div>
 
-                                <div className="mis-vis-card">
+                                <div className="mis-vis-card primary-box-shadow">
                                     <Image src='/images/aboutUs/clock-arrow-down.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Reduce Manual Effort</p>
 
-                                    <p>Replace repetitive work with technology-driven solutions.</p>
+                                    <p>Automate repetitive tasks with smart, technology-driven solutions.</p>
                                 </div>
                             </div>
                         </div>
@@ -84,47 +83,47 @@ export default function AboutUs() {
                 <div className="container">
                     <div className="mis-vis-section vis-section">
                         <div className="mis-vis-heading vis-heading">
-                            <h2 className='h3'>Our Vision is a future where readiness is seamless and active.</h2>
+                            <h2 className='h3'>Our Vision </h2>
 
-                            <p className='text-20 text-rg'>Our mission is to streamline and strengthen compliance with automation and actionable insights.</p>
+                            <p className='text-20 text-rg'>A future where clinical trial readiness is seamless, proactive, and technology driven. </p>
 
                             <Image src='/images/aboutUs/vision-heading.webp' alt='mission-heading' width={453} height={289} priority={false}></Image>
                         </div>
 
                         <div className="mis-vis-card-lists">
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card vis-card">
+                                <div className="mis-vis-card greenish-box-shadow vis-card">
                                     <Image src='/images/aboutUs/work-history.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
 
-                                    <p className='mis-vis-para text-md text-20'>Seamless Experience</p>
+                                    <p className='mis-vis-para text-md text-20'>Seamless Experience </p>
 
-                                    <p>Deliver compliance processes that are Smooth, user-friendly.</p>
+                                    <p>Deliver smooth, user-friendly compliance processes for trial teams. </p>
                                 </div>
 
-                                <div className="mis-vis-card vis-card">
+                                <div className="mis-vis-card greenish-box-shadow vis-card">
                                     <Image src='/images/aboutUs/proactive-readiness-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
 
-                                    <p className='mis-vis-para text-md text-20'>Proactive Readiness</p>
+                                    <p className='mis-vis-para text-md text-20'>Trust & Transparency </p>
 
-                                    <p>Anticipate regulatory needs before they become challenges.</p>
+                                    <p>Build confidence with secure, efficient workflows and clear oversight. </p>
                                 </div>
                             </div>
 
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card vis-card">
+                                <div className="mis-vis-card greenish-box-shadow vis-card">
                                     <Image src='/images/aboutUs/arming-countdown.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
 
-                                    <p className='mis-vis-para text-md text-20'>Trust & Transparency</p>
+                                    <p className='mis-vis-para text-md text-20'>Proactive Readiness </p>
 
-                                    <p>Build confidence with secure, efficient workflows.</p>
+                                    <p>Anticipate regulatory needs before they become challenges. </p>
                                 </div>
 
-                                <div className="mis-vis-card vis-card">
+                                <div className="mis-vis-card greenish-box-shadow vis-card">
                                     <Image src='/images/aboutUs/emoji-objects.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
 
-                                    <p className='mis-vis-para text-md text-20'>Future Innovation</p>
+                                    <p className='mis-vis-para text-md text-20'>Future Innovation </p>
 
-                                    <p>Continuously evolve compliance through modern technology.</p>
+                                    <p>Continuously evolve compliance through modern, scalable technology. </p>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +141,7 @@ export default function AboutUs() {
                         <div className="our-platform-text">
                             <h2 className='h4'>Our platform supports frameworks to help you stay audit-ready.</h2>
 
-                            <p className='text-20 text-rg'>Our platform centralizes compliance with global frameworks, keeping you audit-ready.</p>
+                            <p className='platform-para text-20 text-rg'>Our platform centralizes compliance across global frameworks keeping your clinical trial operations secure, aligned, and audit-ready at every step. </p>
 
                             <div className="platform-tools">
                                 <div>
@@ -174,7 +173,8 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <SwiperComponent />
+
+            <AboutUsSwiperComponents />
         </>
     )
 }

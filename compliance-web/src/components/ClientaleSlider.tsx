@@ -17,7 +17,8 @@ export default function ClientaleSlider() {
                         pagination={{ clickable: true }}
                         autoplay={{ delay: 2000, disableOnInteraction: true }}
                         slidesPerView={1}
-                        slidesPerGroup={1} >
+                        slidesPerGroup={1}
+                        speed={4000} >
 
                         <SwiperSlide className="clientale-slide">
                             <div className="slide-content">
