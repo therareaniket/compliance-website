@@ -5,7 +5,7 @@ import React from 'react'
 
 export function Header() {
     return (
-        <header>
+        <header style={{ position:'sticky', top:'0', backgroundColor:'white', zIndex:'9999' }}>
             <div className="container">
                 <div className="navbar-wrapper">
                     <div className="navbar-logo">

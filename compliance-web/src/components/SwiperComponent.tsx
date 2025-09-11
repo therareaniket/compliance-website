@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 
 export default function SwiperComponents() {
     return (
@@ -48,7 +48,7 @@ export default function SwiperComponents() {
                                 </div>
                                 <div className="feature-lists">
                                     <ul>
-                                        <li className="text-18 text-rg"> Upload and store compliance documents securely.</li>
+                                        <li className="text-18 text-rg">Upload and store compliance documents securely.</li>
 
                                         <li className="text-18 text-rg">Supports version control for accuracy.</li>
 
