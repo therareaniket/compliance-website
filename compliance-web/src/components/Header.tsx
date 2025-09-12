@@ -23,7 +23,7 @@ export function Header() {
                                 <Link href='#' title='User & Access'>User & Access</Link>
                             </li>
                             <li>
-                                <Link href='#' title='Compliance'>Compliance</Link>
+                                <Link href='/Compliance' title='Compliance'>Compliance</Link>
                             </li>
                             <li>
                                 <Link href='#' title='Contact'>Contact</Link>

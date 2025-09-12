@@ -28,6 +28,13 @@
 .btn-white { background-color: transparent; color: var(--black); border: 1px solid var(--black); }
 .fade-in { animation: fadeIn 600ms ease; }
 
+/* ABOUTUS swiper code */
+.swiper-button-next, .swiper-button-prev { display: none !important; }
+.swiper-pagination{ transform: translateY(-20px) !important; }
+.swiper-wrapper{ height: 450px !important; }
+.swiper-pagination-bullet{background-color: rgba(184, 184, 184, 1) !important;}
+.swiper-pagination-bullet-active{background: var(--primary) !important;}
+
 @keyframes whyUsCard-riseFromBack {
     0% {
       transform: translateY(40px) scale(0.8);
@@ -200,11 +207,6 @@
 
 
 
-
-
-
-
-
 /* AboutUS-page */
 
 .abt-hero {
@@ -278,9 +280,11 @@
 .border-red     { border-bottom-color: #FEE4D2; }
 .border-purplish{ border-bottom-color: #EDCCFD; }
 
-/* swiper code */
-.swiper-button-next, .swiper-button-prev { display: none !important; }
-.swiper-pagination{ transform: translateY(-20px) !important; }
-.swiper-wrapper{ height: 450px !important; }
-.swiper-pagination-bullet{background-color: rgba(184, 184, 184, 1) !important;}
-.swiper-pagination-bullet-active{background: var(--primary) !important;}
+
+
+
+
+/* COMPLIANCE-PAGE  */
+.com-hero { width: 100%; min-height: 700px; background-image: url('/images/compliance/page-banner.webp'); }
+.banner-head { width: 850px; }
+.banner-head span { color: var(--primary); } 

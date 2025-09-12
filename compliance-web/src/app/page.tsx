@@ -93,8 +93,6 @@ export default function Home() {
     const activePlanDetails = planDetails[activePlanButton];
     const activeFAQDetails = faqsByCategory[activeFaqCategoryButton];
 
-
-    // const rotateLastToFront = () => setCards((prev) => (prev.length ? [prev[prev.length - 1], ...prev.slice(0, -1)] : prev));
     const rotateLastToFront = () => {
         setCards((prev) => {
           if (!prev.length) return prev;
@@ -102,7 +100,7 @@ export default function Home() {
           setMovingId(last.id);
           return [last, ...prev.slice(0, -1)];
         });
-        setTimeout(() => setMovingId(null), 600); // keep in sync with CSS duration
+        setTimeout(() => setMovingId(null), 600);
       };
       
 
