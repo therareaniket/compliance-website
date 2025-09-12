@@ -31,7 +31,7 @@ export default function AboutUsSwiperComponents() {
                         slidesPerView={4}
                         slidesPerGroup={1}
                         breakpoints={{
-                            0: { slidesPerView: "auto", centeredSlides: true, slidesPerGroup: 1 },
+                            0: { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1 },
                             680: { slidesPerView: 2, slidesPerGroup: 1, },
                             991: { slidesPerView: 2.4, centeredSlides: false, slidesPerGroup: 1, },
                             1024: { slidesPerView: 3, centeredSlides: false, slidesPerGroup: 1, },

@@ -19,6 +19,8 @@
     --light-grey: #F2F2F2;
 
     --light-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+
+    --orange-tint: #FFFAF6;
 }
 
 .section { padding: 100px 0; }
@@ -34,6 +36,7 @@
 .swiper-wrapper{ height: 450px !important; }
 .swiper-pagination-bullet{background-color: rgba(184, 184, 184, 1) !important;}
 .swiper-pagination-bullet-active{background: var(--primary) !important;}
+.orange-tint{ background-color: var(--orange-tint); }
 
 @keyframes whyUsCard-riseFromBack {
     0% {
@@ -285,6 +288,71 @@
 
 
 /* COMPLIANCE-PAGE  */
-.com-hero { width: 100%; min-height: 700px; background-image: url('/images/compliance/page-banner.webp'); }
+.com-hero { width: 100%; min-height: 700px; background-image: url('/images/compliance/page-banner.webp'); padding: 100px 0;}
 .banner-head { width: 850px; }
+.banner-head p{ margin-top: 12px; }
 .banner-head span { color: var(--primary); } 
+.com-page-banner{ display: flex; align-items: center; gap: 50px; }
+
+.compliance-matters-cards{ margin: 100px 0; }
+.compliance-matters-main{ margin: 100px 0 0; }
+.compliance-matters-section{ display: flex; justify-content: space-between;}
+.compliance-matters-text{ width: 934px; }
+.matters-para1{ margin-bottom: 30px; }
+.matters-para2{ margin-bottom: 40px; }
+.surety-count-cards{ display: flex; justify-content: space-between; }
+.surety-count-cards .card-1{ border-left: 4px solid var(--primary); border-radius: 10px;  padding: 10px 20px; }
+
+
+.compliance-matters-card-list{ display: flex;gap: 40px; margin-bottom: 40px; }
+.hipaa-card{ background-image: url('/images/compliance/hippa_card.webp'); background-position: center; width: 780px; height: 368px; padding: 40px; }
+.fda_card{ background-image: url('/images/compliance/fda_card.webp'); background-position: center; width: 780px; height: 368px; padding: 40px; }
+.annex_11_card{ background-image: url('/images/compliance/annex_11_card.webp'); background-position: center; width: 780px; height: 368px; padding: 40px; }
+.gdpr_card{ background-image: url('/images/compliance/gdpr_card.webp'); background-position: center; width: 780px; height: 368px; padding: 40px; }
+.gcp_card{ background-image: url('/images/compliance/gcp_card.webp'); background-position: center; width: 780px; height: 368px; padding: 40px; }
+.cdsco_card{ background-image: url('/images/compliance/cdsco_card.webp'); background-position: center; width: 780px; height: 368px; padding: 40px; }
+.compliace-card-heading-text{ height: 196px; margin-bottom: 40px; }
+.card-list-text{ margin-top: 20px; }
+
+/* swiper code */
+.swiper-button-next, .swiper-button-prev { display: none !important; }
+.swiper-pagination{ transform: translateY(-20px) !important; }
+.swiper-wrapper{ height: 450px !important; }
+.swiper-pagination-bullet{ background-color: rgba(184, 184, 184, 1) !important; }
+.swiper-pagination-bullet-active{ background: var(--primary) !important; }
+
+
+
+
+
+
+/*  User & Access  */
+
+.user-access-hero{ display: flex;  background-image: url('/images/userAccess/herSectionImg.webp'); background-position: center; width: 100%; height: auto; padding: 100px 0; }
+.user-access-hero-wrapper{ display: flex; gap: 89px; align-items: center; }
+.user-access-hero-head{ width: 821px; }
+.hero-section-para{ color: var(--grey); margin-top: 12px; }
+
+.roles-card-section{ margin-top: 100px; }
+.roles-wrapper h2{ text-align: center; margin-bottom: 40px; }
+.role-account-admin{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 100px; width: 1600px; height: 550px; border-radius: 10px; padding:20px 40px ; }
+.account-admin-text{ width: 100%; margin-bottom: 30px; } 
+.account-admin-text p{ margin-top: 10px; }
+.account-admin-pointers{ width: 788px; }
+.account-admin-pointers h4{ margin-bottom: 20px; }
+.account-admin-pointers ul li { margin-bottom: 20px;}
+
+.card-row-reverse{ flex-direction: row-reverse; }
+
+.secure-portal-wrapper{ background-color: #F7FAF3; width: 100%; height: 825px; border-radius: 10px 10px 0 0; }
+.secure-portal-section{ padding: 60px 0px 47px; }
+.secure-portal-text{ display: flex; justify-content: space-between; gap: 70px; align-items: start; margin-bottom: 69px ; }
+.secure-portal-text h2{ width: 633px; }
+.account-admin-pointers ul{ list-style: disc; padding-left: 30px; }
+.secure-portal-text p{ width: 897px; }
+.access-portal-path { position: relative; }
+.path-line{ display: flex; justify-content: center; }
+.path-1{ position: absolute; top: 0; left: 0; }
+.path-2{ position: absolute; bottom: 0; left: 25%; }
+.path-3{ position: absolute; top: 0; left: 55%; transform: translateY(-30%);}
+.path-4{ position: absolute; bottom: 0; left: 70%; transform: translateY(50%); }
