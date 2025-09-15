@@ -11,12 +11,12 @@ type PlanId = 'free' | 'standard' | 'enterprise';
 type FaqCategoryId = 'general' | 'support' | 'other';
 type FAQData = { question: string; answer: string };
 
-const initialCards: Card[] = [
-    { id: 'why-c5', title: 'Scalable & Secure',      background_color: '#4B0081', text_color: '#FFF' },
-    { id: 'why-c4', title: 'Trusted by Leaders',     background_color: '#6F339A', text_color: '#FFF' },
-    { id: 'why-c3', title: 'Automation-Driven',      background_color: '#AC8AC5', text_color: '#FFF' },
-    { id: 'why-c2', title: 'Real-Time Monitoring',   background_color: '#C7B0D8', text_color: '#000' },
-    { id: 'why-c1', title: 'Comprehensive Coverage', background_color: '#EDE6F2', text_color: '#000' },
+const whyusCards: Card[] = [
+    { id: 'why-c5', title: 'Scalable & Secure',      background_color: '#4B0081', text_color: '#FFF', content:'abc' },
+    { id: 'why-c4', title: 'Trusted by Leaders',     background_color: '#6F339A', text_color: '#FFF', content:'abc' },
+    { id: 'why-c3', title: 'Automation-Driven',      background_color: '#AC8AC5', text_color: '#FFF', content:'abc' },
+    { id: 'why-c2', title: 'Real-Time Monitoring',   background_color: '#C7B0D8', text_color: '#000', content:'abc' },
+    { id: 'why-c1', title: 'Comprehensive Coverage', background_color: '#EDE6F2', text_color: '#000', content:'abc' },
   ];
 
 const planDetails: Record<PlanId, { title: string; bullets: string[]; }> = {
@@ -86,7 +86,7 @@ const faqsByCategory: Record<FaqCategoryId, { heading: string; items: FAQData[] 
 export default function Home() {
 
     const [active, setActive] = useState<'smrt' | 'features'>('smrt');
-    const [cards, setCards] = useState<Card[]>(initialCards);
+    const [cards, setCards] = useState<Card[]>(whyusCards);
     const [movingId, setMovingId] = useState<string | null>(null);
     const [activePlanButton, setActivePlanButton] = useState<PlanId>('free');
     const [activeFaqCategoryButton, setActiveFaqCategoryButton] = useState<FaqCategoryId>('general');
@@ -214,8 +214,6 @@ export default function Home() {
                             <Image src='/images/homepage/comprehensive-coverage.webp' alt="comprehensive-coverage" width={449} height={345} priority={false}></Image>
                         </div>
 
-                        
-
                         <div className="why-us-cards">
                             <div className="why-us-stack">
                                 {cards.map((card, idx) => (
@@ -225,7 +223,8 @@ export default function Home() {
                                     </button>
                                 ))}
                               </div>
-                          </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -429,4 +428,3 @@ export default function Home() {
     </div>
   );
 }
-

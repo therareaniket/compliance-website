@@ -137,6 +137,9 @@
 }
 .card-btn .icon-check_circle { margin-right: 15px; }
 .moving-to-top { z-index: 0; animation: whyUsCard-riseFromBack 600ms ease both; }
+.moving-to-top::before{ 
+    content: "aniket";
+ }
 
 .result-head { display: flex; justify-content: space-between; }
 .result-head .h3{ width: 640px; }
@@ -289,7 +292,7 @@
 
 /* COMPLIANCE-PAGE  */
 .com-hero { width: 100%; min-height: 700px; background-image: url('/images/compliance/page-banner.webp'); padding: 100px 0;}
-.banner-head { width: 850px; }
+.banner-head { width: 840px; }
 .banner-head p{ margin-top: 12px; }
 .banner-head span { color: var(--primary); } 
 .com-page-banner{ display: flex; align-items: center; gap: 50px; }
@@ -325,7 +328,6 @@
 
 
 
-
 /*  User & Access  */
 
 .user-access-hero{ display: flex;  background-image: url('/images/userAccess/herSectionImg.webp'); background-position: center; width: 100%; height: auto; padding: 100px 0; }
@@ -356,3 +358,32 @@
 .path-2{ position: absolute; bottom: 0; left: 25%; }
 .path-3{ position: absolute; top: 0; left: 55%; transform: translateY(-30%);}
 .path-4{ position: absolute; bottom: 0; left: 70%; transform: translateY(50%); }
+
+
+
+
+/* CONTACTUS-PAGE */
+.contact-hero { width: 100%; background-image: url('/images/compliance/page-banner.webp'); }
+.cntct-page-banner { min-height: 700px; display: flex; justify-content: space-between; align-items: center; }
+.head-text, .form-fields form { width: 820px; }
+.head-text .h3 { margin-bottom: 20px; }
+.head-text p { margin-bottom: 40px; }
+.form-type-btn .enquiry-btn { margin-left: 20px; }
+.form-fields { display: flex; justify-content: space-between; margin-top: 30px; }
+.form-col label { display: block; margin-bottom: 12px; }
+.form-col label sup { color: #DC1919; }
+.form-col input, 
+.form-col textarea, 
+.form-col select,
+.selections
+{ width: 100%; padding: 20px; background-color: var(--off-white); }
+.selections { display: flex; padding: 36px 20px; border: transparent; outline: none; box-shadow: none; }
+.selection-content { padding: 10px 20px; margin-bottom: 4px; }
+.form-col input:focus, .form-col textarea:focus { outline: 1px dashed var(--secondary); }
+.form-col:not(:last-child){ margin-bottom: 20px; } 
+.form-fields .btn-primary { margin-top: 30px; }
+.info-block { width: 675px; padding: 30px; background-color: var(--off-white); }
+.info-block:not(:last-child) { margin-bottom: 20px; }
+.info-txt p { color: var(--primary); }
+.info-txt p span { display: block; margin-bottom: 10px; }
+.info-txt > span { display: block; color: var(--primary); margin-bottom: 10px; }
