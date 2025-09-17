@@ -44,6 +44,11 @@
     .mis-vis-heading{ width: max-content; }
     .mis-vis-cards{ gap: 30px; }
 
+    /* Contact Us */
+    .banner-head, .head-text, .form-fields form { width: 770px; }
+    .cntct-page-banner .banner-showcase { width: 550px; }
+    .info-block { width: 500px; }
+
     /* userAccess page */
     .role-account-admin{ width: 100%; }
     .account-admin-main-text{ width: 600px; }
@@ -94,6 +99,11 @@
     .text-20 { font-size: 18px; line-height: 28px; }
 
     .our-platforms{ height: max-content; }
+
+    /* Contact Us */
+    .banner-head, .head-text, .form-fields form { width: 720px; }
+    .cntct-page-banner .banner-showcase { width: 460px; }
+    .info-block { width: 440px; }
 
     /* userAccess page */
     .roles-images img{ width: 360px; }

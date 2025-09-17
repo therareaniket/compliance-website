@@ -12,11 +12,11 @@ type FaqCategoryId = 'general' | 'support' | 'other';
 type FAQData = { question: string; answer: string };
 
 const whyusCards: Card[] = [
-    { id: 'why-c5', title: 'Scalable & Secure',      background_color: '#4B0081', text_color: '#FFF', content:'abc' },
-    { id: 'why-c4', title: 'Trusted by Leaders',     background_color: '#6F339A', text_color: '#FFF', content:'abc' },
-    { id: 'why-c3', title: 'Automation-Driven',      background_color: '#AC8AC5', text_color: '#FFF', content:'abc' },
-    { id: 'why-c2', title: 'Real-Time Monitoring',   background_color: '#C7B0D8', text_color: '#000', content:'abc' },
-    { id: 'why-c1', title: 'Comprehensive Coverage', background_color: '#EDE6F2', text_color: '#000', content:'abc' },
+    { id: 'why-c5', title: 'Scalable & Secure',      background_color: '#4B0081', text_color: '#FFF', content:'Built on AWS with a cloud-first architecture, our solution scales effortlessly as your organization grows. Security is embedded at every layer, ensuring both data integrity and regulatory compliance.' },
+    { id: 'why-c4', title: 'Trusted by Leaders',     background_color: '#6F339A', text_color: '#FFF', content:'Our platform is adopted by startups, enterprises, and regulated industries worldwide. Organizations choose us for our proven reliability, scalability, and ease of use in meeting strict compliance needs.' },
+    { id: 'why-c3', title: 'Automation-Driven',      background_color: '#AC8AC5', text_color: '#FFF', content:'Eliminate repetitive manual tasks with automated workflows. From policy checks to audit readiness, automation reduces human error, saves time, and ensures consistency across all compliance processes.' },
+    { id: 'why-c2', title: 'Real-Time Monitoring',   background_color: '#C7B0D8', text_color: '#000', content:'Stay ahead of risks with live dashboards and automated alerts. Our system constantly tracks violations and anomalies, giving you immediate visibility so issues are resolved before they turn into breaches.' },
+    { id: 'why-c1', title: 'Comprehensive Coverage', background_color: '#EDE6F2', text_color: '#000', content:'We support a wide range of compliance frameworks including ISO 27001, SOC 2, HIPAA, GDPR, CDSCO, and more. This ensures your organization stays compliant across industries and regions without juggling multiple.' },
   ];
 
 const planDetails: Record<PlanId, { title: string; bullets: string[]; }> = {
@@ -108,6 +108,8 @@ export default function Home() {
     <div>
         <>
             <section className="hm-hero">
+                <Image src='/images/homepage/hero-background.webp' alt="home-hero" width={1920} height={870} priority={true} draggable={false}></Image>
+
                 <div className="container">
                     <div className="hm-hero-content">
                         <h1 className="text-center">Stay Ahead with<br />Smarter Clinical Trial Compliance</h1>
@@ -217,9 +219,10 @@ export default function Home() {
                         <div className="why-us-cards">
                             <div className="why-us-stack">
                                 {cards.map((card, idx) => (
-                                    <button key={card.id} className={`card-btn site-radius-20 ${movingId === card.id && idx === 0 ? 'moving-to-top' : ''}`} onClick={rotateLastToFront} type="button" style={{ backgroundColor: card.background_color, color: card.text_color }}>
-                                        <p><span className="icon-check_circle"></span>{card.title}</p>
-                                        <p>{card.content}</p>
+                                    <button key={card.id} className={`card-btn site-radius-20 card-${card.id} ${movingId === card.id && idx === 0 ? 'moving-to-top' : ''}`} onClick={rotateLastToFront} type="button" style={{ backgroundColor: card.background_color, color: card.text_color }}>
+                                        <p className="h5 why-card-title"><span className="icon-check_circle"></span>{card.title}</p>
+                                        {/* <p>{card.content}</p> */}
+                                        {idx === cards.length - 1 && <p className="why-card-content text-18">{card.content}</p>}
                                     </button>
                                 ))}
                               </div>

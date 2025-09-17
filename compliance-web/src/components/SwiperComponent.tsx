@@ -26,8 +26,8 @@ export default function AboutUsSwiperComponents() {
                         modules={[Pagination, Autoplay]}
                         spaceBetween={20}
                         loop={true}
-                        pagination={{ clickable: true }}
-                        // autoplay={{ delay: 1000, disableOnInteraction: false }}
+                        pagination={{ clickable: true, dynamicBullets: true, dynamicMainBullets: 2 }}
+                        autoplay={{ delay: 1000, disableOnInteraction: false }}
                         slidesPerView={4}
                         slidesPerGroup={1}
                         breakpoints={{
@@ -40,9 +40,7 @@ export default function AboutUsSwiperComponents() {
                             1359: { slidesPerView: 3.5, centeredSlides: false, slidesPerGroup: 1, },
                             1440: { slidesPerView: 4, centeredSlides: false, slidesPerGroup: 1, },
                         }}
-                        
-                        speed={3000}
-                    >
+                        speed={3000}>
 
                         <SwiperSlide>
                             <div className="featurecard bg-blue">

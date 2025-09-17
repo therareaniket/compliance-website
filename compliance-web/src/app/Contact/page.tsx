@@ -23,7 +23,7 @@ export default function ContactUs() {
                             <p className='text-20 text-grey'>Connect with our team for inquiries, support, or tailored solutions. We’re here to guide you at every step.</p>
                         </div>
                         
-                        <Image src='/images/contactus/contact-banner-showcase.webp' alt='banner-showcase' width={699} height={500} priority={true} className=''></Image>
+                        <Image src='/images/contactus/contact-banner-showcase.webp' alt='banner-showcase' width={699} height={500} priority={true} className='banner-showcase'></Image>
                     </div>
                 </div>
             </section>
