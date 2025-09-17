@@ -10,7 +10,8 @@ export function Header() {
                 <div className="navbar-wrapper">
                     <div className="navbar-logo">
                         <Link href='/' title=''>
-                            <Image src='/images/header/logo-header.svg' alt='logo' width={239} height={34} priority={true}></Image>
+                            {/* <Image src='/images/header/logo-header.svg' alt='logo' width={239} height={34} priority={true}></Image> */}
+                            <Image src='https://rarepixelsdesign.com/wp-content/uploads/2025/09/logo-header.svg' alt='logo' width={239} height={34} priority={true}></Image>
                         </Link>
                     </div>
 
