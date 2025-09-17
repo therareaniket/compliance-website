@@ -40,47 +40,7 @@ export default function ContactUs() {
 
                     <div className="form-container flex justify-between">
                         <div className="form-selection">
-
-                            {/* <div className="form-fields">
-                                <form action="" method="post">
-                                    <div className="form-row">
-                                        <div className="form-col">
-                                            <span data-name="your-name">
-                                                <label htmlFor="your-name" className='text-18'>Name<sup className='text-18'>*</sup></label>
-
-                                                <input id="contct-name" placeholder='Enter your name' className='site-radius-10 text-20' name='your-name' type='text' required />
-                                            </span>
-                                        </div>
-
-                                        <div className="form-col">
-                                            <span data-name="your-name">
-                                                <label htmlFor="your-name" className='text-18'>Email<sup className='text-18'>*</sup></label>
-
-                                                <input id="contct-name" placeholder='Enter your mail' className='site-radius-10 text-20' name='your-name' type='text' required />
-                                            </span>
-                                        </div>
-
-                                        <div className="form-col">
-                                            <span data-name="your-name">
-                                                <label htmlFor="your-name" className='text-18'>Organization<sup className='text-18'>*</sup></label>
-
-                                                <input id="contct-name" placeholder='Enter your organization' className='site-radius-10 text-20' name='your-name' type='text' required />
-                                            </span>
-                                        </div>
-
-                                        <div className="form-col">
-                                            <span data-name="your-name">
-                                                <label htmlFor="your-name" className='text-18'>Message</label>
-
-                                                <textarea rows={6} id="contct-name" placeholder='Enter your name' className='site-radius-10 text-20' name='your-name' />
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <button type='submit' className='text-md btn-padding btn-primary site-radius-10'>Let’s Connect</button>
-                                </form>
-                            </div> */}
-                               <div className="form-selection">
+                            {/* <div className="form-selection">
                                     <div className="form-type-btn" role="tablist" aria-label="Form Type">
                                         <button role="tab" aria-selected={formType === 'registration'}
                                         tabIndex={formType === 'registration' ? 0 : -1}
@@ -100,7 +60,11 @@ export default function ContactUs() {
                                     <div className="form-fields">
                                         {formType === 'enquiry' ? <EnquiryForm /> : <RegistrationForm />}
                                     </div>
-                                </div>
+                            </div> */}
+
+                            <div className="form-fields">
+                                <EnquiryForm />
+                            </div>
                         </div>
 
                         <div className="contct-info text-center">

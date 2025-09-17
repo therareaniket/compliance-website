@@ -1,11 +1,20 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function Header() {
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 0)
+        onScroll()
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
+      }, []);
+
     return (
-        <header style={{ position:'sticky', top:'0', backgroundColor:'white', zIndex:'9999' }}>
+        <header style={{ position:'sticky', top:'0', backgroundColor:'white', zIndex:'9999' }} className={`header-main ${scrolled ? 'is-scrolled' : ''}`}>
             <div className="container">
                 <div className="navbar-wrapper">
                     <div className="navbar-logo">
@@ -26,12 +35,9 @@ export function Header() {
                             <li>
                                 <Link href='/Compliance' title='Compliance'>Compliance</Link>
                             </li>
-                            <li>
-                                <Link href='/Contact' title='Contact'>Contact</Link>
-                            </li>
                         </ul>
                         
-                        <button className='nav-signup text-18 text-md site-radius-10 cursor-pointer' type='button' onClick={() => alert("Later redirected to the Registration Form")}>Sign up</button>
+                        <Link href='/Contact' className='nav-signup text-18 text-md site-radius-10'>Contact</Link>
                     </div>
                 </div>
             </div>
