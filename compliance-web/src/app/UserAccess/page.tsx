@@ -45,8 +45,10 @@ export default function UserAccess() {
                                         </ul>
                                     </div>
                                 </div>
-
-                                <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={513} height={510} priority={false}></Image>
+                                
+                                <div className='roles-images'>
+                                    <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={513} height={510} priority={false}></Image>
+                                </div>
                             </div>
 
                             <div className="role-account-admin card-row-reverse bg-yellow">
@@ -67,7 +69,9 @@ export default function UserAccess() {
                                     </div>
                                 </div>
 
-                                <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
+                                <div className="roles-images">
+                                    <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
+                                </div> 
                             </div>
 
                             <div className="role-account-admin bg-purplish">
@@ -87,8 +91,10 @@ export default function UserAccess() {
                                         </ul>
                                     </div>
                                 </div>
-
-                                <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={506} height={510} priority={false}></Image>
+                                
+                                <div className="roles-images">
+                                    <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={506} height={510} priority={false}></Image>
+                                </div>
                             </div>
 
                             <div className="role-account-admin card-row-reverse orange-tint">
@@ -109,7 +115,9 @@ export default function UserAccess() {
                                     </div>
                                 </div>
 
-                                <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={441} height={510} priority={false}></Image>
+                                <div className='roles-images'>
+                                    <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={441} height={510} priority={false}></Image>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -130,13 +138,15 @@ export default function UserAccess() {
                                 <Image className='path-line' src='/images/userAccess/access-portal-path-line.webp' alt='path-line' width={1238} height={425} priority={false}></Image>
                             </div>
 
-                            <Image className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false}></Image>
+                            <div className='path-images'>
+                                <Image className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false}></Image>
 
-                            <Image className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false}></Image>
+                                <Image className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false}></Image>
 
-                            <Image className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false}></Image>
+                                <Image className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false}></Image>
 
-                            <Image className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false}></Image>
+                                <Image className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false}></Image>
+                            </div>
                         </div>
                     </div>
                 </div>

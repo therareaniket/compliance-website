@@ -53,7 +53,7 @@ export default function ComplianceListing() {
                 <div className="container">
                     <div className="compliance-matters-cards">
                         <div className='compliance-matters-card-list'>
-                            <div className='hipaa-card'>
+                            <div className='hipaa-card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>HIPAA</h2>
 
@@ -62,7 +62,7 @@ export default function ComplianceListing() {
 
                                 <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
-                            <div className='fda_card'>
+                            <div className='fda_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>FDA 21 CFR Part 11</h2>
 
@@ -74,7 +74,7 @@ export default function ComplianceListing() {
                         </div>
 
                         <div className='compliance-matters-card-list'>
-                            <div className='annex_11_card'>
+                            <div className='annex_11_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>EU Annex 11</h2>
 
@@ -83,7 +83,7 @@ export default function ComplianceListing() {
 
                                 <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
-                            <div className='gdpr_card'>
+                            <div className='gdpr_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>GDPR</h2>
 
@@ -95,7 +95,7 @@ export default function ComplianceListing() {
                         </div>
 
                         <div className='compliance-matters-card-list'>
-                            <div className='gcp_card'>
+                            <div className='gcp_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>GCP</h2>
 
@@ -104,7 +104,7 @@ export default function ComplianceListing() {
 
                                 <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
-                            <div className='cdsco_card'>
+                            <div className='cdsco_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>CDSCO</h2>
 

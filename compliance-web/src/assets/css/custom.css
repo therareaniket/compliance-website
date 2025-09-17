@@ -251,9 +251,10 @@
     margin: 100px 0px;
     background-color: rgba(254, 228, 210, 1); 
     border-radius: 10px; 
-    padding: 100px 20px 0px; 
+    padding: 0px 20px; 
     overflow: hidden; 
 }
+.our-platform-text{ padding: 50px 0; }
 .our-platform-text h2{ width: 595px;}
 .our-platform-text p{ width: 595px; color: rgba(126, 126, 126, 1); margin: 20px 0 20px 0; }
 .platform-tools{ display: flex; gap: 100px; margin-top: 20px; }
@@ -291,7 +292,7 @@
 
 
 /* COMPLIANCE-PAGE  */
-.com-hero { width: 100%; min-height: 700px; background-image: url('/images/compliance/page-banner.webp'); padding: 100px 0;}
+.com-hero { width: 100%; height: 700px; background-image: url('/images/compliance/page-banner.webp'); background-position: center; background-size: cover; display: flex; align-items: center;}
 .banner-head { width: 840px; }
 .banner-head p{ margin-top: 12px; }
 .banner-head span { color: var(--primary); } 
@@ -317,6 +318,13 @@
 .compliace-card-heading-text{ height: 196px; margin-bottom: 40px; }
 .card-list-text{ margin-top: 20px; }
 
+.card-list-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* swiper code */
 .swiper-button-next, .swiper-button-prev { display: none !important; }
 .swiper-pagination{ transform: translateY(-20px) !important; }
@@ -330,8 +338,8 @@
 
 /*  User & Access  */
 
-.user-access-hero{ display: flex;  background-image: url('/images/userAccess/herSectionImg.webp'); background-position: center; width: 100%; height: auto; padding: 100px 0; }
-.user-access-hero-wrapper{ display: flex; gap: 89px; align-items: center; }
+.user-access-hero{ display: flex; align-items: center; background-image: url('/images/userAccess/herSectionImg.webp');background-position: center; background-size: cover; width: 100%; height: 700px; }
+.user-access-hero-wrapper{ display: flex; justify-content: center; gap: 89px; align-items: center;  }
 .user-access-hero-head{ width: 821px; }
 .hero-section-para{ color: var(--grey); margin-top: 12px; }
 
@@ -354,6 +362,7 @@
 .secure-portal-text p{ width: 897px; }
 .access-portal-path { position: relative; }
 .path-line{ display: flex; justify-content: center; }
+.path-images{ display: flex; }
 .path-1{ position: absolute; top: 0; left: 0; }
 .path-2{ position: absolute; bottom: 0; left: 25%; }
 .path-3{ position: absolute; top: 0; left: 55%; transform: translateY(-30%);}

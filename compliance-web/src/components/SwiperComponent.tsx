@@ -27,14 +27,17 @@ export default function AboutUsSwiperComponents() {
                         spaceBetween={20}
                         loop={true}
                         pagination={{ clickable: true }}
-                        autoplay={{ delay: 1000, disableOnInteraction: false }}
+                        // autoplay={{ delay: 1000, disableOnInteraction: false }}
                         slidesPerView={4}
                         slidesPerGroup={1}
                         breakpoints={{
                             0: { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1 },
-                            680: { slidesPerView: 2, slidesPerGroup: 1, },
+                            359: { slidesPerView: 2, centeredSlides: false, slidesPerGroup: 1 },
+                            480: { slidesPerView: 1.4, centeredSlides: true, slidesPerGroup: 1  },
+                            680: { slidesPerView: 1.9, centeredSlides: true, slidesPerGroup: 1, },
                             991: { slidesPerView: 2.4, centeredSlides: false, slidesPerGroup: 1, },
-                            1024: { slidesPerView: 3, centeredSlides: false, slidesPerGroup: 1, },
+                            1024: { slidesPerView: 3.2, centeredSlides: false, slidesPerGroup: 1, },
+                            1359: { slidesPerView: 3.5, centeredSlides: false, slidesPerGroup: 1, },
                             1440: { slidesPerView: 4, centeredSlides: false, slidesPerGroup: 1, },
                         }}
                         
