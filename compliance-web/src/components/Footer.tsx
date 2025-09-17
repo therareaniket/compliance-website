@@ -51,7 +51,7 @@ export function Footer() {
 
                 <div className="copyright">
                     <div className="copyright-box">
-                        <p className='text-14 text-rg'>Powered by DFolds</p>
+                        <p className='text-14 text-rg'>Powered by DFOLDS</p>
                         <p className='text-14 text-rg'>DhatuComply 2025.1.1</p>
                         <p className='text-14 text-rg'>Copyright ©2025, all rights reserved. </p>
                     </div>
