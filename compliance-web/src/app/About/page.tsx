@@ -27,7 +27,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section>
+            <section className='abt-mis'>
                 <div className="container">
                     <div className="mis-vis-section">
                         <div className="mis-vis-heading">
@@ -79,7 +79,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section>
+            <section className='abt-vis'>
                 <div className="container">
                     <div className="mis-vis-section vis-section">
                         <div className="mis-vis-heading vis-heading">
@@ -131,48 +131,35 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section>
+            <section className="abt-platforms">
                 <div className="container">
-                    <div className="our-platforms">
-                        <div className="platform-images">
-                            <Image src='/images/aboutUs/platform-section-image.webp' alt='platform-image' width={798} height={570}></Image>
-                        </div>
+                    <div className="platform-wrapper site-radius-10">
+                        <Image src='/images/aboutUs/platform-section-image.webp' alt='our-platform' width={860} height={549} priority={false} className='platform-showcase-img'></Image>
 
-                        <div className="our-platform-text">
+                        <div className="platform-info">
                             <h2 className='h4'>Our platform supports frameworks to help you stay audit-ready.</h2>
 
-                            <p className='platform-para text-20 text-rg'>Our platform centralizes compliance across global frameworks keeping your clinical trial operations secure, aligned, and audit-ready at every step. </p>
+                            <p className='text-20 text-grey'>Our platform centralizes compliance with global frameworks, keeping you audit-ready.</p>
 
-                            <div className="platform-tools">
-                                <div>
-                                    <ul>
-                                        <li className='platform-section-links'><Image src='/images/aboutUs/check-circle.svg' alt='checked-circle' width={25} height={25} priority={false}></Image><p>HIPAA</p></li>
+                            <div className="platform-lists text-20">
+                                <ul>
+                                    <li><span className='icon-check_circle'></span> HIPAA</li>
+                                    <li><span className='icon-check_circle'></span> GDPR</li>
+                                    <li><span className='icon-check_circle'></span> 21 CFR Part 11</li>
+                                </ul>
 
-                                        <li className='platform-section-links'><Image src='/images/aboutUs/check-circle.svg' alt='checked-circle' width={25} height={25} priority={false}></Image><p>GDPR</p></li>
-
-                                        <li className='platform-section-links'><Image src='/images/aboutUs/check-circle.svg' alt='checked-circle' width={25} height={25} priority={false}></Image><p>21 CFR Part 11</p></li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <ul>
-                                        <li className='platform-section-links'><Image src='/images/aboutUs/check-circle.svg' alt='checked-circle' width={25} height={25} priority={false}></Image><p>CDSCO</p></li>
-
-                                        <li className='platform-section-links'><Image src='/images/aboutUs/check-circle.svg' alt='checked-circle' width={25} height={25} priority={false}></Image><p>WHO-GMP</p></li>
-
-                                        <li className='platform-section-links'><Image src='/images/aboutUs/check-circle.svg' alt='checked-circle' width={25} height={25} priority={false}></Image><p>EMA</p></li>
-                                    </ul>
-                                </div>
+                                <ul>
+                                    <li><span className='icon-check_circle'></span>CDSCO</li>
+                                    <li><span className='icon-check_circle'></span>WHO-GMP</li>
+                                    <li><span className='icon-check_circle'></span>EMA</li>
+                                </ul>
                             </div>
 
-                            <div className="platform-btn">
-                                <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
-                            </div>
+                            <Link href='/Compliance' title='Learn More' className='btn-padding site-radius-10 btn-primary'>Learn More</Link>
                         </div>
                     </div>
                 </div>
             </section>
-
 
             <AboutUsSwiperComponents />
         </>

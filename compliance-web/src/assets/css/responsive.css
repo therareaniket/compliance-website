@@ -38,8 +38,8 @@
 
 
     .abt-hero-wrapper, .mis-vis-section{ gap: 50px; } 
-    .our-platforms{ padding-bottom: 50px; }
-    /* .platform-images{ transform: translateY(15%); bottom: -30px; } */
+
+
     .featurecard{ width: 330px; }
     .mis-vis-heading{ width: max-content; }
     .mis-vis-cards{ gap: 30px; }
@@ -66,7 +66,6 @@
 
 @media screen and (max-width: 1599px) {
     .core-feature-heading p { width: 748px; }
-    .our-platforms { height: 563px; }
 
     /* userAccess page */
     .roles-images img{ width: 400px; }
@@ -98,7 +97,7 @@
     h3, .h3  { font-size: 38px; line-height: 48px; }
     .text-20 { font-size: 18px; line-height: 28px; }
 
-    .our-platforms{ height: max-content; }
+
 
     /* Contact Us */
     .banner-head, .head-text, .form-fields form { width: 720px; }
@@ -121,7 +120,7 @@
     h3, .h3 { font-size: 34px; line-height: 42px; }
     .text-20 { font-size: 18px; line-height: 28px; }
 
-    .our-platforms { height: 565px; gap: 35px; }
+
     .core-feature-heading{ gap: 50px; }
     .footer-wrapper{ justify-content: space-around; }
     
@@ -155,11 +154,7 @@
     .mis-vis-card img { width: 30px; height: auto; }
     .mis-vis-card { padding-right: 20px; height: 200px; }
     .vis-card{ padding-left: 20px; }
-    .our-platforms{ height: auto; padding: 60px 50px 0; flex-direction: column-reverse; align-items: center; justify-content: center; }
-    .our-platform-text { width: 100%; height: auto; }
-    .our-platform-text h2, .our-platform-text p{ width: 100%; }
-    .platform-tools{ gap: 50px; }
-    .platform-images{ transform: translateY(0); }
+
     .core-feature-heading{ flex-direction: column; align-items: center; text-align: center; gap: 20px; }
     .core-feature-heading h2, .core-feature-heading p{ width: 100%; }
     .quick-links{ width: max-content; }
@@ -192,7 +187,6 @@
     .core-feature-heading{ flex-direction: column; gap: 20px; align-items: center; text-align: center; }
     .core-feature-heading h2, .core-feature-heading p{ width: 100%; }
     .core-feature-section, .mis-vis-section{ margin: 50px 0; }
-    /* .mis-vis-heading p, .core-feature-para, .feature-card-head, .platform-para, .mis-vis-para{ font-size: 18px; line-height: 28px; } */
     .footer-links{ gap: 50px; }
 
     /* userAccess page */
@@ -208,7 +202,7 @@
 
 
     .abt-hero-head{ width: 550px; }
-    .platform-images{ width: 717px; }
+
     .footer-links{ gap: 50px; }
 
     /* userAccess page */
@@ -232,8 +226,8 @@
     .abt-hero-wrapper{ flex-direction: column; text-align: center; width: 100%; align-items: center; }
     .abt-hero-head{ width: 100%; }
     .core-feature-heading{ align-items: flex-start; text-align: start; }
-    .our-platform-text{ padding: 0; }
-    .platform-images{ width: 655px; padding-bottom: 0; }
+
+
     .footer-wrapper{ flex-wrap: wrap; gap: 50px; }
 
     /* userAccess page */
@@ -263,12 +257,11 @@
 
     .abt-hero-wrapper{ flex-direction: column; }
     .abt-hero-head{ width: 100%; text-align: center; }
-    .platform-images{ width: 522px; }
+
     .mis-vis-heading p{ width: 100%; }
     .mis-vis-card-lists{ width: 100%; }
     .mis-vis-cards{ flex-direction: column; align-items: center; }
     .core-feature-section{ padding-bottom: 0; }
-    .our-platform-text{ padding: 0; }
     .copyright-box{ flex-wrap: wrap; }
 
     /* userAccess page */
@@ -297,7 +290,7 @@
     .abt-hero-head{ width: 100%; text-align: center; }
     .mis-vis-heading, .core-feature-heading{text-align: left; align-items: start; }
     .mis-vis-card{ width: 100%; }
-    .our-platforms{ margin: 50px 0; }
+
     .footer-links{ flex-direction: column; }
 
     /* userAccess page */
@@ -305,7 +298,7 @@
     .user-access-hero-wrapper{ flex-direction: column; text-align: center; gap: 40px; }
     .roles-card-section{ margin-top: 0; }
     .secure-portal-wrapper{ height: max-content;  }
-        .path-1, .path-2, .path-3, .path-4{ width: 249px; }
+    .path-1, .path-2, .path-3, .path-4{ width: 249px; }
 
     /* compliance page */
 
@@ -328,7 +321,7 @@
 
 @media screen and (max-width: 480px) {
     .abt-hero-wrapper, .mis-vis-section{ gap: 30px; }
-    .platform-images{ width: 100%; }
+
     .footer-wrapper{ flex-wrap: wrap; gap: 30px; }
     .copyright-box{ flex-wrap: wrap; }
 
@@ -360,15 +353,13 @@
 @media screen and (max-width: 400px) {
     .mis-vis-heading, .core-feature-heading{text-align: left; align-items: start; }
     .abt-hero-wrapper, .mis-vis-section{ gap: 20px; }
-    .our-platforms{ padding: 30px 30px 0; }
-    .platform-btn{ margin-top: 30px; }
-    .platform-tools{ gap: 30px;}
+
 
     /* userAccess page */
 
 
     /* compliance page */
-        .com-page-banner img{ width: 275px; }
+    .com-page-banner img{ width: 275px; }
     .compliance-matters-main{ margin-top: 60px; }
 }
 

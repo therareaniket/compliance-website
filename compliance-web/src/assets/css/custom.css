@@ -229,7 +229,7 @@
 .abt-hero-head span{ color: var(--primary); }
 .abt-hero-head p{ color: rgba(126, 126, 126, 1); margin-bottom: 20px; }
 .abt-hero-head-button button{ width: 210px; height: 52px; border-radius: 10px; background: var(--primary); color: var(--white); }
-.abt-hero-head-button a, .platform-btn a{ display: inline-block;  }
+.abt-hero-head-button a{ display: inline-block;  }
 
 .mis-vis-section{ display: flex; justify-content: space-between; align-items: center; margin: 100px 0; }
 .mis-vis-heading{ width: 692px; }
@@ -244,23 +244,12 @@
 
 .vis-section{ flex-direction: row-reverse; }
 
-.our-platforms{ 
-    display: flex; 
-    justify-content: center; 
-    gap: 84px; 
-    margin: 100px 0px;
-    background-color: rgba(254, 228, 210, 1); 
-    border-radius: 10px; 
-    padding: 0px 20px; 
-    overflow: hidden; 
-}
-.our-platform-text{ padding: 50px 0; }
-.our-platform-text h2{ width: 595px;}
-.our-platform-text p{ width: 595px; color: rgba(126, 126, 126, 1); margin: 20px 0 20px 0; }
-.platform-tools{ display: flex; gap: 100px; margin-top: 20px; }
-.platform-section-links{ display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-.platform-section-links p{ width: 100%; margin: 0; }
-.platform-btn{ margin-top: 40px; }
+.platform-wrapper { position: relative; display: flex; justify-content: flex-end; padding: 140px 100px 140px 0; background-color: #FEE4D2; }
+.platform-showcase-img { position: absolute; bottom: 0; left: 0;  }
+.platform-info { width: 600px; }
+.platform-info p { margin: 20px 0; }
+.platform-lists { display: flex; gap: 100px; margin-bottom: 40px; }
+.platform-lists span { margin-right: 14px; }
 
 .core-feature-section { margin: 100px 0; padding-bottom: 50px; }
 .core-feature-heading { display: flex;  justify-content: space-between; }
