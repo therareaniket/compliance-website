@@ -156,18 +156,13 @@
 .why-us-head { margin-bottom: 100px; }
 .why-us-head .h3 { margin-bottom: 20px; }
 
-.card-btn {
-    width: 720px; 
-    display: block;
-    padding: 30px; 
-    cursor: pointer; 
-    text-align: left; 
-    position: relative;
-    transform-origin: center;
-    transition: box-shadow 200ms ease;
-    will-change: transform, opacity;
-}
+.card-btn { width: 720px; display: block; padding: 30px; cursor: pointer; text-align: left; position: relative; transform-origin: center; transition: box-shadow 200ms ease; will-change: transform, opacity;}
 .card-btn .icon-check_circle { margin-right: 15px; }
+.images-group.single { position: relative; width: 449px; height: 345px; overflow: hidden; }
+.image-viewport { position: relative; width: 100%; height: 100%; }
+.image-slide { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateX(20px); transition: opacity 300ms ease, transform 300ms ease; pointer-events: none; }
+.image-slide.is-active { opacity: 1; transform: translateX(0); pointer-events: auto; }
+.image-slide.is-inactive { opacity: 0; transform: translateX(-20px);}
 .moving-to-top { z-index: 0; animation: whyUsCard-riseFromBack 7000ms ease both; }
 .why-card-title { margin-bottom: 12px; }
 .why-us-stack .card-btn:nth-child(1) { transform: translateY(100px); }

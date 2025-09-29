@@ -1,0 +1,43 @@
+type HomeData = {
+    page: {
+      homepage: {
+        heroTitle: string;
+        heroSubtitle: string;
+        heroCta?: { url: string; title: string } | null;
+        heroCta2?: { url: string; title: string } | null;
+        heroImage?: {
+          node: { sourceUrl: string };
+        } | null;
+      };
+    };
+  };
+
+
+-----------------------------------------------------
+
+
+    const data = await fetchGraphQL<HomeData>(`
+        query {
+            page(id: "/", idType: URI) {
+                homepage {
+                    heroTitle
+                    heroSubtitle
+                    heroCta {
+                        url
+                        title
+                    }
+                    heroCta2 {
+                        url
+                        title
+                    }
+                    heroImage {
+                        node {
+                            sourceUrl
+                        }
+                    }
+                }
+            }
+        }
+      `);
+
+      const home = data.page.homepage;
