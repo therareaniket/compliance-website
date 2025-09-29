@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -13,7 +14,7 @@ export default function ComplianceListing() {
 
                             <p className='text-20 text-rg text-grey'>Empowering organizations with clear, reliable data to ensure regulatory alignment and operational integrity.</p>
                         </div>
-                            <Image src='/images/compliance/compli-banner-show.webp' alt='hero-card' width={699} height={500} priority={false}></Image>                      
+                            <Image src='/images/compliance/compli-banner-show.webp' alt='hero-card' width={816} height={606} priority={false}></Image>                      
                     </div>
                 </div>
             </section>

@@ -134,7 +134,7 @@ export default function AboutUs() {
             <section className="abt-platforms">
                 <div className="container">
                     <div className="platform-wrapper site-radius-10">
-                        <Image src='/images/aboutUs/platform-section-image.webp' alt='our-platform' width={860} height={549} priority={false} className='platform-showcase-img'></Image>
+                        <Image src='/images/aboutUs/platform-section-image.webp' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img'></Image>
 
                         <div className="platform-info">
                             <h2 className='h4'>Our platform supports frameworks to help you stay audit-ready.</h2>

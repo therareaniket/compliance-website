@@ -4,9 +4,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
+//  
 
 export default function AboutUsSwiperComponents() {
     return (
@@ -27,20 +25,21 @@ export default function AboutUsSwiperComponents() {
                         spaceBetween={20}
                         loop={true}
                         pagination={{ clickable: true, dynamicBullets: true, dynamicMainBullets: 2 }}
-                        autoplay={{ delay: 1000, disableOnInteraction: false }}
+                        autoplay={{ delay: 1000 }}
                         slidesPerView={4}
+                        centeredSlides={true}
                         slidesPerGroup={1}
                         breakpoints={{
-                            0: { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1 },
-                            359: { slidesPerView: 2, centeredSlides: false, slidesPerGroup: 1 },
-                            480: { slidesPerView: 1.4, centeredSlides: true, slidesPerGroup: 1  },
-                            680: { slidesPerView: 1.9, centeredSlides: true, slidesPerGroup: 1, },
+                            0: { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1, },
+                            359: { slidesPerView: 1.05, centeredSlides: true, slidesPerGroup: 1, },
+                            480: { slidesPerView: 1.4, centeredSlides: false, slidesPerGroup: 1, },
+                            680: { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1, },
                             991: { slidesPerView: 2.4, centeredSlides: false, slidesPerGroup: 1, },
                             1024: { slidesPerView: 3.2, centeredSlides: false, slidesPerGroup: 1, },
                             1359: { slidesPerView: 3.5, centeredSlides: false, slidesPerGroup: 1, },
                             1440: { slidesPerView: 4, centeredSlides: false, slidesPerGroup: 1, },
                         }}
-                        speed={3000}>
+                        speed={5000}>
 
                         <SwiperSlide>
                             <div className="featurecard bg-blue">

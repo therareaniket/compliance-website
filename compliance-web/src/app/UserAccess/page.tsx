@@ -1,6 +1,5 @@
 "use client"
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
 export default function UserAccess() {
@@ -16,7 +15,7 @@ export default function UserAccess() {
                         </div>
 
                         <div>
-                            <Image src='/images/userAccess/heroImg.webp' alt='hero-card' width={590} height={500} priority={false}></Image>
+                            <Image src='/images/userAccess/heroImg.webp' alt='hero-card' width={809} height={634} priority={false}></Image>
                         </div>
                     </div>
                 </div>

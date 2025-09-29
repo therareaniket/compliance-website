@@ -60,12 +60,47 @@
 
 
 /* HEADER */
+/* .navbar-logo{ z-index: 10000 }  */
 .navbar-wrapper { padding: 30px 0; display: flex; align-items: center; justify-content: space-between; transition: all 600ms ease; }
 .navbar-links { display: flex; align-items: center; gap: 60px; }
+.navbar-links ul li { transition: 0.7s ease; }
+.navbar-links ul li:hover{ color: var(--secondary); }
 .navbar-links ul { display: flex; gap: 40px; }
 .nav-signup { padding: 12px 30px; background-color: var(--primary); color: var(--white); }
 .header-main.is-scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.12); }
 .header-main.is-scrolled .navbar-wrapper { padding: 15px 0; }
+
+/* hamburger */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.bar {
+  display: block;
+  width: 23px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--black);
+}
+
+/* Hamburger active state */
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
 
 /* FOOTER */
 .footer { padding: 40px 0; background-color: var(--footer-bg); color: var(--off-white); }
@@ -249,13 +284,14 @@
 .platform-info { width: 600px; }
 .platform-info p { margin: 20px 0; }
 .platform-lists { display: flex; gap: 100px; margin-bottom: 40px; }
+.platform-lists ul li{ margin-bottom: 14px; }
 .platform-lists span { margin-right: 14px; }
 
 .core-feature-section { margin: 100px 0; padding-bottom: 50px; }
 .core-feature-heading { display: flex;  justify-content: space-between; }
 .core-feature-heading h2 { max-width: 600px; }
 .core-feature-heading p { max-width: 900px; color: var(--grey); }
-.feature-cards { gap: 20px; margin-top: 60px; }
+.feature-cards { margin-top: 60px; }
 .featurecard { width: 380px; height: 388px; padding: 20px; border-radius: 10px; }
 .feature-frame { padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #CDD8FF; }
 .feature-card-head { margin-top: 30px; }
@@ -282,10 +318,11 @@
 
 /* COMPLIANCE-PAGE  */
 .com-hero { width: 100%; height: 700px; background-image: url('/images/compliance/page-banner.webp'); background-position: center; background-size: cover; display: flex; align-items: center;}
-.banner-head { width: 840px; }
+.banner-head { width: 842px; }
 .banner-head p{ margin-top: 12px; }
 .banner-head span { color: var(--primary); } 
 .com-page-banner{ display: flex; align-items: center; gap: 50px; }
+.com-page-banner img{ width: 700px; }
 
 .compliance-matters-cards{ margin: 100px 0; }
 .compliance-matters-main{ margin: 100px 0 0; }
@@ -323,13 +360,12 @@
 
 
 
-
-
 /*  User & Access  */
 
 .user-access-hero{ display: flex; align-items: center; background-image: url('/images/userAccess/herSectionImg.webp');background-position: center; background-size: cover; width: 100%; height: 700px; }
 .user-access-hero-wrapper{ display: flex; justify-content: center; gap: 89px; align-items: center;  }
 .user-access-hero-head{ width: 821px; }
+.user-access-hero-wrapper img{ width: 700px; }
 .hero-section-para{ color: var(--grey); margin-top: 12px; }
 
 .roles-card-section{ margin-top: 100px; }

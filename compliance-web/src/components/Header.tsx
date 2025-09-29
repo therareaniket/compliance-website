@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 0)
@@ -12,6 +13,12 @@ export function Header() {
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
       }, []);
+
+      
+    const toggleMenu = () => {
+        setMenuOpen(prev => !prev);
+    };
+
 
     return (
         <header style={{ position:'sticky', top:'0', backgroundColor:'white', zIndex:'9999' }} className={`header-main ${scrolled ? 'is-scrolled' : ''}`}>
@@ -24,7 +31,7 @@ export function Header() {
                         </Link>
                     </div>
 
-                    <div className="navbar-links">
+                    <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                         <ul className='text-18'>
                             <li>
                                 <Link href='/About' title='About'>About</Link>
@@ -38,6 +45,12 @@ export function Header() {
                         </ul>
                         
                         <Link href='/Contact' className='nav-signup text-18 text-md site-radius-10'>Contact</Link>
+                    </div>
+
+                    <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu} id='hamburger'>
+                        <span className='bar'></span>
+                        <span className='bar'></span>
+                        <span className='bar'></span>
                     </div>
                 </div>
             </div>
