@@ -253,7 +253,7 @@ export default async function Home() {
                 </div>
             </section>
 
-            <ExtendButtons
+            {/* <ExtendButtons
                 purpleTitle={home.purpleBox.purpleTitle}
                 purpleSubtitle={home.purpleBox.purpleSubtitle}
                 purpleListItem1={home.purpleBox.purpleListItem1}
@@ -266,9 +266,9 @@ export default async function Home() {
                 greenListItem2={home.greenBox.greenListItem2}
                 greenListItem3={home.greenBox.greenListItem3}
                 greenListItem4={home.greenBox.greenListItem4}
-            />
+            /> */}
 
-            {/* <section className="hm-compli-steps">
+            <section className="hm-compli-steps">
                 <div className="container">
                     <div className="steps-head">
                         <h2 className="h3">{home.complianceTitle}</h2>
@@ -284,12 +284,19 @@ export default async function Home() {
                         <Image src='/images/homepage/stp-3-act.webp' alt="step-3-act" width={454} height={228} priority={false} className="step-3-img"></Image>
                         <Image src='/images/homepage/stp-4-report.webp' alt="step-4-report" width={497} height={276} priority={false} className="step-4-img"></Image>
                     </div>
+
+                    <div className="steps-path-responsive">
+                        <Image src='/images/homepage/step-1-connect.webp' alt="step-1-connect" width={495} height={196} priority={false} className="step-1-connect"></Image>
+                        <Image src='/images/homepage/step-2-connect.webp' alt="step-2-connect" width={495} height={387} priority={false} className="step-2-connect"></Image>
+                        <Image src='/images/homepage/step-3-connect.webp' alt="step-3-connect" width={495} height={317} priority={false} className="step-2-connect"></Image>
+                        <Image src='/images/homepage/step-4-connect.webp' alt="step-4-connect" width={495} height={378} priority={false} className="step-2-connect"></Image>
+                    </div>
                 </div>
-            </section> */}
+            </section>
 
             {/* <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} /> */}
 
-            {/* <section className="hm-proven-result">
+            <section className="hm-proven-result">
                 <div className="container">
                     <div className="result-head">
                         <h2 className="h3">{home.provenResultsTitle}</h2>
@@ -353,11 +360,11 @@ export default async function Home() {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
 
             {/* <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} /> */}
 
-            {/* <section className="hm-clientale">
+            <section className="hm-clientale">
                 <div className="container">
                     <div className="clientale-wrapper">
                         <div className="trusted-leaders site-radius-10">
@@ -375,7 +382,7 @@ export default async function Home() {
                         <ClientaleSlider />
                     </div>
                 </div>
-            </section> */}
+            </section>
 
             {/* <FAQSection
                 faqTitle = {home.faqsList.faqTitle }

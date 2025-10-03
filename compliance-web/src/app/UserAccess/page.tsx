@@ -46,7 +46,7 @@ export default function UserAccess() {
                                 </div>
                                 
                                 <div className='roles-images'>
-                                    <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={513} height={510} priority={false}></Image>
+                                    <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
                                 </div>
                             </div>
 
@@ -92,7 +92,7 @@ export default function UserAccess() {
                                 </div>
                                 
                                 <div className="roles-images">
-                                    <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={506} height={510} priority={false}></Image>
+                                    <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
                                 </div>
                             </div>
 
@@ -115,7 +115,7 @@ export default function UserAccess() {
                                 </div>
 
                                 <div className='roles-images'>
-                                    <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={441} height={510} priority={false}></Image>
+                                    <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
                                 </div>
                             </div>
                         </div>

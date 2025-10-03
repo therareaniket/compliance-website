@@ -1,11 +1,13 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
+    const menuRef = useRef<HTMLDivElement>(null)
+    const hamburgerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 0)
@@ -14,11 +16,38 @@ export function Header() {
         return () => window.removeEventListener('scroll', onScroll)
       }, []);
 
+
+useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Node
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(target) &&
+                hamburgerRef.current &&
+                !hamburgerRef.current.contains(target)
+            ) {
+                setMenuOpen(false)
+            }
+        }
+
+        if (menuOpen) {
+            document.addEventListener('mousedown', handleClickOutside)
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [menuOpen])
+
       
     const toggleMenu = () => {
         setMenuOpen(prev => !prev);
     };
 
+    
+   const handleLinkClick = () => {
+        setMenuOpen(false)
+    }
 
     return (
         <header style={{ position:'sticky', top:'0', backgroundColor:'white', zIndex:'9999' }} className={`header-main ${scrolled ? 'is-scrolled' : ''}`}>
@@ -31,23 +60,23 @@ export function Header() {
                         </Link>
                     </div>
 
-                    <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+                    <div ref={menuRef} className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                         <ul className='text-18'>
                             <li>
-                                <Link href='/About' title='About'>About</Link>
+                                <Link onClick={handleLinkClick} href='/About' title='About' >About</Link>
                             </li>
                             <li>
-                                <Link href='/UserAccess' title='User & Access'>User & Access</Link>
+                                <Link onClick={handleLinkClick} href='/UserAccess' title='User & Access'>User & Access</Link>
                             </li>
                             <li>
-                                <Link href='/Compliance' title='Compliance'>Compliance</Link>
+                                <Link onClick={handleLinkClick} href='/Compliance' title='Compliance'>Compliance</Link>
                             </li>
                         </ul>
                         
-                        <Link href='/Contact' className='nav-signup text-18 text-md site-radius-10'>Contact</Link>
+                        <Link onClick={handleLinkClick} href='/Contact' className='nav-signup text-18 text-md site-radius-10'>Contact</Link>
                     </div>
 
-                    <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu} id='hamburger'>
+                    <div ref={hamburgerRef} className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu} id='hamburger'>
                         <span className='bar'></span>
                         <span className='bar'></span>
                         <span className='bar'></span>

@@ -51,7 +51,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                 <div className="container">
                     <div className="plan-content-wrapper">
                         <div className="plans-left">
-                            <h2 className="h3">{plansTitle}</h2>
+                            <h2 className="h3 plans-left-heading">{plansTitle}</h2>
 
                             <div className="plan-details bg-blue site-radius-20" aria-live="polite">
                                 <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
@@ -67,7 +67,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
 
 
                         <div className="plans-right">
-                            <p className="text-20 text-grey">{plansSubtitle}</p>
+                            <p className="text-20 text-grey plan-title">{plansSubtitle}</p>
 
                             <div className="plan-btns-group">
                                 <button type="button" className={`plans-btn text-left site-radius-10 ${activePlanButton === 'free' ? 'plan-btn-active' : ''}`} onClick={() => setActivePlanButton('free')}>
