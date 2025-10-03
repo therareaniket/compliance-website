@@ -17,10 +17,10 @@ export function Footer() {
                         <div className='quick-links text-md'>
                             <p className='text-16 text-md'>Quick Links</p>
                             <ul>
-                                <li><Link href="#" title='' className='text-16 text-rg'>About</Link></li>
-                                <li><Link href="#" title='' className='text-16 text-rg'>User & Access</Link></li>
-                                <li><Link href="#" title='' className='text-16 text-rg'>Compliance</Link></li>
-                                <li><Link href="#" title='' className='text-16 text-rg'>Contact</Link></li>
+                                <li><Link href="/About" title='' className='text-16 text-rg'>About</Link></li>
+                                <li><Link href="/UserAccess" title='' className='text-16 text-rg'>User & Access</Link></li>
+                                <li><Link href="/Compliance" title='' className='text-16 text-rg'>Compliance</Link></li>
+                                <li><Link href="/Contact" title='' className='text-16 text-rg'>Contact</Link></li>
                             </ul>
                         </div>
 
