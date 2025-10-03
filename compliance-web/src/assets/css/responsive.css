@@ -544,20 +544,24 @@
     top: 100%;
     left: 0 !important;
     width: 100% !important;
-    background-color: var(--primary) !important;
+    /* background-color: var(--footer-bg) !important; */
+    background-color: var(--white) !important;
     justify-content: space-around;
-    color: white;
+    color: var(--black);
     z-index: 9998 !important;
     gap: 0px !important;
     padding: 20px 50px;
     display: none;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.07);
   }
+
+  .nav-signup { color: var(--black); }
 
   /* Slide down when open */
   .navbar-links.open {
     display: flex;
-    padding: 20px 30px;
-    border-radius: 0 0 5px 5px;
+    padding: 10px 30px;
+    /* border-radius: 0 0 5px 5px; */
   }
 
   .navbar-links ul {
