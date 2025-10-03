@@ -114,6 +114,7 @@
 .quick-links ul li a:hover { text-decoration: underline; }
 .copyright { display: flex; justify-content: center; }
 .copyright-box { width: 1216px; margin-top: 40px; padding-top: 30px; border-top: 1px solid #b8b8b838; display: flex; justify-content: center; gap: 30px; }
+.cta-links .btn-primary:hover, .cta-links .btn-white:hover { background-color: var(--secondary); border: none; color: var(--white); }
 
 
 /* HOME PAGE */

@@ -711,7 +711,8 @@
     .platform-lists{ gap: 80px; }
     .showcase-result{ flex-direction: column; }
     .global-org, .framwrk-coverd, .secure-docs, .audit-suc{ width: 100%; }
-
+    .cta-links .btn-primary { background-color: transparent; border: 1px solid var(--white); color: var(--white); }
+    .cta-links .btn-primary, .cta-links .btn-white { display: block; margin: 0; margin-bottom: 10px; }
     .hm-compli-steps{ height: max-content; }
     .steps-path-view{ display: none; }
 
@@ -721,7 +722,6 @@
     .client-review{ height: 150px; }
     .quotes-img img{ width: 200px; }
  
-
     .navbar-links ul{ gap: 60px!important; }
 
     .click-box { height: 320px; }

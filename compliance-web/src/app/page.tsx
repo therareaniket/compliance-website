@@ -417,7 +417,7 @@ export default async function Home() {
                 otherAnswer3 = {home.faqsList.otherAnswer3 }
                 otherAnswer4 = {home.faqsList.otherAnswer4 }
                 otherAnswer5 = {home.faqsList.otherAnswer5 }
-                />
+            />
 
             <section className="section hm-cta">
                 <div className="container">
