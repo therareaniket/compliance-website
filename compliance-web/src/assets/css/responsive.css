@@ -720,7 +720,7 @@
 
 @media screen and (max-width: 575px) {
     .primary-box-shadow{ box-shadow: -4px 0 0 0 var(--primary); }
-    .hm-hero img { height: 400px; opacity: 0.6; }
+    .hm-hero img { height: 400px; opacity: 0; }
     .hm-hero-content { top: 30px; }
     .hm-hero-content .text-grey { color: var(--black); }
     .platform-info{ width: 100%; }
