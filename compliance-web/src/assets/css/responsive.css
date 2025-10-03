@@ -246,7 +246,30 @@
     .text-18 { font-size: 14px; line-height: 24px; }
     p { font-size: 16px; line-height: 26px; }
 
-    .swiper-slide, .swiper-slide-active{ width: 290px !important; }
+    .click-box .h3 { font-size: 32px; line-height: 40px; }
+    .click-box.active { width: calc(100% - 440px); }
+    .box-content { gap: 30px; }
+    .smrt-img, .key-img { width: 450px; bottom: -25%; }
+
+    .steps-head .h3 { width: 400px; }
+    .steps-head p { width: 500px; }
+    .step-1-img { width: 400px; }
+    .step-2-img { width: 350px; }
+
+    .result-head .h3 { width: 450px; }
+    .result-head p { width: 500px; }
+    .global-org { left: 5%; }
+    .framwrk-coverd { left: 0 ; }
+    .audit-suc { left: 80%; }
+    .plans-right { width: 500px; gap: 40px; }
+    .plans-left { width: 450px; }
+
+    .trusted-leaders { width: 450px; }
+    .swiper-pagination { transform: translateY(-50px) !important; }
+    .trst-lead-content { padding: 60px 30px; }
+    .footer-links { gap: 50px; }
+
+    /* .feature-cards, .swiper-slide, .swiper-slide-active{ width: 290px !important; } */
     .abt-hero { padding: 50px 0; }
     .featurecard { width: 296px; height: 370px; }
     .mis-vis-section { flex-direction: column; align-items: center; gap: 40px; }
@@ -779,6 +802,13 @@
     .hm-hero-content h1, .h1 { font-size: 30px; line-height: 38px; }
     .click-box { height: 390px; }
     .key-img { bottom: -12%; }
+    .why-card-title.h5 { font-size: 18px; line-height: 26px; }
+    .card-btn .icon-check_circle { margin-right: 10px; }
+    .category-btns { gap: 10px; }
+    .category-btn .h6 { font-size: 16px; line-height: 24px; }
+    .category-btn { padding: 7px; }
+    .clientale-main .swiper { width: 300px; }
+    .client-review { height: 200px; }
 
     .why-card-title.h5 { font-size: 18px; line-height: 26px; }
     .card-btn .icon-check_circle { margin-right: 10px; }

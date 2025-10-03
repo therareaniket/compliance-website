@@ -362,7 +362,7 @@ export default async function Home() {
                 </div>
             </section>
 
-            <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
+            {/* <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} /> */}
 
             <section className="hm-clientale">
                 <div className="container">
