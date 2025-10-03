@@ -786,6 +786,7 @@
     .smart-usp-lists li span, .key-usp-lists li span { padding-top: 4px; }
     .smrt-img { bottom: -10%; }
     .key-img { bottom: -14%; }
+    /* .clientale-main .swiper { width: 380px; } */
 
     .why-card-title.h5 { font-size: 20px; line-height: 28px; }
 
@@ -840,6 +841,8 @@
 }
 
 @media screen and (max-width: 359px) {
+    .account-admin-text h3{ font-size: 22px; line-height: 30px; }
+
     .swiper-slide, .swiper-slide-active{ width: 290px !important; }
     .hm-hero-content p { margin: 20px 0; }
 
