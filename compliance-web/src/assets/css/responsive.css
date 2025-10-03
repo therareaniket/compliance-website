@@ -738,6 +738,8 @@
     .clientale-main .swiper { width: 400px; }
     .client-review{ height: 150px; }
     .quotes-img img{ width: 200px; }
+       .path-images { flex-direction: column; }
+    .path-1, .path-2, .path-3, .path-4{ width: 350px; }
  
     .navbar-links ul{ gap: 60px!important; }
 
@@ -764,6 +766,7 @@
 
     /* compliance page */
     .com-page-banner img{ width: 400px; }
+    .surety-count-cards{ flex-direction: column; gap: 20px; }
 }
 
 @media screen and (max-width: 480px) {
@@ -785,8 +788,8 @@
 
     /* compliance page */
     .com-page-banner img{ width: 370px; }
-    .surety-count-cards{ flex-direction: column; gap: 20px; }
-    .path-1, .path-2, .path-3, .path-4{ width: 100%; }
+     .path-1, .path-2, .path-3, .path-4{ width: 350px;  }
+    /* .path-1, .path-2, .path-3, .path-4{ width: 100%; } */
     
     .banner-head, .head-text, .form-fields form{ width: 100%; }
     .form-fields, .form-col input, .form-col textarea, .form-col select, .selections{ width: 100%; }
@@ -813,6 +816,7 @@
     .smart-usp-lists li span, .key-usp-lists li span { padding-top: 4px; }
     .smrt-img { bottom: -10%; }
     .key-img { bottom: -14%; }
+    /* .clientale-main .swiper { width: 380px; } */
 
     .why-card-title.h5 { font-size: 20px; line-height: 28px; }
 
@@ -875,6 +879,8 @@
 }
 
 @media screen and (max-width: 359px) {
+    .account-admin-text h3{ font-size: 22px; line-height: 30px; }
+
     .swiper-slide, .swiper-slide-active{ width: 290px !important; }
     .hm-hero-content p { margin: 20px 0; }
 
