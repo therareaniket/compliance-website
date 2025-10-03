@@ -28,7 +28,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
     const planDetails = useMemo(
         () => ({
           free: {
-            title: "Free Compliance Starter Plan",
+            title: "Starter Plan",
             bullets: [ freePlan.inclusion1, freePlan.inclusion2, freePlan.inclusion3, freePlan.inclusion4, freePlan.inclusion5, freePlan.inclusion6,].filter(Boolean),
           },
           standard: {
@@ -53,6 +53,24 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                         <div className="plans-left">
                             <h2 className="h3 plans-left-heading">{plansTitle}</h2>
 
+                            <p className="text-20 text-grey plan-sub-title">{plansSubtitle}</p>
+
+                            {/* <div className="plan-details bg-blue site-radius-20" aria-live="polite">
+                                <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
+
+                                {activePlanDetails.bullets.map((b, i) => (
+                                    <div key={i} className="plan-poin">
+                                        <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
+                                    </div>
+                                ))}
+
+                            </div> */}
+                        </div>
+
+
+                        <div className="plans-right">
+                            {/* <p className="text-20 text-grey plan-title">{plansSubtitle}</p> */}
+
                             <div className="plan-details bg-blue site-radius-20" aria-live="polite">
                                 <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
 
@@ -63,11 +81,6 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                 ))}
 
                             </div>
-                        </div>
-
-
-                        <div className="plans-right">
-                            <p className="text-20 text-grey plan-title">{plansSubtitle}</p>
 
                             <div className="plan-btns-group">
                                 <button type="button" className={`plans-btn text-left site-radius-10 ${activePlanButton === 'free' ? 'plan-btn-active' : ''}`} onClick={() => setActivePlanButton('free')}>
@@ -89,7 +102,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                 <button type="button" className={`plans-btn text-left site-radius-10 ${activePlanButton === 'enterprise' ? 'plan-btn-active' : ''}`} onClick={() => setActivePlanButton('enterprise')} >
                                     <div className="plan-btn-cont">
                                         <h3 className="h5">Enterprise Plan</h3>
-                                        <p className="text-20 text-grey">Suited for large organizations requiring scalable compliance and dedicated support.</p>
+                                        <p className="text-20 text-grey">Ideal for enterprises needing scalable compliance and expert support.</p>
                                     </div>
 
                                     <p className="h4">$499<span className="text-18 text-grey">/month</span></p>
