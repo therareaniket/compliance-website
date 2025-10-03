@@ -253,7 +253,7 @@ export default async function Home() {
                 </div>
             </section>
 
-            {/* <ExtendButtons
+            <ExtendButtons
                 purpleTitle={home.purpleBox.purpleTitle}
                 purpleSubtitle={home.purpleBox.purpleSubtitle}
                 purpleListItem1={home.purpleBox.purpleListItem1}
@@ -266,7 +266,7 @@ export default async function Home() {
                 greenListItem2={home.greenBox.greenListItem2}
                 greenListItem3={home.greenBox.greenListItem3}
                 greenListItem4={home.greenBox.greenListItem4}
-            /> */}
+            />
 
             <section className="hm-compli-steps">
                 <div className="container">
@@ -294,7 +294,7 @@ export default async function Home() {
                 </div>
             </section>
 
-            {/* <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} /> */}
+            <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} />
 
             <section className="hm-proven-result">
                 <div className="container">
@@ -362,7 +362,7 @@ export default async function Home() {
                 </div>
             </section>
 
-            {/* <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} /> */}
+            <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
 
             <section className="hm-clientale">
                 <div className="container">
@@ -384,7 +384,7 @@ export default async function Home() {
                 </div>
             </section>
 
-            {/* <FAQSection
+            <FAQSection
                 faqTitle = {home.faqsList.faqTitle }
                 faqSubtitle = {home.faqsList.faqSubtitle }
                 generalFaq1 = {home.faqsList.generalFaq1 }
@@ -417,9 +417,9 @@ export default async function Home() {
                 otherAnswer3 = {home.faqsList.otherAnswer3 }
                 otherAnswer4 = {home.faqsList.otherAnswer4 }
                 otherAnswer5 = {home.faqsList.otherAnswer5 }
-                /> */}
+                />
 
-            {/* <section className="section hm-cta">
+            <section className="section hm-cta">
                 <div className="container">
                     <h2 className="h3 text-center">{home.ctaTitle}</h2>
 
@@ -431,7 +431,7 @@ export default async function Home() {
                         <Link href={home.ctaLink3?.url as string} title={home.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{home.ctaLink3?.title}</Link>
                     </div>
                 </div>
-            </section> */}
+            </section>
         </>
     </div>
   );

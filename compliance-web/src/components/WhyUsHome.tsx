@@ -70,9 +70,8 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                                         <div
                                             key={img.src + idx}
                                             className={`image-slide ${idx === activeImage ? "is-active" : "is-inactive"}`}
-                                            aria-hidden={idx !== activeImage}
-                                        >
-                                            <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority={false} />
+                                            aria-hidden={idx !== activeImage} >
+                                            <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority={false} className="why-us-slider-images" />
                                         </div>
                                     ))}
                                 </div>
