@@ -31,11 +31,11 @@
 .fade-in { animation: fadeIn 600ms ease; }
 
 /* ABOUTUS swiper code */
-.swiper-button-next, .swiper-button-prev { display: none !important; }
-.swiper-pagination{ transform: translateY(-20px) !important; }
-.swiper-wrapper{ height: 450px !important; }
-.swiper-pagination-bullet{background-color: rgba(184, 184, 184, 1) !important;}
-.swiper-pagination-bullet-active{background: var(--primary) !important;}
+.feature-cards .swiper-button-next, .swiper-button-prev { display: none !important; }
+.feature-cards .swiper-pagination{ transform: translateY(-20px) !important; }
+.feature-cards .swiper-wrapper{ height: 450px !important; }
+.feature-cards .swiper-pagination-bullet{background-color: rgba(184, 184, 184, 1) !important;}
+.feature-cards .swiper-pagination-bullet-active{background: var(--primary) !important;}
 .orange-tint{ background-color: var(--orange-tint); }
 
 @keyframes whyUsCard-riseFromBack {
@@ -295,6 +295,7 @@
 .feature-frame { padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #CDD8FF; }
 .feature-card-head { margin-top: 30px; }
 .feature-lists ul li { color: var(--grey);margin-bottom: 10px; }
+
 
 /* ----- color variations ----- */
 .bg-blue    { background: #F5F7FF; }

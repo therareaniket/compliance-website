@@ -24,21 +24,24 @@ export default function AboutUsSwiperComponents() {
                         modules={[Pagination, Autoplay]}
                         spaceBetween={20}
                         loop={true}
+                        // loopAdditionalSlides={5} 
                         pagination={{ clickable: true, dynamicBullets: true, dynamicMainBullets: 2 }}
                         autoplay={{ delay: 1000 }}
-                        slidesPerView={4}
+                        slidesPerView= "auto"
                         centeredSlides={true}
                         slidesPerGroup={1}
                         breakpoints={{
-                            0: { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1, },
-                            359: { slidesPerView: 1.05, centeredSlides: true, slidesPerGroup: 1, },
-                            480: { slidesPerView: 1.4, centeredSlides: false, slidesPerGroup: 1, },
-                            680: { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1, },
-                            991: { slidesPerView: 2.4, centeredSlides: false, slidesPerGroup: 1, },
-                            1024: { slidesPerView: 3.2, centeredSlides: false, slidesPerGroup: 1, },
-                            1359: { slidesPerView: 3.5, centeredSlides: false, slidesPerGroup: 1, },
-                            1440: { slidesPerView: 4, centeredSlides: false, slidesPerGroup: 1, },
+                            0    :  { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1,    },
+                            359  :  { slidesPerView: 1.05, centeredSlides: true, slidesPerGroup: 1, },
+                            375  :  { slidesPerView: 1.10, centeredSlides: true, slidesPerGroup: 1, },
+                            480  :  { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1,   },
+                            680  :  { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1, },
+                            991  :  { slidesPerView: 2.4, centeredSlides: false, slidesPerGroup: 1, },
+                            1023 :  { slidesPerView: 3.2, centeredSlides: false, slidesPerGroup: 1, },
+                            1359 :  { slidesPerView: 3.5, centeredSlides: false, slidesPerGroup: 1, },
+                            1440 :  { slidesPerView: 4, centeredSlides: false, slidesPerGroup: 1,   },
                         }}
+
                         speed={5000}>
 
                         <SwiperSlide>
@@ -166,4 +169,14 @@ export default function AboutUsSwiperComponents() {
 }
 
 
-
+// breakpoints={{
+//     0    :  { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1,    },
+//     359  :  { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1, },
+//     375  :  { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1, },
+//     480  :  { slidesPerView: 1, centeredSlides: false, slidesPerGroup: 1, },
+//     680  :  { slidesPerView: 1, centeredSlides: false, slidesPerGroup: 1, },
+//     991  :  { slidesPerView: 2, centeredSlides: false, slidesPerGroup: 1, },
+//     1024 :  { slidesPerView: 3, centeredSlides: false, slidesPerGroup: 1, },
+//     1359 :  { slidesPerView: 3, centeredSlides: false, slidesPerGroup: 1, },
+//     1440 :  { slidesPerView: 4, centeredSlides: false, slidesPerGroup: 1,   },
+// }}
