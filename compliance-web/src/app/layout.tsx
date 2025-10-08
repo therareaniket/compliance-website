@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import type { Metadata } from "next";
 import "./globals.css";
 import "@/assets/css/custom.css";
@@ -22,8 +23,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <body suppressHydrationWarning>
             <SpeedInsights/>  {/* Vercel's Page Speed Insight */}
 
-            <Header />
-                {children}
+            {/* <Header /> */}
+            {children}
             <Footer />
       </body>
     </html>

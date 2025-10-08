@@ -15,7 +15,7 @@ export default function ClientaleSlider() {
                         modules={[Pagination, Autoplay]}
                         spaceBetween={20}
                         pagination={{ clickable: true }}
-                        // autoplay={{ delay: 5000, disableOnInteraction: true }}
+                        autoplay={{ delay: 5000, disableOnInteraction: true }}
                         slidesPerView={1}
                         // slidesPerGroup={1}
                         centeredSlides={false} 

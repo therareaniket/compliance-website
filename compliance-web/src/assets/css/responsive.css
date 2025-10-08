@@ -43,7 +43,7 @@
 
     .why-us-content{ width: 680px; }
     .card-btn{ width: 620px; }
-    .trusted-leaders{ width: 735px; }
+    /* .trusted-leaders{ width: 735px; } */
     .quotes-img img { width: 500px; }
     .category-faqs{ width: 790px; }
     .steps-head .h3{ width: 550px; }
@@ -92,6 +92,13 @@
     .compliance-matters-section{ gap: 40px; }
     .compliance-matters-text{ width: 878px; }
     .hipaa-card, .fda_card, .annex_11_card, .gdpr_card, .gcp_card, .cdsco_card{ width: 680px; height: auto; }
+
+
+
+    .result-head .h3, .supported-compli-lists { width: 660px; } 
+    .result-head p, .compli-stats { width: 650px; }
+    .supp-compli-list { width: 320px; }
+
 }
 
 @media screen and (max-width: 1599px) {
@@ -104,7 +111,7 @@
     .steps-head .h3{ width: 560px; }
     .steps-head p{ width: 672px; }
 
-    .trusted-leaders{ width: 700px; }
+    /* .trusted-leaders{ width: 700px; } */
     .quotes-img img{ width: 450px; }
     .clientale-main .swiper{ width: 500px; }
 
@@ -133,7 +140,6 @@
     .step-3-img{ width: 450px; }
 
     .quotes-img img{ width: 380px; }
-    .trusted-leaders{ height: 700px; }
 
     /* userAccess page */
 
@@ -141,7 +147,8 @@
     /* compliance page */
     .com-page-banner img{ width: 527px; }
 
-    /* contact -us */   
+    
+    .stats-nums { width: 250px; padding: 15px 20px; }
 
     
 }
@@ -189,6 +196,18 @@
     .info-block { width: 440px; }
     .platform-info{ width: 470px; }
     .platform-showcase-img{ width: 730px; }
+
+
+    .supp-compli-list .h5 { font-size: 22px; line-height: 32px; }
+    .result-head .h3, .supported-compli-lists { width: 580px; }
+    .result-head p, .compli-stats { width: 600px; }
+    .supp-compli-list { width: 275px; }
+    .stats-nums { width: 230px; }
+    .stats-nums .h1 { font-size: 56px; line-height: 66px; }
+    .glob-org { top: 0; left: 10%; }
+    .sec-doc { top: 5%; right: 0; }
+    .fram-covd { left: 12%; bottom: 20%; }
+    .aud-suc { width: 200px; bottom: 12%; right: 0; }
 }
 
 @media screen and (max-width: 1359px) {
@@ -253,7 +272,7 @@
     .step-2-img { width: 350px; }
 
     .result-head .h3 { width: 450px; }
-    .result-head p { width: 500px; }
+    /* .result-head p { width: 500px; } */
     .global-org { left: 5%; }
     .framwrk-coverd { left: 0 ; }
     .audit-suc { left: 80%; }
@@ -324,6 +343,22 @@
     .info-block{ width: 370px; padding: 20px; }
     .form-col textarea{ height: 150px; }
     .contct-info{ padding-top: 34px; }
+
+    /* .result-head .h3, .supported-compli-lists { width: 490px; } */
+    .supp-compli-list { width: 230px; padding: 15px; }
+    .result-head p, .compli-stats { width: 460px; }
+    .rotating-eclipse-1, .rotating-eclipse-2, .rotating-eclipse-3 { left: 10%; }
+    .rotating-eclipse-1 { width: 350px; height: 400px; opacity: 1; }
+    .rotating-eclipse-2 { width: 340px; height: 515px;  opacity: 1; }
+    .rotating-eclipse-3 { width: 320px; height: 485px; }
+    .stats-nums { padding: 15px; width: 200px; }
+    .stats-nums .h1 { font-size: 46px; }
+    .stats-nums.text-20 { font-size: 16px; line-height: 26px; }
+    .glob-org { top: 0; left: 2%; }
+    .sec-doc { top: 15%; right: 0; }
+    .fram-covd { left: 2%; bottom: 30%; }
+    .aud-suc { width: 200px; bottom: 12%; right: 0; }
+
 }
 
 @media screen and (max-width: 1199px) {

@@ -227,10 +227,10 @@ body {
 
   
 
-.text-rg { font-family: 'poppins-rg'; }
-.text-md { font-family: 'poppins-md'; }
-.text-sb { font-family: 'poppins-sb'; }
-.text-bd { font-family: 'poppins-bd'; }
+.text-rg { font-family: 'poppins-rg' !important; }
+.text-md { font-family: 'poppins-md' !important; }
+.text-sb { font-family: 'poppins-sb' !important; }
+.text-bd { font-family: 'poppins-bd' !important; }
 
 .text-20 { font-size: 20px; line-height: 30px; }
 .text-18 { font-size: 18px; line-height: 28px; }

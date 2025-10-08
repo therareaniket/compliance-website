@@ -2,13 +2,17 @@ import { fetchGraphQL } from "@/lib/graphql";
 import ClientaleSlider from "@/components/ClientaleSlider";
 import Image from "next/image";
 import Link from "next/link";
-// import { useState } from "react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
+import HeroHome from "@/components/HeroHome";
 import ExtendButtons from "@/components/ExpandableButton";
 import WhyUs from "@/components/WhyUsHome";
 import PlansSection from "@/components/PlansHome";
 import FAQSection from "@/components/FAQHome";
+import { Header } from "@/components/Header";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
+gsap.registerPlugin(ScrollTrigger,SplitText);
 
 type HomeData = {
     page: {
@@ -17,10 +21,10 @@ type HomeData = {
             heroSubtitle: string;
             heroCta?: { url: string; title: string } | null;
             heroCta2?: { url: string; title: string } | null;
-            
+
             purpleBox: { purpleTitle: string; purpleSubtitle: string; purpleListItem1: string; purpleListItem2: string; purpleListItem3: string; purpleListItem4: string; };
             greenBox: { greenTitle: string; greenSubtitle: string; greenListItem1: string; greenListItem2: string; greenListItem3: string; greenListItem4: string; };
-            
+
             complianceTitle: string;
             complianceSubtitle: string;
 
@@ -195,7 +199,7 @@ export default async function Home() {
         }
       `);
 
-      const home = data.page.homepage;
+    const home = data.page.homepage;
 
     const freePlan = {
         inclusion1: home.freePlan.inclusion1,
@@ -204,7 +208,7 @@ export default async function Home() {
         inclusion4: home.freePlan.inclusion4,
         inclusion5: home.freePlan.inclusion5,
         inclusion6: home.freePlan.inclusion6,
-    } 
+    }
 
     const standardPlan = {
         inclusion1: home.standardPlan.inclusion1,
@@ -213,7 +217,7 @@ export default async function Home() {
         inclusion4: home.standardPlan.inclusion4,
         inclusion5: home.standardPlan.inclusion5,
         inclusion6: home.standardPlan.inclusion6,
-    } 
+    }
 
     const enterprisePlan = {
         inclusion1: home.enterprisePlan.inclusion1,
@@ -223,80 +227,62 @@ export default async function Home() {
         inclusion5: home.enterprisePlan.inclusion5,
         inclusion6: home.enterprisePlan.inclusion6,
     }
-      
-  return (
-    <div>
-        <>
-            <section className="hm-hero">
-                <Image src='/images/homepage/hero-background.webp' alt="home-hero" width={1920} height={870} priority={true} draggable={false}></Image>
 
-                <div className="container">
-                    <div className="hm-hero-content">
-                        <h1 className="text-center" dangerouslySetInnerHTML={{ __html: home.heroTitle }}></h1>
+    return (
+        <div>
+            <>
+                <div className="homebody">
 
-                        <p className="text-center text-20 text-grey">{home.heroSubtitle}</p>
+                    <Header />
 
-                        <div className="hm-hero-btns">
-                            {home.heroCta?.url ? (
-                                <Link href={home.heroCta.url as string} title={home.heroCta.title} className="btn-primary btn-padding text-md text-18 site-radius-10">
-                                    {home.heroCta.title}
-                                </Link>
-                            ) : null}
+                    <HeroHome  heroTitle={home.heroTitle} heroSubtitle={home.heroSubtitle} heroCta={home.heroCta} heroCta2={home.heroCta2} />
 
-                            {home.heroCta2?.url ? ( 
-                                <Link href={home.heroCta2.url as string} title={home.heroCta2.title} className="btn-white btn-padding text-md text-18 site-radius-10">
-                                    {home.heroCta2.title}
-                                </Link>
-                            ) : null}
+                    <ExtendButtons
+                        purpleTitle={home.purpleBox.purpleTitle}
+                        purpleSubtitle={home.purpleBox.purpleSubtitle}
+                        purpleListItem1={home.purpleBox.purpleListItem1}
+                        purpleListItem2={home.purpleBox.purpleListItem2}
+                        purpleListItem3={home.purpleBox.purpleListItem3}
+                        purpleListItem4={home.purpleBox.purpleListItem4}
+                        greenTitle={home.greenBox.greenTitle}
+                        greenSubtitle={home.greenBox.greenSubtitle}
+                        greenListItem1={home.greenBox.greenListItem1}
+                        greenListItem2={home.greenBox.greenListItem2}
+                        greenListItem3={home.greenBox.greenListItem3}
+                        greenListItem4={home.greenBox.greenListItem4}
+                    />
+
+                    <section className="hm-compli-steps">
+                        <div className="container">
+                            <div className="steps-head">
+                                <h2 className="h3">{home.complianceTitle}</h2>
+
+                                <p className="text-20 text-grey">{home.complianceSubtitle}</p>
+                            </div>
+
+                            <div className="steps-path-view">
+                                <Image src='images/homepage/steps-dotted-path.svg' alt="steps-path" width={1293} height={425} priority={false} className="steps-path-img"></Image>
+
+                                <Image src='/images/homepage/stp-1-connect.webp' alt="step-1-connect" width={528} height={226} priority={false} className="step-1-img"></Image>
+                                <Image src='/images/homepage/stp-2-monitor.webp' alt="step-2-monitor" width={424} height={344} priority={false} className="step-2-img"></Image>
+                                <Image src='/images/homepage/stp-3-act.webp' alt="step-3-act" width={454} height={228} priority={false} className="step-3-img"></Image>
+                                <Image src='/images/homepage/stp-4-report.webp' alt="step-4-report" width={497} height={276} priority={false} className="step-4-img"></Image>
+                            </div>
+
+                            <div className="steps-path-responsive">
+                                <Image src='/images/homepage/step-1-connect.webp' alt="step-1-connect" width={495} height={196} priority={false} className="step-1-connect"></Image>
+                                <Image src='/images/homepage/step-2-connect.webp' alt="step-2-connect" width={495} height={387} priority={false} className="step-2-connect"></Image>
+                                <Image src='/images/homepage/step-3-connect.webp' alt="step-3-connect" width={495} height={317} priority={false} className="step-2-connect"></Image>
+                                <Image src='/images/homepage/step-4-connect.webp' alt="step-4-connect" width={495} height={378} priority={false} className="step-2-connect"></Image>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
-            <ExtendButtons
-                purpleTitle={home.purpleBox.purpleTitle}
-                purpleSubtitle={home.purpleBox.purpleSubtitle}
-                purpleListItem1={home.purpleBox.purpleListItem1}
-                purpleListItem2={home.purpleBox.purpleListItem2}
-                purpleListItem3={home.purpleBox.purpleListItem3}
-                purpleListItem4={home.purpleBox.purpleListItem4}
-                greenTitle={home.greenBox.greenTitle}
-                greenSubtitle={home.greenBox.greenSubtitle}
-                greenListItem1={home.greenBox.greenListItem1}
-                greenListItem2={home.greenBox.greenListItem2}
-                greenListItem3={home.greenBox.greenListItem3}
-                greenListItem4={home.greenBox.greenListItem4}
-            />
+                    <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} />
 
-            <section className="hm-compli-steps">
-                <div className="container">
-                    <div className="steps-head">
-                        <h2 className="h3">{home.complianceTitle}</h2>
+                    {/* OLD LAYOUT */}
 
-                        <p className="text-20 text-grey">{home.complianceSubtitle}</p>
-                    </div>
-
-                    <div className="steps-path-view">
-                        <Image src='images/homepage/steps-dotted-path.svg' alt="steps-path" width={1293} height={425} priority={false} className="steps-path-img"></Image>
-
-                        <Image src='/images/homepage/stp-1-connect.webp' alt="step-1-connect" width={528} height={226} priority={false} className="step-1-img"></Image>
-                        <Image src='/images/homepage/stp-2-monitor.webp' alt="step-2-monitor" width={424} height={344} priority={false} className="step-2-img"></Image>
-                        <Image src='/images/homepage/stp-3-act.webp' alt="step-3-act" width={454} height={228} priority={false} className="step-3-img"></Image>
-                        <Image src='/images/homepage/stp-4-report.webp' alt="step-4-report" width={497} height={276} priority={false} className="step-4-img"></Image>
-                    </div>
-
-                    <div className="steps-path-responsive">
-                        <Image src='/images/homepage/step-1-connect.webp' alt="step-1-connect" width={495} height={196} priority={false} className="step-1-connect"></Image>
-                        <Image src='/images/homepage/step-2-connect.webp' alt="step-2-connect" width={495} height={387} priority={false} className="step-2-connect"></Image>
-                        <Image src='/images/homepage/step-3-connect.webp' alt="step-3-connect" width={495} height={317} priority={false} className="step-2-connect"></Image>
-                        <Image src='/images/homepage/step-4-connect.webp' alt="step-4-connect" width={495} height={378} priority={false} className="step-2-connect"></Image>
-                    </div>
-                </div>
-            </section>
-
-            <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} />
-
-            <section className="hm-proven-result">
+                    {/* <section className="hm-proven-result">
                 <div className="container">
                     <div className="result-head">
                         <h2 className="h3">{home.provenResultsTitle}</h2>
@@ -360,79 +346,158 @@ export default async function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+                    </section> */}
 
-            <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
+                    <section className="section hm-proven-result">
+                        <div className="container">
+                            <div className="result-head">
+                                <h2 className="h3">{home.provenResultsTitle}</h2>
 
-            <section className="hm-clientale">
-                <div className="container">
-                    <div className="clientale-wrapper">
-                        <div className="trusted-leaders site-radius-10">
-                            <div className="quotes-img">
-                                <Image src='/images/homepage/clientale-quotes.webp' alt="quotes" width={588} height={410} priority={false} style={{opacity:'0.2'}} draggable={false}></Image>
+                                <p className="text-20">{home.provenResultsSubtitle}</p>
                             </div>
 
-                            <div className="trst-lead-content">
-                                <h2 className="h3">{home.testimonialTitle}</h2>
+                            <div className="compli-list-stats">
+                                <div className="supported-compli-lists">
+                                    <div className="supp-compli-list site-radius-10">
+                                        <h3 className="h5">FDA 21 CFR Part 11</h3>
 
-                                <p className="text-20 text-grey">{home.testimonialSubtitle}</p>
+                                        <p>Reliable records & eSignatures compliance.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10">
+                                        <h3 className="h5">GDPR</h3>
+
+                                        <p>Safeguards EU data privacy.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10">
+                                        <h3 className="h5">HIPAA</h3>
+
+                                        <p>Secure patient data & privacy.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10">
+                                        <h3 className="h5">GCP</h3>
+
+                                        <p>Defines quality standards for trials.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10">
+                                        <h3 className="h5">CDSCO</h3>
+
+                                        <p>Regulates drug and device approvals.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10">
+                                        <h3 className="h5">EU Annex 11</h3>
+
+                                        <p>Sets rules for system data integrity.</p>
+                                    </div>
+                                </div>
+
+                                <div className="compli-stats">
+                                    <div className="rotate-eclipse">
+                                        <div className="eclipse-wrapper">
+                                            <Image src='/images/homepage/stat-eclipse-1.svg' alt='eclipse-1' width={432} height={506} className="rotating-eclipse-1"></Image>
+
+                                            <Image src='/images/homepage/stat-eclipse-2.svg' alt='eclipse-2' width={378} height={574} className="rotating-eclipse-2"></Image>
+
+                                            <Image src='/images/homepage/stat-eclipse-3.svg' alt='eclipse-3' width={344} height={522} className="rotating-eclipse-3"></Image>
+                                        </div>
+                                    </div>
+
+                                    <div className="floating-stats">
+                                        <div className="stats-nums site-radius-10 text-20 glob-org">
+                                            <span className="h1">500+</span>Global organizations
+                                        </div>
+
+                                        <div className="stats-nums site-radius-10 text-20 sec-doc">
+                                            <span className="h1">1M+</span>Secure documents
+                                        </div>
+
+                                        <div className="stats-nums site-radius-10 text-20 fram-covd">
+                                            <span className="h1">50+</span>Frameworks covered
+                                        </div>
+
+                                        <div className="stats-nums site-radius-10 text-20 aud-suc">
+                                            <span className="h1">99%</span>Audit success
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                        <ClientaleSlider />
-                    </div>
+                    <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
+
+                    <section className="hm-clientale --bg-white">
+                        <div className="container">
+                            <div className="clientale-wrapper">
+                                <div className="trusted-leaders site-radius-10">
+                                    <div className="trst-lead-content">
+                                        <h2 className="h3">{home.testimonialTitle}</h2>
+
+                                        <p className="text-20 text-grey">{home.testimonialSubtitle}</p>
+                                    </div>
+
+                                    <Image src='/images/homepage/clientale-quotes.webp' alt="quotes" width={588} height={410} priority={false} style={{ opacity: '0.2' }} draggable={true} className="testi-quotes"></Image>
+                                </div>
+
+                                <ClientaleSlider />
+                            </div>
+                        </div>
+                    </section>
+
+                    <FAQSection
+                        faqTitle={home.faqsList.faqTitle}
+                        faqSubtitle={home.faqsList.faqSubtitle}
+                        generalFaq1={home.faqsList.generalFaq1}
+                        generalFaq2={home.faqsList.generalFaq2}
+                        generalFaq3={home.faqsList.generalFaq3}
+                        generalFaq4={home.faqsList.generalFaq4}
+                        generalFaq5={home.faqsList.generalFaq5}
+                        generalAnswer1={home.faqsList.generalAnswer1}
+                        generalAnswer2={home.faqsList.generalAnswer2}
+                        generalAnswer3={home.faqsList.generalAnswer3}
+                        generalAnswer4={home.faqsList.generalAnswer4}
+                        generalAnswer5={home.faqsList.generalAnswer5}
+                        supportQuestion1={home.faqsList.supportQuestion1}
+                        supportQuestion2={home.faqsList.supportQuestion2}
+                        supportQuestion3={home.faqsList.supportQuestion3}
+                        supportQuestion4={home.faqsList.supportQuestion4}
+                        supportQuestion5={home.faqsList.supportQuestion5}
+                        supportAnswer1={home.faqsList.supportAnswer1}
+                        supportAnswer2={home.faqsList.supportAnswer2}
+                        supportAnswer3={home.faqsList.supportAnswer3}
+                        supportAnswer4={home.faqsList.supportAnswer4}
+                        supportAnswer5={home.faqsList.supportAnswer5}
+                        otherQuestion1={home.faqsList.otherQuestion1}
+                        otherQuestion2={home.faqsList.otherQuestion2}
+                        otherQuestion3={home.faqsList.otherQuestion3}
+                        otherQuestion4={home.faqsList.otherQuestion4}
+                        otherQuestion5={home.faqsList.otherQuestion5}
+                        otherAnswer1={home.faqsList.otherAnswer1}
+                        otherAnswer2={home.faqsList.otherAnswer2}
+                        otherAnswer3={home.faqsList.otherAnswer3}
+                        otherAnswer4={home.faqsList.otherAnswer4}
+                        otherAnswer5={home.faqsList.otherAnswer5}
+                    />
+
+                    <section className="section hm-cta">
+                        <div className="container">
+                            <h2 className="h3 text-center">{home.ctaTitle}</h2>
+
+                            <div className="cta-links text-center">
+                                <Link href={home.ctaLink1?.url as string} title={home.ctaLink1?.title} className="btn-padding btn-primary text-md text-18 site-radius-10">{home.ctaLink1?.title}</Link>
+
+                                <Link href={home.ctaLink2?.url as string} title={home.ctaLink2?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{home.ctaLink2?.title}</Link>
+
+                                <Link href={home.ctaLink3?.url as string} title={home.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{home.ctaLink3?.title}</Link>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
-
-            <FAQSection
-                faqTitle = {home.faqsList.faqTitle }
-                faqSubtitle = {home.faqsList.faqSubtitle }
-                generalFaq1 = {home.faqsList.generalFaq1 }
-                generalFaq2 = {home.faqsList.generalFaq2 }
-                generalFaq3 = {home.faqsList.generalFaq3 }
-                generalFaq4 = {home.faqsList.generalFaq4 }
-                generalFaq5 = {home.faqsList.generalFaq5 }
-                generalAnswer1 = {home.faqsList.generalAnswer1 }
-                generalAnswer2 = {home.faqsList.generalAnswer2 }
-                generalAnswer3 = {home.faqsList.generalAnswer3 }
-                generalAnswer4 = {home.faqsList.generalAnswer4 }
-                generalAnswer5 = {home.faqsList.generalAnswer5 }
-                supportQuestion1 = {home.faqsList.supportQuestion1 }
-                supportQuestion2 = {home.faqsList.supportQuestion2 }
-                supportQuestion3 = {home.faqsList.supportQuestion3 }
-                supportQuestion4 = {home.faqsList.supportQuestion4 }
-                supportQuestion5 = {home.faqsList.supportQuestion5 }
-                supportAnswer1 = {home.faqsList.supportAnswer1 }
-                supportAnswer2 = {home.faqsList.supportAnswer2 }
-                supportAnswer3 = {home.faqsList.supportAnswer3 }
-                supportAnswer4 = {home.faqsList.supportAnswer4 }
-                supportAnswer5 = {home.faqsList.supportAnswer5 }
-                otherQuestion1 = {home.faqsList.otherQuestion1 }
-                otherQuestion2 = {home.faqsList.otherQuestion2 }
-                otherQuestion3 = {home.faqsList.otherQuestion3 }
-                otherQuestion4 = {home.faqsList.otherQuestion4 }
-                otherQuestion5 = {home.faqsList.otherQuestion5 }
-                otherAnswer1 = {home.faqsList.otherAnswer1 }
-                otherAnswer2 = {home.faqsList.otherAnswer2 }
-                otherAnswer3 = {home.faqsList.otherAnswer3 }
-                otherAnswer4 = {home.faqsList.otherAnswer4 }
-                otherAnswer5 = {home.faqsList.otherAnswer5 }
-            />
-
-            <section className="section hm-cta">
-                <div className="container">
-                    <h2 className="h3 text-center">{home.ctaTitle}</h2>
-
-                    <div className="cta-links text-center">
-                        <Link href={home.ctaLink1?.url as string} title={home.ctaLink1?.title} className="btn-padding btn-primary text-md text-18 site-radius-10">{home.ctaLink1?.title}</Link>
-
-                        <Link href={home.ctaLink2?.url as string} title={home.ctaLink2?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{home.ctaLink2?.title}</Link>
-                        
-                        <Link href={home.ctaLink3?.url as string} title={home.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{home.ctaLink3?.title}</Link>
-                    </div>
-                </div>
-            </section>
-        </>
-    </div>
-  );
+            </>
+        </div>
+    );
 }

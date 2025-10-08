@@ -10,7 +10,7 @@ export function Header() {
     const hamburgerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 0)
+        const onScroll = () => setScrolled(window.scrollY > 800 )
         onScroll()
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
@@ -20,12 +20,7 @@ export function Header() {
 useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             const target = event.target as Node
-            if (
-                menuRef.current &&
-                !menuRef.current.contains(target) &&
-                hamburgerRef.current &&
-                !hamburgerRef.current.contains(target)
-            ) {
+            if ( menuRef.current && !menuRef.current.contains(target) && hamburgerRef.current && !hamburgerRef.current.contains(target) ) {
                 setMenuOpen(false)
             }
         }
@@ -50,13 +45,13 @@ useEffect(() => {
     }
 
     return (
-        <header style={{ position:'sticky', top:'0', backgroundColor:'white', zIndex:'9999' }} className={`header-main ${scrolled ? 'is-scrolled' : ''}`}>
+        <header className={`header-main ${scrolled ? 'is-scrolled' : ''}`}>
             <div className="container">
                 <div className="navbar-wrapper">
                     <div className="navbar-logo">
                         <Link href='/' title=''>
                             {/* <Image src='/images/header/logo-header.svg' alt='logo' width={239} height={34} priority={true}></Image> */}
-                            <Image src='https://rarepixelsdesign.com/wp-content/uploads/2025/09/logo-header.svg' alt='logo' width={239} height={34} priority={true}></Image>
+                            <Image src='https://rarepixelsdesign.com/wp-content/uploads/2025/10/main-logo.svg' alt='logo' width={239} height={34} priority={true}></Image>
                         </Link>
                     </div>
 

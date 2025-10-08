@@ -163,7 +163,7 @@ export default function FAQSection(props: FAQProps) {
 
     return (
         <>
-            <section className="section FAQs">
+            <section className="section FAQs --bg-white">
                 <div className="container">
                     <div className="faq-head text-center">
                         <h2 className="h3">{faqTitle}</h2>

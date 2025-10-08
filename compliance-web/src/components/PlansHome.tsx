@@ -47,7 +47,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
 
     return (
         <>
-            <section className="section hm-plans">
+            <section className="section hm-plans --bg-white">
                 <div className="container">
                     <div className="plan-content-wrapper">
                         <div className="plans-left">

@@ -36,10 +36,10 @@ export default function ExtendButtons({
     const [active, setActive] = useState<'smrt' | 'features'>('smrt');
     
     return (
-        <section className="section hm-click-expand">
+        <section className="section hm-click-expand --bg-white">
             <div className="container">
                 <div className="expnd-contnt-wrapper">
-                    <div className={`click-box click-smrt-compliance site-radius-20 ${active === 'smrt' ? 'active' : 'smrt-not-active'}`} onClick={() => setActive('smrt')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('smrt')} aria-pressed={active === 'smrt'} >
+                    <div className={`click-box click-smrt-compliance site-radius-20 ${active === 'smrt' ? 'active' : 'smrt-not-active'}`} onMouseEnter={() => setActive('smrt')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('smrt')} aria-pressed={active === 'smrt'} >
                         <div className="box-content">
                             <div className="cont-head">
                                 <h2 className="h3">{purpleTitle}</h2>
@@ -57,7 +57,7 @@ export default function ExtendButtons({
                         <Image src="/images/homepage/smarter-compliance.webp" alt="smarter-compliance" width={613} height={688} priority={false} className="smrt-img" />
                     </div>
 
-                    <div className={`click-box click-key-features site-radius-20 ${active === 'features' ? 'active' : 'key-not-active'}`} onClick={() => setActive('features')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('features')} aria-pressed={active === 'features'} >
+                    <div className={`click-box click-key-features site-radius-20 ${active === 'features' ? 'active' : 'key-not-active'}`} onMouseEnter={() => setActive('features')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('features')} aria-pressed={active === 'features'} >
                         <div className="box-content">
                             <div className="cont-head">
                                 <h2 className="h3">{greenTitle}</h2>
