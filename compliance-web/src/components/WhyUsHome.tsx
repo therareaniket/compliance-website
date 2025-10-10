@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type Card = {
-    id: string;
+    id: "why-c1" | "why-c2" | "why-c3" | "why-c4" | "why-c5";
     title: string;
     content?: string;
     background_color: string;
@@ -25,32 +25,67 @@ const whyusCards: Card[] = [
 ];
 
 const images = [
-    { src: "/images/homepage/comprehensive-coverage.webp", alt: "comprehensive-coverage", w: 449, h: 345 },
-    { src: "/images/homepage/realtime-monitoring.webp", alt: "realtime-monitoring", w: 526, h: 358 },
-    { src: "/images/homepage/automation-driven.webp", alt: "automation-driven", w: 482, h: 289 },
-    { src: "/images/homepage/trusted-by-leaders.webp", alt: "trusted-by-leaders", w: 472, h: 354 },
-    { src: "/images/homepage/scalable-secure.webp", alt: "scalable-secure", w: 454, h: 428 },
+    { src: "/images/homepage/scalable-secure.gif", alt: "scalable-secure", w: 454, h: 428 },
+    { src: "/images/homepage/trusted-by-leaders.gif", alt: "trusted-by-leaders", w: 472, h: 354 },
+    { src: "/images/homepage/automation-driven.gif", alt: "automation-driven", w: 482, h: 289 },
+    { src: "/images/homepage/realtime-monitoring.gif", alt: "realtime-monitoring", w: 526, h: 358 },
+    { src: "/images/homepage/comprehensive-coverage.gif", alt: "comprehensive-coverage", w: 449, h: 345 },
 ];
 
 export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
+
+    const cardIdToImageIndex: Record<Card["id"], number> = {
+        "why-c5": 0,
+        "why-c4": 1,
+        "why-c3": 2,
+        "why-c2": 3,
+        "why-c1": 4,
+    };
+
     const [cards, setCards] = useState<Card[]>(whyusCards);
     const [movingId, setMovingId] = useState<string | null>(null);
     const [activeImage, setActiveImage] = useState(0);
 
-    const rotateLastToFront = () => {
+    // const rotateLastToFront = () => {
+    //     setCards((prev) => {
+    //         if (!prev.length) return prev;
+    //         const last = prev[prev.length - 1];
+    //         setMovingId(last.id);
+    //         return [last, ...prev.slice(0, -1)];
+    //     });
+
+    //     // advance image index in sync (wraparound)
+    //     setActiveImage((i) => (i + 1) % images.length);
+
+    //     // clear visual “moving” flag after the CSS duration
+    //     setTimeout(() => setMovingId(null), 600);
+    // };
+
+    // Update this function to move the clicked card to the last position
+    const moveCardToLast = (idx: number) => {
         setCards((prev) => {
-            if (!prev.length) return prev;
-            const last = prev[prev.length - 1];
-            setMovingId(last.id);
-            return [last, ...prev.slice(0, -1)];
+            if (prev.length < 2) return prev;
+            // Pull out the clicked card
+            const selected = prev[idx];
+            // Remove the clicked card from its spot, and push to end
+            const filtered = prev.filter((_, i) => i !== idx);
+            setMovingId(selected.id);
+            return [...filtered, selected];
         });
 
-        // advance image index in sync (wraparound)
-        setActiveImage((i) => (i + 1) % images.length);
+        // Image will update in useEffect based on the last card
 
-        // clear visual “moving” flag after the CSS duration
+        // Clear the visual moving flag after the CSS animation
         setTimeout(() => setMovingId(null), 600);
     };
+
+    useEffect(() => {
+        const lastCard = cards[cards.length - 1];
+        if (lastCard && cardIdToImageIndex[lastCard.id] !== undefined) {
+            setActiveImage(cardIdToImageIndex[lastCard.id]);
+        }
+    }, [cards]);
+
 
     return (
         <>
@@ -64,7 +99,7 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                             </div>
 
                             {/* Single-image viewport with a simple fade/slide animation */}
-                            <div className="images-group single">
+                            {/* <div className="images-group single">
                                 <div className="image-viewport">
                                     {images.map((img, idx) => (
                                         <div
@@ -75,10 +110,20 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                                         </div>
                                     ))}
                                 </div>
+                            </div> */}
+
+                            <div className="images-group single">
+                                <div className="image-viewport">
+                                    {images.map((img, idx) => (
+                                        <div key={img.src + idx} className={`image-slide ${idx === activeImage ? "is-active" : "is-inactive"}`} aria-hidden={idx !== activeImage}>
+                                            <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority={false} className="why-us-slider-images" unoptimized />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
-                        <div className="why-us-cards">
+                        {/* <div className="why-us-cards">
                             <div className="why-us-stack">
                                 {cards.map((card, idx) => (
                                     <button
@@ -97,11 +142,31 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                                     </button>
                                 ))}
                             </div>
+                        </div> */}
+
+                        <div className="why-us-cards">
+                            <div className="why-us-stack">
+                                {cards.map((card, idx) => (
+                                    <button
+                                        key={card.id}
+                                        className={`card-btn site-radius-20 card-${card.id} ${movingId === card.id && idx === cards.length - 1 ? "moving-to-last" : ""}`}
+                                        onClick={() => [moveCardToLast(idx)]}
+                                        type="button"
+                                        style={{ backgroundColor: card.background_color, color: card.text_color }}
+                                    >
+                                        <p className="h5 why-card-title">
+                                            <span className="icon-check_circle"></span>
+                                            {card.title}
+                                        </p>
+                                        {/* Show content for the last card */}
+                                        {idx === cards.length - 1 && <p className="why-card-content text-18">{card.content}</p>}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
         </>
     );
 }

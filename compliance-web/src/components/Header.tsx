@@ -9,11 +9,32 @@ export function Header() {
     const menuRef = useRef<HTMLDivElement>(null)
     const hamburgerRef = useRef<HTMLDivElement>(null)
 
+    // useEffect(() => {
+    //     const onScroll = () => setScrolled(window.scrollY > 800 )
+    //     onScroll()
+    //     window.addEventListener('scroll', onScroll, { passive: true })
+    //     return () => window.removeEventListener('scroll', onScroll)
+    //   }, []);
+
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 800 )
-        onScroll()
-        window.addEventListener('scroll', onScroll, { passive: true })
-        return () => window.removeEventListener('scroll', onScroll)
+        const getScrollLimit = () => {
+          const width = window.innerWidth;
+      
+        //   if (width <= 576) return 400;
+          if (width <= 1023) return 500;
+          if (width <= 1280) return 600;
+          return 800;
+        };
+      
+        const onScroll = () => {
+          const scrollLimit = getScrollLimit();
+          setScrolled(window.scrollY > scrollLimit);
+        };
+      
+        onScroll(); // run once initially
+        window.addEventListener("scroll", onScroll, { passive: true });
+      
+        return () => window.removeEventListener("scroll", onScroll);
       }, []);
 
 

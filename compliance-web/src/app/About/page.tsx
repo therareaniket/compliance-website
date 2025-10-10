@@ -3,10 +3,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import AboutUsSwiperComponents from "@/components/SwiperComponent";
+import { Header } from '@/components/Header';
 
 export default function AboutUs() {
     return (
         <>
+        <div className="aboutbody">
+            <Header/>
+
             <section className='abt-hero'>
                 <video src="/images/aboutUs/About-us.mp4" autoPlay loop muted></video>
                 <div className="container">
@@ -129,7 +133,11 @@ export default function AboutUs() {
             <section className="abt-platforms">
                 <div className="container">
                     <div className="platform-wrapper site-radius-10">
-                        <Image src='/images/aboutUs/platform-section-image.webp' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img'></Image>
+                        <div className="left-gif-platform">
+                            <Image src='/images/aboutUs/platform-side-img.webp' alt='platform-side-img' width={452} height={440} priority={false} className='platform-side-image site-radius-10'></Image>
+
+                            <Image src='/images/aboutUs/about-us-platform.gif' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
+                        </div>
 
                         <div className="platform-info">
                             <h2 className='h4'>Our platform supports frameworks to help you stay audit-ready.</h2>
@@ -157,6 +165,7 @@ export default function AboutUs() {
             </section>
 
             <AboutUsSwiperComponents />
+        </div>
         </>
     )
 }

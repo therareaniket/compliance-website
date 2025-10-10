@@ -1,4 +1,5 @@
 "use client"
+import { Header } from '@/components/Header';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -6,6 +7,9 @@ import React from 'react'
 export default function ComplianceListing() {
     return(
         <>
+        <div className="compliancebody">
+            <Header />
+
             <section className='com-hero'>
                 <video src="/images/compliance/Compliance.mp4" autoPlay loop muted></video>
                 <div className="container">
@@ -116,6 +120,7 @@ export default function ComplianceListing() {
                     </div>
                 </div>
             </section>  
+        </div>
         </>
     );
 }

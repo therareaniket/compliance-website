@@ -229,7 +229,6 @@ export default async function Home() {
     }
 
     return (
-        <div>
             <>
                 <div className="homebody">
 
@@ -260,7 +259,11 @@ export default async function Home() {
                                 <p className="text-20 text-grey">{home.complianceSubtitle}</p>
                             </div>
 
-                            <div className="steps-path-view">
+                            <div className="steps-video-wrapper site-radius-20 ">
+                                <video src="/images/homepage/final-steps-video.mp4" autoPlay muted loop width='3840' height='2160' className="steps-vid site-radius-20"></video>
+                            </div>
+
+                            {/* <div className="steps-path-view">
                                 <Image src='images/homepage/steps-dotted-path.svg' alt="steps-path" width={1293} height={425} priority={false} className="steps-path-img"></Image>
 
                                 <Image src='/images/homepage/stp-1-connect.webp' alt="step-1-connect" width={528} height={226} priority={false} className="step-1-img"></Image>
@@ -274,15 +277,16 @@ export default async function Home() {
                                 <Image src='/images/homepage/step-2-connect.webp' alt="step-2-connect" width={495} height={387} priority={false} className="step-2-connect"></Image>
                                 <Image src='/images/homepage/step-3-connect.webp' alt="step-3-connect" width={495} height={317} priority={false} className="step-2-connect"></Image>
                                 <Image src='/images/homepage/step-4-connect.webp' alt="step-4-connect" width={495} height={378} priority={false} className="step-2-connect"></Image>
-                            </div>
+                            </div> */}
                         </div>
+                            <span className="white-box"></span>
                     </section>
 
                     <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} />
 
                     {/* OLD LAYOUT */}
 
-                    {/* <section className="hm-proven-result">
+                {/* <section className="hm-proven-result">
                 <div className="container">
                     <div className="result-head">
                         <h2 className="h3">{home.provenResultsTitle}</h2>
@@ -430,7 +434,7 @@ export default async function Home() {
 
                     <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
 
-                    <section className="hm-clientale --bg-white">
+                    <section className="hm-clientale --bg-white overflow-hidden">
                         <div className="container">
                             <div className="clientale-wrapper">
                                 <div className="trusted-leaders site-radius-10">
@@ -440,7 +444,7 @@ export default async function Home() {
                                         <p className="text-20 text-grey">{home.testimonialSubtitle}</p>
                                     </div>
 
-                                    <Image src='/images/homepage/clientale-quotes.webp' alt="quotes" width={588} height={410} priority={false} style={{ opacity: '0.2' }} draggable={true} className="testi-quotes"></Image>
+                                    <Image src='/images/homepage/clientale-quotes.webp' alt="quotes" width={588} height={410} priority={false} style={{ opacity: '0.2' }} draggable={false} className="testi-quotes"></Image>
                                 </div>
 
                                 <ClientaleSlider />
@@ -498,6 +502,5 @@ export default async function Home() {
                     </section>
                 </div>
             </>
-        </div>
     );
 }
