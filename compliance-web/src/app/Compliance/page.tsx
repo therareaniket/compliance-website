@@ -7,15 +7,13 @@ export default function ComplianceListing() {
     return(
         <>
             <section className='com-hero'>
+                <video src="/images/compliance/Compliance.mp4" autoPlay loop muted></video>
                 <div className="container">
-                    <div className="com-page-banner">
                         <div className="banner-head">
                             <h1>Trusted <span>Compliance</span> Management Insights</h1>
 
                             <p className='text-20 text-rg text-grey'>Empowering organizations with clear, reliable data to ensure regulatory alignment and operational integrity.</p>
                         </div>
-                            <Image src='/images/compliance/compli-banner-show.webp' alt='hero-card' width={816} height={606} priority={false}></Image>                      
-                    </div>
                 </div>
             </section>
 

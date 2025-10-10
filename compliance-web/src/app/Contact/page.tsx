@@ -15,16 +15,13 @@ export default function ContactUs() {
     return (
         <>
             <section className='contact-hero'>
+                <video src="/images/contactus/Contact-us.mp4" autoPlay loop muted></video>
                 <div className="container">
-                    <div className="cntct-page-banner">
-                        <div className="banner-head">
+                        <div className="banner-head contact-banner-head">
                             <h1>Let’s Simplify <span>Compliance</span> Together</h1>
 
                             <p className='text-20 text-grey'>Connect with our team for inquiries, support, or tailored solutions. We’re here to guide you at every step.</p>
                         </div>
-                        
-                        <Image src='/images/contactus/contact-banner-showcase.webp' alt='banner-showcase' width={699} height={500} priority={true} className='banner-showcase'></Image>
-                    </div>
                 </div>
             </section>
 

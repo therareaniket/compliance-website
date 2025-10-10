@@ -6,18 +6,13 @@ export default function UserAccess() {
     return (
         <>
             <section className='user-access-hero'>
+                <video src="/images/userAccess/User&Access.mp4" autoPlay loop muted></video>
                 <div className="container">
-                    <div className="user-access-hero-wrapper">
                         <div className="user-access-hero-head">
                             <h1>User Roles and Access Management</h1>
 
                             <p className='hero-section-para text-rg text-20'>Driving compliance and transparency by defining clear permissions responsibilities and secure access for every role across the system</p>
                         </div>
-
-                        <div>
-                            <Image src='/images/userAccess/heroImg.webp' alt='hero-card' width={809} height={634} priority={false}></Image>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -27,81 +22,81 @@ export default function UserAccess() {
                         <h2 className='h3 text-md'>Defining Roles for Secure and Compliant Operations</h2>
 
                         <div className="role-card-wrapper">
-                            <div className="role-account-admin bg-blue">
+                            <div className="role-account-admin">
                                 <div className="account-admin-main-text">
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Account Admin</h3>
 
-                                        <p className='text-grey'>Full access to manage account settings, users, and security</p>
+                                        <p className='text-20 text-grey text-rg'>Full access to manage account settings, users, and security</p>
                                     </div>
                                     <div className='account-admin-pointers'>
                                         <h4 className='h6'>Responsibilities</h4>
 
                                         <ul>
-                                            <li className='text-20 text-grey text-rg'><p>Manage and oversee all users, roles, and permissions to ensure appropriate access levels throughout the account.</p></li>
-                                            <li className='text-20 text-grey text-rg'><p>Monitor billing, subscriptions, and financial transactions to ensure accurate account management.</p></li>
-                                            <li className='text-20 text-grey text-rg'><p>Enforce security protocols and policies to protect account data and prevent unauthorized access.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Enforce security protocols and policies to protect account data and prevent unauthorized access.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Manage and oversee all users, roles, and permissions to ensure appropriate access levels throughout the account.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Monitor billing, subscriptions, and financial transactions to ensure accurate account management.</p></li>
                                         </ul>
                                     </div>
                                 </div>
                                 
                                 <div className='roles-images'>
-                                    <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
+                                    <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
                                 </div>
                             </div>
 
-                            <div className="role-account-admin card-row-reverse bg-yellow">
+                            <div className="role-account-admin card-row-reverse">
                                 <div className="account-admin-main-text">
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Officer</h3>
 
-                                        <p className='text-grey'>Oversees organizational compliance and regulatory adherence</p>
+                                        <p className='text-20 text-grey text-rg'>Oversees organizational compliance and regulatory adherence</p>
                                     </div>
                                     <div className='account-admin-pointers'>
                                         <h4 className='h6'>Responsibilities</h4>
 
                                         <ul>
-                                            <li className='text-20 text-grey text-rg'><p>Develop, implement, and enforce compliance policies and procedures across the organization.</p></li>
-                                            <li className='text-20 text-grey text-rg'><p>Continuously monitor adherence to external regulations and internal standards to mitigate risk.</p></li>
-                                            <li className='text-20 text-grey text-rg'><p>Conduct detailed risk assessments and recommend actionable measures for improvement.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Develop, implement, and enforce compliance policies and procedures across the organization.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Continuously monitor adherence to external regulations and internal standards to mitigate risk.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Conduct detailed risk assessments and recommend actionable measures for improvement.</p></li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div className="roles-images">
-                                    <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
+                                    <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
                                 </div> 
                             </div>
 
-                            <div className="role-account-admin bg-purplish">
+                            <div className="role-account-admin">
                                 <div className="account-admin-main-text">
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Contributor</h3>
 
-                                        <p className='text-grey'>Supports compliance operations by creating and maintaining documentation</p>
+                                        <p className='text-20 text-grey text-rg'>Supports compliance operations by creating and maintaining documentation</p>
                                     </div>
                                     <div className='account-admin-pointers'>
                                         <h4 className='h6'>Responsibilities</h4>
 
                                         <ul>
-                                            <li className='text-20 text-grey text-rg'><p>Create, update, and maintain compliance records and documentation to ensure accuracy.</p></li>
-                                            <li className='text-20 text-grey text-rg'><p>Prepare and submit reports or data for review by compliance officers in a timely manner.</p></li>
-                                            <li className='text-20 text-grey text-rg'><p>Assist in organizing and maintaining regulatory documents and reference materials.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Create, update, and maintain compliance records and documentation to ensure accuracy.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Prepare and submit reports or data for review by compliance officers in a timely manner.</p></li>
+                                            <li><p className='text-20 text-grey text-rg'>Assist in organizing and maintaining regulatory documents and reference materials.</p></li>
                                         </ul>
                                     </div>
                                 </div>
                                 
                                 <div className="roles-images">
-                                    <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
+                                    <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
                                 </div>
                             </div>
 
-                            <div className="role-account-admin card-row-reverse orange-tint">
+                            <div className="role-account-admin card-row-reverse">
                                 <div className="account-admin-main-text">
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Auditor</h3>
 
-                                        <p className='text-grey'>Reviews compliance activities to ensure accuracy and accountability</p>
+                                        <p className='text-20 text-grey text-rg'>Reviews compliance activities to ensure accuracy and accountability</p>
                                     </div>
                                     <div className='account-admin-pointers'>
                                         <h4 className='h6'>Responsibilities</h4>
@@ -115,7 +110,7 @@ export default function UserAccess() {
                                 </div>
 
                                 <div className='roles-images'>
-                                    <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={510} height={510} priority={false}></Image>
+                                    <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
                                 </div>
                             </div>
                         </div>
