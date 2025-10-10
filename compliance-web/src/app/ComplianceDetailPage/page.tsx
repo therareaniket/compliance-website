@@ -1,0 +1,207 @@
+"use client"
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+
+
+export default function ComplianceDetailPage (){
+    return (
+        <>
+            <section className="detail-page-hero" >
+                <div className="container">
+                    <div className="detail-banner-head container-sm">
+                            <h1 className='h2'>Protecting Healthcare Data with HIPAA Standards</h1>
+
+                            <p> Mandatory compliance for providers, insurers, and business associates made practical.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className='detail-section-1 container-sm'>
+                <div className="container">
+                    <h2 className='h3 text-md'>What is HIPAA?</h2>
+
+                    <p className='text-20 text-rg'>The <strong>Health Insurance Portability and Accountability Act (HIPAA),</strong>  enacted in 1996, establishes standards for safeguarding Protected Health Information (PHI). Its primary goals are:</p>
+                    
+                    <ul>
+                        <li className='text-20 text-grey text-rg'>Protecting patient privacy.</li>
+                        <li className='text-20 text-grey text-rg'>Ensuring security of electronic health information (ePHI).</li>
+                        <li className='text-20 text-grey text-rg'>Allowing portability of insurance coverage.</li>
+                        <li className='text-20 text-grey text-rg'>Standardizing healthcare transactions.</li>
+                    </ul>
+                    <div className='hippa-applies'>
+                    <p className='text-20 text-md'>HIPAA applies to:</p>
+                    
+                    <ul>
+                        <li className='text-20 text-grey text-rg'><strong>Covered Entities (CEs):</strong> Healthcare providers (doctors, hospitals, clinics), health plans (insurance companies), and healthcare clearinghouses.</li>
+                        <li className='text-20 text-grey text-rg'><strong>Business Associates (BAs):</strong> Third-party vendors, contractors, or partners that process, store, or transmit PHI for covered entities.</li>
+                    </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section className="detail-section-2 container-sm">
+                <div className="container">
+                    <h2 className='h3'>Who Needs to Be HIPAA Compliant?</h2>
+
+                    <p className='text-20 text-rg'>Any organization or vendor that creates, stores, processes, or transmits PHI must comply with HIPAA.</p>
+
+                    <ul>
+                        <li className='text-20 text-rg text-grey'>Patient portals (online access to medical records).</li>
+                        <li className='text-20 text-rg text-grey'>Telehealth platforms (video consultations, messaging).</li>
+                        <li className='text-20 text-rg text-grey'>Online appointment forms (scheduling and intake forms).</li>
+                        <li className='text-20 text-rg text-grey'>Secure live chat with doctors, nurses, or other medical professionals.</li>
+                        <li className='text-20 text-rg text-grey'>Cloud hosting providers that store PHI on behalf of healthcare organizations.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className="detail-section-3 container-sm">
+                <div className="container">
+                    <h2 className='h3'>Key HIPAA Rules</h2>
+
+                    <ul>
+                        <p className='text-20 text-md'>Privacy Rule</p>
+                        <li className='text-20 text-grey text-rg'>Defines how PHI can be used/disclosed.</li>
+                        <li className='text-20 text-grey text-rg'>Grants patients rights to access, amend, and control their medical data.</li>
+                        <li className='text-20 text-grey text-rg'>Example: A doctor may share PHI with another provider for treatment but cannot disclose it to a marketer without patient consent.</li>
+                    </ul>
+
+                    <ul>
+                        <p className='text-20 text-md'>Security Rule</p>
+                        <li className='text-20 text-grey text-rg'>Applies specifically to electronic PHI (ePHI).</li>
+                        <li className='text-20 text-grey text-rg'>Requires administrative, technical, and physical safeguards to secure data.</li>
+                        <li className='text-20 text-grey text-rg'>Example: Implementing firewalls, encryption, and access restrictions.</li>
+                    </ul>
+
+                    <ul>
+                        <p className='text-20 text-md'>Breach Notification Rule</p>
+                        <li className='text-20 text-grey text-rg'>Requires organizations to notify affected individuals, HHS, and sometimes the media after a breach.</li>
+                        <li className='text-20 text-grey text-rg'>Timeline: Notification must occur within 60 days of discovery.</li>
+                    </ul>
+
+                    <ul>
+                        <p className='text-20 text-md'>Enforcement Rule</p>
+                        <li className='text-20 text-grey text-rg'>Outlines investigation and penalty procedures for HIPAA violations.</li>
+                        <li className='text-20 text-grey text-rg'>Penalties depend on the level of negligence and can reach $1.9M annually per violation category (2025 adjusted figures).</li>
+                    </ul>
+
+                        <ul>
+                        <p className='text-20 text-md'>Omnibus Rule</p>
+                        <li className='text-20 text-grey text-rg'>Strengthens privacy/security provisions.</li>
+                        <li className='text-20 text-grey text-rg'>Extends liability to business associates.</li>
+                        <li className='text-20 text-grey text-rg'>Requires updated BAAs and patient rights notices.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='detail-section-4 container-sm'>
+                <div className="container">
+                    <h2 className='h3'>Technical Safeguards</h2>
+
+                    <p className='text-20 text-rg'>To secure ePHI, organizations must implement:</p>
+
+                    <Image src='/images/complianceDetailPage/technicalSafeGuard.webp' alt='technicalSafeGuard' width={1100} height={500} priority={false}></Image>
+
+                    <ul>
+                        <li className='text-20 text-md'>SSL/TLS Encryption – <span className='text-grey text-rg'>Ensures data is encrypted during transmission (e.g., HTTPS websites, secure APIs).</span></li>
+                        <li className='text-20 text-md'>Data Encryption at Rest – <span className='text-grey text-rg'>Protects stored data on databases, servers, and backups.</span></li>
+                        <li className='text-20 text-md'>Secure Authentication – <span className='text-grey text-rg'>Use multi-factor authentication (MFA) and strong password policies.</span></li>
+                        <li className='text-20 text-md'>Access Controls – <span className='text-grey text-rg'>Restrict PHI access based on role-based permissions.</span></li>
+                        <li className='text-20 text-md'>Audit Trails & Logging – <span className='text-grey text-rg'>Track who accessed data, when, and what changes were made.</span></li>
+                        <li className='text-20 text-md'>Intrusion Detection & Monitoring – <span className='text-grey text-rg'>Detect unusual activity or unauthorized access attempts.</span></li>
+                        <li className='text-20 text-md'>HIPAA-Compliant Hosting – <span className='text-grey text-rg'>Work with cloud providers (AWS, Azure, Google Cloud, etc.) that sign Business Associate Agreements (BAAs).</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='detail-section-5 container-sm'>
+                <div className="container">
+                    <h2 className='h3'>Administrative & Physical Safeguards</h2>
+
+                    <p className='text-20 text-rg'>Non-technical but equally critical protections include:</p>
+
+                    <ul>
+                        <li className='text-20 text-md'>Appoint HIPAA Privacy & Security Officers – <span className='text-grey text-rg'>Responsible for compliance oversight.</span></li>
+                        <li className='text-20 text-md'>Regular Risk Assessments – <span className='text-grey text-rg'>Identify vulnerabilities in systems, policies, and processes.</span></li>
+                        <li className='text-20 text-md'>Staff Training – <span className='text-grey text-rg'>Educate employees on PHI handling, phishing awareness, and breach response.</span></li>
+                        <li className='text-20 text-md'>Data Backup & Recovery Plans – <span className='text-grey text-rg'>Ensure PHI is recoverable after cyberattacks or disasters.</span></li>
+                        <li className='text-20 text-md'>Physical Security – <span className='text-grey text-rg'>Restrict server room access, secure laptops/mobile devices, use badge systems and surveillance.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='detail-section-6 container-sm'>
+                <div className="container">
+                    <p>Any patient-facing system must:</p>
+
+                    <ul>
+                        <p className='text-20 text-md'>Use encrypted forms for:</p>
+                        <li className='text-20 text-rg text-grey'>New patient registration/intake.</li>
+                        <li className='text-20 text-rg text-grey'>Appointment scheduling.</li>
+                        <li className='text-20 text-rg text-grey'>Online health questionnaires.</li>
+                    </ul>
+
+                    <ul>
+                        <p className='text-20 text-md'>Patient portals must be:</p>
+                        <li className='text-20 text-rg text-grey'>Password-protected with MFA.</li>
+                        <li className='text-20 text-rg text-grey'>Monitored for unauthorized logins (alerts for suspicious activity).</li>
+                        <li className='text-20 text-rg text-grey'>Designed with minimum necessary data collection – only ask for what’s essential.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='detail-section-7 container-sm'>
+                <div className="container">
+                    <h2 className='h3'>Business Associate Agreements (BAAs)</h2>
+
+                    <p className='text-20 text-rg'>If a third-party vendor handles PHI (e.g., hosting providers, billing services, telehealth platforms), a BAA is legally required.</p>
+
+                    <Image src='/images/complianceDetailPage/businessAssociateImg.webp' alt='businessAssociateImg' width={1100} height={500} priority={false}></Image>
+
+                    <ul>
+                        <li className='text-20 text-rg text-grey'>Permitted uses/disclosures of PHI.</li>
+                        <li className='text-20 text-rg text-grey'>Security measures the vendor must implement.</li>
+                        <li className='text-20 text-rg text-grey'>Breach reporting protocols and timelines.</li>
+                        <li className='text-20 text-rg text-grey'>Termination clauses if compliance is not maintained.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='detail-section-8 container-sm'>
+                <div className="container">
+                    <h2 className='h3'>Notice of Privacy Practices (NPP)</h2>
+
+                    <p className='text-20 text-rg'>Healthcare organizations must publish and provide an NPP:</p>
+
+                    <ul>
+                        <li className='text-20 text-rg text-grey'>Clearly explains how PHI is collected, used, and disclosed.</li>
+                        <li className='text-20 text-rg text-grey'>Lists patient rights (e.g., right to access, right to restrict disclosure).</li>
+                        <li className='text-20 text-rg text-grey'>Provides contact information for complaints or privacy concerns.</li>
+                        <li className='text-20 text-rg text-grey'>Prominently posted on websites and in clinics.</li>
+                        <li className='text-20 text-rg text-grey'>Available in paper form upon request.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='detail-section-9 container-sm'>
+                <div className="container">
+                    <h2 className='h3'>HIPAA Compliance Checklist (Quick Summary)</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg text-grey'>SSL Certificate Installed – HTTPS enabled for all data transmission.</li>
+                        <li className='text-20 text-rg text-grey'>HIPAA-Compliant Hosting – Use hosting with a signed BAA.</li>
+                        <li className='text-20 text-rg text-grey'>Data Encryption – At rest (databases, backups) and in transit (SSL/TLS).</li>
+                        <li className='text-20 text-rg text-grey'> Secure Web Forms – Encrypted, authenticated, minimal data collection.</li>
+                        <li className='text-20 text-rg text-grey'>Access Controls & Monitoring – Role-based access, audit logs, intrusion detection.</li>
+                        <li className='text-20 text-rg text-grey'>BAAs with Vendors – Signed and regularly reviewed.</li>
+                        <li className='text-20 text-rg text-grey'>Privacy Policy Posted – Clear and patient-friendly NPP.</li>
+                        <li className='text-20 text-rg text-grey'>Staff Training Completed – Ongoing security awareness programs.</li>
+                        <li className='text-20 text-rg text-grey'>Backup & Recovery Procedures – Regular testing of data restoration.</li>
+                        <li className='text-20 text-rg text-grey'>Breach Notification Plan – Documented procedure for timely reporting.</li>
+                    </ul>
+                </div>
+            </section>
+        </>
+    )
+}
