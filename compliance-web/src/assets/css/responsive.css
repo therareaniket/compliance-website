@@ -35,6 +35,7 @@
     /* compliance page */
 
     .contct-info{ padding-top: 38px; }
+    .contactbody .banner-head { width: 850px; }
 
 
     /* line-clamp for  mis-vis-para */
@@ -45,14 +46,15 @@
 @media screen and (max-width: 1799px) {
     .section { padding: 80px 0; }
     h1, .h1{ font-size: 70px; line-height: 80px; }
-    .abt-hero-head, .user-access-hero-head, .banner-head{ left: 181px; width: 750px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head{ left: 100px; width: 750px; }
+    .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 60px; line-height: 68px; }
     /* .banner-head{ width: 700px; } */
 
     .why-us-content{ width: 680px; }
     .card-btn{ width: 620px; }
     /* .trusted-leaders{ width: 735px; } */
     .quotes-img img { width: 500px; }
-    .category-faqs{ width: 790px; }
+    .category-faqs{ width: 750px; }
     .steps-head .h3{ width: 550px; }
     .steps-head p{ width: 800px; }
     .white-box { height: 250px; }
@@ -88,6 +90,7 @@
 
 
     /* Contact Us */
+    .contactbody .banner-head { width: 780px; }
     .head-text, .form-fields form { width: 770px; }
     .cntct-page-banner .banner-showcase { width: 550px; }
     .info-block { width: 500px; }
@@ -103,8 +106,6 @@
     .compliance-matters-section{ gap: 40px; }
     .compliance-matters-text{ width: 878px; }
     .hipaa-card, .fda_card, .annex_11_card, .gdpr_card, .gcp_card, .cdsco_card{ width: 680px; height: auto; }
-
-
 
     .result-head .h3, .supported-compli-lists { width: 660px; } 
     .result-head p, .compli-stats { width: 650px; }
@@ -128,7 +129,7 @@
 
     .core-feature-heading p { width: 748px; }
 
-    .abt-hero-head, .user-access-hero-head, .banner-head{ left: 99px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { left: 115px; }
 
     /* About Us */
     .platform-wrapper { padding: 80px 40px; }
@@ -145,7 +146,7 @@
 
 
     /* contact-us */
-    /* .banner-head{ width: 769px; } */
+    .contactbody .banner-head { width: 760px; }
 }
 
 @media screen and (max-width: 1560px) {
@@ -159,21 +160,24 @@
     .quick-links{ width: 200px; }
     .core-feature-section { padding-bottom: 0; }
     .step-3-img{ width: 450px; }
-
     .quotes-img img{ width: 380px; }
 
-    .abt-hero-head, .user-access-hero-head, .banner-head{ width: 750px; }
+
+    /* About Us */
+    .abt-hero-head, .user-access-hero-head, .banner-head { width: 750px; top: 50%; transform: translate(0, -45%); }
+    .user-access-hero-head { width: 700px; transform: translate(-50px, -45%); }
 
     /* userAccess page */
 
 
     /* compliance page */
     .com-page-banner img{ width: 527px; }
-
-    
     .stats-nums { width: 250px; padding: 15px 20px; }
-
+    .contactbody .banner-head { width: 680px; }
     
+    .role-eclipse { width: 300px; right: -50px; }
+    .eclipse-rev { left: -50px; }
+
 }
 
 @media screen and (max-width: 1439px) {
@@ -209,17 +213,20 @@
     
     .step-3-img{ width: 400px; }
     
-    .abt-hero-head, .user-access-hero-head, .banner-head{ width: 700px; }
-    
+    .platform-wrapper { padding: 70px 40px; }
+    .platform-showcase-img { width: 600px; bottom: 80px; }
+    .platform-side-image { width: 200px; }
     .mis-vis-heading img{ height: 250px; object-fit: cover; }
+    
+
 
     /* About Us */
-    .platform-wrapper { padding: 70px 40px; }
-    .platform-side-image { width: 200px; }
-    .platform-showcase-img { width: 600px; bottom: 80px; }
+    .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 60px; line-height: 68px; }
+    .abt-hero-para { margin-bottom: 30px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { width: 680px; }
+
 
     /* userAccess page */
-    /* .roles-images img{ width: 360px; } */
     .role-account-admin{ gap: 50px; }
     .user-access-hero-wrapper img{ width: 558px; }
     .account-admin-main-text{ width: 670px; }
@@ -248,6 +255,8 @@
     .sec-doc { top: 5%; right: 0; }
     .fram-covd { left: 12%; bottom: 20%; }
     .aud-suc { width: 200px; bottom: 12%; right: 0; }
+
+    .contactbody .banner-head { width: 620px; }
 }
 
 @media screen and (max-width: 1359px) {
@@ -287,7 +296,14 @@
 
     /* about-us */
     /* .abt-hero{ height: max-content; padding: 100px 0; } */
-    .abt-hero-head, .user-access-hero-head, .banner-head{ left: 58px; width: 680px; }
+    .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 56px; line-height: 60px; }
+    .abt-hero-para { margin-bottom: 20px; }
+    .abt-hero-head-button .btn-secondary { padding: 12px 20px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head{ left: 58px; width: 680px; transform: translate(0, -40%); }
+    .user-access-hero-head { width: 640px; }
+
+
+
     /* userAccess page */
     /* .user-access-hero{ height: max-content; padding: 100px 0; } */
     .path-1, .path-2, .path-3, .path-4{ width: 350px; }
@@ -347,7 +363,9 @@
 
     /* .feature-cards, .swiper-slide, .swiper-slide-active{ width: 290px !important; } */
     /* .abt-hero { padding: 50px 0; } */
+    .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 50px; line-height: 56px; }
     .abt-hero-head, .user-access-hero-head, .banner-head{ left: 128px; width: 580px; }
+    .user-access-hero-head { left: 100px; }
     .featurecard { width: 296px; height: 370px; }
     .abt-hero-para{ margin-bottom: 25px; }
     .mis-vis-section { flex-direction: column; align-items: center; gap: 40px; }
@@ -403,6 +421,7 @@
     /* contact-us */
     /* .banner-head{ width: 550px; } */
     /* .cntct-page-banner .banner-showcase { width: 400px; } */
+    .contactbody .banner-head { width: 540px; }
     .form-fields{ width: 550px; }
     .form-col input, .form-col textarea, .form-col select, .selections{ width: 500px; }
     .info-block{ width: 370px; padding: 20px; }
@@ -424,6 +443,10 @@
     .fram-covd { left: 2%; bottom: 30%; }
     .aud-suc { width: 200px; bottom: 12%; right: 0; }
 
+    .role-eclipse { width: 250px; right: -50px; top: -70px; }
+    .eclipse-rev { left: -50px; }
+
+
 }
 
 @media screen and (max-width: 1199px) {
@@ -444,24 +467,26 @@
     .quick-links{ width: max-content; }
     .core-feature-heading{ flex-direction: column; gap: 20px; align-items: center; text-align: center; }
     .core-feature-heading h2, .core-feature-heading p{ width: 100%; }
-    .core-feature-section, .mis-vis-section{ margin: 50px 0; }
+    /* .core-feature-section{ margin: 50px 0; } */
     .footer-links{ gap: 50px; }
 
     .trusted-leaders { height: 650px; }
     .clientale-main .swiper{ width: 450px; }
     .category-faqs .h4 { font-size: 26px; line-height: 36px; }
-
     .plan-btn-cont .h5 { font-size: 22px; line-height: 30px; }
 
+
+    /* About Us */
+    .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 40px; line-height: 48px; }
     .abt-hero-head, .user-access-hero-head, .banner-head{ left: 100px; width: 500px; }
 
     /* userAccess page */
+    .user-access-hero-head { left: 70px; }
     .footer-wrapper{ justify-content: space-between; }
     .path-4{ bottom: 15px; }
 
-    /* compliance page */
-
-    /* .abt-hero-head, .user-access-hero-head, .banner-head{  } */
+    /* Contact Us Page */
+    .contactbody .banner-head { width: 400px; }
 
 }
 
@@ -554,13 +579,14 @@
     .abt-hero-head, .user-access-hero-head, .banner-head{ width: 450px; }
 
     /* About Us */
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 600px; background-color: #421B58; }
+    .about-hero-vid { padding-top: 20px; }
     .platform-showcase-img { left: 0; transform: translateX(0); }
     .platform-side-image { left: 70%; }
     .platform-wrapper { padding-bottom: 100px; }
 
     /* userAccess page */
-    .user-access-hero{ height: 520px; }
-    .user-access-hero-head{ transform: translateY(-60%); }
+    .user-access-hero-head { width: 500px; transform: translateY(-30%); }
     .path-line{ width: 100%; }
     .path-2{ bottom: 0; }
     .secure-portal-wrapper{ height: 640px; }
@@ -584,7 +610,7 @@
 }
 
 @media screen and (max-width: 991px) {
-    h1, .h1 { font-size: 46px; line-height: 30px; }
+    h1, .h1 { font-size: 46px; line-height: 56px; }
     h4, .h4{ font-size: 30px; line-height: 40px; }
     .text-20{ font-size: 16px; line-height: 24px; }
 
@@ -610,9 +636,10 @@
     .navbar-links ul{ gap: 30px; }
     .nav-signup{ padding: 10px 15px; }
 
-    .abt-hero, .user-access-hero, .com-hero{ height: max-content; }
-    /* .abt-hero-wrapper{ flex-direction: column; text-align: center; width: 100%; align-items: center; } */
-    .abt-hero-head, .user-access-hero-head, .banner-head { left: 110px; width: 360px; }
+    
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 550px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { left: 50px; width: 420px; transform: translate(0, -40%); }
+    .about-hero-vid { padding-top: 40px; }
     .abt-hero-para{ margin-bottom: 20px; }                                                                                                                                                                                                                                                              
     .abt-hero-head .btn-padding{ padding: 10px 15px; }
     .abt-hero-para{ font-size: 14px; line-height: 20px; }                                                                                                                                                                               
@@ -625,6 +652,8 @@
 
     /* userAccess page */
     .user-access-hero-wrapper{ flex-direction: column; text-align: center; gap: 40px;  }
+    .user-acc-vid { padding-top: 40px; }
+    .user-access-hero-head { width: 440px; }
     /* .user-access-hero-head{ width: 100%; } */
     /* .role-account-admin{ flex-direction: column-reverse; }
     .role-account-admin img{ width: 100%; }
@@ -657,7 +686,7 @@
 
 @media screen and (max-width: 800px) {
     .hm-hero-content { padding: 20px; }
-    .abt-hero-head, .user-access-hero-head, .banner-head { left: 36px; width: 350px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { left: 36px;  }
 }
 
 @media screen and (max-width: 767px) {
@@ -685,7 +714,7 @@
         box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.07);
     }
 
-    .nav-signup { color: var(--black); }
+    .nav-signup.text-md { color: var(--black); font-weight: normal; font-family: poppins-rg !important; }
     .navbar-links.open { display: flex; padding: 10px 30px; }
     .navbar-links ul { gap: 100px !important; padding: 0 !important; }
     .nav-signup { padding: 0; background-color: transparent; }
@@ -756,7 +785,13 @@
     .testi-quotes { width: 400px; }
     .trusted-leaders { height: 300px; }
 
+    /* About Us */
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 500px; }
+    .about-hero-vid, .user-acc-vid, .contact-vid, .compliance-vid { display: none; }
+    .abt-hero-head, .user-access-hero-head, .banner-head, .contactbody .banner-head { width: 600px; }
+
     /* userAccess page */
+    /* .user-access-hero-head { transform: translate(0, 40px) } */
     .path-line{ display: none; }
     .path-images{ flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
     .path-1, .path-2, .path-3, .path-4{ position: static; }
@@ -786,7 +821,7 @@
     .hm-hero-bg-setup { display: none; }
     
     .abt-hero-wrapper{ flex-direction: column; align-items: center; }
-    .abt-hero-head{ width: 100%; text-align: center; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { width: 500px !important; }
     .mis-vis-heading, .core-feature-heading{text-align: left; align-items: start; }
     .mis-vis-cards{ flex-direction: column; align-items: center; }
     .mis-vis-card{ width: 100%; }
@@ -827,15 +862,17 @@
 
     /* About Us */
     .platform-side-image { width: 140px; }
+    .removed-margin-btm { margin-bottom: 40px; }
 
     /* userAccess page */
     .user-access-hero{ padding: 50px 0; }
     .user-access-hero-wrapper{ flex-direction: column; text-align: center; gap: 40px; padding: 0; }
-    .roles-card-section{ margin-top: 0; }
     .secure-portal-wrapper{ height: max-content;  }
     .path-1, .path-2, .path-3, .path-4{ width: 249px; }
 
     /* compliance page */
+
+    .role-eclipse { width: 200px; }
 }
 
 @media screen and (max-width: 575px) {
@@ -847,7 +884,8 @@
     .platform-lists{ gap: 80px; }
 
     .steps-video-wrapper { height: 250px; }
-
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 550px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { width: 400px !important; }
     
     .global-org, .framwrk-coverd, .secure-docs, .audit-suc { width: calc(50% - 10px); }
     .cta-links .btn-primary { background-color: transparent; border: 1px solid var(--white); color: var(--white); }
@@ -873,7 +911,8 @@
     .floating-stats > * { width: 80%; position: relative; top: 0; left: 0; margin: 0 auto; }
     .floating-stats > *:not(:last-child) { margin-bottom: 20px; }
  
-    .navbar-links ul{ gap: 60px!important; }
+    .navbar-links { gap: 40px; }
+    .navbar-links ul{ gap: 40px !important; }
 
     .click-box { height: 320px; }
     .click-box.active { height: 740px; }
@@ -890,6 +929,8 @@
     .clientale-main .swiper-pagination { transform: translateY(-40px) !important; } 
 
     /* About Us */
+    .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 30px; line-height: 38px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { padding-right: 20px !important; }
     .platform-side-image { display: none; }
     .platform-wrapper { gap: 40px; }
     .platform-showcase-img { scale: 1.1; }
@@ -927,6 +968,8 @@
 
     .banner-head, .head-text, .form-fields form{ width: 100%; }
     .form-fields, .form-col input, .form-col textarea, .form-col select, .selections{ width: 100%; }
+
+    .role-eclipse { display: none; }
 }
 
 @media screen and (max-width: 459px) {
@@ -964,15 +1007,18 @@
     .plans-btn:not(:last-child) { margin-bottom: 10px; }
 
     /* About Us */
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 450px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { width: 350px !important; }
     .platform-wrapper { padding: 30px; }
 
     /* userAccess page */
-    .roles-card-section{ margin-top: 60px; }
     .role-account-admin{ margin-bottom: 30px; }
 
 
     /* compliance page */
     .role-account-admin{ padding: 20px 25px; }
+
+    .header-main.is-scrolled .nav-signup { padding: 6px 0; }
 }
 
 @media screen and (max-width: 400px) {
@@ -1007,9 +1053,13 @@
     .hm-hero-btns .btn-primary { margin: 0; }
     .white-box { display: none; }
 
+    /* About Us */
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 480px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { width: 320px !important; }
+
     /* compliance page */
     .com-page-banner img{ width: 275px; }
-    .compliance-matters-main{ margin-top: 60px; }
+    /* .compliance-matters-main{ margin-top: 60px; } */
 }
 
 @media screen and (max-width: 374px) {
@@ -1027,6 +1077,10 @@
     .platform-wrapper { padding: 20px; }
     .platform-showcase-img { scale: 1; }
     /* .feature-cards .swiper-slide{ width: 100% !important; } */
+
+    /* About Us */
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 500px; }
+    .abt-hero-head, .user-access-hero-head, .banner-head { width: 280px !important; }
 
 }
 

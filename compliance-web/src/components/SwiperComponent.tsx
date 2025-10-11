@@ -8,7 +8,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 export default function AboutUsSwiperComponents() {
     return (
-        <section>
+        <section className="--bg-white">
             <div className="container">
                 <div className="core-feature-section">
                     <div className="core-feature-heading">

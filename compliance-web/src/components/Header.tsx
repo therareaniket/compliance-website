@@ -20,10 +20,12 @@ export function Header() {
         const getScrollLimit = () => {
           const width = window.innerWidth;
       
-        //   if (width <= 576) return 400;
-          if (width <= 1023) return 500;
-          if (width <= 1280) return 600;
-          return 800;
+            if (width <= 1023) return 500;
+            if (width <= 1200) return 400;
+            if (width <= 1450) return 500;
+            if (width <= 1600) return 610;
+            if (width <= 1800) return 650;
+          return 720;
         };
       
         const onScroll = () => {
@@ -46,13 +48,9 @@ useEffect(() => {
             }
         }
 
-        if (menuOpen) {
-            document.addEventListener('mousedown', handleClickOutside)
-        }
+        if (menuOpen) { document.addEventListener('mousedown', handleClickOutside) }
+        return () => { document.removeEventListener('mousedown', handleClickOutside) }
 
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside)
-        }
     }, [menuOpen])
 
       

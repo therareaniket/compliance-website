@@ -1,6 +1,6 @@
 "use client"
 import { Header } from '@/components/Header';
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -11,17 +11,17 @@ export default function ComplianceListing() {
             <Header />
 
             <section className='com-hero'>
-                <video src="/images/compliance/Compliance.mp4" autoPlay loop muted></video>
+                <video src="/images/compliance/Compliance.mp4" autoPlay loop muted className='compliance-vid'></video>
                 <div className="container">
                         <div className="banner-head">
-                            <h1>Trusted <span>Compliance</span> Management Insights</h1>
+                            <h1>Trusted Compliance Management Insights</h1>
 
                             <p className='text-20 text-rg text-grey'>Empowering organizations with clear, reliable data to ensure regulatory alignment and operational integrity.</p>
                         </div>
                 </div>
             </section>
 
-            <section className='compliance-matters-main'>
+            <section className='section compliance-matters-main --bg-white'>
                 <div className="container">
                     <div className='compliance-matters-section'>
                         <h2 className='h3 '>Why Compliance Matters</h2>
@@ -52,7 +52,7 @@ export default function ComplianceListing() {
                 </div>
             </section>
 
-            <section>
+            <section className='section --bg-white'>
                 <div className="container">
                     <div className="compliance-matters-cards">
                         <div className='compliance-matters-card-list'>
@@ -120,6 +120,20 @@ export default function ComplianceListing() {
                     </div>
                 </div>
             </section>  
+
+            <section className="section hm-cta">
+                <div className="container">
+                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
+
+                    <div className="cta-links text-center">
+                        <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
+
+                        <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
+
+                        <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
+                    </div>
+                </div>
+            </section>
         </div>
         </>
     );

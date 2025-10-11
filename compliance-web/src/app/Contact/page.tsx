@@ -1,31 +1,28 @@
 "use client"
+import { Header } from '@/components/Header';
 import EnquiryForm from '@/components/EnquiryForm';
-import RegistrationForm from '@/components/RegistrationForm';
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useState } from 'react'
-
-type FormType = 'enquiry' | 'registration';
-
+import React from 'react'
+import Link from 'next/link';
 
 export default function ContactUs() {
 
-    const [formType, setFormType] = useState<FormType>('registration');
-
     return (
         <>
+        <div className="contactbody">
+            <Header />
+
             <section className='contact-hero'>
-                <video src="/images/contactus/Contact-us.mp4" autoPlay loop muted></video>
+                <video src="/images/contactus/Contact-us.mp4" autoPlay loop muted className='contact-vid'></video>
                 <div className="container">
                         <div className="banner-head contact-banner-head">
-                            <h1>Let’s Simplify <span>Compliance</span> Together</h1>
+                            <h1>Let’s Simplify Compliance Together</h1>
 
                             <p className='text-20 text-grey'>Connect with our team for inquiries, support, or tailored solutions. We’re here to guide you at every step.</p>
                         </div>
                 </div>
             </section>
 
-            <section className="section contct-form">
+            <section className="section contct-form --bg-white">
                 <div className="container">
                     <div className="contct-head">
                         <div className="head-text">
@@ -37,28 +34,6 @@ export default function ContactUs() {
 
                     <div className="form-container flex justify-between">
                         <div className="form-selection">
-                            {/* <div className="form-selection">
-                                    <div className="form-type-btn" role="tablist" aria-label="Form Type">
-                                        <button role="tab" aria-selected={formType === 'registration'}
-                                        tabIndex={formType === 'registration' ? 0 : -1}
-                                        className={`text-md btn-padding site-radius-10 ${formType === 'registration' ? 'btn-primary' : 'btn-white'}`}
-                                        onClick={() => setFormType('registration')} type="button" >
-                                            Registration
-                                        </button>
-
-                                        <button role="tab" aria-selected={formType === 'enquiry'}
-                                        tabIndex={formType === 'enquiry' ? 0 : -1}
-                                        className={`text-md btn-padding site-radius-10 enquiry-btn ${formType === 'enquiry' ? 'btn-primary' : 'btn-white'}`}
-                                        onClick={() => setFormType('enquiry')} type="button">
-                                            Enquiry
-                                        </button>
-                                    </div>
-
-                                    <div className="form-fields">
-                                        {formType === 'enquiry' ? <EnquiryForm /> : <RegistrationForm />}
-                                    </div>
-                            </div> */}
-
                             <div className="form-fields">
                                 <EnquiryForm />
                             </div>
@@ -92,6 +67,21 @@ export default function ContactUs() {
                     </div>                    
                 </div>
             </section>
+
+            <section className="section hm-cta">
+                <div className="container">
+                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
+
+                    <div className="cta-links text-center">
+                        <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
+
+                        <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
+
+                        <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
+                    </div>
+                </div>
+            </section>
+        </div>
         </>
     )
 }

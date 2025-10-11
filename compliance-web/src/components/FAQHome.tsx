@@ -178,9 +178,9 @@ export default function FAQSection(props: FAQProps) {
                                 onClick={() => setActiveFaqCategoryButton("general")}
                                 type="button"
                             >
-                                <p className="h6">
+                                <p className="h5">
                                     General
-                                    <span className="text-14 text-rg text-grey">
+                                    <span className="text-20 text-rg text-grey">
                                         Find essential guidance and quick answers about our clinical trial compliance services starting point for understanding the platform.
                                     </span>
                                 </p>
@@ -192,9 +192,9 @@ export default function FAQSection(props: FAQProps) {
                                 onClick={() => setActiveFaqCategoryButton("support")}
                                 type="button"
                             >
-                                <p className="h6">
+                                <p className="h5">
                                     Support
-                                    <span className="text-14 text-rg text-grey">
+                                    <span className="text-20 text-rg text-grey">
                                         Our team is here to assist with any technical or general queries, ensuring a smooth and hassle-free compliance experience.
                                     </span>
                                 </p>
@@ -206,9 +206,9 @@ export default function FAQSection(props: FAQProps) {
                                 onClick={() => setActiveFaqCategoryButton("other")}
                                 type="button"
                             >
-                                <p className="h6">
+                                <p className="h5">
                                     Other
-                                    <span className="text-14 text-rg text-grey">
+                                    <span className="text-20 text-rg text-grey">
                                      Explore topics beyond standard categories. For unique questions or special requests, helpful resources are available here. 
                                     </span>
                                 </p>

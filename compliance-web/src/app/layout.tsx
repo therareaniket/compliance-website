@@ -1,12 +1,11 @@
 
-/* eslint-disable @next/next/no-sync-scripts */
+// /* eslint-disable @next/next/no-sync-scripts */
 import type { Metadata } from "next";
 import "./globals.css";
 import "@/assets/css/custom.css";
 import "@/assets/css/responsive.css";
 import { Footer } from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import GSAPProvider from "@/components/GSAPProvider";
 
 export const metadata: Metadata = {
   title: "DhatuComply | Compliance",
@@ -14,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
-
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -25,8 +23,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         
         <body suppressHydrationWarning>
             <SpeedInsights/>  {/* Vercel's Page Speed Insight */}
-            <GSAPProvider />
-            {/* <Header /> */}
+            
             {children}
             <Footer />
       </body>

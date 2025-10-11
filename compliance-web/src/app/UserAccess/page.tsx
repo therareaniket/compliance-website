@@ -1,12 +1,17 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export default function UserAccess() {
     return (
         <>
+        <div className="useraccessbody">
+            <Header />
+
             <section className='user-access-hero'>
-                <video src="/images/userAccess/User&Access.mp4" autoPlay loop muted></video>
+                <video src="/images/userAccess/User&Access.mp4" autoPlay loop muted className='user-acc-vid'></video>
                 <div className="container">
                         <div className="user-access-hero-head">
                             <h1>User Roles and Access Management</h1>
@@ -16,9 +21,9 @@ export default function UserAccess() {
                 </div>
             </section>
 
-            <section className='roles-card-section'>
+            <section className='section roles-card-section --bg-white overflow-hidden'>
                 <div className="container">
-                    <div className="roles-wrapper">
+                    <div className="roles-wrapper ">
                         <h2 className='h3 text-md'>Defining Roles for Secure and Compliant Operations</h2>
 
                         <div className="role-card-wrapper">
@@ -29,6 +34,7 @@ export default function UserAccess() {
 
                                         <p className='text-20 text-grey text-rg'>Full access to manage account settings, users, and security</p>
                                     </div>
+
                                     <div className='account-admin-pointers'>
                                         <h4 className='h6'>Responsibilities</h4>
 
@@ -41,7 +47,13 @@ export default function UserAccess() {
                                 </div>
                                 
                                 <div className='roles-images'>
-                                    <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
+                                    <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
+                                        
+                                    <Image src='/images/userAccess/role-eclipse-2.svg' alt='role-eclipse-2' width={344} height={520} priority={true} className='role-eclipse'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-3.svg' alt='role-eclipse-3' width={344} height={520} priority={true} className='role-eclipse'></Image>
                                 </div>
                             </div>
 
@@ -52,6 +64,7 @@ export default function UserAccess() {
 
                                         <p className='text-20 text-grey text-rg'>Oversees organizational compliance and regulatory adherence</p>
                                     </div>
+
                                     <div className='account-admin-pointers'>
                                         <h4 className='h6'>Responsibilities</h4>
 
@@ -64,7 +77,13 @@ export default function UserAccess() {
                                 </div>
 
                                 <div className="roles-images">
-                                    <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
+                                    <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
+                                        
+                                    <Image src='/images/userAccess/role-eclipse-2.svg' alt='role-eclipse-2' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-3.svg' alt='role-eclipse-3' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
                                 </div> 
                             </div>
 
@@ -75,6 +94,7 @@ export default function UserAccess() {
 
                                         <p className='text-20 text-grey text-rg'>Supports compliance operations by creating and maintaining documentation</p>
                                     </div>
+
                                     <div className='account-admin-pointers'>
                                         <h4 className='h6'>Responsibilities</h4>
 
@@ -87,7 +107,13 @@ export default function UserAccess() {
                                 </div>
                                 
                                 <div className="roles-images">
-                                    <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
+                                    <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
+                                        
+                                    <Image src='/images/userAccess/role-eclipse-2.svg' alt='role-eclipse-2' width={344} height={520} priority={true} className='role-eclipse'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-3.svg' alt='role-eclipse-3' width={344} height={520} priority={true} className='role-eclipse'></Image>
                                 </div>
                             </div>
 
@@ -110,7 +136,13 @@ export default function UserAccess() {
                                 </div>
 
                                 <div className='roles-images'>
-                                    <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={730} height={450} priority={false}></Image>
+                                    <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
+                                        
+                                    <Image src='/images/userAccess/role-eclipse-2.svg' alt='role-eclipse-2' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
+
+                                    <Image src='/images/userAccess/role-eclipse-3.svg' alt='role-eclipse-3' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
                                 </div>
                             </div>
                         </div>
@@ -145,6 +177,21 @@ export default function UserAccess() {
                     </div>
                 </div>
             </section>
+
+            <section className="section hm-cta">
+                <div className="container">
+                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
+
+                    <div className="cta-links text-center">
+                        <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
+
+                        <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
+
+                        <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
+                    </div>
+                </div>
+            </section>
+        </div>
         </>
     )
 }

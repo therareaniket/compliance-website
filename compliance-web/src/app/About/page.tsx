@@ -12,10 +12,11 @@ export default function AboutUs() {
             <Header/>
 
             <section className='abt-hero'>
-                <video src="/images/aboutUs/About-us.mp4" autoPlay loop muted></video>
+                <video src="/images/aboutUs/About-us.mp4" autoPlay loop muted className='about-hero-vid'></video>
+
                 <div className="container">
                     <div className="abt-hero-head all-banner-head">
-                        <h1>Redefining Clinical Trial <span>Compliance</span> for a Smarter Future</h1>
+                        <h1>Redefining Clinical Trial Compliance for a Smarter Future</h1>
 
                         <p className='text-rg text-20 abt-hero-para'>We simplify regulatory complexities with secure, efficient solutions. Our platform keeps trial teams audit-ready, builds trust, and supports long-term success across every phase of clinical research. </p>
 
@@ -26,7 +27,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className='abt-mis'>
+            <section className='section abt-mis --bg-white'>
                 <div className="container">
                     <div className="mis-vis-section">
                         <div className="mis-vis-heading">
@@ -78,7 +79,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className='abt-vis'>
+            <section className='abt-vis --bg-white'>
                 <div className="container">
                     <div className="mis-vis-section vis-section">
                         <div className="mis-vis-heading vis-heading">
@@ -130,7 +131,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className="abt-platforms">
+            <section className="abt-platforms section --bg-white">
                 <div className="container">
                     <div className="platform-wrapper site-radius-10">
                         <div className="left-gif-platform">
@@ -165,6 +166,20 @@ export default function AboutUs() {
             </section>
 
             <AboutUsSwiperComponents />
+
+            <section className="section hm-cta">
+                <div className="container">
+                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
+
+                    <div className="cta-links text-center">
+                        <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
+
+                        <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
+
+                        <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
+                    </div>
+                </div>
+            </section>
         </div>
         </>
     )
