@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
@@ -12,42 +12,67 @@ export default function ComplianceAnimations() {
     const pathname = usePathname();
 
     // === Animate of Whole using GSAP ===
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger,SplitText);
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
 
-        gsap.from (".com-hero .banner-head h1, .com-hero .banner-head p", {opacity: 0, x: -100, delay: 0.7, duration: 1, stagger:1});
+        const ctx = gsap.context(() => {
+            gsap.from(".com-hero .banner-head h1, .com-hero .banner-head p", {
+                opacity: 0,
+                x: -100,
+                delay: 0.7,
+                duration: 1,
+                stagger: 1,
+            });
 
-        gsap.from(".compliance-matters-section .h3", { opacity: 0, y:-100, duration: 1,
-            scrollTrigger: {
-                trigger: ".compliance-matters-main",
-                start: 'top 60%'
-            }
-        })
+            gsap.from(".compliance-matters-section .h3", {
+                opacity: 0,
+                y: -100,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".compliance-matters-main",
+                    start: "top 60%",
+                    invalidateOnRefresh: true,
+                },
+            });
 
-        gsap.from(".compli-para-anim", { opacity: 0, y:-100, duration: 1, delay: 1, stagger: 1,
-            scrollTrigger: {
-                trigger: ".compliance-matters-main",
-                start: 'top 60%'
-            }
-        })
+            gsap.from(".compli-para-anim", {
+                opacity: 0,
+                y: -100,
+                duration: 1,
+                delay: 1,
+                stagger: 1,
+                scrollTrigger: {
+                    trigger: ".compliance-matters-main",
+                    start: "top 60%",
+                    invalidateOnRefresh: true,
+                },
+            });
 
-        gsap.from(".surety-count-cards .card-1", { opacity: 0, x:100, duration: 1, delay: 3, stagger: 1,
-            scrollTrigger: {
-                trigger: ".compliance-matters-main",
-                start: 'top 60%'
-            }
-        })
+            gsap.from(".surety-count-cards .card-1", {
+                opacity: 0,
+                x: 100,
+                duration: 1,
+                delay: 3,
+                stagger: 1,
+                scrollTrigger: {
+                    trigger: ".compliance-matters-main",
+                    start: "top 60%",
+                    invalidateOnRefresh: true,
+                },
+            });
+        });
 
-
-        
-        
-        ScrollTrigger.refresh();
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                ScrollTrigger.refresh();
+            });
+        });
 
         return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            ctx.revert();
+            ScrollTrigger.killAll();
             gsap.globalTimeline.clear();
-          };
+        };
     }, [pathname]);
     
 
