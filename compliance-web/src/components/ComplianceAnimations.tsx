@@ -39,9 +39,6 @@ export default function ComplianceAnimations() {
             }
         })
 
-
-        
-        
         ScrollTrigger.refresh();
 
         return () => {
