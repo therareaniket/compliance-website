@@ -1,4 +1,5 @@
 "use client"
+import ComplianceAnimations from '@/components/ComplianceAnimations';
 import { Header } from '@/components/Header';
 import Link from 'next/link'
 import React from 'react'
@@ -135,7 +136,7 @@ export default function ComplianceListing() {
             </section>
         </div>
 
-        {/* <ComplianceAnimations /> */}
+        <ComplianceAnimations />
         </>
     );
 }

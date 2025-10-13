@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import AboutUsSwiperComponents from "@/components/SwiperComponent";
 import { Header } from '@/components/Header';
+import AboutAnimations from '@/components/AboutAnimations';
 
 export default function AboutUs() {
 
@@ -183,7 +184,7 @@ export default function AboutUs() {
             </section>
         </div>
 
-        {/* <AboutAnimations/> */}
+        <AboutAnimations />
         </>
     )
 }
