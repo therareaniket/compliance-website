@@ -1,6 +1,5 @@
 "use client"
 import { Header } from '@/components/Header'
-import UserAccessAnimation from '@/components/UserAccessAnimations'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -194,7 +193,6 @@ export default function UserAccess() {
             </section>
         </div>
 
-        <UserAccessAnimation />
         </>
     )
 }
