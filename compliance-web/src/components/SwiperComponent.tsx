@@ -47,7 +47,7 @@ export default function AboutUsSwiperComponents() {
                         <SwiperSlide>
                             <div className="featurecard bg-blue">
                                 <div className="feature-frame">
-                                    <Image src="/images/aboutUs/document-management-icon.svg" alt="document-management-icon" width={60} height={60} />
+                                    <Image src="/images/aboutUs/document-management-icon.svg" alt="document-management-icon" width={60} height={60} className="feat-frame-slider-img"/>
                                     <p className="feature-card-head text-20 text-md">  Document Management </p>
                                 </div>
                                 <div className="feature-lists">
@@ -65,7 +65,7 @@ export default function AboutUsSwiperComponents() {
                         <SwiperSlide>
                             <div className="featurecard bg-green">
                                 <div className='feature-frame border-green'>
-                                    <Image src='/images/aboutUs/audit-trails-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+                                    <Image src='/images/aboutUs/audit-trails-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} className="feat-frame-slider-img"></Image>
 
                                     <p className='feature-card-head text-20 text-md'>Audit Trails</p>
                                 </div>
@@ -85,7 +85,7 @@ export default function AboutUsSwiperComponents() {
                         <SwiperSlide>
                             <div className="featurecard bg-yellow">
                                 <div className='feature-frame border-yellow'>
-                                    <Image src='/images/aboutUs/training-sop-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+                                    <Image src='/images/aboutUs/training-sop-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} className="feat-frame-slider-img"></Image>
 
                                     <p className='feature-card-head text-20 text-md'>Training & SOPs</p>
                                 </div>
@@ -105,7 +105,7 @@ export default function AboutUsSwiperComponents() {
                         <SwiperSlide>
                             <div className="featurecard bg-purple">
                                 <div className='feature-frame border-purple'>
-                                    <Image src='/images/aboutUs/risk-management-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+                                    <Image src='/images/aboutUs/risk-management-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} className="feat-frame-slider-img"></Image>
 
                                     <p className='feature-card-head text-20 text-md'>CAPA & Risk Management</p>
                                 </div>
@@ -125,7 +125,7 @@ export default function AboutUsSwiperComponents() {
                         <SwiperSlide>
                             <div className="featurecard bg-red">
                                 <div className='feature-frame border-red'>
-                                    <Image src='/images/aboutUs/regulatory-alert-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+                                    <Image src='/images/aboutUs/regulatory-alert-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} className="feat-frame-slider-img"></Image>
 
                                     <p className='feature-card-head text-20 text-md'>Regulatory Alerts</p>
                                 </div>
@@ -145,7 +145,7 @@ export default function AboutUsSwiperComponents() {
                         <SwiperSlide>
                             <div className="featurecard bg-purplish">
                                 <div className='feature-frame border-purplish'>
-                                    <Image src='/images/aboutUs/dashboard-report-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} ></Image>
+                                    <Image src='/images/aboutUs/dashboard-report-icon.svg' alt='document-management-icon' width={60} height={60} priority={false} className="feat-frame-slider-img"></Image>
 
                                     <p className='feature-card-head text-20 text-md'>Dashboards & Reports</p>
                                 </div>

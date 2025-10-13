@@ -6,6 +6,7 @@ import "@/assets/css/custom.css";
 import "@/assets/css/responsive.css";
 import { Footer } from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import GSAPProvider from "@/components/GSAPProvider";
 
 export const metadata: Metadata = {
   title: "DhatuComply | Compliance",
@@ -23,6 +24,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         
         <body suppressHydrationWarning>
             <SpeedInsights/>  {/* Vercel's Page Speed Insight */}
+            {/* <GSAPProvider /> */}
             
             {children}
             <Footer />

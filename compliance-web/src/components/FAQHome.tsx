@@ -170,53 +170,38 @@ export default function FAQSection(props: FAQProps) {
                         <p className="text-20 text-grey">{faqSubtitle}</p>
                     </div>
 
-                    <div className="faq-list-category">
-                        <div className="category-btns">
+                    <div className="category-btns">
                             <button
-                                className={`category-btn general-btn text-left site-radius-10 ${activeFaqCategoryButton === "general" ? "faq-active" : ""
+                                className={`category-btn-new general-btn text-left site-radius-10 ${activeFaqCategoryButton === "general" ? "faq-active-new" : ""
                                     }`}
                                 onClick={() => setActiveFaqCategoryButton("general")}
                                 type="button"
                             >
-                                <p className="h5">
-                                    General
-                                    <span className="text-20 text-rg text-grey">
-                                        Find essential guidance and quick answers about our clinical trial compliance services starting point for understanding the platform.
-                                    </span>
-                                </p>
+                                <p className="h5">General</p>
                             </button>
 
                             <button
-                                className={`category-btn general-btn text-left site-radius-10 ${activeFaqCategoryButton === "support" ? "faq-active" : ""
+                                className={`category-btn-new support-btn text-left site-radius-10 ${activeFaqCategoryButton === "support" ? "faq-active-new" : ""
                                     }`}
                                 onClick={() => setActiveFaqCategoryButton("support")}
                                 type="button"
                             >
-                                <p className="h5">
-                                    Support
-                                    <span className="text-20 text-rg text-grey">
-                                        Our team is here to assist with any technical or general queries, ensuring a smooth and hassle-free compliance experience.
-                                    </span>
-                                </p>
+                                <p className="h5">Support</p>
                             </button>
 
                             <button
-                                className={`category-btn general-btn text-left site-radius-10 ${activeFaqCategoryButton === "other" ? "faq-active" : ""
+                                className={`category-btn-new others-btn text-left site-radius-10 ${activeFaqCategoryButton === "other" ? "faq-active-new" : ""
                                     }`}
                                 onClick={() => setActiveFaqCategoryButton("other")}
                                 type="button"
                             >
-                                <p className="h5">
-                                    Other
-                                    <span className="text-20 text-rg text-grey">
-                                     Explore topics beyond standard categories. For unique questions or special requests, helpful resources are available here. 
-                                    </span>
-                                </p>
+                                <p className="h5">Other</p>
                             </button>
-                        </div>
+                    </div>
 
+                    <div className="faq-list-category">
                         <div className="category-faqs" key={activeFaqCategoryButton}>
-                            <h3 className="h4">{activeFAQDetails.heading}</h3>
+                            {/* <h3 className="h4">{activeFAQDetails.heading}</h3> */}
 
                             <Accordion type="single" collapsible>
                                 {activeFAQDetails.items.map((item, i) => (
@@ -226,7 +211,7 @@ export default function FAQSection(props: FAQProps) {
                                         className="faq-accordian site-radius-10"
                                     >
                                         <AccordionTrigger className="faq-trigger text-18">
-                                            {item.question}
+                                            <p>{item.question}</p>
                                         </AccordionTrigger>
 
                                         <AccordionContent className="text-18 text-grey">

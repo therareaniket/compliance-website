@@ -19,7 +19,8 @@ export function Header() {
     useEffect(() => {
         const getScrollLimit = () => {
           const width = window.innerWidth;
-      
+
+            if (width <= 575) return 300;
             if (width <= 1023) return 500;
             if (width <= 1200) return 400;
             if (width <= 1450) return 500;

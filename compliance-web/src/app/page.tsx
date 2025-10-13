@@ -11,6 +11,7 @@ import { Header } from "@/components/Header";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import GSAPProvider from "@/components/GSAPProvider";
 
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
@@ -260,7 +261,7 @@ export default async function Home() {
                             </div>
 
                             <div className="steps-video-wrapper site-radius-20 ">
-                                <video src="/images/homepage/final-steps-video.mp4" autoPlay muted loop width='3840' height='2160' className="steps-vid site-radius-20"></video>
+                                <video src="/images/homepage/final-steps-video.mp4" autoPlay muted loop controls controlsList="nodownload noplaybackrate" disablePictureInPicture contextMenu="return false" width='3840' height='2160' className="steps-vid site-radius-20"></video>
                             </div>
 
                             {/* <div className="steps-path-view">
@@ -397,6 +398,43 @@ export default async function Home() {
 
                                         <p>Sets rules for system data integrity.</p>
                                     </div>
+
+
+                                    <div className="supp-compli-list site-radius-10 element-none">
+                                        <h3 className="h5">FDA 21 CFR Part 11</h3>
+
+                                        <p>Reliable records & eSignatures compliance.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10 element-none">
+                                        <h3 className="h5">GDPR</h3>
+
+                                        <p>Safeguards EU data privacy.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10 element-none">
+                                        <h3 className="h5">HIPAA</h3>
+
+                                        <p>Secure patient data & privacy.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10 element-none">
+                                        <h3 className="h5">GCP</h3>
+
+                                        <p>Defines quality standards for trials.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10 element-none">
+                                        <h3 className="h5">CDSCO</h3>
+
+                                        <p>Regulates drug and device approvals.</p>
+                                    </div>
+
+                                    <div className="supp-compli-list site-radius-10 element-none">
+                                        <h3 className="h5">EU Annex 11</h3>
+
+                                        <p>Sets rules for system data integrity.</p>
+                                    </div>
                                 </div>
 
                                 <div className="compli-stats">
@@ -424,7 +462,7 @@ export default async function Home() {
                                         </div>
 
                                         <div className="stats-nums site-radius-10 text-20 aud-suc">
-                                            <span className="h1">99%</span>Audit success
+                                            <span className="h1">99%</span><span>Audit success</span>
                                         </div>
                                     </div>
                                 </div>

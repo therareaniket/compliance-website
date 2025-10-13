@@ -16,13 +16,13 @@ export default function AboutUs() {
 
                 <div className="container">
                     <div className="abt-hero-head all-banner-head">
-                        <h1>Redefining Clinical Trial Compliance for a Smarter Future</h1>
+                        <h1>Redefining Compliance for a Smarter Future</h1>
 
-                        <p className='text-rg text-20 abt-hero-para'>We simplify regulatory complexities with secure, efficient solutions. Our platform keeps trial teams audit-ready, builds trust, and supports long-term success across every phase of clinical research. </p>
+                        <p className='text-rg text-20 abt-hero-para'>Streamlines clinical trial compliance with secure, efficient solutions—keeping teams audit-ready, building trust, and driving long-term success.</p>
 
-                        <div className='abt-hero-head-button' >
+                        {/* <div className='abt-hero-head-button' >
                             <Link href='#' title="connect-with-us" className="btn-secondary btn-padding text-md text-18 site-radius-10">Connect With Us</Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

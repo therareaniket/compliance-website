@@ -81,10 +81,15 @@
     100% { border-bottom: 1px solid var(--secondary); width: 100%; }
 }
 
+@keyframes card-sliding-animation {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
 
 .homebody { position: relative; }
 .--bg-white { background-color: var(--white); }
-
+.element-none { display: none; }
 
 /* HEADER */
 .header-main { position: fixed; width: 100%; z-index: 99; top: 0; transition: all 600ms ease;  }
@@ -113,7 +118,7 @@
 .nav-signup { padding: 12px 30px; background-color: var(--secondary); color: var(--white); transition: all 600ms ease; }
 .header-main.is-scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.12); background-color: #290047; }
 .header-main.is-scrolled .navbar-wrapper { padding: 15px 0; }
-.header-main.is-scrolled .nav-signup { padding: 10px 15px; }
+.header-main.is-scrolled .nav-signup { padding: 10px 20px; }
 
 /* hamburger */
 .hamburger { display: none; cursor: pointer; z-index: 10000; }
@@ -217,7 +222,7 @@
 .compliance-card { width: 353px; margin: 0 auto; margin-top: 6px; padding: 14px 20px; border: 1px solid var(--light-grey); box-shadow: var(--light-shadow); }
 .showcase-result span { display: block; }
 .global-org, .framwrk-coverd, .secure-docs, .audit-suc { position: absolute; padding: 10px 30px; box-shadow: var(--light-shadow); }
-.global-org { top: 0; left: 20%; transform: translateY(-100%); } 
+.global-org { top: 0; left: 20%; transform: translateY(-100%); }
 .framwrk-coverd { top: 30%; left: 14%; }
 .secure-docs{ top: 0; left: 65%; transform: translateY(-50%); }
 .audit-suc { top: 45%; left: 70%; }
@@ -266,17 +271,21 @@
 
 .faq-head { width: 785px; margin: 0 auto; }
 .faq-head .h3 { margin-bottom: 20px; }
+.category-btns { display: flex; gap: 20px; justify-content: center; margin: 40px; }
+.category-btn { width: 160px; display: block; padding: 25px; cursor: pointer; transition: all 600ms ease, }
 .category-btn:not(:last-child) { margin-bottom: 20px; }
 .category-btn span { display: block; margin-top: 10px; }
-.faq-list-category { display: flex; justify-content: space-between; margin-top: 40px; }
+/* .faq-list-category { display: flex; justify-content: space-between; margin-top: 40px; } */
 .category-btn.faq-active { background-color: var(--primary); color: var(--white); cursor: auto; }
 .category-btn.faq-active .text-grey { color: var(--white); transition: all 1000ms ease, }
-.category-btn { width: 600px; display: block; padding: 25px; cursor: pointer; transition: all 600ms ease, }
-.category-faqs { width: 840px; }
+
+.category-faqs { width: 840px; margin: 0 auto; }
 .category-faqs .h4 { margin-bottom: 20px; color: var(--primary); }
 .faq-accordian { padding: 20px; margin-bottom: 20px; border: 1px solid #B8B8B8; }
 .faq-trigger { padding: 0; align-items: center; }
 .faq-seprator { margin: 20px 0; background-color: var(--light-grey); }
+
+.trst-lead-content .h3 { position: relative; z-index: 2; }
 
 .hm-cta { background-color: var(--footer-bg); background-color: var(--black); color: var(--white); }
 .cta-links { margin-top: 20px; }
@@ -295,7 +304,7 @@
 .abt-hero, .user-access-hero, .contact-hero, .com-hero { position: sticky; top: 0; z-index: -1; }
 .abt-hero-head h1{ width: 100%; color: var(--white); }
 .abt-hero-head span{ color: var(--secondary); }
-.abt-hero-para{ color: var(--white); margin-top: 12px; margin-bottom: 40px; }
+.abt-hero-para { color: var(--white); margin-top: 12px; }
 .abt-hero-head-button button{ width: 210px; height: 52px; border-radius: 10px;}
 .btn-secondary{ background-color: var(--secondary); color: var(--white); }
 .abt-hero-head-button a{ display: inline-block;  }
@@ -420,7 +429,7 @@
 
 .card-row-reverse{ flex-direction: row-reverse; }
 
-.secure-portal-wrapper{ background-color: #F7FAF3; width: 100%; height: 825px; border-radius: 10px 10px 0 0; }
+.secure-portal-wrapper{ background-color: #F7FAF3; width: 100%; height: 825px; }
 .secure-portal-section{ padding: 60px 0px 47px; }
 .secure-portal-text{ display: flex; justify-content: space-between; gap: 70px; align-items: start; margin-bottom: 69px ; }
 .secure-portal-text h2{ width: 633px; }
@@ -549,3 +558,6 @@
 .role-img { position: relative; z-index: 4; }
 .role-eclipse { position: absolute; top: -100px; right: -100px; opacity: 0.5; z-index: 3; animation: eclipse-rotate-rtl 3000ms infinite; }
 .eclipse-rev { right: auto; left: -100px; }
+.category-btn-new { width: 140px; padding: 10px; text-align: center; border: 1px solid var(--black); cursor: pointer; }
+.category-btn-new.faq-active-new { background-color: var(--primary); color: var(--white); border: none; cursor: auto; }
+.faq-accordian { border: none; border-bottom: 1px solid #B8B8B8; }

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef  } from 'react';
 
 type Props = {
     purpleTitle: string;
@@ -34,6 +34,24 @@ export default function ExtendButtons({
     greenListItem4, }: Props) {
 
     const [active, setActive] = useState<'smrt' | 'features'>('smrt');
+    const featureRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          if (window.innerWidth < 575 && featureRef.current) {
+            const rect = featureRef.current.getBoundingClientRect();
+            
+            if (rect.top <= 400) {
+              setActive("features");
+            } else {
+              setActive("smrt");
+            }
+          }
+        };
+    
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);   
     
     return (
         <section className="section hm-click-expand --bg-white">
@@ -57,7 +75,7 @@ export default function ExtendButtons({
                         <Image src="/images/homepage/smarter-compliance.webp" alt="smarter-compliance" width={613} height={688} priority={false} className="smrt-img" />
                     </div>
 
-                    <div className={`click-box click-key-features site-radius-20 ${active === 'features' ? 'active' : 'key-not-active'}`} onMouseEnter={() => setActive('features')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('features')} aria-pressed={active === 'features'} >
+                    <div ref={featureRef} className={`click-box click-key-features site-radius-20 ${active === 'features' ? 'active' : 'key-not-active'}`} onMouseEnter={() => setActive('features')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('features')} aria-pressed={active === 'features'} >
                         <div className="box-content">
                             <div className="cont-head">
                                 <h2 className="h3">{greenTitle}</h2>

@@ -25,6 +25,14 @@
 ********
 */
 
+h1, .h1 {  }
+h2, .h2 {  }
+h3, .h3 {  }
+h4, .h4 {  }
+h5, .h5 {  }
+h6, .h6 {  }
+
+
 @media screen and (max-width: 1900px) {
     .quotes-img img{ width: 550px; }
     .abt-hero-head, .user-access-hero-head, .banner-head{ left: 132px; }
@@ -37,7 +45,7 @@
     .contct-info{ padding-top: 38px; }
 
     /* .mis-vis-detail-para{ display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; } */
-} 
+}
 
 @media screen and (max-width: 1799px) {
     .section { padding: 80px 0; }
@@ -45,6 +53,8 @@
     .abt-hero-head, .user-access-hero-head, .banner-head{ left: 100px; width: 750px; }
     .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 60px; line-height: 68px; }
     /* .banner-head{ width: 700px; } */
+    .left-hero-home { width: 780px; }
+    .right-hero-home { width: 680px; }
 
     .why-us-content{ width: 680px; }
     .card-btn{ width: 620px; }
@@ -146,7 +156,7 @@
 }
 
 @media screen and (max-width: 1560px) {
-    h1, .h1{ font-size: 64px; line-height: 74px; }
+    
 
     .left-hero-home { width: 750px; }
     .right-hero-home { width: 650px; bottom: -4%; }
@@ -174,6 +184,14 @@
     .role-eclipse { width: 300px; right: -50px; }
     .eclipse-rev { left: -50px; }
 
+    .hero-scanning-line { width: 21px; }
+    .plans-btn { padding: 20px; }
+    h1, .h1 { font-size: 58px !important; line-height: 68px !important; }
+    h2, .h2 { font-size: 48px !important; line-height: 56px !important; }
+    h3, .h3 { font-size: 38px !important; line-height: 46px !important; }
+    h4, .h4 { font-size: 30px !important; line-height: 38px !important; }
+    h5, .h5 { font-size: 26px !important; line-height: 36px !important; }
+
 }
 
 @media screen and (max-width: 1439px) {
@@ -196,6 +214,7 @@
     .why-us-head { margin-bottom: 60px; }
     .card-btn { width: 540px; }
     .why-us-slider-images { width: 400px; height: auto; }
+    .trusted-leaders { height: 500px; }
 
     .category-btn { width: 450px; }
     .category-faqs { width: 680px; }
@@ -218,7 +237,6 @@
 
     /* About Us */
     .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 60px; line-height: 68px; }
-    .abt-hero-para { margin-bottom: 30px; }
     .abt-hero-head, .user-access-hero-head, .banner-head { width: 680px; }
 
 
@@ -253,12 +271,22 @@
     .aud-suc { width: 200px; bottom: 12%; right: 0; }
 
     .contactbody .banner-head { width: 620px; }
+
+
+    .hero-scanning-line { width: 20px; }
+    .plans-btn { padding: 20px; }
+    .hm-hero-btns .text-18 { font-size: 16px; line-height: 26px; }
+    h1, .h1 { font-size: 52px !important; line-height: 60px !important; }
+    h2, .h2 { font-size: 44px !important; line-height: 54px !important; }
+    h3, .h3 { font-size: 34px !important; line-height: 42px !important; }
+    h4, .h4 { font-size: 28px !important; line-height: 36px !important; }
+    h5, .h5 { font-size: 26px !important; line-height: 36px !important; }
 }
 
 @media screen and (max-width: 1359px) {
-    h1, .h1 { font-size: 62px; line-height: 72px; }
-    h3, .h3 { font-size: 34px; line-height: 44px; }
-    .text-20 { font-size: 18px; line-height: 28px; }
+    /* h1, .h1 { font-size: 62px; line-height: 72px; }
+    h3, .h3 { font-size: 34px; line-height: 44px; } */
+    .text-20, p { font-size: 16px; line-height: 24px; }
 
     .navbar-logo img { width: 200px; }
 
@@ -293,7 +321,6 @@
     /* about-us */
     /* .abt-hero{ height: max-content; padding: 100px 0; } */
     .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 56px; line-height: 60px; }
-    .abt-hero-para { margin-bottom: 20px; }
     .abt-hero-head-button .btn-secondary { padding: 12px 20px; }
     .abt-hero-head, .user-access-hero-head, .banner-head{ left: 58px; width: 680px; transform: translate(0, -40%); }
     .user-access-hero-head { width: 640px; }
@@ -316,6 +343,13 @@
 
     /* contact-us */
     .cntct-page-banner{ min-height: max-content; padding: 100px 0; }
+
+    .hero-scanning-line { width: 19px; }
+    h1, .h1 { font-size: 50px !important; line-height: 58px !important; }
+    h2, .h2 { font-size: 42px !important; line-height: 52px !important; }
+    h3, .h3 { font-size: 30px !important; line-height: 38px !important; }
+    h4, .h4 { font-size: 26px !important; line-height: 34px !important; }
+    h5, .h5 { font-size: 22px !important; line-height: 32px !important; }
 }
 
 @media screen and (max-width: 1279px) {
@@ -363,7 +397,6 @@
     .abt-hero-head, .user-access-hero-head, .banner-head{ left: 128px; width: 580px; }
     .user-access-hero-head { left: 100px; }
     .featurecard { width: 296px; height: 370px; }
-    .abt-hero-para{ margin-bottom: 25px; }
     .mis-vis-section { flex-direction: column; align-items: center; gap: 40px; }
     .mis-vis-heading { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 20px; flex-direction: column; text-align: center;  }
     /* .mis-vis-heading img{ display: none; } */
@@ -442,7 +475,14 @@
     .role-eclipse { width: 250px; right: -50px; top: -70px; }
     .eclipse-rev { left: -50px; }
 
-
+    .text-20, p { font-size: 16px; line-height: 24px; }
+    .hero-scanning-line { width: 16px; }
+    h1, .h1 { font-size: 44px !important; line-height: 52px !important; }
+    h2, .h2 { font-size: 38px !important; line-height: 46px !important; }
+    /* h3, .h3 { font-size: 28px !important; line-height: 36px !important; }
+    h4, .h4 { font-size: 24px !important; line-height: 32px !important; }
+    h5, .h5 { font-size: 20px !important; line-height: 30px !important; } */
+    
 
     /* compliance detail page */
     .container-sm{ width: 900px; }
@@ -485,6 +525,16 @@
     .path-4{ bottom: 15px; }
 
     /* compliance page */
+
+    /* .hero-scanning-line { width: 20px; } */
+    .plans-btn { padding: 20px; }
+    .hm-hero-btns .text-18 { font-size: 16px; line-height: 26px; }
+    .text-20, p { font-size: 16px; line-height: 24px; }
+    h1, .h1 { font-size: 40px !important; line-height: 48px !important; }
+    h2, .h2 { font-size: 36px !important; line-height: 44px !important; }
+    h3, .h3 { font-size: 32px !important; line-height: 40px !important; }
+    h4, .h4 { font-size: 26px !important; line-height: 34px !important; }
+    h5, .h5 { font-size: 22px !important; line-height: 32px !important; }
 
     /* .abt-hero-head, .user-access-hero-head, .banner-head{  } */
 
@@ -640,8 +690,7 @@
     
     .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 550px; }
     .abt-hero-head, .user-access-hero-head, .banner-head { left: 50px; width: 420px; transform: translate(0, -40%); }
-    .about-hero-vid { padding-top: 40px; }
-    .abt-hero-para{ margin-bottom: 20px; }                                                                                                                                                                                                                                                              
+    .about-hero-vid { padding-top: 40px; }                                                                                                                                                                                                                                                            
     .abt-hero-head .btn-padding{ padding: 10px 15px; }
     .abt-hero-para{ font-size: 14px; line-height: 20px; }                                                                                                                                                                               
     /* .abt-hero{ display: flex; flex-direction: column; }
@@ -917,17 +966,21 @@
     .path-1, .path-2, .path-3, .path-4{ width: 350px; }
 
     .feature-cards .swiper-pagination{ display: none; }
-    .supp-compli-list { width: 80%; }
+    .supported-compli-lists { width: max-content; flex-wrap: nowrap; }
+    /* .supp-compli-list { width: 200px !important; } */
+    .element-none { display: block; }
+    .supported-compli-lists { animation:  card-sliding-animation 10000ms linear infinite; }
     .hm-proven-result{ height: auto; }
     .eclipse-wrapper { display: none; }
     .floating-stats { margin-top: 40px; }
-    .floating-stats > * { width: 80%; position: relative; top: 0; left: 0; margin: 0 auto; }
+    .floating-stats { display: flex; flex-wrap: wrap; }
+    .floating-stats > * { width: 210px; height: 122px; position: relative; top: 0; left: 0; margin: 0 auto; }
     .floating-stats > *:not(:last-child) { margin-bottom: 20px; }
  
     .navbar-links { gap: 40px; }
     .navbar-links ul{ gap: 40px !important; }
 
-    .click-box { height: 320px; }
+    .click-box { height: 250px; }
     .click-box.active { height: 740px; }
     .smrt-img { bottom: -18%; }
     .category-btn .h6 { font-size: 18px; line-height: 26px; }
@@ -939,7 +992,7 @@
     .plan-btn-cont p { width: 200px; height: 50px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
     .plan-btns-group { width: 100%; flex-direction: column; }
    
-    .clientale-main .swiper-pagination { transform: translateY(-40px) !important; } 
+    .clientale-main .swiper-pagination { transform: translateY(-40px) !important; }
 
     /* About Us */
     .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 30px; line-height: 38px; }
@@ -956,6 +1009,22 @@
     /* compliance page */
     .com-page-banner img{ width: 400px; }
     .surety-count-cards{ flex-direction: column; gap: 20px; }
+    .steps-head .h3, .steps-head p, .why-us-head .h3, .why-us-head p, .result-head, .plans-left, .trst-lead-content, .hm-cta .h3, .secure-portal-text h2, .secure-portal-text p{ text-align: left; }
+    .why-us-head .h3, .hm-cta .h3 { margin-bottom: 30px; }
+    .why-us-head p { width: 100%; }
+    .plans-left, .clientale-wrapper { gap: 30px; }
+
+    .hm-hero { min-height: 530px; }
+    .card-btn { padding: 20px; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 400px; }
+    /* .text-20, p { font-size: 14px; line-height: 20px; } */
+    h1, .h1 { font-size: 32px !important; line-height: 40px !important; }
+    h2, .h2 { font-size: 28px !important; line-height: 36px !important; }
+    h3, .h3 { font-size: 24px !important; line-height: 32px !important; }
+    h4, .h4 { font-size: 22px !important; line-height: 30px !important; }
+    h5, .h5 { font-size: 20px !important; line-height: 28px !important; }
+    /* h6, .h6 { font-size: ; line-height: ; } */
+    
 
     /* compliance detail page */
 
@@ -978,6 +1047,8 @@
     .key-img { bottom: -20%; }
     .clientale-main .swiper { width: 100%; }
 
+    .floating-stats > * { width: 180px; height: 150px; }
+
 
     /* compliance page */
     .com-page-banner img{ width: 370px; }
@@ -988,6 +1059,22 @@
     .form-fields, .form-col input, .form-col textarea, .form-col select, .selections{ width: 100%; }
 
     .role-eclipse { display: none; }
+
+    h1, .h1 { font-size: 26px !important; line-height: 34px !important; }
+    h2, .h2 { font-size: 24px !important; line-height: 32px !important; }
+    h3, .h3 { font-size: 22px !important; line-height: 30px !important; }
+    /* h4, .h4 { font-size: 20px !important; line-height: 28px !important; }
+    h5, .h5 { font-size: 18px !important; line-height: 26px !important; } */
+    .mis-vis-heading { gap: 10px; }
+
+    .mis-vis-card { height: max-content; padding: 12px; margin-bottom: 30px; }
+    .mis-vis-card img { width: 25px; }
+    .mis-vis-para { margin: 6px 0; }
+    .feature-card-head { margin-top: 10px; }
+    .feature-frame { margin-bottom: 8px; padding-bottom: 8px; }
+    .featurecard { height: 300px; }
+    .core-feature-section .swiper-slide, .feature-cards { height: 350px !important; }
+    .feat-frame-slider-img { width: 40px; }
 
 
     /* compliance detail page */
@@ -1021,6 +1108,8 @@
     .key-img { bottom: -14%; }
     /* .clientale-main .swiper { width: 380px; } */
     .trusted-leaders { height: auto; }
+    .floating-stats > * { width: 170px; height: 130px; }
+    .stats-nums .h1 { font-size: 40px; line-height: 48px; }
 
     .why-card-title.h5 { font-size: 20px; line-height: 28px; }
 
@@ -1030,7 +1119,7 @@
     .plans-btn:not(:last-child) { margin-bottom: 10px; }
 
     /* About Us */
-    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 450px; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 380px; }
     .abt-hero-head, .user-access-hero-head, .banner-head { width: 350px !important; }
     .platform-wrapper { padding: 30px; }
 
@@ -1042,13 +1131,26 @@
     .role-account-admin{ padding: 20px 25px; }
 
     .header-main.is-scrolled .nav-signup { padding: 6px 0; }
+
+    .category-btn-new { padding: 8px; }
+    .category-btn-new p { font-size: 16px !important; }
+    .hm-hero-content { top: 90px; }
+    .hm-hero-content p { margin: 20px 0; margin-bottom: 30px; padding: 0; }
+    .hm-hero-btns { gap: 20px; }
+    .hm-hero-btns .text-18 { font-size: 14px; line-height: 22px; }
+    .trst-lead-content { padding-bottom: 0; }
+    .clientale-wrapper { gap: 10px; height: 530px; }
+    .trst-lead-content p { display: none; }
+    .slider-seprator { margin: 10px 0; }
+    .clientale-main .swiper-pagination{ transform: translateY(-20px) !important; }
 }
 
 @media screen and (max-width: 400px) {
     .mis-vis-heading, .core-feature-heading{ text-align: left; align-items: start; }
     .abt-hero-wrapper, .mis-vis-section{ gap: 20px; }
 
-    .hm-hero-content h1, .h1 { font-size: 30px; line-height: 38px; }
+    .hm-hero-content h1, .h1 { font-size: 26px; line-height: 34px;  }
+    .abt-hero-head h1, .user-access-hero-head h1, .banner-head h1 { font-size: 26px; line-height: 34px; }
     .click-box { height: 390px; }
     .key-img { bottom: -12%; }
     .why-card-title.h5 { font-size: 18px; line-height: 26px; }
@@ -1060,10 +1162,15 @@
     .client-review { height: 200px; }
     .global-org p, .framwrk-coverd p, .secure-docs p, .audit-suc p { font-size: 28px; line-height: 36px; text-align: left; }
     /* .clientale-wrapper { height: 1000px; } */
-    .clientale-main .swiper-pagination{ transform: translateY(10px) !important; }
+    /* .clientale-main .swiper-pagination{ transform: translateY(2px) !important; } */
     .audit-suc span { width: 50%; }
-    .clientale-wrapper { gap: 30px; }
+    /* .clientale-wrapper { gap: 30px; } */
     .steps-video-wrapper { height: auto; }
+    .stats-nums.text-20 { line-height: 20px; }
+    .floating-stats > * { width: 150px; height: 120px; }
+    .stats-nums .h1 { font-size: 30px; }
+    .aud-suc span + span { width: 50%; margin: 0 auto; }
+
 
     .why-card-title.h5 { font-size: 18px; line-height: 26px; }
     .card-btn .icon-check_circle { margin-right: 10px; }
@@ -1072,16 +1179,18 @@
     .category-btn .h6 { font-size: 16px; line-height: 24px; }
     .category-btn { padding: 10px; }
 
-    .hm-hero-btns { flex-direction: column; justify-content: center; gap: 20px; }
+    .hm-hero-btns { flex-direction: column; justify-content: center; }
     .hm-hero-btns .btn-primary { margin: 0; }
     .white-box { display: none; }
 
     /* About Us */
-    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 480px; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 370px; }
     .abt-hero-head, .user-access-hero-head, .banner-head { width: 320px !important; }
 
     /* compliance page */
     .com-page-banner img{ width: 275px; }
+    .text-18 { font-size: 12px; line-height: 22px; }
+    .stats-nums .h1 { margin-bottom: 10px; }
     /* .compliance-matters-main{ margin-top: 60px; } */
 }
 
@@ -1099,10 +1208,14 @@
 
     .platform-wrapper { padding: 20px; }
     .platform-showcase-img { scale: 1; }
+
+    .stats-nums.text-20 { line-height: 20px; }
+    .floating-stats > * { height: 120px; }
+
     /* .feature-cards .swiper-slide{ width: 100% !important; } */
 
     /* About Us */
-    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 500px; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 400px; }
     .abt-hero-head, .user-access-hero-head, .banner-head { width: 280px !important; }
 
 }
@@ -1120,5 +1233,8 @@
     .client-review { font-size: 14px; }
     .clientale-main .swiper { width: 100% !important; }
     .clientale-wrapper { height: 1100px; }
+
+    .floating-stats > * { width: 136px; height: 115px; padding: 10px; }
+    .floating-stats > :not(:last-child) { margin-bottom: 10px; }
 
 }
