@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function ComplianceDetailPage (){
     return (
-        <>
+        <main className='detail-section'>
             <section className="detail-page-hero" >
                 <div className="container">
                     <div className="detail-banner-head container-sm">
@@ -202,6 +202,6 @@ export default function ComplianceDetailPage (){
                     </ul>
                 </div>
             </section>
-        </>
+        </main>
     )
 }

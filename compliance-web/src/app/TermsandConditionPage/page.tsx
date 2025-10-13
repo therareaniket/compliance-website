@@ -1,0 +1,216 @@
+"use client"
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+
+export default function TermsAndConditionPage() {
+    return(
+        <main className='termsmain'>
+            <section className='terms-hero'>
+                <div className="container">
+                    <h1 className='h2'>DhatuComply — Terms of Use</h1>
+                </div>
+            </section>
+
+            <section className='terms-section-1 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>1. Acceptance & Eligibility</h2>
+
+                    <p className='text-20 text-rg'>By using DhatuComply, you affirm you are of legal age and authorized by your organization. If you do not agree to these Terms, do not use the service.</p>
+                </div>
+            </section>
+
+            <section className='terms-section-2 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>2. Account & Access</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'>Maintain accurate account information and keep credentials confidential. You are responsible for activities under your account.</li>
+
+                        <li className='text-20 text-rg'>We may provision, limit, or suspend access to protect the service or for suspected breach, misuse, or nonpayment.</li>
+
+                        <li className='text-20 text-rg'>Trials and betas are provided <strong>AS IS</strong> and may be modified or discontinued.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='terms-section-3 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>3. License & Customer Data</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'><strong>License.</strong> Subject to these Terms and any Order, DFOLDS grants you a 
+                        <strong>non‑exclusive, non‑transferable, revocable</strong> right to access and use DhatuComply for your internal business purposes.</li>
+
+                        <li className='text-20 text-rg'><strong>Ownership.</strong> You retain all rights to <strong>Customer Content.</strong> You grant DFOLDS a 
+                        limited license to Process Customer Content <strong>solely</strong> to provide, support, and secure the services, and as otherwise permitted 
+                        by these Terms and the MSA/DPA/BAA.</li>
+
+                        <li className='text-20 text-rg'><strong>Feedback.</strong> DFOLDS may use feedback without restriction or compensation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='terms-section-4 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>4. Acceptable Use</h2>
+
+                    <p className='text-20 text-rg'>You will not: (a) violate laws or third‑party rights; (b) upload unlawful/harmful/infringing content; 
+                        (c) probe/scan/test vulnerabilities except as expressly permitted; (d) copy, modify, reverse engineer, or create derivative works of the service; 
+                        (e) bypass access controls or quotas; (f) use the service to build a competing product; (g) send spam or interfere with networks;
+                         (h) use the service for emergency, life‑support, or medical diagnosis/treatment contexts.</p>
+                </div>
+            </section>
+
+            <section className='terms-section-5 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>5.  Compliance Responsibilities</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'><strong>Your responsibilities. </strong> Configure your environment, user permissions, retention settings, and integrations to meet your obligations (e.g., HIPAA, GDPR, 21 CFR Part 11).</li>
+
+                        <li className='text-20 text-rg'><strong>Our commitments. </strong> DFOLDS maintains security controls, availability targets, and processing 
+                        safeguards as described in the <strong>Privacy Policy, Security Overview,</strong> and any <strong>DPA/BAA.</strong> DFOLDS does not provide legal advice.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='terms-section-6 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>6. Third‑Party Services</h2>
+
+                    <p className='text-20 text-rg'>Integrations and third‑party services are governed by their own terms and privacy policies. DFOLDS is not responsible for third‑party services and does not control their availability or behavior.</p>
+                </div>
+            </section>
+
+            <section className='terms-section-7 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>7. Confidentiality</h2>
+
+                    <p className='text-20 text-rg'>Each party may receive <strong>Confidential Information</strong> of the other. The receiving party will protect it using at least reasonable care and not disclose it except to personnel/subprocessors with a need to know under similar obligations. Customer Content and security documentation are Confidential Information.</p>
+                </div>
+            </section>
+
+            <section className='terms-section-8 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>8. Fees, Taxes & Orders (if applicable)</h2>
+
+                    <p className='text-20 text-rg'>Fees, billing cycles, and payment terms are set in the applicable <strong>Order</strong> or MSA. Fees are exclusive of taxes; you are responsible for taxes other than DFOLDS’s income taxes. Late amounts may accrue interest at the lower of 1.5% per month or the maximum allowed by law. Except as expressly stated, <strong>fees are non‑refundable.</strong></p>
+                </div>
+            </section>
+
+            <section className='terms-section-9 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>9. Term; Suspension; Termination</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'>These Terms remain in effect while you use the service.</li>
+
+                        <li className='text-20 text-rg'>We may suspend/terminate access for breach, security risk, nonpayment, legal requirements, or misuse. You may terminate by closing your account and discontinuing use.</li>
+
+                        <li className='text-20 text-rg'>Upon termination, your access ceases and we will handle Customer Content per the <strong>DPA/BAA</strong> (return/delete) and retention policies.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='terms-section-11 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>11.  Limitation of Liability</h2>
+
+                    <p className='text-20 text-rg'>TO THE MAXIMUM EXTENT PERMITTED BY LAW: (A) NEITHER PARTY WILL BE LIABLE FOR 
+                        <strong>INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES,</strong> OR LOSS OF PROFITS/REVENUE/GOODWILL/USE/OR DATA,
+                         EVEN IF ADVISED OF THE POSSIBILITY; AND (B) EACH PARTY’S TOTAL LIABILITY ARISING OUT OF OR RELATED TO THESE TERMS SHALL NOT EXCEED THE AMOUNTS 
+                         PAID OR PAYABLE TO DFOLDS FOR THE SERVICE IN THE <strong>12 MONTHS</strong> PRECEDING THE CLAIM (OR <strong>$1,000</strong> FOR FREE TIERS), EXCEPT FOR (i) YOUR PAYMENT OBLIGATIONS; 
+                         (ii) A PARTY’S MISAPPROPRIATION OF THE OTHER’S INTELLECTUAL PROPERTY; OR (iii) YOUR BREACH OF <strong>Acceptable Use.</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section className='terms-section-12 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>12. Indenification</h2>
+
+                    <p className='text-20 text-rg'>You will indemnify and defend DFOLDS and its affiliates against third‑party claims arising from: 
+                        (a) your Customer Content; (b) your breach of these Terms or applicable law; or (c) your use of the service in violation of the Acceptable Use.
+                         DFOLDS will indemnify you for third‑party IP infringement claims alleging the service directly infringes valid IP rights,
+                          subject to standard limitations and exclusions; remedies may include modification, substitution, or termination with a pro‑rated refund of prepaid fees.
+                    </p>
+                </div>
+            </section>
+
+            <section className='terms-section-13 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>13. Export, Sanctions & Anti‑Corruption</h2>
+
+                    <p className='text-20 text-rg'>Comply with US and international <strong>export control</strong> and <section>sanctions</section> laws (e.g., EAR, OFAC) 
+                        and anti‑corruption laws (FCPA, UK Bribery Act). Do not use the service in embargoed countries or by prohibited parties.
+                    </p>
+                </div>
+            </section>
+
+            <section className='terms-section-14 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>14. Government Rights</h2>
+
+                    <p className='text-20 text-rg'>If use is by or on behalf of the US Government, the service is <strong>Commercial Computer Software</strong> subject to 
+                        restricted rights under FAR 12.212 and DFARS 227.7202.
+                    </p>
+                </div>
+            </section>
+
+            <section className='terms-section-15 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>15. Changes</h2>
+
+                    <p className='text-20 text-rg'>We may update these Terms. Material changes will be notified (email or in‑app). Continued use after the effective date constitutes acceptance.
+                    </p>
+                </div>
+            </section>
+
+            <section className='terms-section-16 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>16. Dispute Resolution; Governing Law</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'><strong>Law & Venue.</strong> Delaware law (USA), without regard to conflict‑of‑law rules.</li>
+
+                        <li className='text-20 text-rg'><strong>Arbitration.</strong> Disputes resolved by <strong>binding arbitration</strong> in Delaware under JAMS 
+                            Commercial Rules, on an individual basis. <strong>Class actions and jury trials are waived.</strong> Either party may seek 
+                            injunctive relief in court for IP misuse or confidentiality breaches.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='terms-section-17 container-sm '>
+                <div className="container">
+                    <h2 className='h3 text-rg'>17. Miscellaneous</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'><strong>Order of precedence. </strong> Your MSA/DPA/BAA control over these Terms if conflicting.</li>
+
+                        <li className='text-20 text-rg'><strong>Assignment. </strong> You may not assign without DFOLDS’s consent; DFOLDS may assign to an 
+                        affiliate or in connection with a corporate transaction.</li>
+
+                        <li className='text-20 text-rg'><strong>Force Majeure. </strong>Neither party is liable for delays/failures due to events beyond reasonable control.</li>
+
+                        <li className='text-20 text-rg'><strong>Entire Agreement. </strong>These Terms, plus Orders and incorporated policies, are the complete agreement on this subject.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='terms-section-18 container-sm section-sm'>
+                <div className="container">
+                    <h2 className='h3 text-rg'>18. Contact</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'><strong>General inquiries: </strong><Link href="mailto:enquiry@dfolds.com" title='' className='text-20 text-rg'>enquiry@dfolds.com</Link></li>
+
+                        <li className='text-20 text-rg'><strong>Legal notices & contracts: </strong><Link href="mailto: contactus@dfolds.com" title='' className='text-20 text-rg'> contactus@dfolds.com</Link></li>
+
+                        <li className='text-20 text-rg'><strong>Address: </strong>DFOLDS LLC, 262 CHAPMAN RD, STE 240, NEWARK, DE 19702, USA</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    )
+}
