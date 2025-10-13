@@ -1,5 +1,6 @@
 "use client"
 import { Header } from '@/components/Header'
+import UserAccessAnimation from '@/components/UserAccessAnimations'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -23,19 +24,19 @@ export default function UserAccess() {
 
             <section className='section roles-card-section --bg-white overflow-hidden'>
                 <div className="container">
-                    <div className="roles-wrapper ">
+                    <div className="roles-wrapper">
                         <h2 className='h3 text-md'>Defining Roles for Secure and Compliant Operations</h2>
 
                         <div className="role-card-wrapper">
-                            <div className="role-account-admin">
+                            <div className="role-account-admin admin-anim">
                                 <div className="account-admin-main-text">
-                                    <div className="account-admin-text ">
+                                    <div className="account-admin-text">
                                         <h3 className='h4 text-md'>Account Admin</h3>
 
-                                        <p className='text-20 text-grey text-rg'>Full access to manage account settings, users, and security</p>
+                                        <p className='text-20 text-grey text-rg'>Full access to manage account settings, users and security</p>
                                     </div>
 
-                                    <div className='account-admin-pointers'>
+                                    <div className='account-admin-pointers admin-anim-points'>
                                         <h4 className='h6'>Responsibilities</h4>
 
                                         <ul>
@@ -46,7 +47,7 @@ export default function UserAccess() {
                                     </div>
                                 </div>
                                 
-                                <div className='roles-images'>
+                                <div className='roles-images admin-anim-img'>
                                     <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
@@ -57,7 +58,7 @@ export default function UserAccess() {
                                 </div>
                             </div>
 
-                            <div className="role-account-admin card-row-reverse">
+                            <div className="role-account-admin card-row-reverse compli-officr-anim">
                                 <div className="account-admin-main-text">
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Officer</h3>
@@ -65,7 +66,7 @@ export default function UserAccess() {
                                         <p className='text-20 text-grey text-rg'>Oversees organizational compliance and regulatory adherence</p>
                                     </div>
 
-                                    <div className='account-admin-pointers'>
+                                    <div className='account-admin-pointers comp-ofcr-points'>
                                         <h4 className='h6'>Responsibilities</h4>
 
                                         <ul>
@@ -76,7 +77,7 @@ export default function UserAccess() {
                                     </div>
                                 </div>
 
-                                <div className="roles-images">
+                                <div className="roles-images comp-ofcr-imgs">
                                     <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
@@ -87,7 +88,7 @@ export default function UserAccess() {
                                 </div> 
                             </div>
 
-                            <div className="role-account-admin">
+                            <div className="role-account-admin compli-contri">
                                 <div className="account-admin-main-text">
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Contributor</h3>
@@ -95,7 +96,7 @@ export default function UserAccess() {
                                         <p className='text-20 text-grey text-rg'>Supports compliance operations by creating and maintaining documentation</p>
                                     </div>
 
-                                    <div className='account-admin-pointers'>
+                                    <div className='account-admin-pointers compli-contri-points'>
                                         <h4 className='h6'>Responsibilities</h4>
 
                                         <ul>
@@ -106,7 +107,7 @@ export default function UserAccess() {
                                     </div>
                                 </div>
                                 
-                                <div className="roles-images">
+                                <div className="roles-images compli-contri-imgs">
                                     <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
@@ -117,14 +118,14 @@ export default function UserAccess() {
                                 </div>
                             </div>
 
-                            <div className="role-account-admin card-row-reverse">
+                            <div className="role-account-admin card-row-reverse compli-auditor">
                                 <div className="account-admin-main-text">
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Auditor</h3>
 
                                         <p className='text-20 text-grey text-rg'>Reviews compliance activities to ensure accuracy and accountability</p>
                                     </div>
-                                    <div className='account-admin-pointers'>
+                                    <div className='account-admin-pointers compli-auditor-points'>
                                         <h4 className='h6'>Responsibilities</h4>
 
                                         <ul>
@@ -135,7 +136,7 @@ export default function UserAccess() {
                                     </div>
                                 </div>
 
-                                <div className='roles-images'>
+                                <div className='roles-images compli-auditor-imgs'>
                                     <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
@@ -192,6 +193,8 @@ export default function UserAccess() {
                 </div>
             </section>
         </div>
+
+        <UserAccessAnimation />
         </>
     )
 }

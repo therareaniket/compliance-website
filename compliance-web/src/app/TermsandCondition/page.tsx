@@ -67,9 +67,9 @@ export default function TermsAndConditionPage() {
                     <h2 className='h3 text-rg'>5.  Compliance Responsibilities</h2>
 
                     <ul>
-                        <li className='text-20 text-rg'><strong>Your responsibilities. </strong> Configure your environment, user permissions, retention settings, and integrations to meet your obligations (e.g., HIPAA, GDPR, 21 CFR Part 11).</li>
+                        <li className='text-20 text-rg'><strong>Your responsibilities.</strong> Configure your environment, user permissions, retention settings, and integrations to meet your obligations (e.g., HIPAA, GDPR, 21 CFR Part 11).</li>
 
-                        <li className='text-20 text-rg'><strong>Our commitments. </strong> DFOLDS maintains security controls, availability targets, and processing 
+                        <li className='text-20 text-rg'><strong>Our commitments.</strong> DFOLDS maintains security controls, availability targets, and processing 
                         safeguards as described in the <strong>Privacy Policy, Security Overview,</strong> and any <strong>DPA/BAA.</strong> DFOLDS does not provide legal advice.</li>
                     </ul>
                 </div>

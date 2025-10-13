@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import AboutUsSwiperComponents from "@/components/SwiperComponent";
 import { Header } from '@/components/Header';
+import AboutAnimations from '@/components/AboutAnimations';
 
 export default function AboutUs() {
     return (
@@ -30,17 +31,17 @@ export default function AboutUs() {
             <section className='section abt-mis --bg-white'>
                 <div className="container">
                     <div className="mis-vis-section">
-                        <div className="mis-vis-heading">
+                        <div className="mis-vis-heading only-mis">
                             <h2 className='h3'>Our Mission</h2>
 
                             <p className='text-20 text-rg'>To simplify and strengthen clinical trial compliance through automation and actionable insights. </p>
 
-                            <Image src='/images/aboutUs/mission-heading.webp' alt='mission-heading' width={692} height={295} priority={false}></Image>
+                            <Image src='/images/aboutUs/mission-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-mis-img'></Image>
                         </div>
 
                         <div className="mis-vis-card-lists">
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card primary-box-shadow">
+                                <div className="mis-vis-card primary-box-shadow mis-anim-1">
                                     <Image src='/images/aboutUs/rebase-icon.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Simplify Workflows</p>
@@ -48,7 +49,7 @@ export default function AboutUs() {
                                     <p className='mis-vis-detail-para text-grey test-18 text-rg'>Automate routine tasks to save time and reduce errors in trial operations.</p>
                                 </div>
 
-                                <div className="mis-vis-card primary-box-shadow">
+                                <div className="mis-vis-card primary-box-shadow mis-anim-2">
                                     <Image src='/images/aboutUs/process-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Empower Organizations</p>
@@ -58,7 +59,7 @@ export default function AboutUs() {
                             </div>
 
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card primary-box-shadow removed-margin-btm">
+                                <div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-1">
                                     <Image src='/images/aboutUs/approval-delegation.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Strengthen Processes</p>
@@ -66,7 +67,7 @@ export default function AboutUs() {
                                     <p className='mis-vis-detail-para text-grey test-18 text-rg'>Ensure accuracy and reliability across all clinical compliance activities.</p>
                                 </div>
 
-                                <div className="mis-vis-card primary-box-shadow removed-margin-btm">
+                                <div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-2">
                                     <Image src='/images/aboutUs/clock-arrow-down.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Reduce Manual Effort</p>
@@ -82,17 +83,17 @@ export default function AboutUs() {
             <section className='abt-vis --bg-white'>
                 <div className="container">
                     <div className="mis-vis-section vis-section">
-                        <div className="mis-vis-heading vis-heading">
-                            <h2 className='h3'>Our Vision </h2>
+                        <div className="mis-vis-heading vis-heading only-vis">
+                            <h2 className='h3'>Our Vision</h2>
 
                             <p className='text-20 text-rg'>A future where clinical trial readiness is seamless, proactive, and technology driven. </p>
 
-                            <Image src='/images/aboutUs/vision-heading.webp' alt='mission-heading' width={692} height={295} priority={false}></Image>
+                            <Image src='/images/aboutUs/vision-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-vis-img'></Image>
                         </div>
 
                         <div className="mis-vis-card-lists">
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card greenish-box-shadow vis-card">
+                                <div className="mis-vis-card greenish-box-shadow vis-card vis-anim-2">
                                     <Image src='/images/aboutUs/work-history.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Seamless Experience </p>
@@ -100,7 +101,7 @@ export default function AboutUs() {
                                     <p className='mis-vis-detail-para text-grey test-18 text-rg'>Deliver smooth, user-friendly compliance processes for trial teams. </p>
                                 </div>
 
-                                <div className="mis-vis-card greenish-box-shadow vis-card">
+                                <div className="mis-vis-card greenish-box-shadow vis-card vis-anim-1">
                                     <Image src='/images/aboutUs/proactive-readiness-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Trust & Transparency </p>
@@ -110,7 +111,7 @@ export default function AboutUs() {
                             </div>
 
                             <div className="mis-vis-cards">
-                                <div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm">
+                                <div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-2">
                                     <Image src='/images/aboutUs/arming-countdown.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Proactive Readiness </p>
@@ -118,7 +119,7 @@ export default function AboutUs() {
                                     <p className='mis-vis-detail-para text-grey test-18 text-rg'>Anticipate regulatory needs before they become challenges. </p>
                                 </div>
 
-                                <div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm">
+                                <div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-1">
                                     <Image src='/images/aboutUs/emoji-objects.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
 
                                     <p className='mis-vis-para text-md text-20'>Future Innovation </p>
@@ -159,7 +160,7 @@ export default function AboutUs() {
                                 </ul>
                             </div>
 
-                            <Link href='/Compliance' title='Learn More' className='btn-padding site-radius-10 btn-primary'>Learn More</Link>
+                            <Link href='/Compliance' title='Learn More' className='btn-padding site-radius-10 btn-primary platform-btn'>Learn More</Link>
                         </div>
                     </div>
                 </div>
@@ -181,6 +182,8 @@ export default function AboutUs() {
                 </div>
             </section>
         </div>
+
+        <AboutAnimations/>
         </>
     )
 }

@@ -27,8 +27,8 @@ export function Footer() {
                         <div className='quick-links legal-info text-md'>
                             <p className='text-16 text-md'>Legal Informations</p>
                             <ul>
-                                <li><Link href="#" title='' className='text-16 text-rg'>Privacy & Policy</Link></li>
-                                <li><Link href="#" title='' className='text-16 text-rg'>Terms & Conditions</Link></li>
+                                <li><Link href="/PrivacyPolicy" title='' className='text-16 text-rg'>Privacy & Policy</Link></li>
+                                <li><Link href="/TermsandCondition" title='' className='text-16 text-rg'>Terms & Conditions</Link></li>
                             </ul>
                         </div>
 

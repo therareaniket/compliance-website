@@ -1,4 +1,5 @@
 "use client"
+import ComplianceAnimations from '@/components/ComplianceAnimations';
 import { Header } from '@/components/Header';
 // import Image from 'next/image'
 import Link from 'next/link'
@@ -27,9 +28,9 @@ export default function ComplianceListing() {
                         <h2 className='h3 '>Why Compliance Matters</h2>
 
                         <div className='compliance-matters-text'>
-                            <p className='matters-para1 text-20 text-rg text-grey'>Compliance in clinical trials and pharmaceuticals means following regulatory standards, ethical guidelines, and legal frameworks that safeguard patient safety, ensure product quality, and protect data integrity. It forms the foundation of trust between researchers, regulators, and patients worldwide.</p>
+                            <p className='matters-para1 text-20 text-rg text-grey compli-para-anim'>Compliance in clinical trials and pharmaceuticals means following regulatory standards, ethical guidelines, and legal frameworks that safeguard patient safety, ensure product quality, and protect data integrity. It forms the foundation of trust between researchers, regulators, and patients worldwide.</p>
 
-                            <p className='matters-para2 text-20 text-rg text-grey'>Adhering to compliance standards ensures clinical trials are ethical, drug manufacturing is safe, and regulatory approvals are smooth. Non-compliance, however, can result in delays, financial penalties, or even halts in research and production.</p>
+                            <p className='matters-para2 text-20 text-rg text-grey compli-para-anim'>Adhering to compliance standards ensures clinical trials are ethical, drug manufacturing is safe, and regulatory approvals are smooth. Non-compliance, however, can result in delays, financial penalties, or even halts in research and production.</p>
 
                             <div className='surety-count-cards'>
                                 <div className="card-1">
@@ -135,6 +136,8 @@ export default function ComplianceListing() {
                 </div>
             </section>
         </div>
+
+        <ComplianceAnimations />
         </>
     );
 }
