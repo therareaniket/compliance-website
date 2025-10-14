@@ -52,7 +52,7 @@ import AboutAnimations from '@/components/AboutAnimations';
 //     },
 // }
 
-const textAnimations = window.innerWidth >= 1100 ? {
+const textAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
     initialLeft: {
         opacity: 0,
         x: -200,
