@@ -9,7 +9,7 @@ import UserAccessAnimation from '@/components/UserAccessAnimations'
  
 export default function UserAccess() {
 
-    const userAccessAnimation = window.innerWidth >= 1100 ? {
+    const userAccessAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
         initialHead: { opacity: 0, x: -100, },
         animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
 

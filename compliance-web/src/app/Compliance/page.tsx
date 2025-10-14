@@ -8,7 +8,7 @@ import ComplianceAnimations from '@/components/ComplianceAnimations';
 
 export default function ComplianceListing() {
 
-    const complyAnimations = window.innerWidth >= 1100 ? {
+    const complyAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
         initialHead: { opacity: 0, x: -100, },
         animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
 
