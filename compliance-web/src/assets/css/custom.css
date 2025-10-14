@@ -296,7 +296,7 @@ section { overflow: hidden; }
 
 
 /* banner-code */
-.abt-hero, .user-access-hero, .com-hero, .contact-hero{ position: relative; }
+/* .abt-hero, .user-access-hero, .com-hero, .contact-hero{ position: relative; } */
 .abt-hero-head, .user-access-hero-head, .banner-head{ position: absolute; top: 50%; left: 142PX; transform: translateY(-50%);  width: 900px; }
 
 /* AboutUS-page */
@@ -502,7 +502,7 @@ section { overflow: hidden; }
 
 
 /* detail page hero */
-.container-sm{ width: 1100px; margin: 0 auto; }
+.container-sm{ width: 1100px; margin: 0 auto; padding: 0 22px; }
 .detail-page-hero{ 
     display: flex;
     justify-content: center;
@@ -565,3 +565,5 @@ section { overflow: hidden; }
 .inner-page header img { margin: 0;  }
 .inner-page .navbar-wrapper { padding: 20px 0; }
 .inner-page .navbar-wrapper li { margin: 0; padding: 0; }
+
+/* .abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero { position: sticky !important; top: 0 !important; z-index: -1 !important; } */

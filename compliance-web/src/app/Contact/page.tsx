@@ -7,7 +7,7 @@ import { delay, motion } from 'framer-motion'
 
 export default function ContactUs() {
 
-    const ContactAnimations = {
+    const ContactAnimations = window.innerWidth >= 1100 ? {
         initialBox1: { opacity: 0, y: -100 },
         animateBox1: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
 
@@ -16,6 +16,15 @@ export default function ContactUs() {
 
         initialBox3: { opacity: 0, y: -100 },
         animateBox3: { opacity: 1, y: 0, transition: { delay: 3, duration: 1 } },
+    } : {
+        initialBox1: { opacity: 1, y: 0 },
+        animateBox1: { opacity: 1, y: 0, },
+
+        initialBox2: { opacity: 1, y: 0 },
+        animateBox2: { opacity: 1, y: 0, },
+
+        initialBox3: { opacity: 1, y: 0 },
+        animateBox3: { opacity: 1, y: 0, },
     }
 
     return (

@@ -52,7 +52,7 @@ import AboutAnimations from '@/components/AboutAnimations';
 //     },
 // }
 
-const textAnimations =  {
+const textAnimations = window.innerWidth >= 1100 ? {
     initialLeft: {
         opacity: 0,
         x: -200,
@@ -94,7 +94,15 @@ const textAnimations =  {
             duration: 1,
         },
     },
-}
+} : {
+    // Static values for screens < 1200px
+    initialLeft: { opacity: 1, x: 0 },
+    initialRight: { opacity: 1, x: 0 },
+    animateLeft: { opacity: 1, x: 0 },
+    animateRight: { opacity: 1, x: 0 },
+    initialBtn: { opacity: 1, scale: 1 },
+    animateBtn: { opacity: 1, scale: 1 },
+};
 
 
 
@@ -102,8 +110,8 @@ export default function AboutUs() {
 
     return (
         <>
-        <div className="aboutbody overflow-hidden">
-
+        <div className="aboutbody">
+            
             <Header />
 
             <section className='abt-hero'>

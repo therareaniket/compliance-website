@@ -9,7 +9,7 @@ import UserAccessAnimation from '@/components/UserAccessAnimations'
  
 export default function UserAccess() {
 
-    const userAccessAnimation = {
+    const userAccessAnimation = window.innerWidth >= 1100 ? {
         initialHead: { opacity: 0, x: -100, },
         animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
 
@@ -36,6 +36,27 @@ export default function UserAccess() {
 
         initialProcessImg4: { opacity: 0, scale: 0 },
         animateProcessImg4: { opacity: 1, scale:1, transition: { delay: 5, duration: 1 } },
+    } : {
+
+        initialHead: { opacity: 1, x: 0, },
+        animateHead: { opacity: 1, x: 0, },
+        initialCardRightImg: { opacity: 1, x: 0 },
+        animateCardRightImg: { opacity: 1, x: 0, },
+        initialCardLeftImg: { opacity: 1, x: 0 },
+        animateCardLeftImg: { opacity: 1, x: 0, },
+        initialCardDetailsRight: { opacity: 1, x: 0, },
+        animateCardDetailsRight: { opacity: 1, x: 0, },
+        initialCardDetailsLeft: { opacity: 1, x: 0 },
+        animateCardDetailsLeft: { opacity: 1, x: 0, },
+        initialProcessImg1: { opacity: 1, scale: 1 },
+        animateProcessImg1: { opacity: 1, scale:1, },
+        initialProcessImg2: { opacity: 1, scale: 1 },
+        animateProcessImg2: { opacity: 1, scale:1, },
+        initialProcessImg3: { opacity: 1, scale:1 },
+        animateProcessImg3: { opacity: 1, scale:1, },
+        initialProcessImg4: { opacity: 1, scale: 1 },
+        animateProcessImg4: { opacity: 1, scale:1, },
+
     }
 
     const MotionImage = motion(Image);
@@ -59,11 +80,11 @@ export default function UserAccess() {
             <section className='section roles-card-section --bg-white overflow-hidden'>
                 <div className="container">
                     <div className="roles-wrapper">
-                        <motion.h2 className='h3 text-md' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>Defining Roles for Secure and Compliant Operations</motion.h2>
+                        <motion.h2 className='h3 text-md' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.3 }}>Defining Roles for Secure and Compliant Operations</motion.h2>
 
                         <div className="role-card-wrapper">
                             <div className="role-account-admin admin-anim">
-                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsLeft' whileInView='animateCardDetailsLeft' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsLeft' whileInView='animateCardDetailsLeft' viewport={{ once: true, amount: 0.3 }}>
                                     <div className="account-admin-text">
                                         <h3 className='h4 text-md'>Account Admin</h3>
 
@@ -81,7 +102,7 @@ export default function UserAccess() {
                                     </div>
                                 </motion.div>
                                 
-                                <motion.div className='roles-images admin-anim-img' variants={userAccessAnimation} initial='initialCardRightImg' whileInView='animateCardRightImg' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className='roles-images admin-anim-img' variants={userAccessAnimation} initial='initialCardRightImg' whileInView='animateCardRightImg' viewport={{ once: true, amount: 0.3 }}>
                                     <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
@@ -93,7 +114,7 @@ export default function UserAccess() {
                             </div>
 
                             <div className="role-account-admin card-row-reverse compli-officr-anim">
-                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsRight' whileInView='animateCardDetailsRight' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsRight' whileInView='animateCardDetailsRight' viewport={{ once: true, amount: 0.3 }}>
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Officer</h3>
 
@@ -111,7 +132,7 @@ export default function UserAccess() {
                                     </div>
                                 </motion.div>
 
-                                <motion.div className="roles-images comp-ofcr-imgs" variants={userAccessAnimation} initial='initialCardLeftImg' whileInView='animateCardLeftImg' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className="roles-images comp-ofcr-imgs" variants={userAccessAnimation} initial='initialCardLeftImg' whileInView='animateCardLeftImg' viewport={{ once: true, amount: 0.3 }}>
                                     <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
@@ -123,7 +144,7 @@ export default function UserAccess() {
                             </div>
 
                             <div className="role-account-admin compli-contri">
-                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsLeft' whileInView='animateCardDetailsLeft' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsLeft' whileInView='animateCardDetailsLeft' viewport={{ once: true, amount: 0.3 }}>
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Contributor</h3>
 
@@ -141,7 +162,7 @@ export default function UserAccess() {
                                     </div>
                                 </motion.div>
                                 
-                                <motion.div className="roles-images compli-contri-imgs" variants={userAccessAnimation} initial='initialCardRightImg' whileInView='animateCardRightImg' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className="roles-images compli-contri-imgs" variants={userAccessAnimation} initial='initialCardRightImg' whileInView='animateCardRightImg' viewport={{ once: true, amount: 0.3 }}>
                                     <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
@@ -153,7 +174,7 @@ export default function UserAccess() {
                             </div>
 
                             <div className="role-account-admin card-row-reverse compli-auditor">
-                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsRight' whileInView='animateCardDetailsRight' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className="account-admin-main-text" variants={userAccessAnimation} initial='initialCardDetailsRight' whileInView='animateCardDetailsRight' viewport={{ once: true, amount: 0.3 }}>
                                     <div className="account-admin-text ">
                                         <h3 className='h4 text-md'>Compliance Auditor</h3>
 
@@ -171,7 +192,7 @@ export default function UserAccess() {
                                     </div>
                                 </motion.div>
 
-                                <motion.div className='roles-images compli-auditor-imgs' variants={userAccessAnimation} initial='initialCardLeftImg' whileInView='animateCardLeftImg' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className='roles-images compli-auditor-imgs' variants={userAccessAnimation} initial='initialCardLeftImg' whileInView='animateCardLeftImg' viewport={{ once: true, amount: 0.3 }}>
                                     <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
 
                                     <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
@@ -189,7 +210,7 @@ export default function UserAccess() {
             <section className='secure-portal-wrapper'>
                 <div className="container">
                     <div className='secure-portal-section'>
-                        <motion.div className='secure-portal-text' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>
+                        <motion.div className='secure-portal-text' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.3 }}>
                             <h2 className='h3 text-rg'>Complete Onboarding Process for Secure Portal Access</h2>
 
                             <p className='text-20 text-rg text-grey'>A structured step by step onboarding guide designed to provide secure compliant and role based access to the portal covering registration verification role assignment and final access</p>
@@ -201,13 +222,13 @@ export default function UserAccess() {
                             </div>
 
                             <motion.div className='path-images' >
-                                <MotionImage className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg1' whileInView='animateProcessImg1' viewport={{ once: true, amount: 0.6 }}></MotionImage>
+                                <MotionImage className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg1' whileInView='animateProcessImg1' viewport={{ once: true, amount: 0.3 }}></MotionImage>
 
-                                <MotionImage className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg2' whileInView='animateProcessImg2' viewport={{ once: true, amount: 0.6 }}></MotionImage>
+                                <MotionImage className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg2' whileInView='animateProcessImg2' viewport={{ once: true, amount: 0.3 }}></MotionImage>
 
-                                <MotionImage className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg3' whileInView='animateProcessImg3' viewport={{ once: true, amount: 0.6 }}></MotionImage>
+                                <MotionImage className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg3' whileInView='animateProcessImg3' viewport={{ once: true, amount: 0.3 }}></MotionImage>
 
-                                <MotionImage className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg4' whileInView='animateProcessImg4' viewport={{ once: true, amount: 0.6 }}></MotionImage>
+                                <MotionImage className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg4' whileInView='animateProcessImg4' viewport={{ once: true, amount: 0.3 }}></MotionImage>
                             </motion.div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ import ComplianceAnimations from '@/components/ComplianceAnimations';
 
 export default function ComplianceListing() {
 
-    const complyAnimations = {
+    const complyAnimations = window.innerWidth >= 1100 ? {
         initialHead: { opacity: 0, x: -100, },
         animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
 
@@ -24,6 +24,17 @@ export default function ComplianceListing() {
 
         initialCardListUp: { opacity: 0, y: -100 },
         animateCardListUp: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+    } : {
+        initialHead: { opacity: 1, x: 0, },
+        animateHead: { opacity: 1, x: 0,  },
+        initialNumbs1: { opacity: 1, x: 0 },
+        animateNumbs1: { opacity: 1, x: 0,  },
+        initialNumbs2: { opacity: 1, x: 0 },
+        animateNumbs2: { opacity: 1, x: 0,  },
+        initialNumbs3: { opacity: 1, x: 0 },
+        animateNumbs3: { opacity: 1, x: 0, },
+        initialCardListUp: { opacity: 1, y: 0 },
+        animateCardListUp: { opacity: 1, y: 0, },
     }
 
     return(
@@ -76,7 +87,7 @@ export default function ComplianceListing() {
             <section className='section --bg-white'>
                 <div className="container">
                     <div className="compliance-matters-cards">
-                        <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.9 }}>
+                        <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.3 }}>
                             <div className='hipaa-card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>HIPAA</h2>
@@ -98,7 +109,7 @@ export default function ComplianceListing() {
                             </div>
                         </motion.div>
 
-                        <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.9 }}>
+                        <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.3 }}>
                             <div className='annex_11_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>EU Annex 11</h2>
@@ -119,7 +130,7 @@ export default function ComplianceListing() {
                             </div>
                         </motion.div>
 
-                        <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.9 }}>
+                        <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.3 }}>
                             <div className='gcp_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
                                     <h2 className='h3'>GCP</h2>
