@@ -1,19 +1,23 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function PrivacyPolicyPage () {
     return(
-        <main className='privacypolicymain'>
+        <main className='privacypolicymain inner-page'>
+
+            <Header />
+
             <section className='privacy-policy-hero'>
-                <div className="container">
+                <div className="container-sm">
                     <h1 className='h2'>DhatuComply — Privacy Policy</h1>
                 </div>
             </section>
 
-            <section className='privacypolicysection-1 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-1 section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>1. Scope & Roles</h2>
 
                     <ul>
@@ -35,8 +39,8 @@ export default function PrivacyPolicyPage () {
                 </div>
             </section>
 
-            <section className='privacypolicysection-2 container-sm '>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-2'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>2. Definitions (plain language)</h2>
 
                     <ul>
@@ -51,8 +55,8 @@ export default function PrivacyPolicyPage () {
                 </div>
             </section>
 
-            <section className='privacypolicysection-3 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-3 section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>3. What We Collect & Sources</h2>
 
                     <ul>
@@ -67,14 +71,14 @@ export default function PrivacyPolicyPage () {
                         <li className='text-20 text-rg'><strong>Support Interactions: </strong> chat transcripts, emails, attachments.</li>
 
                         <li className='text-20 text-rg'><strong>Cookies/Similar Tech: </strong> session/auth cookies, preferences, analytics (see Cookie Notice at <Link href="/CookiesNoticePage" title='' className='text-20 text-rg'>/cookies</Link> ).
-                            Sources include you, your organization, integrated systems you connect (e.g., AWS/Azure/GCP, Okta, GitHub), subprocessors, and lawful public sources.
+                          sources include you, your organization, integrated systems you connect (e.g., AWS/Azure/GCP, Okta, GitHub), subprocessors, and lawful public sources.
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <section className='privacypolicysection-4 container-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-4'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>4. Purposes & Legal Bases (GDPR/UK GDPR)</h2>
 
                     <ul>
@@ -103,10 +107,9 @@ export default function PrivacyPolicyPage () {
                     </ul>
                 </div>
             </section>
-
             
-            <section className='privacypolicysection-5 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-5 section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>5. Cookies, Analytics & Tracking</h2>
 
                     <ul>
@@ -123,8 +126,8 @@ export default function PrivacyPolicyPage () {
                 </div>
             </section>
 
-            <section className='privacypolicysection-6 container-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-6'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>6. Disclosures to Third Parties</h2>
 
                     <p className='text-20 text-rg'>We disclose Personal Data only to: <strong>subprocessors/service providers</strong> (cloud, email, analytics, support) under DPAs;
@@ -134,10 +137,9 @@ export default function PrivacyPolicyPage () {
                     </p>
                 </div>
             </section>
-
             
-            <section className='privacypolicysection-7 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-7 section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>7. International Transfers</h2>
 
                     <p className='text-20 text-rg'>We use <strong>EU SCCs</strong> and <strong>UK IDTA/Addendum</strong> with supplementary measures for cross‑border transfers. 
@@ -146,8 +148,8 @@ export default function PrivacyPolicyPage () {
                 </div>
             </section>
 
-            <section className='privacypolicysection-8 container-sm '>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-8'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>8. International Transfers</h2>
 
                     <p className='text-20 text-rg'>Controls include <strong>encryption in transit/at rest, RBAC/SSO/MFA,</strong> network isolation, vulnerability management,
@@ -158,8 +160,8 @@ export default function PrivacyPolicyPage () {
                 </div>
             </section>
 
-            <section className='privacypolicysection-9 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-9 section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>9. Retention</h2>
 
                     <p className='text-20 text-rg'>We retain Personal Data only as long as necessary or as required by law/contract. 
@@ -170,8 +172,8 @@ export default function PrivacyPolicyPage () {
                 </div>
             </section>
 
-            <section className='privacypolicysection-10 container-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-10'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>10. Your Rights</h2>
 
                     <p className='text-20 text-rg'>Depending on your location, you may have rights to <strong>access, correct, delete, restrict, object, port,</strong> 
@@ -181,32 +183,32 @@ export default function PrivacyPolicyPage () {
                 </div>
             </section>
 
-            <section className='privacypolicysection-11 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-11 section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>11. Children</h2>
 
                     <p className='text-20 text-rg'>Business‑use only; not directed to children under 16. If a child’s Personal Data is identified, contact <strong>contactus@dfolds.com</strong>for deletion.</p>
                 </div>
             </section>
 
-            <section className='privacypolicysection-12 container-sm '>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-12'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>12. Third‑Party Links & Integrations</h2>
 
                     <p className='text-20 text-rg'>Linked services are governed by their own policies. Review them carefully; we are not responsible for third‑party practices.</p>
                 </div>
             </section>
 
-            <section className='privacypolicysection-13 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-13 section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>13. Changes</h2>
 
                     <p className='text-20 text-rg'>We may update this Policy; the date above reflects the latest version. Material changes will be notified via email or in‑app. Continued use after the effective date constitutes acceptance.</p>
                 </div>
             </section>
 
-            <section className='privacypolicysection-14 container-sm'>
-                <div className="container">
+            <section className='--bg-white privacypolicysection-14'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>14. How to Contact Us</h2>
 
                     <ul>

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
-import { motion } from 'framer-motion';
+import { delay, motion } from 'framer-motion';
 
 type FaqCategoryId = "general" | "support" | "other";
 type FAQData = { question: string; answer: string };
@@ -164,10 +164,10 @@ export default function FAQSection(props: FAQProps) {
 
     const FAQAnimate = {
         initialHead: { opacity: 0, y: -100, },
-        animateHead: { opacity: 1, y:0, transition: { duration: 1 } },
+        animateHead: { opacity: 1, y:0, transition: { delay: 1, duration: 1 } },
     
-        initialBtn: { opacity: 0, x: -100 },
-        animateBtn: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
+        initialBtn: { opacity: 0, scale: 0 },
+        animateBtn: { opacity: 1, scale: 1, transition: { delay: 2, duration: 1 } },
     }
 
     return (

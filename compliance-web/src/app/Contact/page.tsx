@@ -3,8 +3,20 @@ import { Header } from '@/components/Header';
 import EnquiryForm from '@/components/EnquiryForm';
 import React from 'react'
 import Link from 'next/link';
+import { delay, motion } from 'framer-motion'
 
 export default function ContactUs() {
+
+    const ContactAnimations = {
+        initialBox1: { opacity: 0, y: -100 },
+        animateBox1: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+
+        initialBox2: { opacity: 0, y: -100 },
+        animateBox2: { opacity: 1, y: 0, transition: { delay: 2, duration: 1 } },
+
+        initialBox3: { opacity: 0, y: -100 },
+        animateBox3: { opacity: 1, y: 0, transition: { delay: 3, duration: 1 } },
+    }
 
     return (
         <>
@@ -40,29 +52,29 @@ export default function ContactUs() {
                         </div>
 
                         <div className="contct-info text-center">
-                            <div className="info-block phone-info site-radius-10 ">
+                            <motion.div className="info-block phone-info site-radius-10" variants={ContactAnimations} initial='initialBox1' whileInView='animateBox1' viewport={{ once: true, amount: 0.9 }}>
                                 <div className="info-txt">
                                     <span className='icon-add_call h5'></span>
 
                                     <p className='text-md text-20'><span className='text-grey text-18'>Phone Number</span>+1 (555) 123-4567</p>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="info-block mail-info site-radius-10 ">
+                            <motion.div className="info-block mail-info site-radius-10" variants={ContactAnimations} initial='initialBox2' whileInView='animateBox2' viewport={{ once: true, amount: 0.9 }}>
                                 <div className="info-txt">
                                     <span className='icon-email h4'></span>
 
                                     <p className='text-md text-20'><span className='text-grey text-18'>Email Address</span>info@dhatucomply.com</p>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="info-block location-info site-radius-10">
+                            <motion.div className="info-block location-info site-radius-10" variants={ContactAnimations} initial='initialBox3' whileInView='animateBox3' viewport={{ once: true, amount: 0.9 }}>
                                 <div className="info-txt">
                                     <span className='icon-location h4'></span>
 
                                     <p className='text-md text-20'><span className='text-grey text-18'>Location</span>2445 Oak Ridge Omaha, QA 45065</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>                    
                 </div>

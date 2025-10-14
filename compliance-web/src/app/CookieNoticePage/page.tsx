@@ -1,4 +1,5 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -6,7 +7,10 @@ import React from 'react'
 
 export default function CookieNoticePage() {
     return (
-        <main className='cookienoticemain'>
+        <main className='cookienoticemain inner-page'>
+
+            <Header />
+
             <section className='cookie-hero'>
                 <div className="container">
                     <h1 className='h2'>DhatuComply — Cookie Notice</h1>

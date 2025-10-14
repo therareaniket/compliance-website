@@ -5,6 +5,7 @@ import React from 'react'
 import AboutUsSwiperComponents from "@/components/SwiperComponent";
 import { Header } from '@/components/Header';
 import { delay, motion, scale, stagger } from 'framer-motion';
+import AboutAnimations from '@/components/AboutAnimations';
 
 const textAnimations = {
     initialLeft: {
@@ -73,9 +74,9 @@ export default function AboutUs() {
                 <div className="container">
                     <div className="mis-vis-section">
                         <motion.div className="mis-vis-heading only-mis" variants={textAnimations} initial="initialLeft" whileInView="animateLeft" viewport={{ once: true, amount: 0.6 }}>
-                            <motion.h2 className='h3'>Our Mission</motion.h2>
+                            <h2 className='h3'>Our Mission</h2>
 
-                            <motion.p className='text-20 text-rg'>To simplify and strengthen clinical trial compliance through automation and actionable insights. </motion.p>
+                            <p className='text-20 text-rg'>To simplify and strengthen clinical trial compliance through automation and actionable insights.</p>
 
                             <Image src='/images/aboutUs/mission-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-mis-img'></Image>
                         </motion.div>
@@ -224,13 +225,11 @@ export default function AboutUs() {
             </section>
         </div>
 
+        <AboutAnimations />
+
         </>
     )
 }
-
-
-
-
 
 
 

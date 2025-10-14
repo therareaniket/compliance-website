@@ -1,4 +1,5 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -6,7 +7,10 @@ import React from 'react'
 
 export default function ComplianceDetailPage (){
     return (
-        <main className='detail-section'>
+        <main className='detail-section inner-page'>
+
+            <Header />
+
             <section className="detail-page-hero" >
                 <div className="container">
                     <div className="detail-banner-head container-sm">
@@ -17,8 +21,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className='detail-section-1 container-sm'>
-                <div className="container">
+            <section className='--bg-white section-sm detail-section-1'>
+                <div className="container-sm">
                     <h2 className='h3 text-md'>What is HIPAA?</h2>
 
                     <p className='text-20 text-rg'>The <strong>Health Insurance Portability and Accountability Act (HIPAA),</strong>  enacted in 1996, establishes standards for safeguarding Protected Health Information (PHI). Its primary goals are:</p>
@@ -40,8 +44,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className="detail-section-2 container-sm">
-                <div className="container">
+            <section className="--bg-white detail-section-2">
+                <div className="container-sm">
                     <h2 className='h3'>Who Needs to Be HIPAA Compliant?</h2>
 
                     <p className='text-20 text-rg'>Any organization or vendor that creates, stores, processes, or transmits PHI must comply with HIPAA.</p>
@@ -56,8 +60,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className="detail-section-3 container-sm">
-                <div className="container">
+            <section className="--bg-white section-sm detail-section-3">
+                <div className="container-sm">
                     <h2 className='h3'>Key HIPAA Rules</h2>
 
                     <ul>
@@ -95,8 +99,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className='detail-section-4 container-sm'>
-                <div className="container">
+            <section className='--bg-white detail-section-4'>
+                <div className="container-sm">
                     <h2 className='h3'>Technical Safeguards</h2>
 
                     <p className='text-20 text-rg'>To secure ePHI, organizations must implement:</p>
@@ -115,8 +119,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className='detail-section-5 container-sm'>
-                <div className="container">
+            <section className='--bg-white section-sm detail-section-5'>
+                <div className="container-sm">
                     <h2 className='h3'>Administrative & Physical Safeguards</h2>
 
                     <p className='text-20 text-rg'>Non-technical but equally critical protections include:</p>
@@ -131,8 +135,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className='detail-section-6 container-sm'>
-                <div className="container">
+            <section className='--bg-white detail-section-6'>
+                <div className="container-sm">
                     <p>Any patient-facing system must:</p>
 
                     <ul>
@@ -151,8 +155,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className='detail-section-7 container-sm'>
-                <div className="container">
+            <section className='--bg-white section-sm detail-section-7'>
+                <div className="container-sm">
                     <h2 className='h3'>Business Associate Agreements (BAAs)</h2>
 
                     <p className='text-20 text-rg'>If a third-party vendor handles PHI (e.g., hosting providers, billing services, telehealth platforms), a BAA is legally required.</p>
@@ -168,8 +172,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className='detail-section-8 container-sm'>
-                <div className="container">
+            <section className='--bg-white detail-section-8'>
+                <div className="container-sm">
                     <h2 className='h3'>Notice of Privacy Practices (NPP)</h2>
 
                     <p className='text-20 text-rg'>Healthcare organizations must publish and provide an NPP:</p>
@@ -184,8 +188,8 @@ export default function ComplianceDetailPage (){
                 </div>
             </section>
 
-            <section className='detail-section-9 container-sm'>
-                <div className="container">
+            <section className='--bg-white section-sm detail-section-9'>
+                <div className="container-sm">
                     <h2 className='h3'>HIPAA Compliance Checklist (Quick Summary)</h2>
 
                     <ul>

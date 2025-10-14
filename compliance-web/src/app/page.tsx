@@ -15,6 +15,7 @@ import GSAPProvider from "@/components/GSAPProvider";
 import { motion } from 'framer-motion'
 import StepsHome from "@/components/StepsHome";
 import ProvenHome from "@/components/ProvenTrust";
+import TestimHome from "@/components/TestiHome";
 
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
@@ -259,7 +260,7 @@ export default async function Home() {
                         greenListItem3={home.greenBox.greenListItem3}
                         greenListItem4={home.greenBox.greenListItem4}
                     />
-                    
+
                     <StepsHome steps_title={home.complianceTitle} steps_subTitle={home.complianceSubtitle} />
 
                     <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} />
@@ -268,7 +269,7 @@ export default async function Home() {
 
                     <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
 
-                    <section className="hm-clientale --bg-white overflow-hidden">
+                    {/* <section className="hm-clientale --bg-white overflow-hidden">
                         <div className="container">
                             <div className="clientale-wrapper">
                                 <div className="trusted-leaders site-radius-10">
@@ -284,7 +285,9 @@ export default async function Home() {
                                 <ClientaleSlider />
                             </div>
                         </div>
-                    </section>
+                    </section> */}
+
+                    <TestimHome testim_title={home.testimonialTitle} testim_subTitle={home.testimonialSubtitle} />
 
                     <FAQSection
                         faqTitle={home.faqsList.faqTitle}

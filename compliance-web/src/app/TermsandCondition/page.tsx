@@ -1,27 +1,31 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function TermsAndConditionPage() {
     return(
-        <main className='termsmain'>
+        <main className='termsmain inner-page'>
+
+            <Header />
+
             <section className='terms-hero'>
-                <div className="container">
+                <div className="container-sm">
                     <h1 className='h2'>DhatuComply — Terms of Use</h1>
                 </div>
             </section>
 
-            <section className='terms-section-1 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-1   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>1. Acceptance & Eligibility</h2>
 
                     <p className='text-20 text-rg'>By using DhatuComply, you affirm you are of legal age and authorized by your organization. If you do not agree to these Terms, do not use the service.</p>
                 </div>
             </section>
 
-            <section className='terms-section-2 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-2   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>2. Account & Access</h2>
 
                     <ul>
@@ -34,12 +38,12 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-3 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-3   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>3. License & Customer Data</h2>
 
                     <ul>
-                        <li className='text-20 text-rg'><strong>License.</strong> Subject to these Terms and any Order, DFOLDS grants you a 
+                        <li className='text-20 text-rg'><strong>License</strong> Subject to these Terms and any Order, DFOLDS grants you a 
                         <strong>non‑exclusive, non‑transferable, revocable</strong> right to access and use DhatuComply for your internal business purposes.</li>
 
                         <li className='text-20 text-rg'><strong>Ownership.</strong> You retain all rights to <strong>Customer Content.</strong> You grant DFOLDS a 
@@ -51,8 +55,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-4 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-4   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>4. Acceptable Use</h2>
 
                     <p className='text-20 text-rg'>You will not: (a) violate laws or third‑party rights; (b) upload unlawful/harmful/infringing content; 
@@ -62,8 +66,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-5 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-5   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>5.  Compliance Responsibilities</h2>
 
                     <ul>
@@ -75,32 +79,32 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-6 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-6   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>6. Third‑Party Services</h2>
 
                     <p className='text-20 text-rg'>Integrations and third‑party services are governed by their own terms and privacy policies. DFOLDS is not responsible for third‑party services and does not control their availability or behavior.</p>
                 </div>
             </section>
 
-            <section className='terms-section-7 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-7   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>7. Confidentiality</h2>
 
                     <p className='text-20 text-rg'>Each party may receive <strong>Confidential Information</strong> of the other. The receiving party will protect it using at least reasonable care and not disclose it except to personnel/subprocessors with a need to know under similar obligations. Customer Content and security documentation are Confidential Information.</p>
                 </div>
             </section>
 
-            <section className='terms-section-8 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-8   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>8. Fees, Taxes & Orders (if applicable)</h2>
 
                     <p className='text-20 text-rg'>Fees, billing cycles, and payment terms are set in the applicable <strong>Order</strong> or MSA. Fees are exclusive of taxes; you are responsible for taxes other than DFOLDS’s income taxes. Late amounts may accrue interest at the lower of 1.5% per month or the maximum allowed by law. Except as expressly stated, <strong>fees are non‑refundable.</strong></p>
                 </div>
             </section>
 
-            <section className='terms-section-9 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-9   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>9. Term; Suspension; Termination</h2>
 
                     <ul>
@@ -113,8 +117,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-11 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-11   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>11.  Limitation of Liability</h2>
 
                     <p className='text-20 text-rg'>TO THE MAXIMUM EXTENT PERMITTED BY LAW: (A) NEITHER PARTY WILL BE LIABLE FOR 
@@ -126,8 +130,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-12 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-12   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>12. Indenification</h2>
 
                     <p className='text-20 text-rg'>You will indemnify and defend DFOLDS and its affiliates against third‑party claims arising from: 
@@ -138,8 +142,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-13 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-13   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>13. Export, Sanctions & Anti‑Corruption</h2>
 
                     <p className='text-20 text-rg'>Comply with US and international <strong>export control</strong> and <section>sanctions</section> laws (e.g., EAR, OFAC) 
@@ -148,8 +152,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-14 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-14   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>14. Government Rights</h2>
 
                     <p className='text-20 text-rg'>If use is by or on behalf of the US Government, the service is <strong>Commercial Computer Software</strong> subject to 
@@ -158,8 +162,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-15 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-15   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>15. Changes</h2>
 
                     <p className='text-20 text-rg'>We may update these Terms. Material changes will be notified (email or in‑app). Continued use after the effective date constitutes acceptance.
@@ -167,8 +171,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-16 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-16   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>16. Dispute Resolution; Governing Law</h2>
 
                     <ul>
@@ -181,8 +185,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-17 container-sm '>
-                <div className="container">
+            <section className='--bg-white terms-section-17   '>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>17. Miscellaneous</h2>
 
                     <ul>
@@ -198,8 +202,8 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='terms-section-18 container-sm section-sm'>
-                <div className="container">
+            <section className='--bg-white terms-section-18   section-sm'>
+                <div className="container-sm">
                     <h2 className='h3 text-rg'>18. Contact</h2>
 
                     <ul>
