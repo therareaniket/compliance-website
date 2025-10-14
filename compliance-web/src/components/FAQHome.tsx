@@ -163,8 +163,8 @@ export default function FAQSection(props: FAQProps) {
     const activeFAQDetails = faqsByCategory[activeFaqCategoryButton];
 
     const FAQAnimate = {
-        initialHead: { opacity: 0, y: -100, },
-        animateHead: { opacity: 1, y:0, transition: { delay: 1, duration: 1 } },
+        initialHead: { opacity: 0, x: -100, },
+        animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
     
         initialBtn: { opacity: 0, scale: 0 },
         animateBtn: { opacity: 1, scale: 1, transition: { delay: 2, duration: 1 } },

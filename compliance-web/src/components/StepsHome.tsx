@@ -10,8 +10,11 @@ type stepsProps = {
 export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
 
     const stepsAnimations = {
-        initialHead: { opacity: 0, y: -100},
-        animateHead: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 }},
+        initialHeader: { opacity: 0, x: -100},
+        animateHeader: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+
+        initialPara: { opacity: 0, x: 100},
+        animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
     }
 
     return(
@@ -19,9 +22,9 @@ export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
             <section className="hm-compli-steps">
                 <div className="container">
                     <div className="steps-head">
-                        <motion.h2 className="h3" variants={stepsAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>{steps_title}</motion.h2>
+                        <motion.h2 className="h3" variants={stepsAnimations} initial='initialHeader' whileInView='animateHeader' viewport={{ once: true, amount: 0.6 }}>{steps_title}</motion.h2>
 
-                        <motion.p className="text-20 text-grey" variants={stepsAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.5 }}>{steps_subTitle}</motion.p>
+                        <motion.p className="text-20 text-grey" variants={stepsAnimations} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.5 }}>{steps_subTitle}</motion.p>
                     </div>
 
                     <div className="steps-video-wrapper site-radius-20 ">

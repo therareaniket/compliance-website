@@ -10,8 +10,8 @@ import UserAccessAnimation from '@/components/UserAccessAnimations'
 export default function UserAccess() {
 
     const userAccessAnimation = {
-        initialHead: { opacity: 0, y: -100, },
-        animateHead: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+        initialHead: { opacity: 0, x: -100, },
+        animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
 
         initialCardRightImg: { opacity: 0, x: 100 },
         animateCardRightImg: { opacity: 1, x: 0, transition: { delay: 1, duration: 0.5 } },

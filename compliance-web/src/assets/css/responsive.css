@@ -25,12 +25,6 @@
 ********
 */
 
-h1, .h1 {  }
-h2, .h2 {  }
-h3, .h3 {  }
-h4, .h4 {  }
-h5, .h5 {  }
-h6, .h6 {  }
 
 
 @media screen and (max-width: 1900px) {
@@ -156,8 +150,6 @@ h6, .h6 {  }
 }
 
 @media screen and (max-width: 1560px) {
-    
-
     .left-hero-home { width: 750px; }
     .right-hero-home { width: 650px; bottom: -4%; }
 
@@ -1170,6 +1162,8 @@ h6, .h6 {  }
     .floating-stats > * { width: 150px; height: 120px; }
     .stats-nums .h1 { font-size: 30px; }
     .aud-suc span + span { width: 50%; margin: 0 auto; }
+
+    .supported-compli-lists { opacity: 1 !important; }
 
 
     .why-card-title.h5 { font-size: 18px; line-height: 26px; }

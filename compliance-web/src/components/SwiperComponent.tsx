@@ -5,28 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { delay, motion } from 'framer-motion'
 
-const textTopAnimation = {
-    initialTop: {
-        opacity: 0,
-        y: -100,
-    },
-
-    animateTop: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 1,
-            delay: 1,
-        },
-    },
-}
 
 export default function AboutUsSwiperComponents() {
     return (
         <section className="--bg-white">
             <div className="container">
                 <div className="core-feature-section">
-                    <motion.div className="core-feature-heading" variants={textTopAnimation} initial='initialTop' whileInView='animateTop' viewport={{ once: true, amount: 0.6 }}>
+                    <motion.div className="core-feature-heading">
                         <motion.h2 className="h4">Core Features That Power Clinical Trial Compliance</motion.h2>
 
                         <motion.p className="core-feature-para text-20 text-rg">

@@ -41,7 +41,7 @@ export default function ExtendButtons({
           if (window.innerWidth < 575 && featureRef.current) {
             const rect = featureRef.current.getBoundingClientRect();
             
-            if (rect.top <= 400) {
+            if (rect.top <= 800) {
               setActive("features");
             } else {
               setActive("smrt");

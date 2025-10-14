@@ -11,11 +11,11 @@ type ProvenProps = {
 export default function ProvenHome( { proven_title, proven_subTitle } : ProvenProps) {
 
     const provenAnimation = {
-        initialHead: { opacity: 0, y: -100},
-        animateHead: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 }},
+        initialHead: { opacity: 0, x: -100},
+        animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
-        initialSubHead: { opacity: 0, y: -100},
-        animateSubHead: { opacity: 1, y: 0, transition: { duration: 1, delay: 1.2, }},
+        initialSubHead: { opacity: 0, x: 100},
+        animateSubHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.2, }},
 
         initialList: { opacity: 0, x: -100 },
         animateList: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.7 } },
@@ -73,6 +73,7 @@ export default function ProvenHome( { proven_title, proven_subTitle } : ProvenPr
                                 <p>Sets rules for system data integrity.</p>
                             </div>
 
+                            {/*  EXTRA ELEMENTS FOR SCROLLER  */}
 
                             <div className="supp-compli-list site-radius-10 element-none">
                                 <h3 className="h5">FDA 21 CFR Part 11</h3>

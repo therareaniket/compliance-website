@@ -7,7 +7,52 @@ import { Header } from '@/components/Header';
 import { delay, motion, scale, stagger } from 'framer-motion';
 import AboutAnimations from '@/components/AboutAnimations';
 
-const textAnimations = {
+
+// const textAnimations = {
+//     initialLeft: {
+//         opacity: 0,
+//         x: -200,
+//     },
+
+//     initialRight: {
+//         opacity: 0,
+//         x: 200,
+//     },
+
+//     animateLeft: {
+//         opacity: 1,
+//         x: 0,
+//         transition: {
+//             duration: 1,
+//         },
+//     },
+
+//     animateRight: {
+//         opacity: 1,
+//         x: 0,
+//         transition: {
+//             delay:1,
+//             duration: 1,
+//             staggerChildren: 0.3,
+//             delayChildren: 0.5,
+//         },
+//     },
+
+//     initialBtn: {
+//         opacity: 0,
+//         scale: 0,
+//     },
+
+//     animateBtn: {
+//         opacity: 1,
+//         scale: 1,
+//         transition: {
+//             duration: 1,
+//         },
+//     },
+// }
+
+const textAnimations =  {
     initialLeft: {
         opacity: 0,
         x: -200,
@@ -30,7 +75,7 @@ const textAnimations = {
         opacity: 1,
         x: 0,
         transition: {
-            delay:1,
+            delay: 1,
             duration: 1,
             staggerChildren: 0.3,
             delayChildren: 0.5,
@@ -51,11 +96,14 @@ const textAnimations = {
     },
 }
 
+
+
 export default function AboutUs() {
 
     return (
         <>
         <div className="aboutbody overflow-hidden">
+
             <Header />
 
             <section className='abt-hero'>

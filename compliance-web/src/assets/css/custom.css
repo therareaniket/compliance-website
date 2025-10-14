@@ -30,6 +30,7 @@
 .btn-primary { background-color: var(--primary); color: var(--white); }
 .btn-white { background-color: transparent; color: var(--black); border: 1px solid var(--black); }
 .fade-in { animation: fadeIn 600ms ease; }
+section { overflow: hidden; }
 
 /* ABOUTUS swiper code */
 .feature-cards .swiper-button-next, .swiper-button-prev { display: none !important; }
