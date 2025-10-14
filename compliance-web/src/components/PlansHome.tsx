@@ -1,6 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react";
+import { delay, motion } from 'framer-motion';
 
 type PlanId = 'free' | 'standard' | 'enterprise';
 
@@ -19,6 +20,17 @@ type PlanProps = {
     freePlan: PlanPoints;
     standardPlan: PlanPoints;
     enterprisePlan: PlanPoints;
+}
+
+const planAnimate = {
+    initialHead: { opacity: 0, y: -100, },
+    animateHead: { opacity: 1, y:0, transition: { duration: 1 } },
+
+    initialBtn: { opacity: 0, x: 100 },
+    animateBtn: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
+
+    initialDetails: { opacity: 0, x: -100 },
+    animateDetails: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
 }
 
 export default function PlansSection({plansTitle, plansSubtitle, freePlan, standardPlan, enterprisePlan} : PlanProps) {
@@ -50,7 +62,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
             <section className="section hm-plans --bg-white">
                 <div className="container">
                     <div className="plan-content-wrapper">
-                        <div className="plans-left">
+                        <motion.div className="plans-left" variants={planAnimate} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>
                             <h2 className="h3 plans-left-heading">{plansTitle}</h2>
 
                             <p className="text-20 text-grey plan-sub-title">{plansSubtitle}</p>
@@ -65,13 +77,13 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                 ))}
 
                             </div> */}
-                        </div>
+                        </motion.div>
 
 
                         <div className="plans-right">
                             {/* <p className="text-20 text-grey plan-title">{plansSubtitle}</p> */}
 
-                            <div className="plan-details bg-blue site-radius-20" aria-live="polite">
+                            <motion.div className="plan-details bg-blue site-radius-20" aria-live="polite" variants={planAnimate} initial="initialDetails" whileInView='animateDetails' viewport={{ once: true, amount: 0.6 }}>
                                 <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
 
                                 {activePlanDetails.bullets.map((b, i) => (
@@ -80,9 +92,9 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                     </div>
                                 ))}
 
-                            </div>
+                            </motion.div>
 
-                            <div className="plan-btns-group">
+                            <motion.div className="plan-btns-group" variants={planAnimate} initial="initialBtn" whileInView='animateBtn' viewport={{ once: true, amount: 0.6 }}>
                                 <button type="button" className={`plans-btn text-left site-radius-10 ${activePlanButton === 'free' ? 'plan-btn-active' : ''}`} onClick={() => setActivePlanButton('free')}>
                                     <div className="plan-btn-cont">
                                         <h3 className="h5">Free Compliance Starter Plan</h3>
@@ -107,7 +119,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
 
                                     <p className="h4">$499<span className="text-18 text-grey">/month</span></p>
                                 </button>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
 
 type Card = {
     id: "why-c1" | "why-c2" | "why-c3" | "why-c4" | "why-c5";
@@ -46,20 +47,6 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
     const [movingId, setMovingId] = useState<string | null>(null);
     const [activeImage, setActiveImage] = useState(0);
 
-    // const rotateLastToFront = () => {
-    //     setCards((prev) => {
-    //         if (!prev.length) return prev;
-    //         const last = prev[prev.length - 1];
-    //         setMovingId(last.id);
-    //         return [last, ...prev.slice(0, -1)];
-    //     });
-
-    //     // advance image index in sync (wraparound)
-    //     setActiveImage((i) => (i + 1) % images.length);
-
-    //     // clear visual “moving” flag after the CSS duration
-    //     setTimeout(() => setMovingId(null), 600);
-    // };
 
     // Update this function to move the clicked card to the last position
     const moveCardToLast = (idx: number) => {
@@ -87,16 +74,23 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
     }, [cards]);
 
 
+    const whyUsAnimations = {
+        initialHead: { opacity: 0, y: -100},
+        animateHead: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 }},
+    }
+
+
     return (
         <>
             <section className="section hm-why-us --bg-white">
                 <div className="container">
                     <div className="why-us-content-wrapper">
                         <div className="why-us-content">
-                            <div className="why-us-head">
-                                <h2 className="h3" dangerouslySetInnerHTML={{ __html: whyus_title }}></h2>
-                                <p className="text-20 text-grey">{whyus_subTitle}</p>
-                            </div>
+                            <motion.div className="why-us-head" variants={whyUsAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>
+                                <motion.h2 className="h3" dangerouslySetInnerHTML={{ __html: whyus_title }}></motion.h2>
+
+                                <motion.p className="text-20 text-grey">{whyus_subTitle}</motion.p>
+                            </motion.div>
 
                             {/* Single-image viewport with a simple fade/slide animation */}
                             {/* <div className="images-group single">

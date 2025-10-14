@@ -1,0 +1,35 @@
+"use client"
+
+import { motion } from 'framer-motion'
+
+type stepsProps = {
+    steps_title: string;
+    steps_subTitle: string;
+}
+
+export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
+
+    const stepsAnimations = {
+        initialHead: { opacity: 0, y: -100},
+        animateHead: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 }},
+    }
+
+    return(
+        <>
+            <section className="hm-compli-steps">
+                <div className="container">
+                    <div className="steps-head">
+                        <motion.h2 className="h3" variants={stepsAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>{steps_title}</motion.h2>
+
+                        <motion.p className="text-20 text-grey" variants={stepsAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.5 }}>{steps_subTitle}</motion.p>
+                    </div>
+
+                    <div className="steps-video-wrapper site-radius-20 ">
+                        <video src="/images/homepage/final-steps-video.mp4" autoPlay muted loop controls controlsList="nodownload noplaybackrate" disablePictureInPicture contextMenu="return false" width='3840' height='2160' className="steps-vid site-radius-20"></video>
+                    </div>
+                </div>
+                <span className="white-box"></span>
+            </section>
+        </>
+    );
+}

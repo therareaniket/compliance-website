@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
+import { motion } from 'framer-motion';
 
 type FaqCategoryId = "general" | "support" | "other";
 type FAQData = { question: string; answer: string };
@@ -161,16 +162,24 @@ export default function FAQSection(props: FAQProps) {
 
     const activeFAQDetails = faqsByCategory[activeFaqCategoryButton];
 
+    const FAQAnimate = {
+        initialHead: { opacity: 0, y: -100, },
+        animateHead: { opacity: 1, y:0, transition: { duration: 1 } },
+    
+        initialBtn: { opacity: 0, x: -100 },
+        animateBtn: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
+    }
+
     return (
         <>
             <section className="section FAQs --bg-white">
                 <div className="container">
-                    <div className="faq-head text-center">
-                        <h2 className="h3">{faqTitle}</h2>
-                        <p className="text-20 text-grey">{faqSubtitle}</p>
-                    </div>
+                    <motion.div className="faq-head text-center" >
+                        <motion.h2 className="h3" variants={FAQAnimate} initial="initialHead" whileInView="animateHead" viewport={{ once: true, amount: 0.4 }}>{faqTitle}</motion.h2>
+                        <motion.p className="text-20 text-grey" variants={FAQAnimate} initial="initialHead" whileInView="animateHead" viewport={{ once: true, amount: 0.7 }}>{faqSubtitle}</motion.p>
+                    </motion.div>
 
-                    <div className="category-btns">
+                    <motion.div className="category-btns" variants={FAQAnimate} initial="initialBtn" whileInView="animateBtn" viewport={{ once: true, amount: 0.6 }}>
                             <button
                                 className={`category-btn-new general-btn text-left site-radius-10 ${activeFaqCategoryButton === "general" ? "faq-active-new" : ""
                                     }`}
@@ -197,7 +206,7 @@ export default function FAQSection(props: FAQProps) {
                             >
                                 <p className="h5">Other</p>
                             </button>
-                    </div>
+                    </motion.div>
 
                     <div className="faq-list-category">
                         <div className="category-faqs" key={activeFaqCategoryButton}>

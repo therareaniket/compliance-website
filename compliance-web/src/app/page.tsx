@@ -12,6 +12,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import GSAPProvider from "@/components/GSAPProvider";
+import { motion } from 'framer-motion'
+import StepsHome from "@/components/StepsHome";
+import ProvenHome from "@/components/ProvenTrust";
 
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
@@ -229,6 +232,11 @@ export default async function Home() {
         inclusion6: home.enterprisePlan.inclusion6,
     }
 
+    // const stepsHead = {
+    //     initialHead: { opacity: 0, y: -100, },
+    //     animatedHead: { opacity: 1, y: 0, transition: { duration: 1,  } },
+    // }
+
     return (
             <>
                 <div className="homebody">
@@ -251,224 +259,12 @@ export default async function Home() {
                         greenListItem3={home.greenBox.greenListItem3}
                         greenListItem4={home.greenBox.greenListItem4}
                     />
-
-                    <section className="hm-compli-steps">
-                        <div className="container">
-                            <div className="steps-head">
-                                <h2 className="h3">{home.complianceTitle}</h2>
-
-                                <p className="text-20 text-grey">{home.complianceSubtitle}</p>
-                            </div>
-
-                            <div className="steps-video-wrapper site-radius-20 ">
-                                <video src="/images/homepage/final-steps-video.mp4" autoPlay muted loop controls controlsList="nodownload noplaybackrate" disablePictureInPicture contextMenu="return false" width='3840' height='2160' className="steps-vid site-radius-20"></video>
-                            </div>
-
-                            {/* <div className="steps-path-view">
-                                <Image src='images/homepage/steps-dotted-path.svg' alt="steps-path" width={1293} height={425} priority={false} className="steps-path-img"></Image>
-
-                                <Image src='/images/homepage/stp-1-connect.webp' alt="step-1-connect" width={528} height={226} priority={false} className="step-1-img"></Image>
-                                <Image src='/images/homepage/stp-2-monitor.webp' alt="step-2-monitor" width={424} height={344} priority={false} className="step-2-img"></Image>
-                                <Image src='/images/homepage/stp-3-act.webp' alt="step-3-act" width={454} height={228} priority={false} className="step-3-img"></Image>
-                                <Image src='/images/homepage/stp-4-report.webp' alt="step-4-report" width={497} height={276} priority={false} className="step-4-img"></Image>
-                            </div>
-
-                            <div className="steps-path-responsive">
-                                <Image src='/images/homepage/step-1-connect.webp' alt="step-1-connect" width={495} height={196} priority={false} className="step-1-connect"></Image>
-                                <Image src='/images/homepage/step-2-connect.webp' alt="step-2-connect" width={495} height={387} priority={false} className="step-2-connect"></Image>
-                                <Image src='/images/homepage/step-3-connect.webp' alt="step-3-connect" width={495} height={317} priority={false} className="step-2-connect"></Image>
-                                <Image src='/images/homepage/step-4-connect.webp' alt="step-4-connect" width={495} height={378} priority={false} className="step-2-connect"></Image>
-                            </div> */}
-                        </div>
-                            <span className="white-box"></span>
-                    </section>
+                    
+                    <StepsHome steps_title={home.complianceTitle} steps_subTitle={home.complianceSubtitle} />
 
                     <WhyUs whyus_title={home.whyUsTitle} whyus_subTitle={home.whyUsSubtitle} />
 
-                    {/* OLD LAYOUT */}
-
-                {/* <section className="hm-proven-result">
-                <div className="container">
-                    <div className="result-head">
-                        <h2 className="h3">{home.provenResultsTitle}</h2>
-                            
-                        <p className="text-20 text-grey">{home.provenResultsSubtitle}</p>
-                    </div>
-
-                    <div className="compliance-lists">
-                        <div className="compliance-card site-radius-10">
-                            <h3 className="text-md text-18">FDA 21 CFR Part 11</h3>
-
-                            <p className="text-14 text-grey">Reliable records & e-signatures compliance.</p>
-                        </div>
-
-                        <div className="compliance-card site-radius-10">
-                            <h3 className="text-md text-18">HIPAA</h3>
-
-                            <p className="text-14 text-grey">Secure patient data & privacy.</p>
-                        </div>
-
-                        <div className="compliance-card site-radius-10">
-                            <h3 className="text-md text-18">GDPR</h3>
-
-                            <p className="text-14 text-grey">Safeguards EU data privacy.</p>
-                        </div>
-
-                        <div className="compliance-card site-radius-10">
-                            <h3 className="text-md text-18">GCP</h3>
-
-                            <p className="text-14 text-grey">Defines quality standards for trials.</p>
-                        </div>
-
-                        <div className="compliance-card site-radius-10">
-                            <h3 className="text-md text-18">CDSCO</h3>
-
-                            <p className="text-14 text-grey">Regulates drug and device approvals.</p>
-                        </div>
-
-                        <div className="compliance-card site-radius-10">
-                            <h3 className="text-md text-18">EU Annex 11</h3>
-
-                            <p className="text-14 text-grey">Sets rules for system data integrity.</p>
-                        </div>
-
-                        <div className="showcase-result text-center">
-                            <div className="global-org site-radius-10 bg-purple">
-                                <p className="h4">500+<span className="text-20 text-rg">Global organizations</span></p>
-                            </div>
-
-                            <div className="framwrk-coverd site-radius-10 bg-green">
-                                <p className="h2">50+<span className="text-20 text-rg">Frameworks covered</span></p>
-                            </div>
-
-                            <div className="secure-docs site-radius-10 bg-yellow">
-                                <p className="h1">1M+<span className="text-20 text-rg">Secure documents</span></p>
-                            </div>
-
-                            <div className="audit-suc site-radius-10 bg-blue">
-                                <p className="h3">99%<span className="text-20 text-rg">Audit success</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </section> */}
-
-                    <section className="section hm-proven-result">
-                        <div className="container">
-                            <div className="result-head">
-                                <h2 className="h3">{home.provenResultsTitle}</h2>
-
-                                <p className="text-20">{home.provenResultsSubtitle}</p>
-                            </div>
-
-                            <div className="compli-list-stats">
-                                <div className="supported-compli-lists">
-                                    <div className="supp-compli-list site-radius-10">
-                                        <h3 className="h5">FDA 21 CFR Part 11</h3>
-
-                                        <p>Reliable records & eSignatures compliance.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10">
-                                        <h3 className="h5">GDPR</h3>
-
-                                        <p>Safeguards EU data privacy.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10">
-                                        <h3 className="h5">HIPAA</h3>
-
-                                        <p>Secure patient data & privacy.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10">
-                                        <h3 className="h5">GCP</h3>
-
-                                        <p>Defines quality standards for trials.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10">
-                                        <h3 className="h5">CDSCO</h3>
-
-                                        <p>Regulates drug and device approvals.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10">
-                                        <h3 className="h5">EU Annex 11</h3>
-
-                                        <p>Sets rules for system data integrity.</p>
-                                    </div>
-
-
-                                    <div className="supp-compli-list site-radius-10 element-none">
-                                        <h3 className="h5">FDA 21 CFR Part 11</h3>
-
-                                        <p>Reliable records & eSignatures compliance.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10 element-none">
-                                        <h3 className="h5">GDPR</h3>
-
-                                        <p>Safeguards EU data privacy.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10 element-none">
-                                        <h3 className="h5">HIPAA</h3>
-
-                                        <p>Secure patient data & privacy.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10 element-none">
-                                        <h3 className="h5">GCP</h3>
-
-                                        <p>Defines quality standards for trials.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10 element-none">
-                                        <h3 className="h5">CDSCO</h3>
-
-                                        <p>Regulates drug and device approvals.</p>
-                                    </div>
-
-                                    <div className="supp-compli-list site-radius-10 element-none">
-                                        <h3 className="h5">EU Annex 11</h3>
-
-                                        <p>Sets rules for system data integrity.</p>
-                                    </div>
-                                </div>
-
-                                <div className="compli-stats">
-                                    <div className="rotate-eclipse">
-                                        <div className="eclipse-wrapper">
-                                            <Image src='/images/homepage/stat-eclipse-1.svg' alt='eclipse-1' width={432} height={506} className="rotating-eclipse-1"></Image>
-
-                                            <Image src='/images/homepage/stat-eclipse-2.svg' alt='eclipse-2' width={378} height={574} className="rotating-eclipse-2"></Image>
-
-                                            <Image src='/images/homepage/stat-eclipse-3.svg' alt='eclipse-3' width={344} height={522} className="rotating-eclipse-3"></Image>
-                                        </div>
-                                    </div>
-
-                                    <div className="floating-stats">
-                                        <div className="stats-nums site-radius-10 text-20 glob-org">
-                                            <span className="h1">500+</span>Global organizations
-                                        </div>
-
-                                        <div className="stats-nums site-radius-10 text-20 sec-doc">
-                                            <span className="h1">1M+</span>Secure documents
-                                        </div>
-
-                                        <div className="stats-nums site-radius-10 text-20 fram-covd">
-                                            <span className="h1">50+</span>Frameworks covered
-                                        </div>
-
-                                        <div className="stats-nums site-radius-10 text-20 aud-suc">
-                                            <span className="h1">99%</span><span>Audit success</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <ProvenHome proven_title={home.provenResultsTitle} proven_subTitle={home.provenResultsSubtitle} />
 
                     <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
 
