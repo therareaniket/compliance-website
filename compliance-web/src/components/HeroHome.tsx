@@ -22,7 +22,7 @@ export default function HeroSection({ heroTitle, heroSubtitle, heroCta, heroCta2
     const titleRef = useRef<HTMLHeadingElement | null>(null);
     const subtitleRef = useRef<HTMLParagraphElement | null>(null);
     const buttonsRef = useRef<HTMLDivElement | null>(null);
-    const pathname = usePathname();
+    // const pathname = usePathname();
 
     // === Split last word of title ===
     const plainText = heroTitle.replace(/<[^>]+>/g, "");
@@ -33,7 +33,7 @@ export default function HeroSection({ heroTitle, heroSubtitle, heroCta, heroCta2
     // === Animate of Whole using GSAP ===
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger,SplitText);
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
         // Hero HOMEPAGE
         gsap.from (titleRef.current,{ opacity: 0, x: -300, delay: 1, duration: 1, });
@@ -178,13 +178,13 @@ export default function HeroSection({ heroTitle, heroSubtitle, heroCta, heroCta2
             },
         });
         
-        ScrollTrigger.refresh();
+        // ScrollTrigger.refresh();
 
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-            gsap.globalTimeline.clear();
-          };
-    }, [pathname]);
+        // return () => {
+        //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        //     gsap.globalTimeline.clear();
+        //   };
+    }, []);
     
 
     return (
