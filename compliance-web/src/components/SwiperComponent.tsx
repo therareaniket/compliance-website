@@ -3,20 +3,36 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import { delay, motion } from 'framer-motion'
 
-//  
+const textTopAnimation = {
+    initialTop: {
+        opacity: 0,
+        y: -100,
+    },
+
+    animateTop: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: 1,
+        },
+    },
+}
 
 export default function AboutUsSwiperComponents() {
     return (
         <section className="--bg-white">
             <div className="container">
                 <div className="core-feature-section">
-                    <div className="core-feature-heading">
-                        <h2 className="h4">Core Features That Power Clinical Trial Compliance</h2>
-                        <p className="core-feature-para text-20 text-rg">
+                    <motion.div className="core-feature-heading" variants={textTopAnimation} initial='initialTop' whileInView='animateTop' viewport={{ once: true, amount: 0.6 }}>
+                        <motion.h2 className="h4">Core Features That Power Clinical Trial Compliance</motion.h2>
+
+                        <motion.p className="core-feature-para text-20 text-rg">
                             Explore essential tools—from document control and training to real-time alerts and reporting—designed to keep your trial operations efficient, secure, and audit-ready.
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
 
                     {/* Swiper wrapper */}
                     <Swiper
