@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-2'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>2. Definitions (plain language)</h2>
+                    <h2 className='h3 text-rg'>2. Definitions (Plain Language)</h2>
 
                     <ul>
                         <li className='text-20 text-rg'><strong>Personal Data: </strong> information that identifies or can reasonably be linked to an individual (e.g., name, email, identifiers).</li>
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-8'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>8. International Transfers</h2>
+                    <h2 className='h3 text-rg'>8. Security</h2>
 
                     <p className='text-20 text-rg'>Controls include <strong>encryption in transit/at rest, RBAC/SSO/MFA,</strong> network isolation, vulnerability management,
                          third-party <strong>pen tests,</strong> secure SDLC, audit logging, immutable backups, and vendor risk management. For HIPAA BA 

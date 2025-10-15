@@ -179,7 +179,7 @@ export default function FAQSection(props: FAQProps) {
 
     return (
         <>
-            <section className="section FAQs --bg-white">
+            <section className="section FAQs --bg-white relative z-[2]">
                 <div className="container">
                     <motion.div className="faq-head text-center" variants={FAQAnimate} initial='initialBody' whileInView='animateBody' viewport={{ once: true, amount: 0.6 }}>
                         <motion.h2 className="h3">{faqTitle}</motion.h2>
@@ -193,7 +193,7 @@ export default function FAQSection(props: FAQProps) {
                                 onClick={() => setActiveFaqCategoryButton("general")}
                                 type="button"
                             >
-                                <p className="h5">General</p>
+                                <p className="h6">General</p>
                             </button>
 
                             <button
@@ -202,7 +202,7 @@ export default function FAQSection(props: FAQProps) {
                                 onClick={() => setActiveFaqCategoryButton("support")}
                                 type="button"
                             >
-                                <p className="h5">Support</p>
+                                <p className="h6">Support</p>
                             </button>
 
                             <button
@@ -211,7 +211,7 @@ export default function FAQSection(props: FAQProps) {
                                 onClick={() => setActiveFaqCategoryButton("other")}
                                 type="button"
                             >
-                                <p className="h5">Other</p>
+                                <p className="h6">Other</p>
                             </button>
                     </motion.div>
 

@@ -306,7 +306,7 @@ export default async function Home() {
                         otherAnswer5={home.faqsList.otherAnswer5}
                     />
 
-                    <section className="section hm-cta">
+                    <section className="section hm-cta relative z-[2]">
                         <div className="container">
                             <h2 className="h3 text-center">{home.ctaTitle}</h2>
 

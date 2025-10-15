@@ -25,7 +25,7 @@ export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
 
     return(
         <>
-            <section className="hm-compli-steps">
+            <section className="hm-compli-steps relative z-[2]">
                 <div className="container">
                     <div className="steps-head">
                         <motion.h2 className="h3" variants={stepsAnimations} initial='initialHeader' whileInView='animateHeader' viewport={{ once: true, amount: 0.6 }}>{steps_title}</motion.h2>

@@ -21,7 +21,7 @@ export default function TestimHome({ testim_title, testim_subTitle } : TestimPro
 
     return(
         <>
-            <section className="hm-clientale --bg-white overflow-hidden">
+            <section className="hm-clientale --bg-white overflow-hidden relative z-[2]">
                 <div className="container">
                     <div className="clientale-wrapper">
                         <div className="trusted-leaders site-radius-10">

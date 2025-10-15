@@ -216,7 +216,7 @@ export default function UserAccess() {
                 <div className="container">
                     <div className='secure-portal-section'>
                         <motion.div className='secure-portal-text' >
-                            <motion.h2 className='h3 text-rg' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.3 }}>Complete Onboarding Process for Secure Portal Access</motion.h2>
+                            <motion.h2 className='h3' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.3 }}>Complete Onboarding Process for Secure Portal Access</motion.h2>
 
                             <motion.p className='text-20 text-rg text-grey' variants={userAccessAnimation} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.3 }}>A structured step by step onboarding guide designed to provide secure compliant and role based access to the portal covering registration verification role assignment and final access</motion.p>
                         </motion.div>

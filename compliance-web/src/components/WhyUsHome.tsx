@@ -90,7 +90,7 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
 
     return (
         <>
-            <section className="section hm-why-us --bg-white">
+            <section className="section hm-why-us --bg-white relative z-[2]">
                 <div className="container">
                     <div className="why-us-content-wrapper">
                         <div className="why-us-content">

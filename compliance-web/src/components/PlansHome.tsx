@@ -74,7 +74,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
 
     return (
         <>
-            <section className="section hm-plans --bg-white">
+            <section className="section hm-plans --bg-white relative z-[2]">
                 <div className="container">
                     <div className="plan-content-wrapper">
                         <motion.div className="plans-left">

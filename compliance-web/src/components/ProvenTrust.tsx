@@ -39,7 +39,7 @@ export default function ProvenHome( { proven_title, proven_subTitle } : ProvenPr
 
     return(
         <>
-            <section className="section hm-proven-result">
+            <section className="section hm-proven-result relative z-[2]">
                 <div className="container">
                     <div className="result-head">
                         <motion.h2 className="h3" variants={provenAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>{proven_title}</motion.h2>

@@ -54,7 +54,7 @@ export default function ExtendButtons({
       }, []);   
     
     return (
-        <section className="section hm-click-expand --bg-white">
+        <section className="section hm-click-expand --bg-white relative z-[2]">
             <div className="container">
                 <div className="expnd-contnt-wrapper">
                     <div className={`click-box click-smrt-compliance site-radius-20 ${active === 'smrt' ? 'active' : 'smrt-not-active'}`} onMouseEnter={() => setActive('smrt')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('smrt')} aria-pressed={active === 'smrt'} >

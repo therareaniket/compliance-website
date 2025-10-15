@@ -16,7 +16,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-1   section-sm'>
+            <section className='--bg-white terms-section-1 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>1. Acceptance & Eligibility</h2>
 
@@ -24,7 +24,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-2   '>
+            <section className='--bg-white terms-section-2'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>2. Account & Access</h2>
 
@@ -38,7 +38,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-3   section-sm'>
+            <section className='--bg-white terms-section-3 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>3. License & Customer Data</h2>
 
@@ -55,7 +55,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-4   '>
+            <section className='--bg-white terms-section-4'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>4. Acceptable Use</h2>
 
@@ -66,7 +66,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-5   section-sm'>
+            <section className='--bg-white terms-section-5 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>5.  Compliance Responsibilities</h2>
 
@@ -79,7 +79,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-6   '>
+            <section className='--bg-white terms-section-6 '>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>6. Third‑Party Services</h2>
 
@@ -87,7 +87,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-7   section-sm'>
+            <section className='--bg-white terms-section-7 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>7. Confidentiality</h2>
 
@@ -95,7 +95,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-8   '>
+            <section className='--bg-white terms-section-8 '>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>8. Fees, Taxes & Orders (if applicable)</h2>
 
@@ -103,7 +103,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-9   section-sm'>
+            <section className='--bg-white terms-section-9 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>9. Term; Suspension; Termination</h2>
 
@@ -117,7 +117,21 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-11   '>
+            <section className='--bg-white terms-section-10 section-sm'>
+                <div className="container-sm">
+                    <h2 className='h3 text-rg'>10. Warranties & Disclaimers</h2>
+
+                    <ul>
+                        <li className='text-20 text-rg'><b>Mutual warranties.</b> Each party represents it has authority to enter these Terms.</li>
+
+                        <li className='text-20 text-rg'><b>Service disclaimer.</b> THE SERVICE, SITES, TRIALS, AND BETA FEATURES ARE PROVIDED “AS IS” AND “AS AVAILABLE.” DFOLDS DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON‑INFRINGEMENT.</li>
+
+                        <li className='text-20 text-rg'><b>No legal advice.</b> DhatuComply provides tooling/automation; you remain responsible for your compliance decisions.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section className='--bg-white terms-section-11 '>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>11.  Limitation of Liability</h2>
 
@@ -130,7 +144,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-12   section-sm'>
+            <section className='--bg-white terms-section-12 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>12. Indenification</h2>
 
@@ -142,7 +156,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-13   '>
+            <section className='--bg-white terms-section-13 '>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>13. Export, Sanctions & Anti‑Corruption</h2>
 
@@ -152,7 +166,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-14   section-sm'>
+            <section className='--bg-white terms-section-14 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>14. Government Rights</h2>
 
@@ -162,7 +176,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-15   '>
+            <section className='--bg-white terms-section-15 '>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>15. Changes</h2>
 
@@ -171,7 +185,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-16   section-sm'>
+            <section className='--bg-white terms-section-16 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>16. Dispute Resolution; Governing Law</h2>
 
@@ -185,7 +199,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-17   '>
+            <section className='--bg-white terms-section-17 '>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>17. Miscellaneous</h2>
 
@@ -202,7 +216,7 @@ export default function TermsAndConditionPage() {
                 </div>
             </section>
 
-            <section className='--bg-white terms-section-18   section-sm'>
+            <section className='--bg-white terms-section-18 section-sm'>
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>18. Contact</h2>
 

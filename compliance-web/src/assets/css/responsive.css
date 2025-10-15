@@ -961,7 +961,7 @@
 
     .steps-path-responsive{ display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 50px;  }
     .clientale-main .swiper { width: 400px; }
-    .client-review{ height: 150px; }
+    .client-review{ height: 180px; }
     .quotes-img img{ width: 200px; }
     .path-images { flex-direction: column; }
     .path-1, .path-2, .path-3, .path-4{ width: 350px; }
@@ -1031,6 +1031,10 @@
 
     .detail-page-hero{ margin-bottom: 50px; }
     .container-sm{ width: 100%; }
+    .account-admin-pointers .h6 { font-size: 18px !important; line-height: 26px; }
+    .account-admin-pointers h4, .account-admin-pointers ul li { margin-bottom: 14px; }
+    .account-admin-text { margin-bottom: 20px; }
+    .secure-portal-text { gap: 20px; }
 }
 
 @media screen and (max-width: 480px) {
@@ -1082,6 +1086,9 @@
 
 
     .FDA21CFRPart11main p, .EUAnnex11main p, .GDPRmain p, .GCPmain p, .CDSCOmain p { padding-top: 0; }
+    .plan-btn-cont .h5 { font-size: 18px; font-family: 'poppins-rg'; }
+    .category-btns { margin: 30px; }
+    .category-btn-new .h6 { font-size: 14px; line-height: 22px; }
 
     
 }
