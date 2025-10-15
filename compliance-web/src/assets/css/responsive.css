@@ -1075,6 +1075,9 @@
 
     /* compliance detail page */
 
+
+    .FDA21CFRPart11main p, .EUAnnex11main p, .GDPRmain p, .GCPmain p, .CDSCOmain p { padding-top: 0; }
+
     
 }
 

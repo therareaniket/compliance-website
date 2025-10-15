@@ -1,18 +1,22 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function GCP() {
     return (
-        <main className="GCPmain">
+        <main className="GCPmain inner-page">
+
+            <Header />
+
             <section className='GCPhero'>
                 <div className="container-sm">
                     <h1 className='h2'>Good Clinical Practice (GCP)</h1>
                 </div>
             </section>
 
-            <section className='GCP-1 section'>
+            <section className='--bg-white GCP-1 section'>
                 <div className="container container-sm ">
                     <p className='text-20 text-rg'><strong>GCP (Good Clinical Practice):</strong></p>
 

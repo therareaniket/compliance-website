@@ -1,18 +1,22 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function GDPR() {
     return (
-        <main className="GDPRmain">
+        <main className="GDPRmain inner-page">
+
+            <Header />
+
             <section className='GDPRhero'>
                 <div className="container-sm">
                     <h1 className='h2'>GDPR (General Data Protection Regulation) </h1>
                 </div>
             </section>
 
-            <section className='GDPR-1 section'>
+            <section className='--bg-white GDPR-1 section'>
                 <div className="container container-sm ">
                     <p className='text-20 text-rg'>The GDPR (Regulation (EU) 2016/679) is an EU regulation for the protection of personal data and privacy of individuals (data subjects) in the EU/EEA. It became enforceable on 25 May 2018 and applies to any organization processing personal data of EU residents, even if the organization is outside the EU.</p>
 

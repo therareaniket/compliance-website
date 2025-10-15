@@ -137,6 +137,9 @@ export default function ComplianceDetailPage (){
 
             <section className='--bg-white detail-section-6'>
                 <div className="container-sm">
+
+                    <h2 className='h3'>HIPAA-Compliant Web Forms & Portals</h2>
+
                     <p>Any patient-facing system must:</p>
 
                     <ul>

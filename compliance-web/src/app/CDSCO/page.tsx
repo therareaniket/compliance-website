@@ -1,20 +1,23 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default function GCP() {
+export default function CDSCO() {
     return (
-        <main className="CDSCOmain">
+        <main className="CDSCOmain inner-page">
+
+            <Header/>
+
             <section className='CDSCOhero'>
                 <div className="container-sm">
-                    <h1 className='h2'>CDSCO (Central Drugs Standard Control Organization, India)</h1>
+                    <h1 className='h2'>CDSCO (Central Drugs Standard Control Organization)</h1>
                 </div>
             </section>
 
-            <section className='CDSCO-1 section'>
+            <section className='--bg-white CDSCO-1 section'>
                 <div className="container container-sm ">
-                    <p className='text-20 text-rg'><strong>GCP (Good Clinical Practice):</strong></p>
 
                     <p className='text-20 text-rg'>  The CDSCO is India’s national regulatory authority for pharmaceuticals, medical devices, and clinical trials. 
                         It operates under the Ministry of Health & Family Welfare and is headed by the Drugs Controller General of India (DCGI). Its functions include 
@@ -41,7 +44,6 @@ export default function GCP() {
 
                 </div>
             </section>
-
         </main>
     )
 }

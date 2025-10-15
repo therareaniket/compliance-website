@@ -10,7 +10,7 @@ type ProvenProps = {
 
 export default function ProvenHome( { proven_title, proven_subTitle } : ProvenProps) {
 
-    const provenAnimation = {
+    const provenAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
         initialHead: { opacity: 0, x: -100},
         animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
@@ -23,6 +23,18 @@ export default function ProvenHome( { proven_title, proven_subTitle } : ProvenPr
         initialList2: { opacity: 0, x: 100 },
         animateList2: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 } },
 
+    } : {
+        initialHead: { opacity: 1, x: 0},
+        animateHead: { opacity: 1, x: 0, },
+
+        initialSubHead: { opacity: 1, x: 0},
+        animateSubHead: { opacity: 1, x: 0, },
+
+        initialList: { opacity: 1, x: 0 },
+        animateList: { opacity: 1, x: 0, },
+
+        initialList2: { opacity: 1, x: 0 },
+        animateList2: { opacity: 1, x: 0, },
     }
 
     return(

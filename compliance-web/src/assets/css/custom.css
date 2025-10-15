@@ -302,7 +302,7 @@ section { overflow: hidden; }
 /* AboutUS-page */
 
 
-.abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero { position: sticky; top: 0; z-index: -1; }
+.abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero, .CDSCOhero, .EUAnnex11hero, .FDA21CFRPart11hero, .GCPhero, .GDPRhero { position: sticky; top: 0; z-index: -1; }
 .abt-hero-head h1{ width: 100%; color: var(--white); }
 .abt-hero-head span{ color: var(--secondary); }
 .abt-hero-para { color: var(--white); margin-top: 12px; }
@@ -521,7 +521,7 @@ section { overflow: hidden; }
  .detail-section h2{ margin-bottom: 20px; }
  .detail-section p{ padding: 20px 0; }
  .detail-section ul li{ padding-bottom: 10px; margin-left: 20px; list-style: disc; }
- .detail-section-9{ margin-bottom: 100px; }
+ /* .detail-section-9{ margin-bottom: 100px; } */
  .detail-section img{ margin-top: 40px; margin-bottom: 40px; }
 
  /* .detail-section-1 ul li{ margin-bottom: 10px; list-style: disc; } */
@@ -561,10 +561,6 @@ section { overflow: hidden; }
 .category-btn-new.faq-active-new { background-color: var(--primary); color: var(--white); border: none; cursor: auto; }
 .faq-accordian { border: none; border-bottom: 1px solid #B8B8B8; }
 
-.inner-page header { background-color: #290047; }
-.inner-page header img { margin: 0;  }
-.inner-page .navbar-wrapper { padding: 20px 0; }
-.inner-page .navbar-wrapper li { margin: 0; padding: 0; }
 
 /* .abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero { position: sticky !important; top: 0 !important; z-index: -1 !important; } */
 
@@ -587,5 +583,11 @@ section { overflow: hidden; }
 
 .FDA21CFRPart11main p, .EUAnnex11main p, .GDPRmain p, .GCPmain p, .CDSCOmain p{ padding: 20px 0; }
 .FDA21CFRPart11main li, .EUAnnex11main li, .GDPRmain li, .GCPmain li, .CDSCOmain li{ list-style: disc; margin-left: 20px; padding-bottom: 10px; }
-.EUAnnex11main a{ color: var(--primary); text-decoration: underline; }
-.EUAnnex11main a:hover{ color: var(--secondary); }
+/* .EUAnnex11main a{ color: var(--primary); text-decoration: underline; }
+.EUAnnex11main a:hover{ color: var(--secondary); } */
+
+
+.inner-page header { background-color: #290047; }
+.inner-page header img { margin: 0;  }
+.inner-page .navbar-wrapper { padding: 20px 0; }
+.inner-page .navbar-wrapper li { margin: 0; padding: 0; }

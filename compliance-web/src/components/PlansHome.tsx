@@ -22,7 +22,7 @@ type PlanProps = {
     enterprisePlan: PlanPoints;
 }
 
-const planAnimate = {
+const planAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
     initialHead: { opacity: 0, y: -100, },
     animateHead: { opacity: 1, y:0, transition: { duration: 1 } },
 
@@ -31,6 +31,15 @@ const planAnimate = {
 
     initialDetails: { opacity: 0, x: -100 },
     animateDetails: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
+} : {
+    initialHead: { opacity: 1, y: 0, },
+    animateHead: { opacity: 1, y:0, },
+
+    initialBtn: { opacity: 1, x: 0 },
+    animateBtn: { opacity: 1, x: 0, },
+
+    initialDetails: { opacity: 1, x: 0 },
+    animateDetails: { opacity: 1, x: 0, },
 }
 
 export default function PlansSection({plansTitle, plansSubtitle, freePlan, standardPlan, enterprisePlan} : PlanProps) {

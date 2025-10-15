@@ -74,9 +74,12 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
     }, [cards]);
 
 
-    const whyUsAnimations = {
+    const whyUsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
         initialHead: { opacity: 0, y: -100},
         animateHead: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 }},
+    } : {
+        initialHead: { opacity: 1, y: 0},
+        animateHead: { opacity: 1, y: 0, },
     }
 
 

@@ -9,12 +9,18 @@ type stepsProps = {
 
 export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
 
-    const stepsAnimations = {
+    const stepsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
         initialHeader: { opacity: 0, x: -100},
         animateHeader: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
         initialPara: { opacity: 0, x: 100},
         animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+    } : {
+        initialHeader: { opacity: 1, x: 0},
+        animateHeader: { opacity: 1, x: 0,},
+
+        initialPara: { opacity: 1, x: 0},
+        animatePara: { opacity: 1, x: 0, },
     }
 
     return(

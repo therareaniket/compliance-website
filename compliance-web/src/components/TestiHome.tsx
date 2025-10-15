@@ -11,9 +11,12 @@ type TestimProps = {
 
 export default function TestimHome({ testim_title, testim_subTitle } : TestimProps) {
 
-    const TestiAnimation = {
+    const TestiAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
         initialHead: { opacity: 0, x: -100},
         animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+    } : {
+        initialHead: { opacity: 1, x: 0},
+        animateHead: { opacity: 1, x: 0,},
     }
 
     return(

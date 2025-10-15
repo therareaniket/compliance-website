@@ -1,26 +1,30 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function EUAnnex11() {
     return (
-        <main className="EUAnnex11main">
+        <main className="EUAnnex11main inner-page">
+
+            <Header />
+
             <section className='EUAnnex11hero'>
                 <div className="container-sm">
                     <h1 className='h2'>EU Annex 11 (Computerised Systems under GMP) </h1>
                 </div>
             </section>
 
-            <section className='EUAnnex11-1 section'>
+            <section className='--bg-white EUAnnex11-1 section'>
                 <div className="container container-sm ">
                     <p className='text-20 text-rg'>EU Annex 11 is a guideline (part of EudraLex Volume 4) that describes how computerized systems used 
                         in GMP-regulated activities must be managed to maintain data integrity, reliability, and GMP compliance. While not legally binding in 
                         itself, compliance with Annex 11 is regarded as best practice in the EU and inspected by regulators. </p>
 
                     <p className='text-20 text-rg'>Annex 11 covers the full lifecycle of computerised systems: project planning, system specification, 
-                        qualification/validation, commissioning, operation, maintenance, and eventual retirement. <Link href="https://simplerqms.com/eu-annex-11/?utm_source=chatgpt.comKey" title='' className='text-20 text-rg'>https://simplerqms.com/eu-annex-11/?utm_source=chatgpt.comKey</Link>  
-                        topics include risk management, change control, supplier assessment, audit trails, electronic signatures, data backup and recovery, and security controls. 
+                        qualification/validation, commissioning, operation, maintenance, and eventual retirement <Link href="https://simplerqms.com/eu-annex-11" title='' className='text-20 text-rg'>Learn more.</Link>  
+                        {' '}topics include risk management, change control, supplier assessment, audit trails, electronic signatures, data backup and recovery, and security controls. 
                         The emphasis is on ensuring the computerized system handles processes in a way that remains consistent with GMP expectations for manual or paper systems.  </p>
 
                     <p className='text-20 text-rg'>One notable feature is the requirement for periodic review of systems to ensure the validated state is maintained,

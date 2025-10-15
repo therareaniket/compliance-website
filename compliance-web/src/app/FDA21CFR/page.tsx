@@ -1,18 +1,22 @@
 "use client"
+import { Header } from '@/components/Header'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function FDA21CFRPart11 () {
     return (
-        <main className="FDA21CFRPart11main">
+        <main className="FDA21CFRPart11main inner-page">
+
+            <Header />
+
             <section className='FDA21CFRPart11hero'>
                 <div className="container-sm">
                     <h1 className='h2'>FDA 21 CFR Part 11 (Electronic Records / Electronic Signatures) </h1>
                 </div>
             </section>
 
-            <section className='FDA21CFRPart11-1 section'>
+            <section className='--bg-white FDA21CFRPart11-1 section'>
                 <div className="container container-sm ">
                     <p className='text-20 text-rg'>21 CFR Part 11 is a U.S. FDA regulation that defines the conditions under which electronic records and electronic signatures are considered reliable, trustworthy, and equivalent to paper records and handwritten signatures. It applies when records are created, modified, maintained, archived, retrieved, or transmitted electronically in systems subject to FDA regulations (predicate rules). The regulation also addresses when electronic records are submitted to the FDA as part of regulatory requirements. </p>
 
