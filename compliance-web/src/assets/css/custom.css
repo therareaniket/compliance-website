@@ -546,8 +546,8 @@
 }
  /* .cookie-hero-text{ display: flex; justify-content: space-around;  align-items: center; margin-top: 20px;} */
  /* .cookienoticesection-2, .cookienoticesection-3, .cookienoticesection-4, .cookienoticesection-5, .cookienoticesection-6, .cookienoticesection-7, .cookienoticesection-8{ margin-top: 50px; } */
- .cookienoticemain p, .privacypolicymain p, .termsmain p{ margin: 20px 0; }
- .cookienoticemain li, .privacypolicymain li, .termsmain li{ list-style: disc; margin-top: 25px; margin-left: 20px; }
+ .cookienoticemain p, .privacypolicymain p, .termsmain p{ padding: 20px 0 0 0; }
+ .cookienoticemain li, .privacypolicymain li, .termsmain li{ list-style: disc; padding-top: 25px; margin-left: 20px; }
  .cookienoticemain a, .privacypolicymain a, .termsmain a{ color: var(--primary); text-decoration: underline; }
  .cookienoticemain a:hover, .privacypolicymain a:hover, .termsmain a:hover{ color: var(--secondary); }
  .privacypolicysection-14{ margin-bottom: 100px; }
@@ -561,3 +561,25 @@
 .category-btn-new { width: 140px; padding: 10px; text-align: center; border: 1px solid var(--black); cursor: pointer; }
 .category-btn-new.faq-active-new { background-color: var(--primary); color: var(--white); border: none; cursor: auto; }
 .faq-accordian { border: none; border-bottom: 1px solid #B8B8B8; }
+
+
+
+/* compliance inner pages */
+
+.FDA21CFRPart11hero, .EUAnnex11hero, .GDPRhero, .GCPhero, .CDSCOhero{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 506px;
+    background: url(/images/FDA21CFRPart11/heroSection.webp)  ;
+    background-position: center;
+    background-size: cover; 
+    color: var(--white);
+}
+
+.FDA21CFRPart11main p, .EUAnnex11main p, .GDPRmain p, .GCPmain p, .CDSCOmain p{ padding: 20px 0; }
+.FDA21CFRPart11main li, .EUAnnex11main li, .GDPRmain li, .GCPmain li, .CDSCOmain li{ list-style: disc; margin-left: 20px; padding-bottom: 10px; }
+.EUAnnex11main a{ color: var(--primary); text-decoration: underline; }
+.EUAnnex11main a:hover{ color: var(--secondary); }
