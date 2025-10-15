@@ -35,11 +35,11 @@ export default function CDSCO() {
                          noncompliance.</p>
                     <ul>
                         <p className='text-20 text-rg'><strong>Key points:</strong> </p>
-                        <li className='text-20 text-rg text-grey'>National regulatory authority in India for drugs, devices, and clinical trials</li>
-                        <li className='text-20 text-rg text-grey'>Headed by DCGI; functions under Ministry of Health & Family Welfare</li>
-                        <li className='text-20 text-rg text-grey'>Grants trial permissions, inspects sites, enforces compliance under Drugs & Cosmetics Act + CT Rules 2019</li>
-                        <li className='text-20 text-rg text-grey'>Issues guidance documents, establishes standards, monitors safety reporting</li>
-                        <li className='text-20 text-rg text-grey'>Coordinates with state drug control bodies and oversees uniform enforcement</li>
+                        <li className='text-20 text-rg  '>National regulatory authority in India for drugs, devices, and clinical trials</li>
+                        <li className='text-20 text-rg  '>Headed by DCGI; functions under Ministry of Health & Family Welfare</li>
+                        <li className='text-20 text-rg  '>Grants trial permissions, inspects sites, enforces compliance under Drugs & Cosmetics Act + CT Rules 2019</li>
+                        <li className='text-20 text-rg  '>Issues guidance documents, establishes standards, monitors safety reporting</li>
+                        <li className='text-20 text-rg  '>Coordinates with state drug control bodies and oversees uniform enforcement</li>
                     </ul>
 
                 </div>

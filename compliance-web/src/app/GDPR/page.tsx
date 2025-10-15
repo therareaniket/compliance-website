@@ -26,12 +26,12 @@ export default function GDPR() {
 
                     <ul>
                         <p className='text-20 text-rg'><strong>Key points:</strong> </p>
-                        <li className='text-20 text-rg text-grey'>Applies to processing of personal data of EU/EEA residents </li>
-                        <li className='text-20 text-rg text-grey'>Based on core principles: lawfulness, purpose limitation, minimization, etc. </li>
-                        <li className='text-20 text-rg text-grey'>Data subject rights: access, correction, erasure, portability, objection  </li>
-                        <li className='text-20 text-rg text-grey'>Requires technical & organizational security measures, DPIAs as needed  </li>
-                        <li className='text-20 text-rg text-grey'>Controllers/processors must document compliance, possibly appoint DPO </li>
-                        <li className='text-20 text-rg text-grey'>Strict rules on cross-border data transfer and heavy penaltiesm Shape </li>
+                        <li className='text-20 text-rg  '>Applies to processing of personal data of EU/EEA residents </li>
+                        <li className='text-20 text-rg  '>Based on core principles: lawfulness, purpose limitation, minimization, etc. </li>
+                        <li className='text-20 text-rg  '>Data subject rights: access, correction, erasure, portability, objection  </li>
+                        <li className='text-20 text-rg  '>Requires technical & organizational security measures, DPIAs as needed  </li>
+                        <li className='text-20 text-rg  '>Controllers/processors must document compliance, possibly appoint DPO </li>
+                        <li className='text-20 text-rg  '>Strict rules on cross-border data transfer and heavy penaltiesm Shape </li>
                     </ul>
 
                 </div>

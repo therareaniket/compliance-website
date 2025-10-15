@@ -12,21 +12,25 @@ export default function ComplianceListing() {
         initialHead: { opacity: 0, x: -100, },
         animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
 
+        initialPara: { opacity: 0, x: -100, },
+        animatePara: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
 
         initialNumbs1: { opacity: 0, x: 100 },
-        animateNumbs1: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
+        animateNumbs1: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
 
         initialNumbs2: { opacity: 0, x: 100 },
-        animateNumbs2: { opacity: 1, x: 0, transition: { delay: 2.5, duration: 1 } },
+        animateNumbs2: { opacity: 1, x: 0, transition: { delay: 4, duration: 1 } },
 
         initialNumbs3: { opacity: 0, x: 100 },
-        animateNumbs3: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
+        animateNumbs3: { opacity: 1, x: 0, transition: { delay: 5, duration: 1 } },
 
         initialCardListUp: { opacity: 0, y: -100 },
         animateCardListUp: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
     } : {
         initialHead: { opacity: 1, x: 0, },
         animateHead: { opacity: 1, x: 0,  },
+        initialPara: { opacity: 1, x: 0, },
+        animatePara: { opacity: 1, x: 0, },
         initialNumbs1: { opacity: 1, x: 0 },
         animateNumbs1: { opacity: 1, x: 0,  },
         initialNumbs2: { opacity: 1, x: 0 },
@@ -58,7 +62,7 @@ export default function ComplianceListing() {
                     <div className='compliance-matters-section'>
                         <motion.h2 className='h3' variants={complyAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>Why Compliance Matters</motion.h2>
 
-                        <motion.div className='compliance-matters-text' variants={complyAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>
+                        <motion.div className='compliance-matters-text' variants={complyAnimations} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.6 }}>
                             <motion.p className='matters-para1 text-20 text-rg text-grey compli-para-anim'>Compliance in clinical trials and pharmaceuticals means following regulatory standards, ethical guidelines, and legal frameworks that safeguard patient safety, ensure product quality, and protect data integrity. It forms the foundation of trust between researchers, regulators, and patients worldwide.</motion.p>
 
                             <motion.p className='matters-para2 text-20 text-rg text-grey compli-para-anim'>Adhering to compliance standards ensures clinical trials are ethical, drug manufacturing is safe, and regulatory approvals are smooth. Non-compliance, however, can result in delays, financial penalties, or even halts in research and production.</motion.p>

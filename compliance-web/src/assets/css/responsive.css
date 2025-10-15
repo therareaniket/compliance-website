@@ -394,7 +394,8 @@
     /* .mis-vis-heading img{ display: none; } */
     .mis-vis-heading img{ width: 600px; height: auto; margin: 30px 0; }
     .mis-vis-cards { gap: 0px; justify-content: space-around; }
-    .mis-vis-card { width: 340px; height: 200px; padding: 10px; padding-right: 20px; }
+    .mis-vis-card { width: 340px; height: 170px; padding: 20px; }
+    .mis-vis-para { margin-top: 20px; }
     .mis-vis-heading p { margin-top: 0; margin-bottom: 0; width: 650px; }
     .mis-vis-card img { width: 30px; height: auto; }
     /* .mis-vis-card { padding-right: 20px;  } */
@@ -791,7 +792,7 @@
 
     .mis-vis-heading p{ width: 100%; }
     .mis-vis-card-lists{ width: 100%; }
-    .mis-vis-card{ width: 250px; height: 180px; }
+    .mis-vis-card{ width: 250px; height: 190px; }
     .mis-vis-para{ margin-top: 15px; }
     /* .mis-vis-cards{ flex-direction: column; align-items: center; } */
     .core-feature-section{ padding-bottom: 0; }
@@ -860,6 +861,10 @@
 
 
     .detail-page-hero, .cookie-hero, .privacy-policy-hero, .terms-hero, .FDA21CFRPart11hero, .EUAnnex11hero, .GDPRhero, .GCPhero, .CDSCOhero { height: max-content; padding: 100px 0 60px 0; background-color: var(--primary); background-image: none; }
+
+    .mis-vis-detail-para { 
+        -webkit-line-clamp: none;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -874,7 +879,7 @@
     .abt-hero-head, .user-access-hero-head, .banner-head { width: 500px !important; }
     .mis-vis-heading, .core-feature-heading{text-align: left; align-items: start; }
     .mis-vis-cards{ flex-direction: column; align-items: center; }
-    .mis-vis-card{ width: 100%; }
+    .mis-vis-card{ width: 100%; height: 172px; }
     .platform-info{ width: 400px; }   
 
     .glob-org { top: 80px; left: 10%; }
@@ -1123,11 +1128,11 @@
     .platform-wrapper { padding: 30px; }
 
     /* userAccess page */
-    .role-account-admin{ margin-bottom: 30px; }
+    .role-account-admin { margin-bottom: 10px; padding: 20px 25px; }
+    .role-account-admin:last-child { margin-bottom: 0; padding-bottom: 0; }
 
 
     /* compliance page */
-    .role-account-admin{ padding: 20px 25px; }
 
     .header-main.is-scrolled .nav-signup { padding: 6px 0; }
 

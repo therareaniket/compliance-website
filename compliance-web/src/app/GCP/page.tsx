@@ -27,11 +27,11 @@ export default function GCP() {
                     <p className='text-20 text-rg'>Over time, GCP has been updated (for instance, under ICH E6 revisions) to respond to evolving trial designs, technologies, and expectations. Modern GCP emphasizes risk-based monitoring, greater flexibility in trial design, and integrating electronic systems (while still preserving data integrity).</p>
                     <ul>
                         <p className='text-20 text-rg'><strong>Key points:</strong> </p>
-                        <li className='text-20 text-rg text-grey'>Protects participants’ rights, safety, and confidentiality</li>
-                        <li className='text-20 text-rg text-grey'>Requires adherence to the approved protocol and ethical oversight </li>
-                        <li className='text-20 text-rg text-grey'>Ensures properly trained personnel, monitoring, auditing, and oversight</li>
-                        <li className='text-20 text-rg text-grey'>Mandates complete, accurate, and traceable documentation</li>
-                        <li className='text-20 text-rg text-grey'>Incorporates risk-based strategies and use of electronic systems (while maintaining integrity) </li>
+                        <li className='text-20 text-rg  '>Protects participants’ rights, safety, and confidentiality</li>
+                        <li className='text-20 text-rg  '>Requires adherence to the approved protocol and ethical oversight </li>
+                        <li className='text-20 text-rg  '>Ensures properly trained personnel, monitoring, auditing, and oversight</li>
+                        <li className='text-20 text-rg  '>Mandates complete, accurate, and traceable documentation</li>
+                        <li className='text-20 text-rg  '>Incorporates risk-based strategies and use of electronic systems (while maintaining integrity) </li>
                     </ul>
 
                 </div>

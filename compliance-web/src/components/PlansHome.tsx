@@ -23,17 +23,23 @@ type PlanProps = {
 }
 
 const planAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    initialHead: { opacity: 0, y: -100, },
-    animateHead: { opacity: 1, y:0, transition: { duration: 1 } },
+    initialHead: { opacity: 0, x: -100, },
+    animateHead: { opacity: 1, x:0, transition: { duration: 1 } },
+
+    initialPara: { opacity: 0, x: -100, },
+    animatePara: { opacity: 1, x:0, transition: { duration: 1, delay: 1 } },
 
     initialBtn: { opacity: 0, x: 100 },
-    animateBtn: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
+    animateBtn: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
 
     initialDetails: { opacity: 0, x: -100 },
-    animateDetails: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
+    animateDetails: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
 } : {
-    initialHead: { opacity: 1, y: 0, },
-    animateHead: { opacity: 1, y:0, },
+    initialHead: { opacity: 1, x: 0, },
+    animateHead: { opacity: 1, x:0, },
+
+    initialPara: { opacity: 1, x: 0, },
+    animatePara: { opacity: 1, x:0, },
 
     initialBtn: { opacity: 1, x: 0 },
     animateBtn: { opacity: 1, x: 0, },
@@ -71,10 +77,10 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
             <section className="section hm-plans --bg-white">
                 <div className="container">
                     <div className="plan-content-wrapper">
-                        <motion.div className="plans-left" variants={planAnimate} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>
-                            <h2 className="h3 plans-left-heading">{plansTitle}</h2>
+                        <motion.div className="plans-left">
+                            <motion.h2 className="h3 plans-left-heading" variants={planAnimate} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>{plansTitle}</motion.h2>
 
-                            <p className="text-20 text-grey plan-sub-title">{plansSubtitle}</p>
+                            <motion.p className="text-20 text-grey plan-sub-title" variants={planAnimate} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.6 }}>{plansSubtitle}</motion.p>
 
                             {/* <div className="plan-details bg-blue site-radius-20" aria-live="polite">
                                 <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>

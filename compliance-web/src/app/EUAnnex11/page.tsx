@@ -33,12 +33,12 @@ export default function EUAnnex11() {
 
                     <ul>
                         <p className='text-20 text-rg'><strong>Key points:</strong> </p>
-                        <li className='text-20 text-rg text-grey'>Applies to computerized systems in GMP-regulated operations </li>
-                        <li className='text-20 text-rg text-grey'>Lifecycle approach: planning → validation → operation → retirement  </li>
-                        <li className='text-20 text-rg text-grey'>Use risk management, change control, supplier qualification </li>
-                        <li className='text-20 text-rg text-grey'>Audit trails, electronic signatures, data integrity measures essential  </li>
-                        <li className='text-20 text-rg text-grey'>Periodic review to maintain validated state </li>
-                        <li className='text-20 text-rg text-grey'>Security, backups, access control, data retention & archiving </li>
+                        <li className='text-20 text-rg  '>Applies to computerized systems in GMP-regulated operations </li>
+                        <li className='text-20 text-rg  '>Lifecycle approach: planning → validation → operation → retirement  </li>
+                        <li className='text-20 text-rg  '>Use risk management, change control, supplier qualification </li>
+                        <li className='text-20 text-rg  '>Audit trails, electronic signatures, data integrity measures essential  </li>
+                        <li className='text-20 text-rg  '>Periodic review to maintain validated state </li>
+                        <li className='text-20 text-rg  '>Security, backups, access control, data retention & archiving </li>
                     </ul>
                 </div>
             </section>

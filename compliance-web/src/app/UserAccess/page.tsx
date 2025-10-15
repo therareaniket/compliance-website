@@ -13,6 +13,9 @@ export default function UserAccess() {
         initialHead: { opacity: 0, x: -100, },
         animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
 
+        initialPara: { opacity: 0, x: -100, },
+        animatePara: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
+
         initialCardRightImg: { opacity: 0, x: 100 },
         animateCardRightImg: { opacity: 1, x: 0, transition: { delay: 1, duration: 0.5 } },
 
@@ -40,6 +43,8 @@ export default function UserAccess() {
 
         initialHead: { opacity: 1, x: 0, },
         animateHead: { opacity: 1, x: 0, },
+        initialPara: { opacity: 1, x: 0, },
+        animatePara: { opacity: 1, x: 0, },
         initialCardRightImg: { opacity: 1, x: 0 },
         animateCardRightImg: { opacity: 1, x: 0, },
         initialCardLeftImg: { opacity: 1, x: 0 },
@@ -210,10 +215,10 @@ export default function UserAccess() {
             <section className='secure-portal-wrapper'>
                 <div className="container">
                     <div className='secure-portal-section'>
-                        <motion.div className='secure-portal-text' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.3 }}>
-                            <h2 className='h3 text-rg'>Complete Onboarding Process for Secure Portal Access</h2>
+                        <motion.div className='secure-portal-text' >
+                            <motion.h2 className='h3 text-rg' variants={userAccessAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.3 }}>Complete Onboarding Process for Secure Portal Access</motion.h2>
 
-                            <p className='text-20 text-rg text-grey'>A structured step by step onboarding guide designed to provide secure compliant and role based access to the portal covering registration verification role assignment and final access</p>
+                            <motion.p className='text-20 text-rg text-grey' variants={userAccessAnimation} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.3 }}>A structured step by step onboarding guide designed to provide secure compliant and role based access to the portal covering registration verification role assignment and final access</motion.p>
                         </motion.div>
 
                         <div className='access-portal-path'>

@@ -25,12 +25,12 @@ export default function FDA21CFRPart11 () {
                     <p className='text-20 text-rg'>In practice, organizations must define and document standard operating procedures, ensure access controls and unique user IDs, maintain audit logs of changes, and validate the software and hardware systems. When changes are made, re-validation or impact assessment is required to maintain compliance.</p>
                     <ul>
                         <p className='text-20 text-rg'><strong>Key points:</strong> </p>
-                        <li className='text-20 text-rg text-grey'>Scope covers FDA “predicate” recordkeeping systems when electronic </li>
-                        <li className='text-20 text-rg text-grey'>Must validate systems, ensure accuracy, integrity, and security </li>
-                        <li className='text-20 text-rg text-grey'>Maintain audit trails & time-stamps of modifications </li>
-                        <li className='text-20 text-rg text-grey'>Use user controls (logins, roles) and link signatures to records </li>
-                        <li className='text-20 text-rg text-grey'>Review & revalidate on changes, maintain documentation </li>
-                        <li className='text-20 text-rg text-grey'>Electronic signatures must capture printed name, date/time, and meaning of signature </li>
+                        <li className='text-20 text-rg  '>Scope covers FDA “predicate” recordkeeping systems when electronic </li>
+                        <li className='text-20 text-rg  '>Must validate systems, ensure accuracy, integrity, and security </li>
+                        <li className='text-20 text-rg  '>Maintain audit trails & time-stamps of modifications </li>
+                        <li className='text-20 text-rg  '>Use user controls (logins, roles) and link signatures to records </li>
+                        <li className='text-20 text-rg  '>Review & revalidate on changes, maintain documentation </li>
+                        <li className='text-20 text-rg  '>Electronic signatures must capture printed name, date/time, and meaning of signature </li>
                     </ul>
 
                 </div>

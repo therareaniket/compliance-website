@@ -163,15 +163,16 @@ export default function FAQSection(props: FAQProps) {
     const activeFAQDetails = faqsByCategory[activeFaqCategoryButton];
 
     const FAQAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-        initialHead: { opacity: 0, x: -100, },
-        animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
-    
+        initialBody: { opacity: 0, scale: 0 },
+        animateBody: { opacity: 1, scale: 1, transition: { delay: 1, duration: 1 } },
+
         initialBtn: { opacity: 0, scale: 0 },
         animateBtn: { opacity: 1, scale: 1, transition: { delay: 2, duration: 1 } },
     } : {
-        initialHead: { opacity: 1, x: 0, },
-        animateHead: { opacity: 1, x: 0,},
     
+        initialBody: { opacity: 1, scale: 1 },
+        animateBody: { opacity: 1, scale: 1, },
+
         initialBtn: { opacity: 1, scale: 1 },
         animateBtn: { opacity: 1, scale: 1, },
     }
@@ -180,12 +181,12 @@ export default function FAQSection(props: FAQProps) {
         <>
             <section className="section FAQs --bg-white">
                 <div className="container">
-                    <motion.div className="faq-head text-center" >
-                        <motion.h2 className="h3" variants={FAQAnimate} initial="initialHead" whileInView="animateHead" viewport={{ once: true, amount: 0.4 }}>{faqTitle}</motion.h2>
-                        <motion.p className="text-20 text-grey" variants={FAQAnimate} initial="initialHead" whileInView="animateHead" viewport={{ once: true, amount: 0.7 }}>{faqSubtitle}</motion.p>
+                    <motion.div className="faq-head text-center" variants={FAQAnimate} initial='initialBody' whileInView='animateBody' viewport={{ once: true, amount: 0.6 }}>
+                        <motion.h2 className="h3">{faqTitle}</motion.h2>
+                        <motion.p className="text-20 text-grey">{faqSubtitle}</motion.p>
                     </motion.div>
 
-                    <motion.div className="category-btns" variants={FAQAnimate} initial="initialBtn" whileInView="animateBtn" viewport={{ once: true, amount: 0.6 }}>
+                    <motion.div className="category-btns" variants={FAQAnimate} initial='initialBtn' whileInView='animateBtn' viewport={{ once: true, amount: 0.6 }}>
                             <button
                                 className={`category-btn-new general-btn text-left site-radius-10 ${activeFaqCategoryButton === "general" ? "faq-active-new" : ""
                                     }`}

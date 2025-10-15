@@ -269,24 +269,6 @@ export default async function Home() {
 
                     <PlansSection plansTitle={home.plansTitle} plansSubtitle={home.plansSubtitle} freePlan={freePlan} standardPlan={standardPlan} enterprisePlan={enterprisePlan} />
 
-                    {/* <section className="hm-clientale --bg-white overflow-hidden">
-                        <div className="container">
-                            <div className="clientale-wrapper">
-                                <div className="trusted-leaders site-radius-10">
-                                    <div className="trst-lead-content">
-                                        <h2 className="h3">{home.testimonialTitle}</h2>
-
-                                        <p className="text-20 text-grey">{home.testimonialSubtitle}</p>
-                                    </div>
-
-                                    <Image src='/images/homepage/clientale-quotes.webp' alt="quotes" width={588} height={410} priority={false} style={{ opacity: '0.2' }} draggable={false} className="testi-quotes"></Image>
-                                </div>
-
-                                <ClientaleSlider />
-                            </div>
-                        </div>
-                    </section> */}
-
                     <TestimHome testim_title={home.testimonialTitle} testim_subTitle={home.testimonialSubtitle} />
 
                     <FAQSection

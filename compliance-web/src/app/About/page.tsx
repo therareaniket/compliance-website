@@ -4,53 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import AboutUsSwiperComponents from "@/components/SwiperComponent";
 import { Header } from '@/components/Header';
-import { delay, motion, scale, stagger } from 'framer-motion';
+import { motion, } from 'framer-motion';
 import AboutAnimations from '@/components/AboutAnimations';
 
-
-// const textAnimations = {
-//     initialLeft: {
-//         opacity: 0,
-//         x: -200,
-//     },
-
-//     initialRight: {
-//         opacity: 0,
-//         x: 200,
-//     },
-
-//     animateLeft: {
-//         opacity: 1,
-//         x: 0,
-//         transition: {
-//             duration: 1,
-//         },
-//     },
-
-//     animateRight: {
-//         opacity: 1,
-//         x: 0,
-//         transition: {
-//             delay:1,
-//             duration: 1,
-//             staggerChildren: 0.3,
-//             delayChildren: 0.5,
-//         },
-//     },
-
-//     initialBtn: {
-//         opacity: 0,
-//         scale: 0,
-//     },
-
-//     animateBtn: {
-//         opacity: 1,
-//         scale: 1,
-//         transition: {
-//             duration: 1,
-//         },
-//     },
-// }
 
 const textAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
     initialLeft: {
@@ -152,7 +108,7 @@ export default function AboutUs() {
 
                                     <p className='mis-vis-para text-md text-20'>Empower Organizations</p>
 
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Help Sponsors, CROs, and Sites stay audit-ready and confident at every stage.</p>
+                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Help Sponsors, CROs, and Sites stay audit-ready and confident.</p>
                                 </motion.div>
                             </motion.div>
 
@@ -162,7 +118,7 @@ export default function AboutUs() {
 
                                     <p className='mis-vis-para text-md text-20'>Strengthen Processes</p>
 
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Ensure accuracy and reliability across all clinical compliance activities.</p>
+                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Ensure accuracy and reliability across all compliance activities.</p>
                                 </motion.div>
 
                                 <motion.div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-2">
@@ -196,7 +152,7 @@ export default function AboutUs() {
 
                                     <p className='mis-vis-para text-md text-20'>Seamless Experience </p>
 
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Deliver smooth, user-friendly compliance processes for trial teams. </p>
+                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Deliver user-friendly compliance processes for trial teams.</p>
                                 </motion.div>
 
                                 <motion.div className="mis-vis-card greenish-box-shadow vis-card vis-anim-1">
@@ -204,7 +160,7 @@ export default function AboutUs() {
 
                                     <p className='mis-vis-para text-md text-20'>Trust & Transparency </p>
 
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Build confidence with secure, efficient workflows and clear oversight. </p>
+                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Confidence with secure, efficient workflows and clear oversight.</p>
                                 </motion.div>
                             </motion.div>
 
@@ -214,7 +170,7 @@ export default function AboutUs() {
 
                                     <p className='mis-vis-para text-md text-20'>Proactive Readiness </p>
 
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Anticipate regulatory needs before they become challenges. </p>
+                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Anticipate regulatory needs before they become challenges.</p>
                                 </motion.div>
 
                                 <motion.div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-1">
@@ -222,7 +178,7 @@ export default function AboutUs() {
 
                                     <p className='mis-vis-para text-md text-20'>Future Innovation </p>
 
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg '>Continuously evolve compliance through modern, scalable technology. </p>
+                                    <p className='mis-vis-detail-para text-grey test-18 text-rg '>Continuously evolve compliance through modern technologies.</p>
                                 </motion.div>
                             </motion.div>
                         </div>
