@@ -105,7 +105,7 @@ export default function ComplianceListing() {
                                     <p className='text-20 text-rg text-grey card-list-text'>Regulates electronic records and electronic signatures in FDA-regulated industries, ensuring that they are trustworthy, reliable, and equivalent to paper records.</p>
                                 </div>
 
-                                <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                <Link href='/FDA21CFR' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
                         </motion.div>
 
@@ -117,7 +117,7 @@ export default function ComplianceListing() {
                                     <p className='text-20 text-rg text-grey card-list-text'>Provides guidance on computer systems used in GMP-regulated environments within the EU. Ensures that automated systems maintain data integrity and regulatory compliance.</p>
                                 </div>
 
-                                <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                <Link href='/EUAnnex11' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
                             <div className='gdpr_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
@@ -126,7 +126,7 @@ export default function ComplianceListing() {
                                     <p className='text-20 text-rg text-grey card-list-text'>Protects personal data of EU residents. Organizations must ensure data privacy, transparency, and user rights in data collection, processing, and storage.</p>
                                 </div>
 
-                                <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                <Link href='/GDPR' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
                         </motion.div>
 
@@ -138,7 +138,7 @@ export default function ComplianceListing() {
                                     <p className='text-20 text-rg text-grey card-list-text'>International ethical and scientific quality standard for designing, conducting, recording, and reporting clinical trials. Protects trial subjects and ensures credible data.</p>
                                 </div>
 
-                                <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                <Link href='/GCP' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
                             <div className='cdsco_card site-radius-10'>
                                 <div className='compliace-card-heading-text'>
@@ -147,7 +147,7 @@ export default function ComplianceListing() {
                                     <p className='text-20 text-rg text-grey card-list-text'>Regulatory authority in India governing drug approval, clinical trials, and manufacturing compliance. Ensures safety, efficacy, and quality of pharmaceuticals.</p>
                                 </div>
 
-                                <Link href='#' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                <Link href='/CDSCO' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                             </div>
                         </motion.div>
                     </div>

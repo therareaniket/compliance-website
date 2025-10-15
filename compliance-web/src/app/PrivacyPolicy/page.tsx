@@ -70,8 +70,8 @@ export default function PrivacyPolicyPage () {
 
                         <li className='text-20 text-rg'><strong>Support Interactions: </strong> chat transcripts, emails, attachments.</li>
 
-                        <li className='text-20 text-rg'><strong>Cookies/Similar Tech: </strong> session/auth cookies, preferences, analytics (see Cookie Notice at <Link href="/CookiesNoticePage" title='' className='text-20 text-rg'>/cookies</Link> ).
-                          sources include you, your organization, integrated systems you connect (e.g., AWS/Azure/GCP, Okta, GitHub), subprocessors, and lawful public sources.
+                        <li className='text-20 text-rg'><strong>Cookies/Similar Tech: </strong> session/auth cookies, preferences, analytics (see Cookie Notice at <Link href="/CookieNoticePage" title='' className='text-20 text-rg'>/cookies</Link> ).
+                            Sources include you, your organization, integrated systems you connect (e.g., AWS/Azure/GCP, Okta, GitHub), subprocessors, and lawful public sources.
                         </li>
                     </ul>
                 </div>
@@ -120,7 +120,7 @@ export default function PrivacyPolicyPage () {
                         <li className='text-20 text-rg'><strong>Analytics — </strong> aggregated metrics to improve performance; IP truncation where feasible. </li>
 
                         <li className='text-20 text-rg'><strong>No cross‑site behavioral advertising; no sale/sharing </strong>of Personal Data for targeted ads.
-                            Manage choices via the <strong>Cookie banner/Preference Center</strong> and browser settings; we honor legally required signals (e.g., <strong>Global Privacy Control</strong>) where applicable. See <Link href="/CookiesNoticePage" title='' className='text-20 text-rg'><strong>/cookies</strong></Link>.
+                            Manage choices via the <strong>Cookie banner/Preference Center</strong> and browser settings; we honor legally required signals (e.g., <strong>Global Privacy Control</strong>) where applicable. See <Link href="/CookieNoticePage" title='' className='text-20 text-rg'><strong>/cookies</strong></Link>.
                         </li>
                     </ul>
                 </div>
@@ -153,7 +153,7 @@ export default function PrivacyPolicyPage () {
                     <h2 className='h3 text-rg'>8. International Transfers</h2>
 
                     <p className='text-20 text-rg'>Controls include <strong>encryption in transit/at rest, RBAC/SSO/MFA,</strong> network isolation, vulnerability management,
-                         third‑party <strong>pen tests,</strong> secure SDLC, audit logging, immutable backups, and vendor risk management. For HIPAA BA 
+                         third-party <strong>pen tests,</strong> secure SDLC, audit logging, immutable backups, and vendor risk management. For HIPAA BA 
                          relationships, safeguards align to the Security Rule; <strong>breach notification</strong> will be made without unreasonable delay and
                          <strong>no later than 60 days</strong> after discovery, as required by HITECH.
                     </p>
@@ -187,7 +187,7 @@ export default function PrivacyPolicyPage () {
                 <div className="container-sm">
                     <h2 className='h3 text-rg'>11. Children</h2>
 
-                    <p className='text-20 text-rg'>Business‑use only; not directed to children under 16. If a child’s Personal Data is identified, contact <strong>contactus@dfolds.com</strong>for deletion.</p>
+                    <p className='text-20 text-rg'>Business‑use only; not directed to children under 16. If a child’s Personal Data is identified, contact <strong><Link href="mailto: contactus@dfolds.com" title='' className='text-20 text-rg'>contactus@dfolds.com</Link></strong> for deletion.</p>
                 </div>
             </section>
 

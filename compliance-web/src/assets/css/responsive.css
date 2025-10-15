@@ -859,10 +859,12 @@
     .container-sm{ width: 550px; }
 
 
-    .detail-page-hero, .cookie-hero, .privacy-policy-hero, .terms-hero { height: max-content; padding: 100px 0 60px 0; background-color: var(--primary); background-image: none; }
+    .detail-page-hero, .cookie-hero, .privacy-policy-hero, .terms-hero, .FDA21CFRPart11hero, .EUAnnex11hero, .GDPRhero, .GCPhero, .CDSCOhero { height: max-content; padding: 100px 0 60px 0; background-color: var(--primary); background-image: none; }
 }
 
 @media screen and (max-width: 680px) {
+    .section-sm{ padding: 40px 0; }
+
     h4, .h4{ font-size: 28px; line-height: 38px; }
     .navbar-links ul{ gap: 80px !important; }
 
@@ -930,6 +932,8 @@
 }
 
 @media screen and (max-width: 575px) {
+
+
     .primary-box-shadow{ box-shadow: -4px 0 0 0 var(--primary); }
     .hm-hero img { height: 400px; opacity: 0; }
     .hm-hero-content { top: 120px; }

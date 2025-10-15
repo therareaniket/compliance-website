@@ -567,3 +567,25 @@ section { overflow: hidden; }
 .inner-page .navbar-wrapper li { margin: 0; padding: 0; }
 
 /* .abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero { position: sticky !important; top: 0 !important; z-index: -1 !important; } */
+
+
+
+/* compliance inner pages */
+
+.FDA21CFRPart11hero, .EUAnnex11hero, .GDPRhero, .GCPhero, .CDSCOhero{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 506px;
+    background: url(/images/FDA21CFRPart11/heroSection.webp)  ;
+    background-position: center;
+    background-size: cover; 
+    color: var(--white);
+}
+
+.FDA21CFRPart11main p, .EUAnnex11main p, .GDPRmain p, .GCPmain p, .CDSCOmain p{ padding: 20px 0; }
+.FDA21CFRPart11main li, .EUAnnex11main li, .GDPRmain li, .GCPmain li, .CDSCOmain li{ list-style: disc; margin-left: 20px; padding-bottom: 10px; }
+.EUAnnex11main a{ color: var(--primary); text-decoration: underline; }
+.EUAnnex11main a:hover{ color: var(--secondary); }
