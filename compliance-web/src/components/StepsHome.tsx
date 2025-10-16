@@ -13,7 +13,7 @@ export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
         initialHeader: { opacity: 0, x: -100},
         animateHeader: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
-        initialPara: { opacity: 0, x: 100},
+        initialPara: { opacity: 0, x: -100},
         animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 }},
     } : {
         initialHeader: { opacity: 1, x: 0},

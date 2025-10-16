@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-1 section-sm'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>1. Scope & Roles</h2>
+                    <h2 className='h3'>1. Scope & Roles</h2>
 
                     <ul>
                         <li className='text-20 text-rg'><strong>Scope.</strong> This Policy explains how we collect, use, disclose, and protect <strong>Personal Data </strong>
@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-2'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>2. Definitions (Plain Language)</h2>
+                    <h2 className='h3'>2. Definitions (Plain Language)</h2>
 
                     <ul>
                         <li className='text-20 text-rg'><strong>Personal Data: </strong> information that identifies or can reasonably be linked to an individual (e.g., name, email, identifiers).</li>
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-3 section-sm'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>3. What We Collect & Sources</h2>
+                    <h2 className='h3'>3. What We Collect & Sources</h2>
 
                     <ul>
                         <li className='text-20 text-rg'><strong>Account & Contact Data: </strong> information that identifies or can reasonably be linked to an individual (e.g., name, email, identifiers).</li>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-4'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>4. Purposes & Legal Bases (GDPR/UK GDPR)</h2>
+                    <h2 className='h3'>4. Purposes & Legal Bases (GDPR/UK GDPR)</h2>
 
                     <ul>
                         <li className='text-20 text-rg'><strong>Provide & secure the service </strong> (accounts, auth, scans, reports, audit trails).
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage () {
             
             <section className='--bg-white privacypolicysection-5 section-sm'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>5. Cookies, Analytics & Tracking</h2>
+                    <h2 className='h3'>5. Cookies, Analytics & Tracking</h2>
 
                     <ul>
                         <li className='text-20 text-rg'><strong>Strictly Necessary </strong>(auth, load balancing, security) — required.</li>
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-6'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>6. Disclosures to Third Parties</h2>
+                    <h2 className='h3'>6. Disclosures to Third Parties</h2>
 
                     <p className='text-20 text-rg'>We disclose Personal Data only to: <strong>subprocessors/service providers</strong> (cloud, email, analytics, support) under DPAs;
                         <strong>integration partners</strong> you connect; <strong>affiliates</strong> under same protections; <strong>legal/safety</strong> recipients when required; 
@@ -137,10 +137,10 @@ export default function PrivacyPolicyPage () {
                     </p>
                 </div>
             </section>
-            
+
             <section className='--bg-white privacypolicysection-7 section-sm'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>7. International Transfers</h2>
+                    <h2 className='h3'>7. International Transfers</h2>
 
                     <p className='text-20 text-rg'>We use <strong>EU SCCs</strong> and <strong>UK IDTA/Addendum</strong> with supplementary measures for cross‑border transfers. 
                         Regional <strong>data residency</strong> (US/EU/India)  may be available by configuration/contract.
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-8'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>8. Security</h2>
+                    <h2 className='h3'>8. Security</h2>
 
                     <p className='text-20 text-rg'>Controls include <strong>encryption in transit/at rest, RBAC/SSO/MFA,</strong> network isolation, vulnerability management,
                          third-party <strong>pen tests,</strong> secure SDLC, audit logging, immutable backups, and vendor risk management. For HIPAA BA 
@@ -162,7 +162,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-9 section-sm'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>9. Retention</h2>
+                    <h2 className='h3'>9. Retention</h2>
 
                     <p className='text-20 text-rg'>We retain Personal Data only as long as necessary or as required by law/contract. 
                         Typical defaults (customizable by agreement): account/profile—life of account + 12 months; 
@@ -174,7 +174,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-10'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>10. Your Rights</h2>
+                    <h2 className='h3'>10. Your Rights</h2>
 
                     <p className='text-20 text-rg'>Depending on your location, you may have rights to <strong>access, correct, delete, restrict, object, port,</strong> 
                         and <strong>withdraw consent.</strong> Certain US states (e.g., CA/CPRA) add rights to <strong>opt‑out of sale/sharing</strong> 
@@ -185,7 +185,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-11 section-sm'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>11. Children</h2>
+                    <h2 className='h3'>11. Children</h2>
 
                     <p className='text-20 text-rg'>Business‑use only; not directed to children under 16. If a child’s Personal Data is identified, contact <strong><Link href="mailto: contactus@dfolds.com" title='' className='text-20 text-rg'>contactus@dfolds.com</Link></strong> for deletion.</p>
                 </div>
@@ -193,7 +193,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-12'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>12. Third‑Party Links & Integrations</h2>
+                    <h2 className='h3'>12. Third‑Party Links & Integrations</h2>
 
                     <p className='text-20 text-rg'>Linked services are governed by their own policies. Review them carefully; we are not responsible for third‑party practices.</p>
                 </div>
@@ -201,7 +201,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-13 section-sm'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>13. Changes</h2>
+                    <h2 className='h3'>13. Changes</h2>
 
                     <p className='text-20 text-rg'>We may update this Policy; the date above reflects the latest version. Material changes will be notified via email or in‑app. Continued use after the effective date constitutes acceptance.</p>
                 </div>
@@ -209,7 +209,7 @@ export default function PrivacyPolicyPage () {
 
             <section className='--bg-white privacypolicysection-14'>
                 <div className="container-sm">
-                    <h2 className='h3 text-rg'>14. How to Contact Us</h2>
+                    <h2 className='h3'>14. How to Contact Us</h2>
 
                     <ul>
                         <li><strong className='text-20 text-rg'>General inquiries:</strong><Link href="mailto:enquiry@dfolds.com" title='' className='text-20 text-rg'>enquiry@dfolds.com</Link></li>

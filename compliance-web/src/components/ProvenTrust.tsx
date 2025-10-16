@@ -14,14 +14,14 @@ export default function ProvenHome( { proven_title, proven_subTitle } : ProvenPr
         initialHead: { opacity: 0, x: -100},
         animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
-        initialSubHead: { opacity: 0, x: 100},
-        animateSubHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.2, }},
+        initialSubHead: { opacity: 0, x: -100},
+        animateSubHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 2, }},
 
         initialList: { opacity: 0, x: -100 },
-        animateList: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.7 } },
+        animateList: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.3 } },
 
         initialList2: { opacity: 0, x: 100 },
-        animateList2: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 } },
+        animateList2: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.7 } },
 
     } : {
         initialHead: { opacity: 1, x: 0},
