@@ -26,7 +26,6 @@
 */
 
 
-
 @media screen and (max-width: 1900px) {
     .quotes-img img{ width: 550px; }
     .abt-hero-head, .user-access-hero-head, .banner-head{ left: 132px; }
@@ -947,8 +946,6 @@
 }
 
 @media screen and (max-width: 575px) {
-
-
     .primary-box-shadow{ box-shadow: -4px 0 0 0 var(--primary); }
     .hm-hero img { height: 400px; opacity: 0; }
     .hm-hero-content { top: 120px; }
@@ -998,7 +995,7 @@
 
     .plans-btn { width: 100%; height: 100px; justify-content: center; }
     .plan-btn-cont { display: flex; justify-content: space-between; }
-    .plan-btn-cont .h5 { margin-bottom: 0; }
+    .plan-btn-cont .h5 { margin-bottom: 0; width: 50%; }
     .plans-btn .h4 { font-size: 22px; line-height: 30px; }
     .plan-btn-cont p { width: 200px; height: 50px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
     .plan-btns-group { width: 100%; flex-direction: column; }
@@ -1047,12 +1044,10 @@
     .secure-portal-text { gap: 20px; }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
     .navbar-links ul{ gap: 40px!important; }
-
     .abt-hero-wrapper, .mis-vis-section{ gap: 30px; }
-
     .quick-links ul li a{ font-size: 14px; line-height: 22px; }
 
     .copyright-box{ flex-wrap: wrap; }
@@ -1136,8 +1131,8 @@
 
     .plan-btn-cont p { display: none; }
     .plans-btn { flex-direction: row; align-items: center; height: 70px; }
-    .plan-btn-cont .h5 { font-size: 20px; }
-    .plans-btn:not(:last-child) { margin-bottom: 10px; }
+    .plan-btn-cont .h5 { font-size: 20px; width: 100%; } 
+    .plans-btn:not(:last-child){ margin-bottom: 10px; }
 
     /* About Us */
     .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 380px; }
@@ -1164,6 +1159,10 @@
     .trst-lead-content p { display: none; }
     .slider-seprator { margin: 10px 0; }
     .clientale-main .swiper-pagination{ transform: translateY(-20px) !important; }
+
+    .plans-left { gap: 20px; }
+    .plans-right { display: none; }
+    .plans-mobile-accordion { display: block; margin-top: 30px; }
 }
 
 @media screen and (max-width: 400px) {
@@ -1246,7 +1245,6 @@
 @media screen and (max-width: 359px) {
     .account-admin-text h3{ font-size: 22px; line-height: 30px; }
     
-    /* .feature-cards .swiper-slide, .swiper-slide-active{ width: 300px !important; } */
     .hm-hero { height: 550px; }
     .hm-hero-content p { margin: 20px 0; }
 

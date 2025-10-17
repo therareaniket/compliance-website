@@ -1,7 +1,8 @@
 "use client"
 
 import { useMemo, useState } from "react";
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
 
 type PlanId = 'free' | 'standard' | 'enterprise';
 
@@ -51,6 +52,7 @@ const planAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100)
 export default function PlansSection({plansTitle, plansSubtitle, freePlan, standardPlan, enterprisePlan} : PlanProps) {
 
     const [activePlanButton, setActivePlanButton] = useState<PlanId>('free');
+    const [accordionValue, setAccordionValue] = useState<string>('item-1');
 
     const planDetails = useMemo(
         () => ({
@@ -70,6 +72,19 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
         [freePlan, standardPlan, enterprisePlan]
       );
 
+      const handleAccordionChange = (value: string) => {
+        setAccordionValue(value);
+        
+        // Update the active plan based on which accordion item is opened
+        if (value === 'item-1') {
+            setActivePlanButton('free');
+        } else if (value === 'item-2') {
+            setActivePlanButton('standard');
+        } else if (value === 'item-3') {
+            setActivePlanButton('enterprise');
+        }
+    };
+
       const activePlanDetails = planDetails[activePlanButton];
 
     return (
@@ -81,20 +96,8 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                             <motion.h2 className="h3 plans-left-heading" variants={planAnimate} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>{plansTitle}</motion.h2>
 
                             <motion.p className="text-20 text-grey plan-sub-title" variants={planAnimate} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.6 }}>{plansSubtitle}</motion.p>
-
-                            {/* <div className="plan-details bg-blue site-radius-20" aria-live="polite">
-                                <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
-
-                                {activePlanDetails.bullets.map((b, i) => (
-                                    <div key={i} className="plan-poin">
-                                        <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
-                                    </div>
-                                ))}
-
-                            </div> */}
                         </motion.div>
-
-
+ 
                         <div className="plans-right">
                             {/* <p className="text-20 text-grey plan-title">{plansSubtitle}</p> */}
 
@@ -106,7 +109,6 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                         <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
                                     </div>
                                 ))}
-
                             </motion.div>
 
                             <motion.div className="plan-btns-group" variants={planAnimate} initial="initialBtn" whileInView='animateBtn' viewport={{ once: true, amount: 0.6 }}>
@@ -135,6 +137,120 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                     <p className="h4">$499<span className="text-18 text-grey">/month</span></p>
                                 </button>
                             </motion.div>
+                        </div>
+
+                        {/* <div className="plans-mobile-accordion">
+                            <Accordion type="single" collapsible>
+                                <AccordionItem value="item-1">
+                                    <AccordionTrigger className="plan-trigger">
+                                        <p className="h5 text-rg">Free Compliance Starter Plan</p>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent className="plan-content">
+                                        <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
+
+                                        {activePlanDetails.bullets.map((b, i) => (
+                                            <div key={i} className="plan-poin">
+                                                <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
+                                            </div>
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
+
+                                <AccordionItem value="item-2">
+                                    <AccordionTrigger className="plan-trigger">
+                                        <p className="h5 text-rg">Standard Plan</p>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent className="plan-content">
+                                        <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
+
+                                        {activePlanDetails.bullets.map((b, i) => (
+                                            <div key={i} className="plan-poin">
+                                                <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
+                                            </div>
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
+
+                                <AccordionItem value="item-3">
+                                    <AccordionTrigger className="plan-trigger">
+                                        <p className="h5 text-rg">Enterprise Plan</p>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent className="plan-content">
+                                        <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
+
+                                        {activePlanDetails.bullets.map((b, i) => (
+                                            <div key={i} className="plan-poin">
+                                                <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
+                                            </div>
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                        </div> */}
+
+                        <div className="plans-mobile-accordion">
+                            <Accordion type="single" collapsible value={accordionValue} onValueChange={handleAccordionChange} className="plan-accordion-wrapper">
+                                <AccordionItem value="item-1" className="accordion-item site-radius-10">
+                                    <AccordionTrigger className="plan-trigger">
+                                        <p className="h5 text-rg">Free Compliance Starter Plan</p>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent className="plan-content site-radius-10 bg-blue">
+                                        {/* <h3 className="h4 fade-in">{planDetails.free.title}</h3> */}
+
+                                        {planDetails.free.bullets.map((b, i) => (
+                                            <div key={i} className="plan-poin">
+                                                <p className="text-grey text-20 fade-in ">
+                                                    <span className="icon-check_circle"></span>{b}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
+
+                                <AccordionItem value="item-2" className="accordion-item site-radius-10">
+                                    <AccordionTrigger className="plan-trigger">
+                                        <p className="h5 text-rg">Standard Plan</p>
+
+                                        <span className="h4">$199<span className="text-18">/month</span></span>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent className="plan-content site-radius-10 bg-blue">
+                                        {/* <h3 className="h4 fade-in">{planDetails.standard.title}</h3> */}
+
+                                        {planDetails.standard.bullets.map((b, i) => (
+                                            <div key={i} className="plan-poin">
+                                                <p className="text-grey text-20 fade-in">
+                                                    <span className="icon-check_circle"></span>{b}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
+
+                                <AccordionItem value="item-3" className="accordion-item site-radius-10">
+                                    <AccordionTrigger className="plan-trigger">
+                                        <p className="h5 text-rg">Enterprise Plan</p>
+
+                                        <span className="h4">$499<span className="text-18">/month</span></span>
+                                    </AccordionTrigger>
+
+                                    <AccordionContent className="plan-content site-radius-10 bg-blue">
+                                        {/* <h3 className="h4 fade-in">{planDetails.enterprise.title}</h3> */}
+
+                                        {planDetails.enterprise.bullets.map((b, i) => (
+                                            <div key={i} className="plan-poin">
+                                                <p className="text-grey text-20 fade-in">
+                                                    <span className="icon-check_circle"></span>{b}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
                         </div>
                     </div>
                 </div>
