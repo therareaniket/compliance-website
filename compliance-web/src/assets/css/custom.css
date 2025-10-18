@@ -34,7 +34,7 @@ section { overflow: hidden; }
 
 /* ABOUTUS swiper code */
 .feature-cards .swiper-button-next, .swiper-button-prev { display: none !important; }
-.feature-cards .swiper-pagination{ transform: translateY(-20px) !important; }
+.feature-cards .swiper-pagination{ left: 50%; transform: translate( -50%, -20px) !important; }
 .feature-cards .swiper-wrapper{ height: 450px !important; }
 .feature-cards .swiper-pagination-bullet{background-color: rgba(184, 184, 184, 1) !important;}
 .feature-cards .swiper-pagination-bullet-active{background: var(--primary) !important;}
@@ -96,7 +96,6 @@ section { overflow: hidden; }
 .header-main { position: fixed; width: 100%; z-index: 99; top: 0; transition: all 600ms ease;  }
 .navbar-wrapper { padding: 30px 0; display: flex; align-items: center; justify-content: space-between; transition: all 600ms ease; color: var(--white); }
 .navbar-links { display: flex; align-items: center; gap: 60px; }
-/* .navbar-links ul li { transition: 0.7s ease; } */
 .navbar-links ul li { position: relative; display: inline-block; cursor: pointer; transition: color 0.3s ease; }
 .navbar-links ul li:hover { color: var(--secondary); }
 
@@ -104,7 +103,7 @@ section { overflow: hidden; }
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px; /* adjust spacing from text */
+    bottom: -3px; 
     width: 0%;
     height: 2px;
     background-color: var(--secondary);
@@ -158,12 +157,7 @@ section { overflow: hidden; }
 .hm-hero-btns .btn-primary { background-color: var(--secondary); margin-right: 20px; }
 .hm-hero-btns .btn-white { color: var(--white); border: 1px solid var(--white); }
 .h1-animation { color: var(--secondary); position: relative; }
-/* .h1-animation::before {
-    content: " ";
-    width: 100px;
-    height: 70px;
-    background-color: Yellow;
-} */
+
 .hero-scanning-line { position: absolute; top: 0; left: -4%; animation: compliance-scanner 8000ms ease infinite; animation-delay: 2500ms; }
 
 .expnd-contnt-wrapper { display: flex; gap: 20px; align-items: center; }
@@ -229,7 +223,6 @@ section { overflow: hidden; }
 .secure-docs{ top: 0; left: 65%; transform: translateY(-50%); }
 .audit-suc { top: 45%; left: 70%; }
 
-/* .plan-content-wrapper { display: flex; justify-content: space-between; } */
 .plans-left { display: flex; justify-content: space-between; }
 .plans-left .h3, .plan-details { width: 600px; }
 .plans-left .plan-sub-title, .plan-btns-group { width: 800px; }
@@ -277,7 +270,6 @@ section { overflow: hidden; }
 .category-btn { width: 160px; display: block; padding: 25px; cursor: pointer; transition: all 600ms ease, }
 .category-btn:not(:last-child) { margin-bottom: 20px; }
 .category-btn span { display: block; margin-top: 10px; }
-/* .faq-list-category { display: flex; justify-content: space-between; margin-top: 40px; } */
 .category-btn.faq-active { background-color: var(--primary); color: var(--white); cursor: auto; }
 .category-btn.faq-active .text-grey { color: var(--white); transition: all 1000ms ease, }
 
@@ -299,6 +291,7 @@ section { overflow: hidden; }
 /* banner-code */
 /* .abt-hero, .user-access-hero, .com-hero, .contact-hero{ position: relative; } */
 .abt-hero-head, .user-access-hero-head, .banner-head{ position: absolute; top: 50%; left: 142PX; transform: translateY(-50%);  width: 900px; }
+
 
 /* AboutUS-page */
 
@@ -361,21 +354,15 @@ section { overflow: hidden; }
 .border-red     { border-bottom-color: #FEE4D2; }
 .border-purplish{ border-bottom-color: #EDCCFD; }
 
-
-
-
-
 /* COMPLIANCE-PAGE  */
-/* .com-hero { width: 100%; height: 700px; background-image: url('/images/compliance/page-banner.webp'); background-position: center; background-size: cover; display: flex; align-items: center;} */
-/* .banner-head { width: 842px; } */
+
 .banner-head h1 { color: var(--white); }
 .banner-head p{ margin-top: 12px; color: var(--off-white); }
 .banner-head span { color: var(--secondary); } 
 .com-page-banner{ display: flex; align-items: center; gap: 50px; }
 .com-page-banner img{ width: 700px; }
 
-/* .compliance-matters-cards{ margin: 100px 0; }
-.compliance-matters-main{ margin: 100px 0 0; } */
+
 .compliance-matters-section{ display: flex; justify-content: space-between;}
 .compliance-matters-text{ width: 934px; }
 .matters-para1{ margin-bottom: 30px; }
@@ -413,9 +400,6 @@ section { overflow: hidden; }
 
 /*  User & Access  */
 
-/* .user-access-hero{ display: flex; align-items: center; background-image: url('/images/userAccess/herSectionImg.webp');background-position: center; background-size: cover; width: 100%; height: 700px; } */
-/* .user-access-hero-wrapper{ display: flex; justify-content: center; gap: 89px; align-items: center;  } */
-/* .user-access-hero-head{ width: 821px; } */
 .user-access-hero-head h1{ color: var(--white); }
 .user-access-hero-wrapper img{ width: 700px; }
 .hero-section-para{ color: var(--white); margin-top: 12px; }
@@ -446,11 +430,8 @@ section { overflow: hidden; }
 .path-4{ position: absolute; bottom: 0; left: 70%; transform: translateY(50%); }
 
 
-
-
 /* CONTACTUS-PAGE */
-/* .contact-hero { width: 100%; background-image: url('/images/compliance/page-banner.webp'); } */
-/* .cntct-page-banner { min-height: 700px; display: flex; justify-content: space-between; align-items: center; } */
+
 .head-text, .form-fields form { width: 820px; }
 .head-text .h3 { margin-bottom: 20px; }
 .head-text p { margin-bottom: 10px; }
@@ -475,9 +456,6 @@ section { overflow: hidden; }
 .info-txt p { color: var(--primary); }
 .info-txt p span { display: block; margin-bottom: 10px; }
 .info-txt > span { display: block; color: var(--primary); margin-bottom: 10px; }
-
-
-
 
 
 /* AFTER DEVELOPMENT DESIGN CHANGES */
@@ -516,7 +494,6 @@ section { overflow: hidden; }
     background-size: cover;
  }
 
- /* .detail-banner-head { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 1132px; } */
  .detail-banner-head h1{  color: var(--white); }
  .detail-banner-head p{  color: var(--off-white); }
  .detail-section h2{ margin-bottom: 20px; }
@@ -525,7 +502,6 @@ section { overflow: hidden; }
  /* .detail-section-9{ margin-bottom: 100px; } */
  .detail-section img{ margin-top: 40px; margin-bottom: 40px; }
 
- /* .detail-section-1 ul li{ margin-bottom: 10px; list-style: disc; } */
 
  .detail-section-3 { counter-reset: section-counter; }
  .detail-section-3 ul { position: relative; list-style: disc;  }

@@ -33,10 +33,8 @@ export default function GCP() {
                         <li className='text-20 text-rg  '>Mandates complete, accurate, and traceable documentation</li>
                         <li className='text-20 text-rg  '>Incorporates risk-based strategies and use of electronic systems (while maintaining integrity) </li>
                     </ul>
-
                 </div>
             </section>
-
         </main>
     )
 }
