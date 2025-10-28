@@ -64,6 +64,16 @@ export default function UserAccess() {
 
     }
 
+    const container = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 1 } }
+      };
+      
+      const imageVariant = {
+        hidden: { opacity: 0, scale: 0 },
+        visible: {  opacity: 1,  scale: 1, transition: { duration: 1 } }
+      };
+
     const MotionImage = motion(Image);
 
     return (
@@ -226,14 +236,18 @@ export default function UserAccess() {
                                 <Image className='path-line' src='/images/userAccess/access-portal-path-line.webp' alt='path-line' width={1238} height={425} priority={false}></Image>
                             </div>
 
-                            <motion.div className='path-images' >
-                                <MotionImage className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg1' whileInView='animateProcessImg1' viewport={{ once: true, amount: 0.3 }}></MotionImage>
+                            <motion.div className='path-images' variants={container} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} >
+                                {/* <MotionImage className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg1' whileInView='animateProcessImg1' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
+                                <MotionImage className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} variants={imageVariant}></MotionImage>
 
-                                <MotionImage className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg2' whileInView='animateProcessImg2' viewport={{ once: true, amount: 0.3 }}></MotionImage>
+                                {/* <MotionImage className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg2' whileInView='animateProcessImg2' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
+                                <MotionImage className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} variants={imageVariant}></MotionImage>
 
-                                <MotionImage className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg3' whileInView='animateProcessImg3' viewport={{ once: true, amount: 0.3 }}></MotionImage>
+                                {/* <MotionImage className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg3' whileInView='animateProcessImg3' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
+                                <MotionImage className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} variants={imageVariant}></MotionImage>
 
-                                <MotionImage className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg4' whileInView='animateProcessImg4' viewport={{ once: true, amount: 0.3 }}></MotionImage>
+                                {/* <MotionImage className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg4' whileInView='animateProcessImg4' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
+                                <MotionImage className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} variants={imageVariant}></MotionImage>
                             </motion.div>
                         </div>
                     </div>
