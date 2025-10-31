@@ -60,11 +60,11 @@ export default function AboutUsSwiperComponents() {
 
                         breakpoints={{
                             0: { slidesPerView: 1, centeredSlides: true, slidesPerGroup: 1, autoplay: false, speed: 2000, },
-                            350: { slidesPerView: 1.01, centeredSlides: true, slidesPerGroup: 1,  autoplay: false, speed: 1000, },
-                            359: { slidesPerView: 1.02, centeredSlides: true, slidesPerGroup: 1,  autoplay: false, speed: 1000, },
-                            375: { slidesPerView: 1.10, centeredSlides: true, slidesPerGroup: 1,  autoplay: false, speed: 1000, },
-                            480: { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1,  autoplay: false, speed: 1000, },
-                            575: { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1,  autoplay: false, speed: 1000, },
+                            350: { slidesPerView: 1.01, centeredSlides: true, slidesPerGroup: 1, autoplay: false, speed: 1000, },
+                            359: { slidesPerView: 1.02, centeredSlides: true, slidesPerGroup: 1, autoplay: false, speed: 1000, },
+                            375: { slidesPerView: 1.10, centeredSlides: true, slidesPerGroup: 1, autoplay: false, speed: 1000, },
+                            480: { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1, autoplay: false, speed: 1000, },
+                            575: { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1, autoplay: false, speed: 1000, },
                             680: { slidesPerView: 1.9, centeredSlides: false, slidesPerGroup: 1, },
                             991: { slidesPerView: 2.4, centeredSlides: false, slidesPerGroup: 1, },
                             1023: { slidesPerView: 3.2, centeredSlides: false, slidesPerGroup: 1, },
@@ -194,30 +194,31 @@ export default function AboutUsSwiperComponents() {
 
                         <div className="swiper-button-container">
 
-                        <div ref={prevRef} className="swiper-button-prev-custom">
-                            <svg className="prevArrow" width="7" height="12" viewBox="0 0 7 12" fill="none">
-                                <g clipPath="url(#clip0_prev)">
-                                    <path d="M6.25 1.25L1.25 6.25L6.25 11.25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_prev">
-                                        <rect width="12" height="7" fill="white" transform="matrix(0 1 -1 0 7 0)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div ref={nextRef} className="swiper-button-next-custom">
-                            <svg className="nextArrow" width="7" height="12" viewBox="0 0 7 12" fill="none">
-                                <g clipPath="url(#clip0_next)">
-                                    <path d="M1 11L6.00204 6.00204L1.00407 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_next">
-                                        <rect width="11.7755" height="7" fill="white" transform="translate(0 11.7754) rotate(-89.9767)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </div>
+                            <div ref={prevRef} className="swiper-button-prev-custom">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2537_2904)">
+                                        <path d="M6.25 1.25L1.25 6.25L6.25 11.25" stroke="#6FB018" stroke-width="1.5" stroke-linecap="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2537_2904">
+                                            <rect width="12" height="7" fill="white" transform="matrix(0 1 -1 0 7 0)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div ref={nextRef} className="swiper-button-next-custom">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2539_2908)">
+                                        <path d="M1 11L6.00204 6.00204L1.00407 1" stroke="#6FB018" stroke-width="1.5" stroke-linecap="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2539_2908">
+                                            <rect width="11.7755" height="7" fill="white" transform="translate(0 11.7754) rotate(-89.9767)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </div>
 
                         </div>
                     </Swiper>

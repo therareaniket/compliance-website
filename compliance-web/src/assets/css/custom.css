@@ -582,3 +582,86 @@ section { overflow: hidden; }
 .plan-trigger[data-state="open"] { background-color: var(--primary-blue); color: var(--white); }
 .plan-poin p { display: flex; align-items: center; gap: 15px; }
 .plan-poin p { margin-bottom: 10px; }
+
+/* 
+/* swiper buttons */
+
+/* .swiper-button-container{ display: flex; gap: 30px; }
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid #6FB018; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+} */
+
+/* Hover effect for both */
+/* .swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  background-color: #6FB018;
+} */
+
+/* Change SVG stroke color on hover */
+/* .swiper-button-prev-custom:hover svg path,
+.swiper-button-next-custom:hover svg path {
+  stroke: #fff;
+} */
+
+
+/* .swiper-button-prev-custom, .swiper-button-next-custom{ display: none; } */ 
+
+
+
+.feature-cards {
+  position: relative; /* ensures buttons position relative to swiper */
+}
+
+/* Button container */
+.swiper-button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  /* places prev/next at both ends */
+  align-items: center;
+  transform: translate( 70% ,-60%); 
+  pointer-events: none; /* allow slide interaction */
+  z-index: 1000;
+}
+
+/* Individual buttons */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid #6FB018;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto; /* re-enable clicking */
+  background-color: #fff; /* optional */
+}
+
+/* Hover effects */
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  background-color: #6FB018;
+}
+
+.swiper-button-prev-custom:hover svg path,
+.swiper-button-next-custom:hover svg path {
+  stroke: #fff;
+}
+
+.swiper-button-container{ display: none; }

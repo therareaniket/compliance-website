@@ -837,6 +837,12 @@
     .mis-vis-detail-para { 
         -webkit-line-clamp: none;
     }
+
+
+    /* .feature-cards .swiper-pagination{ display: none; }
+    .swiper-button-container{ display: flex; transform: translate(70%, -20px);  } */
+
+
 }
 
 @media screen and (max-width: 680px) {
@@ -902,6 +908,10 @@
     .role-eclipse { width: 200px; }
 
     .container-sm{ width: 500px; }
+
+
+ /* .feature-cards .swiper-button-prev-custom, .swiper-button-next-custom{ display: flex; } */
+      
 }
 
 @media screen and (max-width: 575px) {
@@ -1006,7 +1016,7 @@
     .path-images { flex-direction: column; }
     .path-1, .path-2, .path-3, .path-4{ width: 350px; }
 
-    .feature-cards .swiper-pagination{ display: none; }
+
     .supported-compli-lists { width: max-content; flex-wrap: nowrap; }
     /* .supp-compli-list { width: 200px !important; } */
     .element-none { display: block; }
@@ -1072,20 +1082,10 @@
     .detail-page-hero{ margin-bottom: 50px; }
     .container-sm{ width: 100%; }
 
+    .feature-cards .swiper-pagination{ display: none; }
+  .swiper-button-container{ display: flex; }
 
-  .swiper-button-prev-custom,
-  .swiper-button-next-custom {
-    display: flex;
-  }
-
-  .swiper-button-prev-custom,
-  .swiper-button-next-custom{
-
-  top: 80%;
-  transform: translateY(30px);
-  }
-
-      .account-admin-pointers .h6 { font-size: 18px !important; line-height: 26px; }
+    .account-admin-pointers .h6 { font-size: 18px !important; line-height: 26px; }
     .account-admin-pointers h4, .account-admin-pointers ul li { margin-bottom: 14px; }
     .account-admin-text { margin-bottom: 20px; }
     .secure-portal-text { gap: 20px; }
@@ -1131,7 +1131,7 @@
     .feature-frame { margin-bottom: 8px; padding-bottom: 8px; }
     .featurecard { height: 300px; }
     .core-feature-section .swiper-slide, .feature-cards { height: 400px !important; }
-    .swiper-button-prev-custom, .swiper-button-next-custom{ transform: translateY(10px); }
+    /* .swiper-button-prev-custom, .swiper-button-next-custom{ transform: translateY(10px); } */
     .feat-frame-slider-img { width: 40px; }
     .core-feature-section{ padding-bottom: 20px; }
 
@@ -1309,6 +1309,6 @@
     .floating-stats > * { width: 136px; height: 115px; padding: 10px; }
     .floating-stats > :not(:last-child) { margin-bottom: 10px; }
 
-    .swiper-button-prev-custom, .swiper-button-next-custom{ transform: translateY(28px); }
+
 
 }
