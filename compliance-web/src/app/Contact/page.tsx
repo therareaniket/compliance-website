@@ -1,108 +1,47 @@
-"use client"
-import { Header } from '@/components/Header';
-import EnquiryForm from '@/components/EnquiryForm';
 import React from 'react'
-import Link from 'next/link';
-import { delay, motion } from 'framer-motion'
+import ContactComponent from '@/components/ContactPageComponent';
+import { fetchGraphQL } from '@/lib/graphql';
 
-export default function ContactUs() {
+type ContactData = {
+    page: {
+        contactpage: {
+            contactHeroTitle: string;
+            contactHeroSubtitle: string;
+    
+            formTitle: string;
+            formSubtitle: string;
 
-    const ContactAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-        initialBox1: { opacity: 0, y: -100 },
-        animateBox1: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
-
-        initialBox2: { opacity: 0, y: -100 },
-        animateBox2: { opacity: 1, y: 0, transition: { delay: 2, duration: 1 } },
-
-        initialBox3: { opacity: 0, y: -100 },
-        animateBox3: { opacity: 1, y: 0, transition: { delay: 3, duration: 1 } },
-    } : {
-        initialBox1: { opacity: 1, y: 0 },
-        animateBox1: { opacity: 1, y: 0, },
-
-        initialBox2: { opacity: 1, y: 0 },
-        animateBox2: { opacity: 1, y: 0, },
-
-        initialBox3: { opacity: 1, y: 0 },
-        animateBox3: { opacity: 1, y: 0, },
+            phoneNumber: string;
+            email: string;
+            location: string;
+        }
     }
+}
+
+export default async function ContactUs() {
+
+    const data = await fetchGraphQL<ContactData>(`
+        query {
+            page(id: "/contactpage", idType: URI) {
+                contactpage {
+                   contactHeroTitle
+                   contactHeroSubtitle
+                   formTitle
+                   formSubtitle
+                   phoneNumber
+                   email
+                   location
+                }
+            }
+        }
+    `);
+
+    const contact = data.page.contactpage
+
 
     return (
         <>
-        <div className="contactbody">
-            <Header />
-
-            <section className='contact-hero'>
-                <video src="/images/contactus/Contact-us.mp4" autoPlay loop muted className='contact-vid'></video>
-                <div className="container">
-                        <div className="banner-head contact-banner-head">
-                            <h1>Let’s Simplify Compliance Together</h1>
-
-                            <p className='text-20 text-grey'>Connect with our team for inquiries, support, or tailored solutions. We’re here to guide you at every step.</p>
-                        </div>
-                </div>
-            </section>
-
-            <section className="section contct-form --bg-white">
-                <div className="container">
-                    <div className="contct-head">
-                        <div className="head-text">
-                            <h2 className='h3'>Get In Touch</h2>
-
-                            <p className='text-20 text-grey'>Have questions, need support, or want a demo? Our team is here to help and respond quickly.</p>
-                        </div>
-                    </div>
-
-                    <div className="form-container flex justify-between">
-                        <div className="form-selection">
-                            <div className="form-fields">
-                                <EnquiryForm />
-                            </div>
-                        </div>
-
-                        <div className="contct-info text-center">
-                            <motion.div className="info-block phone-info site-radius-10" variants={ContactAnimations} initial='initialBox1' whileInView='animateBox1' viewport={{ once: true, amount: 0.9 }}>
-                                <div className="info-txt">
-                                    <span className='icon-add_call h5'></span>
-
-                                    <p className='text-md text-20'><span className='text-grey text-18'>Phone Number</span>+1 (555) 123-4567</p>
-                                </div>
-                            </motion.div>
-
-                            <motion.div className="info-block mail-info site-radius-10" variants={ContactAnimations} initial='initialBox2' whileInView='animateBox2' viewport={{ once: true, amount: 0.9 }}>
-                                <div className="info-txt">
-                                    <span className='icon-email h4'></span>
-
-                                    <p className='text-md text-20'><span className='text-grey text-18'>Email Address</span>info@dhatucomply.com</p>
-                                </div>
-                            </motion.div>
-
-                            <motion.div className="info-block location-info site-radius-10" variants={ContactAnimations} initial='initialBox3' whileInView='animateBox3' viewport={{ once: true, amount: 0.9 }}>
-                                <div className="info-txt">
-                                    <span className='icon-location h4'></span>
-
-                                    <p className='text-md text-20'><span className='text-grey text-18'>Location</span>2445 Oak Ridge Omaha, QA 45065</p>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </div>                    
-                </div>
-            </section>
-
-            <section className="section hm-cta">
-                <div className="container">
-                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
-
-                    <div className="cta-links text-center">
-                        <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
-
-                        <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
-
-                        <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
-                    </div>
-                </div>
-            </section>
-        </div>
+            <ContactComponent contactHeroTitle={contact.contactHeroTitle} contactHeroSubtitle={contact.contactHeroSubtitle} formTitle={contact.formTitle} formSubtitle={contact.formSubtitle} phoneNumber={contact.phoneNumber} email={contact.email} location={contact.location} />
         </>
     )
 }

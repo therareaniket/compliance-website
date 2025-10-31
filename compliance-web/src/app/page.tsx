@@ -11,8 +11,6 @@ import { Header } from "@/components/Header";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import GSAPProvider from "@/components/GSAPProvider";
-import { motion } from 'framer-motion'
 import StepsHome from "@/components/StepsHome";
 import ProvenHome from "@/components/ProvenTrust";
 import TestimHome from "@/components/TestiHome";
@@ -244,7 +242,7 @@ export default async function Home() {
 
                     <Header />
 
-                    <HeroHome  heroTitle={home.heroTitle} heroSubtitle={home.heroSubtitle} heroCta={home.heroCta} heroCta2={home.heroCta2} />
+                    <HeroHome heroTitle={home.heroTitle} heroSubtitle={home.heroSubtitle} heroCta={home.heroCta} heroCta2={home.heroCta2} />
 
                     <ExtendButtons
                         purpleTitle={home.purpleBox.purpleTitle}

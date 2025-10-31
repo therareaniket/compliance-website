@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
 
 type PlanId = 'free' | 'standard' | 'enterprise';
-
+    
 type PlanPoints = {
     inclusion1: string;
     inclusion2: string;
