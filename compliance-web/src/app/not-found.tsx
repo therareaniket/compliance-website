@@ -12,9 +12,9 @@ export default function NotFound() {
             <section>
                 <div className="">
                     <div className="not-found-content relative">
-                        <Image src="/images/404-bg.webp" alt='404-background' width={1920} height={1080} className="image-bg-404"></Image>
+                        {/* <Image src="/images/404-bg.webp" alt='404-background' width={1920} height={1080} className="image-bg-404"></Image> */}
 
-                        <Image src="/images/svg-not-found.svg" alt="Not Found" width={730} height={543} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] image-svg-404' />
+                        <Image src="/images/404-svg-new.svg" alt="Not Found" width={730} height={543} className='image-svg-404' />
                     </div>
                 </div>
             </section>

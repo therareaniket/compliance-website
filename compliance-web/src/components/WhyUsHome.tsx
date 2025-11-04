@@ -100,20 +100,6 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                                 <motion.p className="text-20 text-grey" variants={whyUsAnimations} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.6 }}>{whyus_subTitle}</motion.p>
                             </motion.div>
 
-                            {/* Single-image viewport with a simple fade/slide animation */}
-                            {/* <div className="images-group single">
-                                <div className="image-viewport">
-                                    {images.map((img, idx) => (
-                                        <div
-                                            key={img.src + idx}
-                                            className={`image-slide ${idx === activeImage ? "is-active" : "is-inactive"}`}
-                                            aria-hidden={idx !== activeImage} >
-                                            <Image src={img.src} alt={img.alt} width={img.w} height={img.h} priority={false} className="why-us-slider-images" />
-                                        </div>
-                                    ))}
-                                </div>
-                            </div> */}
-
                             <div className="images-group single">
                                 <div className="image-viewport">
                                     {images.map((img, idx) => (
@@ -124,27 +110,6 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                                 </div>
                             </div>
                         </div>
-
-                        {/* <div className="why-us-cards">
-                            <div className="why-us-stack">
-                                {cards.map((card, idx) => (
-                                    <button
-                                        key={card.id}
-                                        className={`card-btn site-radius-20 card-${card.id} ${movingId === card.id && idx === 0 ? "moving-to-top" : ""
-                                            }`}
-                                        onClick={rotateLastToFront}
-                                        type="button"
-                                        style={{ backgroundColor: card.background_color, color: card.text_color }}
-                                    >
-                                        <p className="h5 why-card-title">
-                                            <span className="icon-check_circle"></span>
-                                            {card.title}
-                                        </p>
-                                        {idx === cards.length - 1 && <p className="why-card-content text-18">{card.content}</p>}
-                                    </button>
-                                ))}
-                            </div>
-                        </div> */}
 
                         <div className="why-us-cards">
                             <div className="why-us-stack">

@@ -1,5 +1,6 @@
 import { fetchGraphQL } from '@/lib/graphql';
 import React from 'react'
+import Link from "next/link";
 import AboutComponent from '@/components/AboutPageComponent';
 
 
@@ -45,6 +46,17 @@ type AboutData = {
     }
 }
 
+type HomeData = {
+    page: {
+        homepage: {
+            ctaTitle: string;
+            ctaLink1?: { url: string; title: string } | null;
+            ctaLink2?: { url: string; title: string } | null;
+            ctaLink3?: { url: string; title: string } | null;
+        };
+    };
+};
+
 export default async function AboutUs() {
     const data = await fetchGraphQL<AboutData>(`
         query {
@@ -84,7 +96,21 @@ export default async function AboutUs() {
         }
     `);
 
+    const ctadata = await fetchGraphQL<HomeData>(`
+        query {
+            page(id: "/", idType: URI) {
+                homepage {
+                    ctaTitle
+                    ctaLink1 { url  title }
+                    ctaLink2 { url  title }
+                    ctaLink3 { url  title }
+                }
+            }
+        }
+    `);
+
     const about = data.page.aboutpage;
+    const ctahome = ctadata.page.homepage;
 
 
     return (
@@ -118,178 +144,19 @@ export default async function AboutUs() {
             platformSupportSubtitle={about.platformSupportSubtitle}
         />
 
-        {/* <div className="aboutbody">
-            
-            <Header />
+                    {/* <section className="section hm-cta relative z-[2]">
+                        <div className="container">
+                            <h2 className="h3 text-center">{ctahome.ctaTitle}</h2>
 
-            <section className='abt-hero'>
-                <video src="/images/aboutUs/About-us.mp4" autoPlay loop muted className='about-hero-vid'></video>
+                            <div className="cta-links text-center">
+                                <Link href={ctahome.ctaLink1?.url as string} title={ctahome.ctaLink1?.title} className="btn-padding btn-primary text-md text-18 site-radius-10">{ctahome.ctaLink1?.title}</Link>
 
-                <div className="container">
-                    <div className="abt-hero-head all-banner-head">
-                        <h1>Redefining Compliance for a Smarter Future</h1>
+                                <Link href={ctahome.ctaLink2?.url as string} title={ctahome.ctaLink2?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink2?.title}</Link>
 
-                        <p className='text-rg text-20 abt-hero-para'>Streamlines clinical trial compliance with secure, efficient solutions—keeping teams audit-ready, building trust, and driving long-term success.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section className='section abt-mis --bg-white'>
-                <div className="container">
-                    <div className="mis-vis-section">
-                        <motion.div className="mis-vis-heading only-mis" variants={textAnimations} initial="initialLeft" whileInView="animateLeft" viewport={{ once: true, amount: 0.6 }}>
-                            <h2 className='h3'>Our Mission</h2>
-
-                            <p className='text-20 text-rg'>To simplify and strengthen clinical trial compliance through automation and actionable insights.</p>
-
-                            <Image src='/images/aboutUs/mission-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-mis-img'></Image>
-                        </motion.div>
-
-                        <div className="mis-vis-card-lists card-list-mision">
-                            <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.6 }}>
-                                <motion.div className="mis-vis-card primary-box-shadow mis-anim-1">
-                                    <Image src='/images/aboutUs/rebase-icon.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Simplify Workflows</p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Automate routine tasks to save time and reduce errors in trial operations.</p>
-                                </motion.div>
-
-                                <motion.div className="mis-vis-card primary-box-shadow mis-anim-2">
-                                    <Image src='/images/aboutUs/process-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Empower Organizations</p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Help Sponsors, CROs, and Sites stay audit-ready and confident.</p>
-                                </motion.div>
-                            </motion.div>
-
-                            <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.3 }}>
-                                <motion.div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-1">
-                                    <Image src='/images/aboutUs/approval-delegation.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Strengthen Processes</p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Ensure accuracy and reliability across all compliance activities.</p>
-                                </motion.div>
-
-                                <motion.div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-2">
-                                    <Image src='/images/aboutUs/clock-arrow-down.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Reduce Manual Effort</p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Automate repetitive tasks with smart, technology-driven solutions.</p>
-                                </motion.div>
-                            </motion.div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='abt-vis --bg-white'>
-                <div className="container">
-                    <div className="mis-vis-section vis-section">
-                        <motion.div className="mis-vis-heading vis-heading only-vis" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.6 }}>
-                            <motion.h2 className='h3'>Our Vision</motion.h2>
-
-                            <motion.p className='text-20 text-rg'>A future where clinical trial readiness is seamless, proactive, and technology driven. </motion.p>
-
-                            <Image src='/images/aboutUs/vision-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-vis-img'></Image>
-                        </motion.div>
-
-                        <div className="mis-vis-card-lists">
-                            <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialLeft" whileInView="animateLeft" viewport={{ once: true, amount: 0.6 }}>
-                                <motion.div className="mis-vis-card greenish-box-shadow vis-card vis-anim-2">
-                                    <Image src='/images/aboutUs/work-history.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Seamless Experience </p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Deliver user-friendly compliance processes for trial teams.</p>
-                                </motion.div>
-
-                                <motion.div className="mis-vis-card greenish-box-shadow vis-card vis-anim-1">
-                                    <Image src='/images/aboutUs/proactive-readiness-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Trust & Transparency </p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Confidence with secure, efficient workflows and clear oversight.</p>
-                                </motion.div>
-                            </motion.div>
-
-                            <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialLeft" whileInView="animateLeft" viewport={{ once: true, amount: 0.3 }}>
-                                <motion.div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-2">
-                                    <Image src='/images/aboutUs/arming-countdown.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Proactive Readiness </p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg'>Anticipate regulatory needs before they become challenges.</p>
-                                </motion.div>
-
-                                <motion.div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-1">
-                                    <Image src='/images/aboutUs/emoji-objects.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
-
-                                    <p className='mis-vis-para text-md text-20'>Future Innovation </p>
-
-                                    <p className='mis-vis-detail-para text-grey test-18 text-rg '>Continuously evolve compliance through modern technologies.</p>
-                                </motion.div>
-                            </motion.div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="abt-platforms section --bg-white">
-                <div className="container">
-                    <div className="platform-wrapper site-radius-10">
-                        <div className="left-gif-platform">
-                            <Image src='/images/aboutUs/platform-side-img.webp' alt='platform-side-img' width={452} height={440} priority={false} className='platform-side-image site-radius-10'></Image>
-
-                            <Image src='/images/aboutUs/about-us-platform.gif' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
-                        </div>
-
-                        <motion.div className="platform-info" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.6 }}>
-                            <h2 className='h4'>Our platform supports frameworks to help you stay audit-ready.</h2>
-
-                            <p className='text-20 text-grey'>Our platform centralizes compliance with global frameworks, keeping you audit-ready.</p>
-
-                            <div className="platform-lists text-20">
-                                <ul>
-                                    <li><span className='icon-check_circle'></span> HIPAA</li>
-                                    <li><span className='icon-check_circle'></span> GDPR</li>
-                                    <li><span className='icon-check_circle'></span> 21 CFR Part 11</li>
-                                </ul>
-
-                                <ul>
-                                    <li><span className='icon-check_circle'></span>CDSCO</li>
-                                    <li><span className='icon-check_circle'></span>WHO-GMP</li>
-                                    <li><span className='icon-check_circle'></span>EMA</li>
-                                </ul>
+                                <Link href={ctahome.ctaLink3?.url as string} title={ctahome.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink3?.title}</Link>
                             </div>
-
-                            <Link href='/Compliance' title='Learn More' className='btn-padding site-radius-10 btn-primary platform-btn'>Learn More</Link>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-
-            <AboutUsSwiperComponents />
-
-            <section className="section hm-cta">
-                <div className="container">
-                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
-
-                    <div className="cta-links text-center">
-                        <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
-
-                        <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
-
-                        <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <AboutAnimations /> */}
+                        </div>
+                    </section> */}
 
         </>
     )

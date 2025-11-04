@@ -7,6 +7,8 @@ import AboutUsSwiperComponents from "./SwiperComponent";
 import Link from "next/link";
 import AboutAnimations from "./AboutAnimations";
 
+
+
 type MissionVisionPoints = {
     point1Title: string;
     point1Subtitle: string;
@@ -245,19 +247,6 @@ export default function AboutComponent ({aboutHeroTitle, aboutHeroSubtitle, miss
 
             <AboutUsSwiperComponents />
 
-            <section className="section hm-cta">
-                <div className="container">
-                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
-
-                    <div className="cta-links text-center">
-                        <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
-
-                        <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
-
-                        <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
-                    </div>
-                </div>
-            </section>
         </div>
 
         <AboutAnimations />

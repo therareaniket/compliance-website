@@ -626,7 +626,6 @@
     .info-block{ width: 300px; }
 
     .image-bg-404 { display: none; }
-    .not-found-content { height: 100vh; background-color: #421B58; }
     .image-svg-404 { padding: 0 18px; }
 }
 
@@ -1104,6 +1103,9 @@
 
 
     .not-found-content { height: 70vh; }
+
+    .coming-content { padding: 0 18px; }
+    .coming-vector, .coming-logo { width: 60%; }
 }
 
 @media screen and (max-width: 480px) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

@@ -192,7 +192,7 @@ section { overflow: hidden; }
 
 .steps-path-responsive{ display: none; }
 
-.why-us-content-wrapper { display: flex; justify-content: space-between; align-items: end; }
+.why-us-content-wrapper { display: flex; justify-content: space-between; align-items: end;  }
 .why-us-content { width: 800px; }
 .why-us-head { margin-bottom: 100px; }
 .why-us-head .h3 { margin-bottom: 20px; }
@@ -296,7 +296,7 @@ section { overflow: hidden; }
 /* AboutUS-page */
 
 
-.abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero, .CDSCOhero, .EUAnnex11hero, .FDA21CFRPart11hero, .GCPhero, .GDPRhero { position: sticky; top: 0; z-index: -1; }
+.abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero, .CDSCOhero, .EUAnnex11hero, .FDA21CFRPart11hero, .GCPhero, .GDPRhero { position: sticky;  z-index: -1; }
 .abt-hero-head h1{ width: 100%; color: var(--white); }
 .abt-hero-head span{ color: var(--secondary); }
 .abt-hero-para { color: var(--white); margin-top: 12px; }
@@ -665,3 +665,18 @@ section { overflow: hidden; }
 }
 
 .swiper-button-container{ display: none; }
+
+
+
+
+
+
+
+
+.not-found-content { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+.comingsoon { width: 100%; height: 100vh; background-image: url('/images/coming-soon.webp'); background-repeat: no-repeat; background-size: cover; }
+
+.coming-content { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; transform: translateY(-30px); }
+.coming-content h3 { transform: translateY(-20px); }
+.coming-content h5 { transform: translateY(-25px); }

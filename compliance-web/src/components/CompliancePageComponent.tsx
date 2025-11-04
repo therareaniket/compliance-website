@@ -32,8 +32,14 @@ export default function ComplianceComponent({complianceHeroTitle, complianceHero
         initialNumbs3: { opacity: 0, x: 100 },
         animateNumbs3: { opacity: 1, x: 0, transition: { delay: 5, duration: 1 } },
 
-        initialCardListUp: { opacity: 0, y: -100 },
-        animateCardListUp: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+        initialCardListUp1: { opacity: 0, y: -100 },
+        animateCardListUp1: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+
+        initialCardListUp2: { opacity: 0, y: -100 },
+        animateCardListUp2: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
+
+        initialCardListUp3: { opacity: 0, y: -100 },
+        animateCardListUp3: { opacity: 1, y: 0, transition: { delay: 1, duration: 1 } },
     } : {
         initialHead: { opacity: 1, x: 0, },
         animateHead: { opacity: 1, x: 0,  },
@@ -45,8 +51,12 @@ export default function ComplianceComponent({complianceHeroTitle, complianceHero
         animateNumbs2: { opacity: 1, x: 0,  },
         initialNumbs3: { opacity: 1, x: 0 },
         animateNumbs3: { opacity: 1, x: 0, },
-        initialCardListUp: { opacity: 1, y: 0 },
-        animateCardListUp: { opacity: 1, y: 0, },
+        initialCardListUp1: { opacity: 1, y: 0 },
+        animateCardListUp1: { opacity: 1, y: 0, },
+        initialCardListUp2: { opacity: 1, y: 0 },
+        animateCardListUp2: { opacity: 1, y: 0, },
+        initialCardListUp3: { opacity: 1, y: 0 },
+        animateCardListUp3: { opacity: 1, y: 0, },
     }
 
 
@@ -100,12 +110,12 @@ export default function ComplianceComponent({complianceHeroTitle, complianceHero
                 <section className='section --bg-white'>
                     <div className="container">
                         <div className="compliance-matters-cards">
-                            <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.3 }}>
+                            <div className='compliance-matters-card-list'>
                                 <div className='hipaa-card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
-                                        <h2 className='h3'>HIPAA</h2>
+                                        <motion.h2 className='h3' variants={complyAnimations} initial='initialCardListUp1' whileInView='animateCardListUp1' viewport={{ once: true, amount: 0.6 }}>HIPAA</motion.h2>
 
-                                        <p className='text-20 text-rg text-grey card-list-text'>Ensure the protection of sensitive patient health information through administrative, physical, and technical safeguards. Compliance is mandatory for healthcare providers, insurers, and their business associates.</p>
+                                        <motion.p className='text-20 text-rg text-grey card-list-text' variants={complyAnimations} initial='initialCardListUp1' whileInView='animateCardListUp1' viewport={{ once: true, amount: 0.6 }}>Ensure the protection of sensitive patient health information through administrative, physical, and technical safeguards. Compliance is mandatory for healthcare providers, insurers, and their business associates.</motion.p>
                                     </div>
 
                                     <Link href='/HIPPA' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
@@ -113,73 +123,73 @@ export default function ComplianceComponent({complianceHeroTitle, complianceHero
 
                                 <div className='fda_card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
-                                        <h2 className='h3'>FDA 21 CFR Part 11</h2>
+                                        <motion.h2 className='h3' variants={complyAnimations} initial='initialCardListUp1' whileInView='animateCardListUp1' viewport={{ once: true, amount: 0.6 }}>FDA 21 CFR Part 11</motion.h2>
 
-                                        <p className='text-20 text-rg text-grey card-list-text'>Regulates electronic records and electronic signatures in FDA-regulated industries, ensuring that they are trustworthy, reliable, and equivalent to paper records.</p>
+                                        <motion.p className='text-20 text-rg text-grey card-list-text' variants={complyAnimations} initial='initialCardListUp1' whileInView='animateCardListUp1' viewport={{ once: true, amount: 0.6 }}>Regulates electronic records and electronic signatures in FDA-regulated industries, ensuring that they are trustworthy, reliable, and equivalent to paper records.</motion.p>
                                     </div>
 
                                     <Link href='/FDA21CFR' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                                 </div>
-                            </motion.div>
+                            </div>
 
-                            <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.3 }}>
+                            <div className='compliance-matters-card-list'>
                                 <div className='annex_11_card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
-                                        <h2 className='h3'>EU Annex 11</h2>
+                                        <motion.h2 className='h3' variants={complyAnimations} initial='initialCardListUp2' whileInView='animateCardListUp2' viewport={{ once: true, amount: 0.6 }}>EU Annex 11</motion.h2>
 
-                                        <p className='text-20 text-rg text-grey card-list-text'>Provides guidance on computer systems used in GMP-regulated environments within the EU. Ensures that automated systems maintain data integrity and regulatory compliance.</p>
+                                        <motion.p className='text-20 text-rg text-grey card-list-text' variants={complyAnimations} initial='initialCardListUp2' whileInView='animateCardListUp2' viewport={{ once: true, amount: 1 }}>Provides guidance on computer systems used in GMP-regulated environments within the EU. Ensures that automated systems maintain data integrity and regulatory compliance.</motion.p>
                                     </div>
 
                                     <Link href='/EUAnnex11' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                                 </div>
                                 <div className='gdpr_card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
-                                        <h2 className='h3'>GDPR</h2>
+                                        <motion.h2 className='h3' variants={complyAnimations} initial='initialCardListUp2' whileInView='animateCardListUp2' viewport={{ once: true, amount: 0.6 }}>GDPR</motion.h2>
 
-                                        <p className='text-20 text-rg text-grey card-list-text'>Protects personal data of EU residents. Organizations must ensure data privacy, transparency, and user rights in data collection, processing, and storage.</p>
+                                        <motion.p className='text-20 text-rg text-grey card-list-text' variants={complyAnimations} initial='initialCardListUp2' whileInView='animateCardListUp2' viewport={{ once: true, amount: 0.6 }}>Protects personal data of EU residents. Organizations must ensure data privacy, transparency, and user rights in data collection, processing, and storage.</motion.p>
                                     </div>
 
                                     <Link href='/GDPR' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                                 </div>
-                            </motion.div>
+                            </div>
 
-                            <motion.div className='compliance-matters-card-list' variants={complyAnimations} initial='initialCardListUp' whileInView='animateCardListUp' viewport={{ once: true, amount: 0.3 }}>
+                            <div className='compliance-matters-card-list'>
                                 <div className='gcp_card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
-                                        <h2 className='h3'>GCP</h2>
+                                        <motion.h2 className='h3' variants={complyAnimations} initial='initialCardListUp3' whileInView='animateCardListUp3' viewport={{ once: true, amount: 0.6 }}>GCP</motion.h2>
 
-                                        <p className='text-20 text-rg text-grey card-list-text'>International ethical and scientific quality standard for designing, conducting, recording, and reporting clinical trials. Protects trial subjects and ensures credible data.</p>
+                                        <motion.p className='text-20 text-rg text-grey card-list-text' variants={complyAnimations} initial='initialCardListUp3' whileInView='animateCardListUp3' viewport={{ once: true, amount: 0.6 }}>International ethical and scientific quality standard for designing, conducting, recording, and reporting clinical trials. Protects trial subjects and ensures credible data.</motion.p>
                                     </div>
 
                                     <Link href='/GCP' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                                 </div>
                                 <div className='cdsco_card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
-                                        <h2 className='h3'>CDSCO</h2>
+                                        <motion.h2 className='h3' variants={complyAnimations} initial='initialCardListUp3' whileInView='animateCardListUp3' viewport={{ once: true, amount: 0.6 }}>CDSCO</motion.h2>
 
-                                        <p className='text-20 text-rg text-grey card-list-text'>Regulatory authority in India governing drug approval, clinical trials, and manufacturing compliance. Ensures safety, efficacy, and quality of pharmaceuticals.</p>
+                                        <motion.p className='text-20 text-rg text-grey card-list-text' variants={complyAnimations} initial='initialCardListUp3' whileInView='animateCardListUp3' viewport={{ once: true, amount: 0.6 }}>Regulatory authority in India governing drug approval, clinical trials, and manufacturing compliance. Ensures safety, efficacy, and quality of pharmaceuticals.</motion.p>
                                     </div>
 
                                     <Link href='/CDSCO' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
                                 </div>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section className="section hm-cta">
+                {/* <section className="section hm-cta">
                     <div className="container">
                         <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
 
                         <div className="cta-links text-center">
-                            <Link href="#" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
+                            <Link href="/Compliance" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
 
-                            <Link href="#" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
+                            <Link href="/Contact" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
 
-                            <Link href="#" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
+                            <Link href="/Contact" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </div>
 
             <ComplianceAnimations />
