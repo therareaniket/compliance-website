@@ -15,6 +15,15 @@ type HomeData = {
     };
 };
 
+type ContactData = {
+    page: {
+        contactpage: {
+            phoneNumber: string;
+            email: string;
+        }
+    }
+}
+
 
 export async function Footer() {
 
@@ -30,6 +39,19 @@ export async function Footer() {
             }
         }
     `);
+
+    const data = await fetchGraphQL<ContactData>(`
+        query {
+            page(id: "/contactpage", idType: URI) {
+                contactpage {
+                   phoneNumber
+                   email
+                }
+            }
+        }
+    `);
+
+    const contact = data.page.contactpage
 
     const ctahome = ctadata.page.homepage;
 
@@ -82,12 +104,12 @@ export async function Footer() {
                             <ul>
                                 <li className='email-info'>
                                     <Image src='/images/footer/foot-email.svg' alt='email-svg' width={16} height={16} priority={true}></Image>
-                                    <Link href="mailto:info@dhatucomply.com" title='' className='text-16 text-rg'>info@dhatucomply.com</Link>
+                                    <Link href="mailto:enquiry@dhatucomply.com" title='' className='text-16 text-rg'>{contact.email}</Link>
                                 </li>
 
                                 <li className='email-info mobile-info'>
                                     <Image src='/images/footer/foot-call.svg' alt='call-svg' width={16} height={16} priority={true}></Image>
-                                    <Link href="#" title='' className='text-16 text-rg'>+1 (555) 123-4567</Link>
+                                    <Link href="#" title='' className='text-16 text-rg'>{contact.phoneNumber}</Link>
                                 </li>
                             </ul>
                         </div>

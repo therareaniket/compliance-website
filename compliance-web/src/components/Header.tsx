@@ -2,12 +2,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState, useRef } from 'react'
+import { usePathname } from "next/navigation";
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
     const menuRef = useRef<HTMLDivElement>(null)
     const hamburgerRef = useRef<HTMLDivElement>(null)
+    const pathname = usePathname();
 
     // useEffect(() => {
     //     const onScroll = () => setScrolled(window.scrollY > 800 )
@@ -80,13 +82,13 @@ useEffect(() => {
                     <div ref={menuRef} className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                         <ul className='text-18'>
                             <li>
-                                <Link onClick={handleLinkClick} href='/About' title='About' >About</Link>
+                                <Link onClick={handleLinkClick} href='/About' title='About' className={pathname === "/About" ? "active-link" : ""}>About</Link>
                             </li>
                             <li>
-                                <Link onClick={handleLinkClick} href='/UserAccess' title='User & Access'>User & Access</Link>
+                                <Link onClick={handleLinkClick} href='/UserAccess' title='User & Access' className={pathname === "/UserAccess" ? "active-link" : ""}>User & Access</Link>
                             </li>
                             <li>
-                                <Link onClick={handleLinkClick} href='/Compliance' title='Compliance'>Compliance</Link>
+                                <Link onClick={handleLinkClick} href='/Compliance' title='Compliance' className={pathname === "/Compliance" ? "active-link" : ""}>Compliance</Link>
                             </li>
                         </ul>
                         
