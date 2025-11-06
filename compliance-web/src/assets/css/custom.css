@@ -148,6 +148,7 @@ section { overflow: hidden; }
 
 
 /* HOME PAGE */
+.left-hero-home, .right-hero-home, .hm-hero-content { visibility: hidden; } 
 .hm-hero { height: 980px; position: sticky; top: 0; z-index: 1; background-color: #290047; max-height: 980px; overflow: hidden; }
 .hero-video { opacity: 40%; width: 100%; height: auto; }
 .left-hero-home, .right-hero-home { position: absolute; bottom: 0; left: 0; display: inline-block; }
