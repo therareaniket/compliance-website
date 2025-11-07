@@ -36,7 +36,7 @@
     /* compliance page */
 
     .contct-info{ padding-top: 38px; }
-
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 760px; }
 }
 
 @media screen and (max-width: 1799px) {
@@ -107,6 +107,8 @@
     .result-head .h3, .supported-compli-lists { width: 660px; } 
     .result-head p, .compli-stats { width: 650px; }
     .supp-compli-list { width: 320px; }
+
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 700px; }
 }
 
 @media screen and (max-width: 1599px) {
@@ -141,6 +143,7 @@
 
     /* contact-us */
     .contactbody .banner-head { width: 760px; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 620px; }
 }
 
 @media screen and (max-width: 1560px) {
@@ -328,6 +331,7 @@
     h5, .h5 { font-size: 22px !important; line-height: 32px !important; }
 
     .image-svg-404 { width: 500px; top: 55%; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 600px; }
 }
 
 @media screen and (max-width: 1279px) {
@@ -452,6 +456,8 @@
 
     /* compliance detail page */
     .container-sm{ width: 900px; }
+
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 530px; }
 }
 
 @media screen and (max-width: 1199px) {
@@ -505,6 +511,8 @@
     .container-sm{ width: 750px; }
 
     .image-svg-404 { width: 400px; }
+
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 480px; }
 }
 
 @media screen and (max-width: 1023px) {

@@ -296,7 +296,7 @@ section { overflow: hidden; }
 
 
 /* AboutUS-page */
-
+.abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 812px; }
 
 .abt-hero, .user-access-hero, .contact-hero, .com-hero, .privacy-policy-hero, .terms-hero, .detail-page-hero, .CDSCOhero, .EUAnnex11hero, .FDA21CFRPart11hero, .GCPhero, .GDPRhero { position: sticky;  z-index: -1; }
 .abt-hero-head h1{ width: 100%; color: var(--white); }
