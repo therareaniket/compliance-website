@@ -216,7 +216,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                             <div className="left-gif-platform">
                                 <Image src='/images/aboutUs/platform-side-img.webp' alt='platform-side-img' width={452} height={440} priority={false} className='platform-side-image site-radius-10'></Image>
 
-                                <Image src='/images/aboutUs/about-us-platform.gif' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
+                                <Image src='/images/aboutUs/about-compliance-updated.gif' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
                             </div>
 
                             <motion.div className="platform-info" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.6 }}>

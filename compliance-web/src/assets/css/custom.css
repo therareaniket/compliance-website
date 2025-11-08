@@ -164,7 +164,7 @@ section { overflow: hidden; }
 
 .expnd-contnt-wrapper { display: flex; gap: 20px; align-items: center; }
 .click-box { width: 600px; height: 800px; padding: 40px; background-color: var(--primary); transition: all 600ms ease; cursor: pointer; position: relative; }
-.smrt-img, .key-img { position: absolute; bottom: 0; right: 0; transition: all 300ms ease; }
+.smrt-img, .key-img { position: absolute; bottom: 0; right: 0; transition: all 300ms ease; width: 550px; }
 .click-box + .click-box { background-color: var(--secondary); }
 .click-box.active { width: calc(100% - 600px); cursor: auto; color: var(--white); }
 .click-box.smrt-not-active { background-color: var(--foundational-primary); }
@@ -252,10 +252,10 @@ section { overflow: hidden; }
 .plans-btn.plan-btn-active .plan-btn-cont > .text-grey, .plans-btn.plan-btn-active > p span { color: var(--white); transition: all 600ms ease, }
 
 .clientale-wrapper { display: flex; gap: 30px; }
-.trusted-leaders { width: 800px; height: 600px; background-color: #F1F7E8; display: flex; align-items: center; position: relative; }
+.trusted-leaders { width: 800px; height: auto; background-color: #F1F7E8; display: flex; align-items: center; position: relative; }
 .testi-quotes { position: absolute; top: 0; right: 0; }
 .quotes-img { display: flex; justify-content: flex-end; }
-.trst-lead-content { padding: 150px 60px 60px 60px; } 
+.trst-lead-content { padding: 60px; } 
 .trst-lead-content .h3 { margin-bottom: 20px; }
 
 .client-review { height: 140px; }
