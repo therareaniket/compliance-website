@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link";
 import { Header } from "./Header";
 import EnquiryForm from "./EnquiryForm";
 import { motion } from "framer-motion"
@@ -45,7 +44,8 @@ export default function ContactComponent({contactHeroTitle, contactHeroSubtitle,
             <Header />
 
             <section className='contact-hero'>
-                <video src="/images/contactus/contact-updated-vid.mp4" autoPlay loop muted className='contact-vid'></video>
+                <video src="/images/contactus/contact-updated-vid.mp4" autoPlay loop muted className='contact-vid'></video>.
+
                 <div className="container">
                         <div className="banner-head contact-banner-head">
                             <h1>{contactHeroTitle}</h1>
