@@ -36,7 +36,7 @@
     /* compliance page */
 
     .contct-info{ padding-top: 38px; }
-
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 760px; }
 }
 
 @media screen and (max-width: 1799px) {
@@ -71,7 +71,7 @@
     .click-box { width: 520px; height: 800px; }
     .click-box.active { width: calc(100% - 520px); }
     .box-content { width: 440px; }
-    .smrt-img, .key-img{ width: 540px; }
+    .smrt-img, .key-img{ width: 510px; }
     
     .clientale-wrapper{ gap: 50px; }
     .quotes-img img{ width: 500px; }
@@ -107,13 +107,15 @@
     .result-head .h3, .supported-compli-lists { width: 660px; } 
     .result-head p, .compli-stats { width: 650px; }
     .supp-compli-list { width: 320px; }
+
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 700px; }
 }
 
 @media screen and (max-width: 1599px) {
 
     .click-box { height: 720px; }
     .click-box .h3 { font-size: 38px; line-height: 50px; }
-    .smrt-img, .key-img { width: 510px; }
+    .smrt-img, .key-img { width: 460px; }
 
     .global-org{ left: 17%; }
     .steps-head .h3{ width: 560px; }
@@ -141,6 +143,7 @@
 
     /* contact-us */
     .contactbody .banner-head { width: 760px; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 620px; }
 }
 
 @media screen and (max-width: 1560px) {
@@ -179,6 +182,8 @@
     h4, .h4 { font-size: 30px !important; line-height: 38px !important; }
     h5, .h5 { font-size: 26px !important; line-height: 36px !important; }
 
+    .image-svg-404 { width: 600px; }
+
 }
 
 @media screen and (max-width: 1439px) {
@@ -202,7 +207,7 @@
     .why-us-head { margin-bottom: 60px; }
     .card-btn { width: 540px; }
     .why-us-slider-images { width: 400px; height: auto; }
-    .trusted-leaders { height: 500px; }
+    /* .trusted-leaders { height: 500px; } */
 
     .category-btn { width: 450px; }
     .category-faqs { width: 680px; }
@@ -324,6 +329,9 @@
     h3, .h3 { font-size: 30px !important; line-height: 38px !important; }
     h4, .h4 { font-size: 26px !important; line-height: 34px !important; }
     h5, .h5 { font-size: 22px !important; line-height: 32px !important; }
+
+    .image-svg-404 { width: 500px; top: 55%; }
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 600px; }
 }
 
 @media screen and (max-width: 1279px) {
@@ -343,7 +351,7 @@
     .click-box .h3 { font-size: 32px; line-height: 40px; }
     .click-box.active { width: calc(100% - 440px); }
     .box-content { gap: 30px; }
-    .smrt-img, .key-img { width: 450px; bottom: -25%; }
+    .smrt-img, .key-img { width: 400px; bottom: -20%; }
 
     .steps-head .h3 { width: 400px; }
     .steps-head p { width: 500px; }
@@ -448,6 +456,8 @@
 
     /* compliance detail page */
     .container-sm{ width: 900px; }
+
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 530px; }
 }
 
 @media screen and (max-width: 1199px) {
@@ -469,7 +479,7 @@
     .core-feature-heading h2, .core-feature-heading p{ width: 100%; }
     .footer-links{ gap: 50px; }
 
-    .trusted-leaders { height: 650px; }
+    .trusted-leaders { height: auto; }
     .clientale-main .swiper{ width: 450px; }
     .category-faqs .h4 { font-size: 26px; line-height: 36px; }
     .plan-btn-cont .h5 { font-size: 22px; line-height: 30px; }
@@ -499,11 +509,16 @@
     /* .abt-hero-head, .user-access-hero-head, .banner-head{  } */
 
     .container-sm{ width: 750px; }
+
+    .image-svg-404 { width: 400px; }
+
+    .abt-hero, .user-access-hero, .contact-hero, .com-hero { min-height: 480px; }
+    .smrt-img, .key-img { width: 380px; bottom: -18%; }
 }
 
 @media screen and (max-width: 1023px) {
     h1, .h1{ font-size: 44px; line-height: 54px; }
-   
+
     .hm-hero-content p { padding: 0 30px; }
     .navbar-logo{ width: 200px; }
     .navbar-links{ gap: 40px; }
@@ -618,6 +633,9 @@
     .form-fields, .form-col input, .form-col textarea, .form-col select, .selections{ width: 100%; }
     .form-fields{ width: 378px; }
     .info-block{ width: 300px; }
+
+    .image-bg-404 { display: none; }
+    .image-svg-404 { padding: 0 18px; }
 }
 
 @media screen and (max-width: 991px) {
@@ -693,6 +711,8 @@
     .contct-info{ padding-top: 30px; }
     .form-fields form{ width: max-content; }
     .container-sm{ width: 700px; }
+
+    .not-found-content { height: 80vh; }
 }
 
 @media screen and (max-width: 800px) {
@@ -890,7 +910,7 @@
 
     .click-box { padding: 30px; }
     .box-content { gap: 20px; }
-    .smrt-img, .key-img { bottom: -22%; }
+    .smrt-img, .key-img { bottom: -16%; }
 
     /* About Us */
     .platform-side-image { width: 140px; }
@@ -915,7 +935,6 @@
 }
 
 @media screen and (max-width: 575px) {
-
 
 .primary-box-shadow {
   position: relative;
@@ -1033,7 +1052,7 @@
 
     .click-box { height: 250px; }
     .click-box.active { height: 740px; }
-    .smrt-img { bottom: -18%; }
+    .smrt-img { bottom: -12%; }
     .category-btn .h6 { font-size: 18px; line-height: 26px; }
 
     .plans-btn { width: 100%; height: 100px; justify-content: center; }
@@ -1089,6 +1108,12 @@
     .account-admin-pointers h4, .account-admin-pointers ul li { margin-bottom: 14px; }
     .account-admin-text { margin-bottom: 20px; }
     .secure-portal-text { gap: 20px; }
+
+
+    .not-found-content { height: 70vh; }
+
+    .coming-content { padding: 0 18px; }
+    .coming-vector, .coming-logo { width: 60%; }
 }
 
 @media screen and (max-width: 480px) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
@@ -1169,8 +1194,8 @@
     .click-box.active { height: 800px; }
     .smart-usp-lists li, .key-usp-lists li { display: flex; }
     .smart-usp-lists li span, .key-usp-lists li span { padding-top: 4px; }
-    .smrt-img { bottom: -10%; }
-    .key-img { bottom: -14%; }
+    .smrt-img { bottom: -10%; width: 340px; }
+    .key-img { bottom: -10%; width: 350px; }
     /* .clientale-main .swiper { width: 380px; } */
     .trusted-leaders { height: auto; }
     .floating-stats > * { width: 170px; height: 130px; }
@@ -1264,6 +1289,8 @@
     .text-18 { font-size: 12px; line-height: 22px; }
     .stats-nums .h1 { margin-bottom: 10px; }
     /* .compliance-matters-main{ margin-top: 60px; } */
+
+    .key-img, .smrt-img { width: 300px; bottom: 0; }
 }
 
 @media screen and (max-width: 374px) {
@@ -1309,6 +1336,6 @@
     .floating-stats > * { width: 136px; height: 115px; padding: 10px; }
     .floating-stats > :not(:last-child) { margin-bottom: 10px; }
 
-
+	.key-img, .smrt-img { bottom: 0; padding-left: 15px; }
 
 }

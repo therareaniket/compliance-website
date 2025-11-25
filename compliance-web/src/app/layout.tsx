@@ -7,6 +7,7 @@ import "@/assets/css/responsive.css";
 import { Footer } from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+
 export const metadata: Metadata = {
   title: "DhatuComply | Compliance",
   description: "Stay Ahead with Smarter Compliance Monitoring",
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
 
+
+    
   return (
     <html lang="en" suppressHydrationWarning>
         <head>

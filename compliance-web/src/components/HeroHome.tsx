@@ -33,6 +33,7 @@ export default function HeroSection({ heroTitle, heroSubtitle, heroCta, heroCta2
     useEffect(() => {
 
     //     // Hero HOMEPAGE
+        gsap.set(".left-hero-home, .right-hero-home, .hm-hero-content", { visibility: "visible" });
         gsap.from (titleRef.current,{ opacity: 0, x: -300, delay: 1, duration: 1, });
         gsap.from (subtitleRef.current,{ opacity: 0, x: -300, delay: 2, duration: 1, });
         gsap.from (buttonsRef.current,{ opacity: 0, scale: 0, delay: 2.5, duration: 1, });

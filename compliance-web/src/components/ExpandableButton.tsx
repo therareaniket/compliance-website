@@ -72,7 +72,7 @@ export default function ExtendButtons({
                             </ul>
                         </div>
 
-                        <Image src="/images/homepage/smarter-compliance.webp" alt="smarter-compliance" width={613} height={688} priority={false} className="smrt-img" />
+                        <Image src="/images/homepage/smrt-img-final.webp" alt="smarter-compliance" width={613} height={688} priority={false} className="smrt-img" />
                     </div>
 
                     <div ref={featureRef} className={`click-box click-key-features site-radius-20 ${active === 'features' ? 'active' : 'key-not-active'}`} onMouseEnter={() => setActive('features')} role="button" tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setActive('features')} aria-pressed={active === 'features'} >
@@ -90,7 +90,7 @@ export default function ExtendButtons({
                             </ul>
                         </div>
 
-                        <Image src="/images/homepage/key-features.webp" alt="key-features" width={613} height={688} priority={false} className="key-img" />
+                        <Image src="/images/homepage/key-feat-img-final.webp" alt="key-features" width={613} height={688} priority={false} className="key-img" />
                     </div>
                 </div>
             </div>

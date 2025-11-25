@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
 
 type PlanId = 'free' | 'standard' | 'enterprise';
-
+    
 type PlanPoints = {
     inclusion1: string;
     inclusion2: string;
@@ -30,11 +30,12 @@ const planAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100)
     initialPara: { opacity: 0, x: -100, },
     animatePara: { opacity: 1, x:0, transition: { duration: 1, delay: 1 } },
 
-    initialBtn: { opacity: 0, x: 100 },
-    animateBtn: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
-
     initialDetails: { opacity: 0, x: -100 },
-    animateDetails: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
+    animateDetails: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
+
+    initialBtn: { opacity: 0, x: 100 },
+    animateBtn: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
+    
 } : {
     initialHead: { opacity: 1, x: 0, },
     animateHead: { opacity: 1, x:0, },

@@ -2,9 +2,76 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { fetchGraphQL } from '@/lib/graphql';
 
-export function Footer() {
+type HomeData = {
+    page: {
+        homepage: {
+            ctaTitle: string;
+            ctaLink1?: { url: string; title: string } | null;
+            ctaLink2?: { url: string; title: string } | null;
+            ctaLink3?: { url: string; title: string } | null;
+        };
+    };
+};
+
+type ContactData = {
+    page: {
+        contactpage: {
+            phoneNumber: string;
+            email: string;
+        }
+    }
+}
+
+
+export async function Footer() {
+
+    const ctadata = await fetchGraphQL<HomeData>(`
+        query {
+            page(id: "/", idType: URI) {
+                homepage {
+                    ctaTitle
+                    ctaLink1 { url  title }
+                    ctaLink2 { url  title }
+                    ctaLink3 { url  title }
+                }
+            }
+        }
+    `);
+
+    const data = await fetchGraphQL<ContactData>(`
+        query {
+            page(id: "/contactpage", idType: URI) {
+                contactpage {
+                   phoneNumber
+                   email
+                }
+            }
+        }
+    `);
+
+    const contact = data.page.contactpage
+
+    const ctahome = ctadata.page.homepage;
+
     return (
+
+        <>
+            <section className="section hm-cta relative z-[2]">
+                        <div className="container">
+                            <h2 className="h3 text-center">{ctahome.ctaTitle}</h2>
+
+                            <div className="cta-links text-center">
+                                <Link href={ctahome.ctaLink1?.url as string} title={ctahome.ctaLink1?.title} className="btn-padding btn-primary text-md text-18 site-radius-10">{ctahome.ctaLink1?.title}</Link>
+
+                                <Link href={ctahome.ctaLink2?.url as string} title={ctahome.ctaLink2?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink2?.title}</Link>
+
+                                <Link href={ctahome.ctaLink3?.url as string} title={ctahome.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink3?.title}</Link>
+                            </div>
+                        </div>
+                    </section>
+        
         <footer className='footer'>
             <div className="container">
                 <div className="footer-wrapper">
@@ -37,12 +104,12 @@ export function Footer() {
                             <ul>
                                 <li className='email-info'>
                                     <Image src='/images/footer/foot-email.svg' alt='email-svg' width={16} height={16} priority={true}></Image>
-                                    <Link href="mailto:info@dhatucomply.com" title='' className='text-16 text-rg'>info@dhatucomply.com</Link>
+                                    <Link href="mailto:enquiry@dhatucomply.com" title='' className='text-16 text-rg'>{contact.email}</Link>
                                 </li>
 
                                 <li className='email-info mobile-info'>
                                     <Image src='/images/footer/foot-call.svg' alt='call-svg' width={16} height={16} priority={true}></Image>
-                                    <Link href="#" title='' className='text-16 text-rg'>+1 (555) 123-4567</Link>
+                                    <Link href="#" title='' className='text-16 text-rg'>{contact.phoneNumber}</Link>
                                 </li>
                             </ul>
                         </div>
@@ -58,5 +125,7 @@ export function Footer() {
                 </div>
             </div>
         </footer>
+
+        </>
     )
 }

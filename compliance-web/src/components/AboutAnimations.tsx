@@ -1,16 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { usePathname } from "next/navigation";
 
 
 export default function AboutAnimations() {
 
-    const pathname = usePathname();
 
     useEffect(() => {
         gsap.registerPlugin(useGSAP, ScrollTrigger,SplitText);
@@ -159,13 +157,3 @@ export default function AboutAnimations() {
     );
 
 }
-
-
-
-
-
-
-
-
-
-

@@ -2,12 +2,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState, useRef } from 'react'
+import { usePathname } from "next/navigation";
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
     const menuRef = useRef<HTMLDivElement>(null)
     const hamburgerRef = useRef<HTMLDivElement>(null)
+    const pathname = usePathname();
 
     // useEffect(() => {
     //     const onScroll = () => setScrolled(window.scrollY > 800 )
@@ -18,15 +20,17 @@ export function Header() {
 
     useEffect(() => {
         const getScrollLimit = () => {
-          const width = window.innerWidth;
+        //   const width = window.innerWidth;
 
-            if (width <= 575) return 300;
-            if (width <= 1023) return 500;
-            if (width <= 1200) return 400;
-            if (width <= 1450) return 500;
-            if (width <= 1600) return 610;
-            if (width <= 1800) return 650;
-          return 720;
+        //     if (width <= 575) return 300;
+        //     if (width <= 1023) return 500;
+        //     if (width <= 1200) return 400;
+        //     if (width <= 1450) return 500;
+        //     if (width <= 1600) return 610;
+        //     if (width <= 1800) return 650;
+        //   return 720;
+        
+            return 150;
         };
       
         const onScroll = () => {
@@ -78,13 +82,13 @@ useEffect(() => {
                     <div ref={menuRef} className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                         <ul className='text-18'>
                             <li>
-                                <Link onClick={handleLinkClick} href='/About' title='About' >About</Link>
+                                <Link onClick={handleLinkClick} href='/About' title='About' className={pathname === "/About" ? "active-link" : ""}>About</Link>
                             </li>
                             <li>
-                                <Link onClick={handleLinkClick} href='/UserAccess' title='User & Access'>User & Access</Link>
+                                <Link onClick={handleLinkClick} href='/UserAccess' title='User & Access' className={pathname === "/UserAccess" ? "active-link" : ""}>User & Access</Link>
                             </li>
                             <li>
-                                <Link onClick={handleLinkClick} href='/Compliance' title='Compliance'>Compliance</Link>
+                                <Link onClick={handleLinkClick} href='/Compliance' title='Compliance' className={pathname === "/Compliance" ? "active-link" : ""}>Compliance</Link>
                             </li>
                         </ul>
                         

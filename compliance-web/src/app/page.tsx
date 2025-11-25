@@ -1,6 +1,4 @@
 import { fetchGraphQL } from "@/lib/graphql";
-import ClientaleSlider from "@/components/ClientaleSlider";
-import Image from "next/image";
 import Link from "next/link";
 import HeroHome from "@/components/HeroHome";
 import ExtendButtons from "@/components/ExpandableButton";
@@ -11,8 +9,6 @@ import { Header } from "@/components/Header";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import GSAPProvider from "@/components/GSAPProvider";
-import { motion } from 'framer-motion'
 import StepsHome from "@/components/StepsHome";
 import ProvenHome from "@/components/ProvenTrust";
 import TestimHome from "@/components/TestiHome";
@@ -244,7 +240,7 @@ export default async function Home() {
 
                     <Header />
 
-                    <HeroHome  heroTitle={home.heroTitle} heroSubtitle={home.heroSubtitle} heroCta={home.heroCta} heroCta2={home.heroCta2} />
+                    <HeroHome heroTitle={home.heroTitle} heroSubtitle={home.heroSubtitle} heroCta={home.heroCta} heroCta2={home.heroCta2} />
 
                     <ExtendButtons
                         purpleTitle={home.purpleBox.purpleTitle}
@@ -306,7 +302,7 @@ export default async function Home() {
                         otherAnswer5={home.faqsList.otherAnswer5}
                     />
 
-                    <section className="section hm-cta relative z-[2]">
+                    {/* <section className="section hm-cta relative z-[2]">
                         <div className="container">
                             <h2 className="h3 text-center">{home.ctaTitle}</h2>
 
@@ -318,7 +314,7 @@ export default async function Home() {
                                 <Link href={home.ctaLink3?.url as string} title={home.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{home.ctaLink3?.title}</Link>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                 </div>
             </>
     );
