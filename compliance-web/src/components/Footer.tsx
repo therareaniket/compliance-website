@@ -76,7 +76,9 @@ export async function Footer() {
                 <div className="container">
                     <div className="footer-wrapper">
                         <div className="comp-intro">
-                            <Image src='/images/footer/DhatuComply-footer-logo.svg' alt='logo' width={217} height={31} priority={true} draggable={false} style={{ marginBottom: '20px' }}></Image>
+                            <Link href="/" title='Home'>
+                                <Image src='/images/footer/DhatuComply-footer-logo.svg' alt='logo' width={217} height={31} priority={true} draggable={false} style={{ marginBottom: '20px' }}></Image>
+                            </Link>
 
                             <p>Smarter Monitoring & Reporting for Simplified Compliance</p>
                         </div>
