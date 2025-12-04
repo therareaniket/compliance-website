@@ -55,7 +55,7 @@ export default function ContactComponent({contactHeroTitle, contactHeroSubtitle,
                 </div>
             </section>
 
-            <section className="section contct-form --bg-white">
+            <section className="section contct-form --bg-white" id='complyForm'>
                 <div className="container">
                     <div className="contct-head">
                         <div className="head-text">
