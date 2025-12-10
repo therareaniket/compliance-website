@@ -59,17 +59,17 @@ export async function Footer() {
 
         <>
             <section className="section hm-cta relative z-[2]">
-                        <div className="container">
-                            <h2 className="h3 text-center">{ctahome.ctaTitle}</h2>
+                <div className="container">
+                    <h2 className="h3 text-center">{ctahome.ctaTitle}</h2>
 
-                            <div className="cta-links text-center">
-                                <Link href={ctahome.ctaLink1?.url as string} title={ctahome.ctaLink1?.title} className="btn-padding btn-primary text-md text-18 site-radius-10">{ctahome.ctaLink1?.title}</Link>
+                    <div className="cta-links text-center">
+                        <Link href={ctahome.ctaLink1?.url as string} title={ctahome.ctaLink1?.title} className="btn-padding btn-primary text-md text-18 site-radius-10">{ctahome.ctaLink1?.title}</Link>
 
-                                <Link href={ctahome.ctaLink2?.url as string} title={ctahome.ctaLink2?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink2?.title}</Link>
+                        <Link href={ctahome.ctaLink2?.url as string} title={ctahome.ctaLink2?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink2?.title}</Link>
 
-                                <Link href={ctahome.ctaLink3?.url as string} title={ctahome.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink3?.title}</Link>
-                            </div>
-                        </div>
+                        <Link href={ctahome.ctaLink3?.url as string} title={ctahome.ctaLink3?.title} className="btn-padding btn-white text-md text-18 site-radius-10">{ctahome.ctaLink3?.title}</Link>
+                    </div>
+                </div>
             </section>
         
             <footer className='footer'>
@@ -81,7 +81,15 @@ export async function Footer() {
                             </Link>
 
                             <p>Smarter Monitoring & Reporting for Simplified Compliance</p>
+
+                            <div className="foot-social-icons">
+                                <i className='icon-linkedin comply-foot-icon'></i>
+                                <i className='icon-twitter comply-foot-icon'></i>
+                                <i className='icon-instagram comply-foot-icon'></i>
+                                <i className='icon-facebook comply-foot-icon'></i>
+                            </div>
                         </div>
+
                         <div className="footer-links">
                             <div className='quick-links text-md'>
                                 <p className='text-16 text-md'>Quick Links</p>

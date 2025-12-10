@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
+import Link from "next/link";
 
 type PlanId = 'free' | 'standard' | 'enterprise';
     
@@ -35,7 +36,6 @@ const planAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100)
 
     initialBtn: { opacity: 0, x: 100 },
     animateBtn: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
-    
 } : {
     initialHead: { opacity: 1, x: 0, },
     animateHead: { opacity: 1, x:0, },
@@ -86,7 +86,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
         }
     };
 
-      const activePlanDetails = planDetails[activePlanButton];
+    const activePlanDetails = planDetails[activePlanButton];
 
     return (
         <>
@@ -110,6 +110,8 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                         <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
                                     </div>
                                 ))}
+
+                                <Link href="/ComingSoon" title="Start Now" className="btn-primary btn-padding text-md text-18 site-radius-10 plan-start-btn">Start Now</Link>
                             </motion.div>
 
                             <motion.div className="plan-btns-group" variants={planAnimate} initial="initialBtn" whileInView='animateBtn' viewport={{ once: true, amount: 0.6 }}>
@@ -227,8 +229,10 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                                 <p className="text-grey text-20 fade-in">
                                                     <span className="icon-check_circle"></span>{b}
                                                 </p>
+
                                             </div>
                                         ))}
+                                        <Link href="/ComingSoon" title="Start Now" className="btn-primary btn-padding text-md text-18 site-radius-10 plan-start-btn">Start Now</Link>
                                     </AccordionContent>
                                 </AccordionItem>
 
@@ -247,8 +251,10 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                                 <p className="text-grey text-20 fade-in">
                                                     <span className="icon-check_circle"></span>{b}
                                                 </p>
+
                                             </div>
                                         ))}
+                                        <Link href="/ComingSoon" title="Start Now" className="btn-primary btn-padding text-md text-18 site-radius-10 plan-start-btn">Start Now</Link>
                                     </AccordionContent>
                                 </AccordionItem>
                             </Accordion>
