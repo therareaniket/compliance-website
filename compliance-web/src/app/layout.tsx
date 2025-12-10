@@ -5,7 +5,6 @@ import "./globals.css";
 import "@/assets/css/custom.css";
 import "@/assets/css/responsive.css";
 import { Footer } from "@/components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 export const metadata: Metadata = {
@@ -25,7 +24,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         </head>
         
         <body suppressHydrationWarning>
-            <SpeedInsights/>  {/* Vercel's Page Speed Insight */}
             
             {children}
             <Footer />
