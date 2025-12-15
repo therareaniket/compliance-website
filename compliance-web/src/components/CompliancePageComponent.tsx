@@ -32,7 +32,7 @@ export default function ComplianceComponent({complianceHeroTitle, complianceHero
         initialNumbs3: { opacity: 0, x: 100 },
         animateNumbs3: { opacity: 1, x: 0, transition: { delay: 5, duration: 1 } },
 
-        initialCardListUp1: { opacity: 0, x: -100 },
+        initialCardListUp1: { opacity: 0, x: -20 },
         animateCardListUp1: { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } },
     } : {
         initialHead: { opacity: 1, x: 0, },
