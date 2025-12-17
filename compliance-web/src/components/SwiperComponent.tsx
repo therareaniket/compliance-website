@@ -18,7 +18,7 @@ export default function AboutUsSwiperComponents() {
             <div className="container">
                 <div className="core-feature-section">
                     <motion.div className="core-feature-heading">
-                        <motion.h2 className="h4">Core Features That Power Clinical Trial Compliance</motion.h2>
+                        <motion.h2 className="h4">Core Features That Power Clinical Trials Compliance</motion.h2>
 
                         <motion.p className="core-feature-para text-20 text-rg">
                             Explore essential tools—from document control and training to real-time alerts and reporting—designed to keep your trial operations efficient, secure, and audit-ready.
