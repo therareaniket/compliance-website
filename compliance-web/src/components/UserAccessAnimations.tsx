@@ -16,7 +16,7 @@ export default function UserAccessAnimation() {
         gsap.registerPlugin(ScrollTrigger,SplitText);
         // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
-        gsap.from (".user-access-hero-head h1, .user-access-hero-head p", {opacity: 0, x: -100, delay: 0.7, duration: 1, stagger:1});
+        // gsap.from (".user-access-hero-head h1, .user-access-hero-head p", {opacity: 0, x: -100, delay: 0.7, duration: 1, stagger:1});
 
 
         // gsap.from(".roles-wrapper .h3", { opacity: 0, y: -100, duration: 1,

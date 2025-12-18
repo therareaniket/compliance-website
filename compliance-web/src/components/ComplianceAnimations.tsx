@@ -14,7 +14,7 @@ export default function ComplianceAnimations() {
         gsap.registerPlugin(ScrollTrigger,SplitText);
         // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
-        gsap.from (".com-hero .banner-head h1, .com-hero .banner-head p", {opacity: 0, x: -100, delay: 0.7, duration: 1, stagger:1});
+        // gsap.from (".com-hero .banner-head h1, .com-hero .banner-head p", {opacity: 0, x: -100, delay: 0.7, duration: 1, stagger:1});
 
         // gsap.from(".compliance-matters-section .h3", { opacity: 0, y:-100, duration: 1,
         //     scrollTrigger: {

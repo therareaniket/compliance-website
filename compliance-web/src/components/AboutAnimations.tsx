@@ -14,8 +14,8 @@ export default function AboutAnimations() {
         gsap.registerPlugin(useGSAP, ScrollTrigger,SplitText);
         // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
-        gsap.from (".abt-hero-head h1", {opacity: 0, x: -100, delay: 0.7, duration: 1,});
-        gsap.from (".abt-hero-head p", {opacity: 0, x: -100, delay: 1.7, duration: 1,});
+        // gsap.from (".abt-hero-head h1", {opacity: 0, x: -100, delay: 0.7, duration: 1,});
+        // gsap.from (".abt-hero-head p", {opacity: 0, x: -100, delay: 1.7, duration: 1,});
 
         // Our Mission
         // gsap.from(".only-mis .h3, .only-mis p", {
