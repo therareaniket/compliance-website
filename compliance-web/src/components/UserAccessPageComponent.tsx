@@ -118,7 +118,7 @@ export default function UserAccessComponent ({
                 <Header />
 
                 <section className='user-access-hero' style={{ backgroundColor: '#290047' }}>
-                    {/* <video src="/images/userAccess/User&Access.mp4" autoPlay loop muted className='user-acc-vid'></video> */}
+                    <video src="/images/userAccess/User&Access.mp4" autoPlay loop muted className='user-acc-vid'></video>
                     <div className="container">
                         <div className="user-access-hero-head">
                             <h1>{userAccessHeroTitle}</h1>

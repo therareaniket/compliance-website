@@ -44,7 +44,7 @@ export default function ContactComponent({contactHeroTitle, contactHeroSubtitle,
             <Header />
 
             <section className='contact-hero' style={{backgroundColor: '#290047'}}>
-                {/* <video src="/images/contactus/contact-updated-vid.mp4" autoPlay loop muted className='contact-vid'></video> */}
+                <video src="/images/contactus/contact-updated-vid.mp4" autoPlay loop muted className='contact-vid'></video>
 
                 <div className="container">
                         <div className="banner-head contact-banner-head">

@@ -95,7 +95,7 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                     <div className="why-us-content-wrapper">
                         <div className="why-us-content">
                             <div className="why-us-head">
-                                <h2 className="h3"></h2>
+                                <h2 className="h3">{whyus_title}</h2>
 
                                 <p className="text-20 text-grey" >{whyus_subTitle}</p>
                             </div>
