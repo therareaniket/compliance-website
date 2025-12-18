@@ -34,57 +34,57 @@ type AboutProps = {
     platformSupportSubtitle: string;
 }
 
-const textAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    initialLeft: {
-        opacity: 0,
-        x: -200,
-    },
+// const textAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
+//     initialLeft: {
+//         opacity: 0,
+//         x: -200,
+//     },
 
-    initialRight: {
-        opacity: 0,
-        x: 200,
-    },
+//     initialRight: {
+//         opacity: 0,
+//         x: 200,
+//     },
 
-    animateLeft: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1,
-        },
-    },
+//     animateLeft: {
+//         opacity: 1,
+//         x: 0,
+//         transition: {
+//             duration: 1,
+//         },
+//     },
 
-    animateRight: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            delay: 1,
-            duration: 1,
-            staggerChildren: 0.3,
-            delayChildren: 0.5,
-        },
-    },
+//     animateRight: {
+//         opacity: 1,
+//         x: 0,
+//         transition: {
+//             delay: 1,
+//             duration: 1,
+//             staggerChildren: 0.3,
+//             delayChildren: 0.5,
+//         },
+//     },
 
-    initialBtn: {
-        opacity: 0,
-        scale: 0,
-    },
+//     initialBtn: {
+//         opacity: 0,
+//         scale: 0,
+//     },
 
-    animateBtn: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            duration: 1,
-        },
-    },
-} : {
-    // Static values for screens < 1200px
-    initialLeft: { opacity: 1, x: 0 },
-    initialRight: { opacity: 1, x: 0 },
-    animateLeft: { opacity: 1, x: 0 },
-    animateRight: { opacity: 1, x: 0 },
-    initialBtn: { opacity: 1, scale: 1 },
-    animateBtn: { opacity: 1, scale: 1 },
-};
+//     animateBtn: {
+//         opacity: 1,
+//         scale: 1,
+//         transition: {
+//             duration: 1,
+//         },
+//     },
+// } : {
+//     // Static values for screens < 1200px
+//     initialLeft: { opacity: 1, x: 0 },
+//     initialRight: { opacity: 1, x: 0 },
+//     animateLeft: { opacity: 1, x: 0 },
+//     animateRight: { opacity: 1, x: 0 },
+//     initialBtn: { opacity: 1, scale: 1 },
+//     animateBtn: { opacity: 1, scale: 1 },
+// };
 
 export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, missionSubtitle, missionPoints, visionSubtitle, visionPoints, platformSupportTitle, platformSupportSubtitle }: AboutProps) {
 
@@ -109,50 +109,50 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                 <section className='section abt-mis --bg-white'>
                     <div className="container">
                         <div className="mis-vis-section">
-                            <motion.div className="mis-vis-heading only-mis" variants={textAnimations} initial="initialLeft" whileInView="animateLeft" viewport={{ once: true, amount: 0.6 }}>
+                            <div className="mis-vis-heading only-mis" >
                                 <h2 className='h3'>Our Mission</h2>
 
                                 <p className='text-20 text-rg'>{missionSubtitle}</p>
 
                                 <Image src='/images/aboutUs/mission-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-mis-img'></Image>
-                            </motion.div>
+                            </div>
 
                             <div className="mis-vis-card-lists card-list-mision">
-                                <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.6 }}>
-                                    <motion.div className="mis-vis-card primary-box-shadow mis-anim-1">
+                                <div className="mis-vis-cards">
+                                    <div className="mis-vis-card primary-box-shadow mis-anim-1">
                                         <Image src='/images/aboutUs/rebase-icon.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{missionPoints.point1Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg'>{missionPoints.point1Subtitle}</p>
-                                    </motion.div>
+                                    </div>
 
-                                    <motion.div className="mis-vis-card primary-box-shadow mis-anim-2">
+                                    <div className="mis-vis-card primary-box-shadow mis-anim-2">
                                         <Image src='/images/aboutUs/process-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{missionPoints.point2Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg'>{missionPoints.point2Subtitle}</p>
-                                    </motion.div>
-                                </motion.div>
+                                    </div>
+                                </div>
 
-                                <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.3 }}>
-                                    <motion.div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-1">
+                                <div className="mis-vis-cards">
+                                    <div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-1">
                                         <Image src='/images/aboutUs/approval-delegation.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{missionPoints.point3Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg'>{missionPoints.point3Subtitle}</p>
-                                    </motion.div>
+                                    </div>
 
-                                    <motion.div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-2">
+                                    <div className="mis-vis-card primary-box-shadow removed-margin-btm mis-anim-2">
                                         <Image src='/images/aboutUs/clock-arrow-down.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{missionPoints.point4Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg'>{missionPoints.point4Subtitle}</p>
-                                    </motion.div>
-                                </motion.div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                 <section className='abt-vis --bg-white'>
                     <div className="container">
                         <div className="mis-vis-section vis-section">
-                            <motion.div className="mis-vis-heading vis-heading only-vis" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.6 }}>
+                            <motion.div className="mis-vis-heading vis-heading only-vis">
                                 <motion.h2 className='h3'>Our Vision</motion.h2>
 
                                 <motion.p className='text-20 text-rg'>{visionSubtitle}</motion.p>
@@ -170,7 +170,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                             </motion.div>
 
                             <div className="mis-vis-card-lists">
-                                <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialLeft" whileInView="animateLeft" viewport={{ once: true, amount: 0.6 }}>
+                                <motion.div className="mis-vis-cards">
                                     <motion.div className="mis-vis-card greenish-box-shadow vis-card vis-anim-2">
                                         <Image src='/images/aboutUs/work-history.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
 
@@ -188,7 +188,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                                     </motion.div>
                                 </motion.div>
 
-                                <motion.div className="mis-vis-cards" variants={textAnimations} initial="initialLeft" whileInView="animateLeft" viewport={{ once: true, amount: 0.3 }}>
+                                <motion.div className="mis-vis-cards">
                                     <motion.div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-2">
                                         <Image src='/images/aboutUs/arming-countdown.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
 
@@ -219,7 +219,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                                 <Image src='/images/aboutUs/about-compliance-updated.gif' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
                             </div>
 
-                            <motion.div className="platform-info" variants={textAnimations} initial="initialRight" whileInView="animateRight" viewport={{ once: true, amount: 0.6 }}>
+                            <div className="platform-info">
                                 <h2 className='h4'>{platformSupportTitle}</h2>
 
                                 <p className='text-20 text-grey'>{platformSupportSubtitle}</p>
@@ -239,7 +239,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                                 </div>
 
                                 <Link href='/Compliance' title='Learn More' className='btn-padding site-radius-10 btn-primary platform-btn'>Learn More</Link>
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
                 </section>

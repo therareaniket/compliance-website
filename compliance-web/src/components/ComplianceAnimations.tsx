@@ -12,7 +12,7 @@ export default function ComplianceAnimations() {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger,SplitText);
-        gsap.from (".com-hero .banner-head h1, .com-hero .banner-head p", {opacity: 0, x: -100, delay: 0.7, duration: 1, stagger:1});
+        // gsap.from (".com-hero .banner-head h1, .com-hero .banner-head p", {opacity: 0, x: -100, delay: 0.7, duration: 1, stagger:1});
     }, []);
 
     return (
