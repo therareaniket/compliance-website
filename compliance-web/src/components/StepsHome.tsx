@@ -25,7 +25,7 @@ export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
 
     return(
         <>
-            <section className="hm-compli-steps relative z-[2]">
+            {/* <section className="hm-compli-steps relative z-[2]">
                 <div className="container">
                     <div className="steps-head">
                         <h2 className="h3">{steps_title}</h2>
@@ -38,7 +38,7 @@ export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
                     </div>
                 </div>
                 <span className="white-box"></span>
-            </section>
+            </section> */}
         </>
     );
 }
