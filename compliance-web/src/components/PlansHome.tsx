@@ -24,31 +24,31 @@ type PlanProps = {
     enterprisePlan: PlanPoints;
 }
 
-const planAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    initialHead: { opacity: 0, x: -100, },
-    animateHead: { opacity: 1, x:0, transition: { duration: 1 } },
+// const planAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
+//     initialHead: { opacity: 0, x: -100, },
+//     animateHead: { opacity: 1, x:0, transition: { duration: 1 } },
 
-    initialPara: { opacity: 0, x: -100, },
-    animatePara: { opacity: 1, x:0, transition: { duration: 1, delay: 1 } },
+//     initialPara: { opacity: 0, x: -100, },
+//     animatePara: { opacity: 1, x:0, transition: { duration: 1, delay: 1 } },
 
-    initialDetails: { opacity: 0, x: -100 },
-    animateDetails: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
+//     initialDetails: { opacity: 0, x: -100 },
+//     animateDetails: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
 
-    initialBtn: { opacity: 0, x: 100 },
-    animateBtn: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
-} : {
-    initialHead: { opacity: 1, x: 0, },
-    animateHead: { opacity: 1, x:0, },
+//     initialBtn: { opacity: 0, x: 100 },
+//     animateBtn: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
+// } : {
+//     initialHead: { opacity: 1, x: 0, },
+//     animateHead: { opacity: 1, x:0, },
 
-    initialPara: { opacity: 1, x: 0, },
-    animatePara: { opacity: 1, x:0, },
+//     initialPara: { opacity: 1, x: 0, },
+//     animatePara: { opacity: 1, x:0, },
 
-    initialBtn: { opacity: 1, x: 0 },
-    animateBtn: { opacity: 1, x: 0, },
+//     initialBtn: { opacity: 1, x: 0 },
+//     animateBtn: { opacity: 1, x: 0, },
 
-    initialDetails: { opacity: 1, x: 0 },
-    animateDetails: { opacity: 1, x: 0, },
-}
+//     initialDetails: { opacity: 1, x: 0 },
+//     animateDetails: { opacity: 1, x: 0, },
+// }
 
 export default function PlansSection({plansTitle, plansSubtitle, freePlan, standardPlan, enterprisePlan} : PlanProps) {
 
@@ -93,16 +93,16 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
             <section className="section hm-plans --bg-white relative z-[2]">
                 <div className="container">
                     <div className="plan-content-wrapper">
-                        <motion.div className="plans-left">
-                            <motion.h2 className="h3 plans-left-heading" variants={planAnimate} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>{plansTitle}</motion.h2>
+                        <div className="plans-left">
+                            <h2 className="h3 plans-left-heading">{plansTitle}</h2>
 
-                            <motion.p className="text-20 text-grey plan-sub-title" variants={planAnimate} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.6 }}>{plansSubtitle}</motion.p>
-                        </motion.div>
+                            <p className="text-20 text-grey plan-sub-title">{plansSubtitle}</p>
+                        </div>
  
                         <div className="plans-right">
                             {/* <p className="text-20 text-grey plan-title">{plansSubtitle}</p> */}
 
-                            <motion.div className="plan-details bg-blue site-radius-20" aria-live="polite" variants={planAnimate} initial="initialDetails" whileInView='animateDetails' viewport={{ once: true, amount: 0.6 }}>
+                            <div className="plan-details bg-blue site-radius-20" aria-live="polite">
                                 <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
 
                                 {activePlanDetails.bullets.map((b, i) => (
@@ -112,9 +112,9 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                                 ))}
 
                                 <Link href="/ComingSoon" title="Start Now" className="btn-primary btn-padding text-md text-18 site-radius-10 plan-start-btn">Start Now</Link>
-                            </motion.div>
+                            </div>
 
-                            <motion.div className="plan-btns-group" variants={planAnimate} initial="initialBtn" whileInView='animateBtn' viewport={{ once: true, amount: 0.6 }}>
+                            <div className="plan-btns-group">
                                 <button type="button" className={`plans-btn text-left site-radius-10 ${activePlanButton === 'free' ? 'plan-btn-active' : ''}`} onClick={() => setActivePlanButton('free')}>
                                     <div className="plan-btn-cont">
                                         <h3 className="h5">Free Compliance Starter Plan</h3>
@@ -139,60 +139,10 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
 
                                     <p className="h4">$499<span className="text-18 text-grey">/month</span></p>
                                 </button>
-                            </motion.div>
+                            </div>
                         </div>
 
-                        {/* <div className="plans-mobile-accordion">
-                            <Accordion type="single" collapsible>
-                                <AccordionItem value="item-1">
-                                    <AccordionTrigger className="plan-trigger">
-                                        <p className="h5 text-rg">Free Compliance Starter Plan</p>
-                                    </AccordionTrigger>
-
-                                    <AccordionContent className="plan-content">
-                                        <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
-
-                                        {activePlanDetails.bullets.map((b, i) => (
-                                            <div key={i} className="plan-poin">
-                                                <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
-                                            </div>
-                                        ))}
-                                    </AccordionContent>
-                                </AccordionItem>
-
-                                <AccordionItem value="item-2">
-                                    <AccordionTrigger className="plan-trigger">
-                                        <p className="h5 text-rg">Standard Plan</p>
-                                    </AccordionTrigger>
-
-                                    <AccordionContent className="plan-content">
-                                        <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
-
-                                        {activePlanDetails.bullets.map((b, i) => (
-                                            <div key={i} className="plan-poin">
-                                                <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
-                                            </div>
-                                        ))}
-                                    </AccordionContent>
-                                </AccordionItem>
-
-                                <AccordionItem value="item-3">
-                                    <AccordionTrigger className="plan-trigger">
-                                        <p className="h5 text-rg">Enterprise Plan</p>
-                                    </AccordionTrigger>
-
-                                    <AccordionContent className="plan-content">
-                                        <h3 key={activePlanButton} className="h4 fade-in">{activePlanDetails.title}</h3>
-
-                                        {activePlanDetails.bullets.map((b, i) => (
-                                            <div key={i} className="plan-poin">
-                                                <p key={activePlanButton} className="text-grey text-20 fade-in"><span className="icon-check_circle"></span>{b}</p>
-                                            </div>
-                                        ))}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            </Accordion>
-                        </div> */}
+                        
 
                         <div className="plans-mobile-accordion">
                             <Accordion type="single" collapsible value={accordionValue} onValueChange={handleAccordionChange} className="plan-accordion-wrapper">

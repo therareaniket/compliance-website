@@ -74,18 +74,18 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
     }, [cards]);
 
 
-    const whyUsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-        initialHead: { opacity: 0, x: -100},
-        animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+    // const whyUsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
+    //     initialHead: { opacity: 0, x: -100},
+    //     animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
-        initialPara: { opacity: 0, x: -100},
-        animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 }},
-    } : {
-        initialHead: { opacity: 1, y: 0},
-        animateHead: { opacity: 1, y: 0, },
-        initialPara: { opacity: 1, y: 0},
-        animatePara: { opacity: 1, y: 0, },
-    }
+    //     initialPara: { opacity: 0, x: -100},
+    //     animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 }},
+    // } : {
+    //     initialHead: { opacity: 1, y: 0},
+    //     animateHead: { opacity: 1, y: 0, },
+    //     initialPara: { opacity: 1, y: 0},
+    //     animatePara: { opacity: 1, y: 0, },
+    // }
 
 
     return (
@@ -94,11 +94,11 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                 <div className="container">
                     <div className="why-us-content-wrapper">
                         <div className="why-us-content">
-                            <motion.div className="why-us-head">
-                                <motion.h2 className="h3" dangerouslySetInnerHTML={{ __html: whyus_title }} variants={whyUsAnimations} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}></motion.h2>
+                            <div className="why-us-head">
+                                <h2 className="h3"></h2>
 
-                                <motion.p className="text-20 text-grey" variants={whyUsAnimations} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.6 }}>{whyus_subTitle}</motion.p>
-                            </motion.div>
+                                <p className="text-20 text-grey" >{whyus_subTitle}</p>
+                            </div>
 
                             <div className="images-group single">
                                 <div className="image-viewport">

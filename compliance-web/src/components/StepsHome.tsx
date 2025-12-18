@@ -9,28 +9,28 @@ type stepsProps = {
 
 export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
 
-    const stepsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-        initialHeader: { opacity: 0, x: -100},
-        animateHeader: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+    // const stepsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
+    //     initialHeader: { opacity: 0, x: -100},
+    //     animateHeader: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
-        initialPara: { opacity: 0, x: -100},
-        animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 }},
-    } : {
-        initialHeader: { opacity: 1, x: 0},
-        animateHeader: { opacity: 1, x: 0,},
+    //     initialPara: { opacity: 0, x: -100},
+    //     animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 }},
+    // } : {
+    //     initialHeader: { opacity: 1, x: 0},
+    //     animateHeader: { opacity: 1, x: 0,},
 
-        initialPara: { opacity: 1, x: 0},
-        animatePara: { opacity: 1, x: 0, },
-    }
+    //     initialPara: { opacity: 1, x: 0},
+    //     animatePara: { opacity: 1, x: 0, },
+    // }
 
     return(
         <>
             <section className="hm-compli-steps relative z-[2]">
                 <div className="container">
                     <div className="steps-head">
-                        <motion.h2 className="h3" variants={stepsAnimations} initial='initialHeader' whileInView='animateHeader' viewport={{ once: true, amount: 0.6 }}>{steps_title}</motion.h2>
+                        <h2 className="h3">{steps_title}</h2>
 
-                        <motion.p className="text-20 text-grey" variants={stepsAnimations} initial='initialPara' whileInView='animatePara' viewport={{ once: true, amount: 0.5 }}>{steps_subTitle}</motion.p>
+                        <p className="text-20 text-grey">{steps_subTitle}</p>
                     </div>
 
                     <div className="steps-video-wrapper site-radius-20 ">

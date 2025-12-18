@@ -10,45 +10,45 @@ type ProvenProps = {
 
 export default function ProvenHome( { proven_title, proven_subTitle } : ProvenProps) {
 
-    const provenAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-        initialHead: { opacity: 0, x: -100},
-        animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+    // const provenAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
+    //     initialHead: { opacity: 0, x: -100},
+    //     animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
-        initialSubHead: { opacity: 0, x: -100},
-        animateSubHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 2, }},
+    //     initialSubHead: { opacity: 0, x: -100},
+    //     animateSubHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 2, }},
 
-        initialList: { opacity: 0, x: -100 },
-        animateList: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.3 } },
+    //     initialList: { opacity: 0, x: -100 },
+    //     animateList: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.3 } },
 
-        initialList2: { opacity: 0, x: 100 },
-        animateList2: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.7 } },
+    //     initialList2: { opacity: 0, x: 100 },
+    //     animateList2: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.7 } },
 
-    } : {
-        initialHead: { opacity: 1, x: 0},
-        animateHead: { opacity: 1, x: 0, },
+    // } : {
+    //     initialHead: { opacity: 1, x: 0},
+    //     animateHead: { opacity: 1, x: 0, },
 
-        initialSubHead: { opacity: 1, x: 0},
-        animateSubHead: { opacity: 1, x: 0, },
+    //     initialSubHead: { opacity: 1, x: 0},
+    //     animateSubHead: { opacity: 1, x: 0, },
 
-        initialList: { opacity: 1, x: 0 },
-        animateList: { opacity: 1, x: 0, },
+    //     initialList: { opacity: 1, x: 0 },
+    //     animateList: { opacity: 1, x: 0, },
 
-        initialList2: { opacity: 1, x: 0 },
-        animateList2: { opacity: 1, x: 0, },
-    }
+    //     initialList2: { opacity: 1, x: 0 },
+    //     animateList2: { opacity: 1, x: 0, },
+    // }
 
     return(
         <>
             <section className="section hm-proven-result relative z-[2]">
                 <div className="container">
                     <div className="result-head">
-                        <motion.h2 className="h3" variants={provenAnimation} initial='initialHead' whileInView='animateHead' viewport={{ once: true, amount: 0.6 }}>{proven_title}</motion.h2>
+                        <h2 className="h3" >{proven_title}</h2>
 
-                        <motion.p className="text-20" variants={provenAnimation} initial='initialSubHead' whileInView='animateSubHead' viewport={{ once: true, amount: 0.6 }}>{proven_subTitle}</motion.p>
+                        <p className="text-20">{proven_subTitle}</p>
                     </div>
 
                     <div className="compli-list-stats">
-                        <motion.div className="supported-compli-lists" variants={provenAnimation} initial='initialList' whileInView='animateList' viewport={{ once: true, amount: 0.3 }}>
+                        <div className="supported-compli-lists">
                             <div className="supp-compli-list site-radius-10">
                                 <h3 className="h5">FDA 21 CFR Part 11</h3>
 
@@ -122,7 +122,7 @@ export default function ProvenHome( { proven_title, proven_subTitle } : ProvenPr
 
                                 <p>Sets rules for system data integrity.</p>
                             </div>
-                        </motion.div>
+                        </div>
 
                         <div className="compli-stats">
                             <div className="rotate-eclipse">
@@ -135,23 +135,23 @@ export default function ProvenHome( { proven_title, proven_subTitle } : ProvenPr
                                 </div>
                             </div>
 
-                            <motion.div className="floating-stats" variants={provenAnimation} initial='initialList2' whileInView='animateList2' viewport={{ once: true, amount: 0.6 }}>
-                                <motion.div className="stats-nums site-radius-10 text-20 glob-org" >
+                            <div className="floating-stats">
+                                <div className="stats-nums site-radius-10 text-20 glob-org" >
                                     <span className="h1">500+</span>Global organizations
-                                </motion.div>
+                                </div>
 
-                                <motion.div className="stats-nums site-radius-10 text-20 sec-doc">
+                                <div className="stats-nums site-radius-10 text-20 sec-doc">
                                     <span className="h1">1M+</span>Secure documents
-                                </motion.div>
+                                </div>
 
-                                <motion.div className="stats-nums site-radius-10 text-20 fram-covd">
+                                <div className="stats-nums site-radius-10 text-20 fram-covd">
                                     <span className="h1">50+</span>Frameworks covered
-                                </motion.div>
+                                </div>
 
-                                <motion.div className="stats-nums site-radius-10 text-20 aud-suc">
+                                <div className="stats-nums site-radius-10 text-20 aud-suc">
                                     <span className="h1">99%</span><span>Audit success</span>
-                                </motion.div>
-                            </motion.div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
