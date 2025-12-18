@@ -312,7 +312,7 @@ section { overflow: hidden; }
 .mis-vis-heading p { margin: 21px 0 32px 0 ; color: var(--grey); }
 .mis-vis-card-lists{ width: 792px; }
 .mis-vis-cards{ display: flex; gap: 40px; }
-.mis-vis-card{ width: 376px; height: 210px; margin-bottom: 40px; border: 1px solid var(--light-grey); border-radius: 10px; padding: 20px; cursor: pointer; }
+.mis-vis-card{ width: 376px; height: 210px; margin-bottom: 40px; border: 1px solid var(--light-grey); border-radius: 10px; padding: 20px; }
 .mis-vis-padding{ margin-bottom: 0; }
 .mis-vis-para{ margin-top: 30px; margin-bottom: 14px; }
 .mis-vis-heading img{ border-radius: 10px; }
