@@ -55,7 +55,7 @@ export default function ComplianceComponent({complianceHeroTitle, complianceHero
             <div className="compliancebody">
                 <Header />
 
-                <section className='com-hero' style={{ backgroundColor: 'var(--primary)' }}>
+                <section className='com-hero' style={{ backgroundColor: '#290047' }}>
                     {/* <video src="/images/compliance/Compliance.mp4" autoPlay loop muted className='compliance-vid'></video> */}
                     <div className="container">
                         <div className="banner-head">

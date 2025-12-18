@@ -43,7 +43,7 @@ export default function ContactComponent({contactHeroTitle, contactHeroSubtitle,
             <div className="contactbody">
             <Header />
 
-            <section className='contact-hero' style={{ backgroundColor: 'var(--primary)' }}>
+            <section className='contact-hero' style={{backgroundColor: '#290047'}}>
                 {/* <video src="/images/contactus/contact-updated-vid.mp4" autoPlay loop muted className='contact-vid'></video> */}
 
                 <div className="container">
@@ -100,20 +100,6 @@ export default function ContactComponent({contactHeroTitle, contactHeroSubtitle,
                     </div>                    
                 </div>
             </section>
-
-            {/* <section className="section hm-cta">
-                <div className="container">
-                    <h2 className="h3 text-center">Stay Ahead of Regulations with Effortless Compliance</h2>
-
-                    <div className="cta-links text-center">
-                        <Link href="/Compliance" title="Get Started" className="btn-padding btn-primary text-md text-18 site-radius-10">Get Started</Link>
-
-                        <Link href="/Contact" title="Schedual a Demo" className="btn-padding btn-white text-md text-18 site-radius-10">Schedual a Demo</Link>
-
-                        <Link href="/Contact" title="Contact Us" className="btn-padding btn-white text-md text-18 site-radius-10">Contact Us</Link>
-                    </div>
-                </div>
-            </section> */}
         </div>
         </>
     );

@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
 import { motion } from 'framer-motion'
 
 
@@ -31,14 +29,13 @@ export default function HeroSection({ heroTitle, heroSubtitle, heroCta, heroCta2
     const firstPart = words.join(" ");
 
     useEffect(() => {
-
-    //     // Hero HOMEPAGE
+     // Hero HOMEPAGE
         gsap.set(".left-hero-home, .right-hero-home, .hm-hero-content", { visibility: "visible" });
-        gsap.from (titleRef.current,{ opacity: 0, x: -300, delay: 1, duration: 1, });
-        gsap.from (subtitleRef.current,{ opacity: 0, x: -300, delay: 2, duration: 1, });
-        gsap.from (buttonsRef.current,{ opacity: 0, scale: 0, delay: 2.5, duration: 1, });
-        gsap.from (".left-hero-home", {opacity: 0, x: -100, delay: 3.2, duration: 1,});
-        gsap.from (".right-hero-home", {opacity: 0, x: 100, delay: 3.7, duration: 1,});
+        // gsap.from (titleRef.current,{ opacity: 0, x: -300, delay: 0, duration: 1, });
+        // gsap.from (subtitleRef.current,{ opacity: 0, x: -300, delay: 1, duration: 1, });
+        // gsap.from (buttonsRef.current,{ opacity: 0, scale: 0, delay: 1.5, duration: 1, });
+        // gsap.from (".left-hero-home", {opacity: 0, x: -100, delay: 2.2, duration: 1,});
+        // gsap.from (".right-hero-home", {opacity: 0, x: 100, delay: 2.7, duration: 1,});
     
     }, []);
     
@@ -83,48 +80,3 @@ export default function HeroSection({ heroTitle, heroSubtitle, heroCta, heroCta2
         </section>
     );
 }
-
-
-
-
-
-
-
-// OLD CODE BACKUP
-// <section className="hm-hero">
-//     {/* <Image src='/images/homepage/hero-background.webp' alt="home-hero" width={1920} height={870} priority={true} draggable={false}></Image> */}
-// 
-//     <div className="hm-hero-bg-setup">
-//         <video src="/images/homepage/hero-home-video.mp4" loop autoPlay muted className="hero-video"></video>
-// 
-//         <Image src='/images/homepage/left-image-hero-home.webp' alt="left-image-hero" width={863} height={314} priority={true} className="left-hero-home"></Image>
-// 
-//         <Image src='/images/homepage/right-image-hero-home.webp' alt="right-image-hero" width={704} height={350} priority={true} className="right-hero-home"></Image>
-//     </div>
-// 
-//     <div className="container">
-//         <div className="hm-hero-content">
-//             {/* <h1 className="text-center" dangerouslySetInnerHTML={{ __html: home.heroTitle }}></h1> */}
-//             <h1 className="text-center">
-//                 {firstPart}{" "} <span className="h1-animation">{lastWord}</span>
-//             </h1>
-// 
-//             <p className="text-center text-20">{home.heroSubtitle}</p>
-// 
-//             <div className="hm-hero-btns">
-//                 {home.heroCta?.url ? (
-//                     <Link href={home.heroCta.url as string} title={home.heroCta.title} className="btn-primary btn-padding text-md text-18 site-radius-10">
-//                         {home.heroCta.title}
-//                     </Link>
-//                 ) : null}
-// 
-//                 {home.heroCta2?.url ? (
-//                     <Link href={home.heroCta2.url as string} title={home.heroCta2.title} className="btn-white btn-padding text-md text-18 site-radius-10">
-//                         {home.heroCta2.title}
-//                     </Link>
-//                 ) : null}
-//             </div>
-//         </div>
-//     </div>
-// 
-// </section>
