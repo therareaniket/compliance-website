@@ -93,8 +93,8 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
             <div className="aboutbody">
                 <Header />
 
-                <section className='abt-hero'>
-                    <video src="/images/aboutUs/About-us.mp4" autoPlay loop muted className='about-hero-vid'></video>
+                <section className='abt-hero' style={{ backgroundColor: 'var(--primary)' }}>
+                    {/* <video src="/images/aboutUs/About-us.mp4" autoPlay loop muted className='about-hero-vid'></video> */}
 
                     <div className="container">
                         <div className="abt-hero-head all-banner-head">
