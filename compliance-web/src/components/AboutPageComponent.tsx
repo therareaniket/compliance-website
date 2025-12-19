@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { Header } from "./Header";
-import { motion, } from 'framer-motion';
+// import { motion, } from 'framer-motion';
 import AboutUsSwiperComponents from "./SwiperComponent";
 import Link from "next/link";
-import AboutAnimations from "./AboutAnimations";
+// import AboutAnimations from "./AboutAnimations";
+import { useEffect, useRef } from "react";
 
 
 
@@ -88,20 +89,107 @@ type AboutProps = {
 
 export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, missionSubtitle, missionPoints, visionSubtitle, visionPoints, platformSupportTitle, platformSupportSubtitle }: AboutProps) {
 
+    const missionRef = useRef<HTMLDivElement | null>(null);
+    const missionCardsRef = useRef<HTMLDivElement | null>(null);
+    const visionRef = useRef<HTMLDivElement | null>(null);
+    const visionCardsRef = useRef<HTMLDivElement | null>(null);
+    const platformRef = useRef<HTMLDivElement | null>(null);
+
+
+
+    useEffect(() => {
+        const h1 = document.querySelector(".abt-hero h1.compliance-anim");
+        const p = document.querySelector(".abt-hero p.compliance-anim");
+
+        if (!h1 || !p) return;
+
+        // Animate H1
+        requestAnimationFrame(() => h1.classList.add("compliance-anim-active"));
+
+        // Animate P after H1
+        setTimeout(() => p.classList.add("compliance-anim-active"), 800);
+
+    }, []);
+
+    // Animate heading, paragraph, image
+    useEffect(() => {
+        const missionEl = missionRef.current;
+        const cardsEl = missionCardsRef.current;
+        if (!missionEl || !cardsEl) return;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                // Trigger heading/paragraph/image animation
+                missionEl.classList.add("animate");
+
+                // Stagger card animations after heading animation finishes
+                setTimeout(() => {
+                    cardsEl.classList.add("animate-cards");
+                }, 1000); // delay matches heading animation duration
+
+                observer.unobserve(missionEl);
+            }
+        }, { threshold: 0.3 });
+
+        observer.observe(missionEl);
+        return () => observer.disconnect();
+    }, []);
+
+
+    useEffect(() => {
+        const visionEl = visionRef.current;
+        const cardsEl = visionCardsRef.current;
+        if (!visionEl || !cardsEl) return;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                // Animate heading/paragraph/image from right
+                visionEl.classList.add("animate");
+
+                // Animate cards from left after heading animation
+                setTimeout(() => {
+                    cardsEl.classList.add("animate-cards");
+                }, 1000); // matches heading animation duration
+
+                observer.unobserve(visionEl);
+            }
+        }, { threshold: 0.3 });
+
+        observer.observe(visionEl);
+
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const el = platformRef.current;
+        if (!el) return;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                el.classList.add("animate"); // triggers CSS animation
+                observer.unobserve(el); // animate once
+            }
+        }, { threshold: 0.3 });
+
+        observer.observe(el);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             <div className="aboutbody">
                 <Header />
 
-                <section className='abt-hero' style={{ backgroundColor: '#290047' }}>
+                <section className='abt-hero'>
                     <video src="/images/aboutUs/About-us.mp4" autoPlay loop muted className='about-hero-vid'></video>
 
                     <div className="container">
                         <div className="abt-hero-head all-banner-head">
                             {/* <h1>Redefining Compliance for a Smarter Future</h1> */}
-                            <h1>{aboutHeroTitle}</h1>
+                            <h1 className="compliance-anim compliance-delay-1">{aboutHeroTitle}</h1>
 
-                            <p className='text-rg text-20 abt-hero-para'>{aboutHeroSubtitle}</p>
+                            <p className='text-rg text-20 abt-hero-para compliance-anim compliance-delay-2'>{aboutHeroSubtitle}</p>
                         </div>
                     </div>
                 </section>
@@ -109,7 +197,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                 <section className='section abt-mis --bg-white'>
                     <div className="container">
                         <div className="mis-vis-section">
-                            <div className="mis-vis-heading only-mis" >
+                            <div className="mis-vis-heading only-mis" ref={missionRef} >
                                 <h2 className='h3'>Our Mission</h2>
 
                                 <p className='text-20 text-rg'>{missionSubtitle}</p>
@@ -117,7 +205,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                                 <Image src='/images/aboutUs/mission-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-mis-img'></Image>
                             </div>
 
-                            <div className="mis-vis-card-lists card-list-mision">
+                            <div className="mis-vis-card-lists card-list-mision" ref={missionCardsRef}>
                                 <div className="mis-vis-cards">
                                     <div className="mis-vis-card primary-box-shadow mis-anim-1">
                                         <Image src='/images/aboutUs/rebase-icon.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
@@ -161,50 +249,50 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                 <section className='abt-vis --bg-white'>
                     <div className="container">
                         <div className="mis-vis-section vis-section">
-                            <motion.div className="mis-vis-heading vis-heading only-vis">
-                                <motion.h2 className='h3'>Our Vision</motion.h2>
+                            <div className="mis-vis-heading vis-heading only-vis" ref={visionRef}>
+                                <h2 className='h3'>Our Vision</h2>
 
-                                <motion.p className='text-20 text-rg'>{visionSubtitle}</motion.p>
+                                <p className='text-20 text-rg'>{visionSubtitle}</p>
 
                                 <Image src='/images/aboutUs/vision-heading.webp' alt='mission-heading' width={692} height={295} priority={false} className='our-vis-img'></Image>
-                            </motion.div>
+                            </div>
 
-                            <div className="mis-vis-card-lists">
-                                <motion.div className="mis-vis-cards">
-                                    <motion.div className="mis-vis-card greenish-box-shadow vis-card vis-anim-2">
+                            <div className="mis-vis-card-lists" ref={visionCardsRef}>
+                                <div className="mis-vis-cards vis-cards">
+                                    <div className="mis-vis-card greenish-box-shadow vis-card vis-anim-2">
                                         <Image src='/images/aboutUs/work-history.svg' alt='rebase-icon' width={33} height={37} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{visionPoints.point1Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg'>{visionPoints.point1Subtitle}</p>
-                                    </motion.div>
+                                    </div>
 
-                                    <motion.div className="mis-vis-card greenish-box-shadow vis-card vis-anim-1">
+                                    <div className="mis-vis-card greenish-box-shadow vis-card vis-anim-1">
                                         <Image src='/images/aboutUs/proactive-readiness-icon.svg' alt='rebase-icon' width={33} height={30} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{visionPoints.point2Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg'>{visionPoints.point2Subtitle}</p>
-                                    </motion.div>
-                                </motion.div>
+                                    </div>
+                                </div>
 
-                                <motion.div className="mis-vis-cards">
-                                    <motion.div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-2">
+                                <div className="mis-vis-cards vis-cards">
+                                    <div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-2">
                                         <Image src='/images/aboutUs/arming-countdown.svg' alt='rebase-icon' width={35} height={33} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{visionPoints.point3Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg'>{visionPoints.point3Subtitle}</p>
-                                    </motion.div>
+                                    </div>
 
-                                    <motion.div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-1">
+                                    <div className="mis-vis-card greenish-box-shadow vis-card removed-margin-btm vis-anim-1">
                                         <Image src='/images/aboutUs/emoji-objects.svg' alt='rebase-icon' width={36} height={26} priority={false}></Image>
 
                                         <p className='mis-vis-para text-md text-20'>{visionPoints.point4Title}</p>
 
                                         <p className='mis-vis-detail-para text-grey test-18 text-rg '>{visionPoints.point4Subtitle}</p>
-                                    </motion.div>
-                                </motion.div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -219,7 +307,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                                 <Image src='/images/aboutUs/about-compliance-updated.gif' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
                             </div>
 
-                            <div className="platform-info">
+                            <div className="platform-info" ref={platformRef}>
                                 <h2 className='h4'>{platformSupportTitle}</h2>
 
                                 <p className='text-20 text-grey'>{platformSupportSubtitle}</p>
@@ -247,7 +335,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                 <AboutUsSwiperComponents />
             </div>
 
-            <AboutAnimations />
+            {/* <AboutAnimations /> */}
         </>
     );
 }

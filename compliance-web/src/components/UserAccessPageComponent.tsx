@@ -1,10 +1,12 @@
 "use client"
 import React from 'react'
 import { Header } from './Header';
-import { motion, scale } from 'framer-motion'
+// import { motion, scale } from 'framer-motion'
 import Image from 'next/image';
-import Link from 'next/link';
-import UserAccessAnimation from './UserAccessAnimations';
+// import Link from 'next/link';
+// import UserAccessAnimation from './UserAccessAnimations';
+import { useEffect } from "react";
+
 
 type UserAccessProps = {
     userAccessHeroTitle: string;
@@ -100,30 +102,42 @@ export default function UserAccessComponent ({
     //     animateProcessImg4: { opacity: 1, scale:1, },
     // }
 
-    const container = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { staggerChildren: 1 } }
-      };
+    // const container = {
+    //     hidden: { opacity: 0 },
+    //     visible: { opacity: 1, transition: { staggerChildren: 1 } }
+    //   };
       
-      const imageVariant = {
-        hidden: { opacity: 0, scale: 0 },
-        visible: {  opacity: 1,  scale: 1, transition: { duration: 1 } }
-      };
+    //   const imageVariant = {
+    //     hidden: { opacity: 0, scale: 0 },
+    //     visible: {  opacity: 1,  scale: 1, transition: { duration: 1 } }
+    //   };
 
-    const MotionImage = motion(Image);
+    // const MotionImage = motion(Image);
+    useEffect(() => {
+        const h1 = document.querySelector(".user-access-hero h1.compliance-anim");
+        const p = document.querySelector(".user-access-hero p.compliance-anim");
 
+        if (!h1 || !p) return;
+
+        // Animate H1
+        requestAnimationFrame(() => h1.classList.add("compliance-anim-active"));
+
+        // Animate P after H1
+        setTimeout(() => p.classList.add("compliance-anim-active"), 800);
+
+    }, []);
     return (
         <>
             <div className="useraccessbody">
                 <Header />
 
-                <section className='user-access-hero' style={{ backgroundColor: '#290047' }}>
+                <section className='user-access-hero'>
                     <video src="/images/userAccess/User&Access.mp4" autoPlay loop muted className='user-acc-vid'></video>
                     <div className="container">
                         <div className="user-access-hero-head">
-                            <h1>{userAccessHeroTitle}</h1>
+                            <h1 className='compliance-anim compliance-delay-1'>{userAccessHeroTitle}</h1>
 
-                            <p className='hero-section-para text-rg text-20'>{userAccessHeroSubtitle}</p>
+                            <p className='hero-section-para text-rg text-20 compliance-anim compliance-delay-2'>{userAccessHeroSubtitle}</p>
                         </div>
                     </div>
                 </section>
@@ -305,7 +319,7 @@ export default function UserAccessComponent ({
                 </section> */}
             </div>
 
-            <UserAccessAnimation />
+            {/* <UserAccessAnimation /> */}
         </>
     );
 }
