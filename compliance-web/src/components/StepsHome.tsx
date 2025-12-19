@@ -34,7 +34,7 @@ export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
                     </div>
 
                     <div className="steps-video-wrapper site-radius-20 ">
-                        <video src="/images/homepage/process-vid-update.mp4" autoPlay muted loop controls controlsList="nodownload noplaybackrate" disablePictureInPicture contextMenu="return false" width='3840' height='2160' className="steps-vid site-radius-20"></video>
+                        <video src="/images/homepage/homepage-section-3.mp4" autoPlay muted loop controls controlsList="nodownload noplaybackrate" disablePictureInPicture contextMenu="return false" width='3840' height='2160' className="steps-vid site-radius-20"></video>
                     </div>
                 </div>
                 <span className="white-box"></span>

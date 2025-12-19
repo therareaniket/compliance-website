@@ -302,9 +302,9 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
                     <div className="container">
                         <div className="platform-wrapper site-radius-10">
                             <div className="left-gif-platform">
-                                <Image src='/images/aboutUs/platform-side-img.webp' alt='platform-side-img' width={452} height={440} priority={false} className='platform-side-image site-radius-10'></Image>
+                                {/* <Image src='/images/aboutUs/platform-side-img.webp' alt='platform-side-img' width={452} height={440} priority={false} className='platform-side-image site-radius-10'></Image> */}
 
-                                <Image src='/images/aboutUs/about-compliance-updated.gif' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
+                                <Image src='/images/aboutUs/platform-support.webp' alt='our-platform' width={770} height={549} priority={false} className='platform-showcase-img site-radius-10'></Image>
                             </div>
 
                             <div className="platform-info" ref={platformRef}>
