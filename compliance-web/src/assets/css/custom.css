@@ -633,7 +633,7 @@ section { overflow: hidden; }
   left: 0;
   width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   /* places prev/next at both ends */
   align-items: center;
   transform: translate( 70% ,-60%); 
