@@ -127,49 +127,62 @@ export default function UserAccessComponent({
 
     }, []);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
+useEffect(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
 
-                        // LEFT animations
-                        if (entry.target.classList.contains('role-anim-left')) {
-                            entry.target.classList.add('active');
-                        }
-
-                        // RIGHT animations
-                        if (entry.target.classList.contains('role-anim-right')) {
-                            entry.target.classList.add('active');
-                        }
-
-                        // LEFT stagger
-                        if (entry.target.classList.contains('role-anim-stagger')) {
-                            [...entry.target.children].forEach((child, index) => {
-                                setTimeout(() => child.classList.add('active'), index * 300);
-                            });
-                        }
-
-                        // RIGHT stagger
-                        if (entry.target.classList.contains('role-anim-stagger-right')) {
-                            [...entry.target.children].forEach((child, index) => {
-                                setTimeout(() => child.classList.add('active'), index * 300);
-                            });
-                        }
+                    // LEFT animations
+                    if (entry.target.classList.contains('role-anim-left')) {
+                        entry.target.classList.add('active');
                     }
-                });
-            },
-            { threshold: 0.2 }
-        );
 
-        document
-            .querySelectorAll(
-                '.role-anim-left, .role-anim-right, .role-anim-stagger, .role-anim-stagger-right'
-            )
-            .forEach(el => observer.observe(el));
+                    // RIGHT animations
+                    if (entry.target.classList.contains('role-anim-right')) {
+                        entry.target.classList.add('active');
+                    }
 
-        return () => observer.disconnect();
-    }, []);
+                    // LEFT stagger
+                    if (entry.target.classList.contains('role-anim-stagger')) {
+                        [...entry.target.children].forEach((child, index) => {
+                            setTimeout(() => child.classList.add('active'), index * 300);
+                        });
+                    }
+
+                    // RIGHT stagger
+                    if (entry.target.classList.contains('role-anim-stagger-right')) {
+                        [...entry.target.children].forEach((child, index) => {
+                            setTimeout(() => child.classList.add('active'), index * 300);
+                        });
+                    }
+
+                    // PATH IMAGES stagger animation - NEW
+                    if (entry.target.classList.contains('path-images-container')) {
+                        const images = entry.target.querySelectorAll('.path-1, .path-2, .path-3, .path-4');
+                        images.forEach((img, index) => {
+                            setTimeout(() => {
+                                img.classList.add('path-img-active');
+                            }, index * 300);
+                        });
+                    }
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    // Observe all animation elements including new path container
+    document
+        .querySelectorAll(
+            '.role-anim-left, .role-anim-right, .role-anim-stagger, .role-anim-stagger-right, .path-images-container'
+        )
+        .forEach(el => observer.observe(el));
+
+    // Cleanup
+    return () => observer.disconnect();
+}, []);
+
 
 
     return (
@@ -335,23 +348,23 @@ export default function UserAccessComponent({
                                 <p className='text-20 text-rg text-grey' >{onboardingSubtitle}</p>
                             </div>
 
-                            <div className='access-portal-path'>
+                            <div className='access-portal-path '>
                                 <div className='path-line' >
                                     <Image className='path-line' src='/images/userAccess/access-portal-path-line.webp' alt='path-line' width={1238} height={425} priority={false}></Image>
                                 </div>
 
-                                <div className='path-images'>
+                                <div className='path-images path-images-container'>
                                     {/* <MotionImage className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg1' whileInView='animateProcessImg1' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
-                                    <Image className='path-1' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
+                                    <Image className='path-1 path-img' src='/images/userAccess/access-portal-path-1.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
 
                                     {/* <MotionImage className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg2' whileInView='animateProcessImg2' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
-                                    <Image className='path-2' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
+                                    <Image className='path-2 path-img' src='/images/userAccess/access-portal-path-2.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
 
                                     {/* <MotionImage className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg3' whileInView='animateProcessImg3' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
-                                    <Image className='path-3' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
+                                    <Image className='path-3 path-img' src='/images/userAccess/access-portal-path-3.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
 
                                     {/* <MotionImage className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} variants={userAccessAnimation} initial='initialProcessImg4' whileInView='animateProcessImg4' viewport={{ once: true, amount: 0.3 }}></MotionImage> */}
-                                    <Image className='path-4' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
+                                    <Image className='path-4 path-img' src='/images/userAccess/access-portal-path-4.webp' alt='path-line' width={450} height={160} priority={false} ></Image>
                                 </div>
                             </div>
                         </div>

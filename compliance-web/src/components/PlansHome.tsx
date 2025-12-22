@@ -1,12 +1,13 @@
 "use client"
 
-import { useMemo, useState } from "react";
-import { motion } from 'framer-motion';
+import { useMemo, useEffect, useState, useRef } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
 import Link from "next/link";
 
+
+
 type PlanId = 'free' | 'standard' | 'enterprise';
-    
+
 type PlanPoints = {
     inclusion1: string;
     inclusion2: string;
@@ -17,7 +18,7 @@ type PlanPoints = {
 };
 
 type PlanProps = {
-    plansTitle : string;
+    plansTitle: string;
     plansSubtitle: string;
     freePlan: PlanPoints;
     standardPlan: PlanPoints;
@@ -50,32 +51,34 @@ type PlanProps = {
 //     animateDetails: { opacity: 1, x: 0, },
 // }
 
-export default function PlansSection({plansTitle, plansSubtitle, freePlan, standardPlan, enterprisePlan} : PlanProps) {
-
+export default function PlansSection({ plansTitle, plansSubtitle, freePlan, standardPlan, enterprisePlan }: PlanProps) {
+    const resultHeadRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const subtitleRef = useRef<HTMLParagraphElement>(null);
     const [activePlanButton, setActivePlanButton] = useState<PlanId>('free');
     const [accordionValue, setAccordionValue] = useState<string>('item-1');
 
     const planDetails = useMemo(
         () => ({
-          free: {
-            title: "Starter Plan",
-            bullets: [ freePlan.inclusion1, freePlan.inclusion2, freePlan.inclusion3, freePlan.inclusion4, freePlan.inclusion5, freePlan.inclusion6,].filter(Boolean),
-          },
-          standard: {
-            title: "Standard Plan",
-            bullets: [ standardPlan.inclusion1, standardPlan.inclusion2, standardPlan.inclusion3, standardPlan.inclusion4, standardPlan.inclusion5, standardPlan.inclusion6,].filter(Boolean),
-          },
-          enterprise: {
-            title: "Enterprise Plan",
-            bullets: [ enterprisePlan.inclusion1, enterprisePlan.inclusion2, enterprisePlan.inclusion3, enterprisePlan.inclusion4, enterprisePlan.inclusion5, enterprisePlan.inclusion6,].filter(Boolean),
-          },
+            free: {
+                title: "Starter Plan",
+                bullets: [freePlan.inclusion1, freePlan.inclusion2, freePlan.inclusion3, freePlan.inclusion4, freePlan.inclusion5, freePlan.inclusion6,].filter(Boolean),
+            },
+            standard: {
+                title: "Standard Plan",
+                bullets: [standardPlan.inclusion1, standardPlan.inclusion2, standardPlan.inclusion3, standardPlan.inclusion4, standardPlan.inclusion5, standardPlan.inclusion6,].filter(Boolean),
+            },
+            enterprise: {
+                title: "Enterprise Plan",
+                bullets: [enterprisePlan.inclusion1, enterprisePlan.inclusion2, enterprisePlan.inclusion3, enterprisePlan.inclusion4, enterprisePlan.inclusion5, enterprisePlan.inclusion6,].filter(Boolean),
+            },
         }),
         [freePlan, standardPlan, enterprisePlan]
-      );
+    );
 
-      const handleAccordionChange = (value: string) => {
+    const handleAccordionChange = (value: string) => {
         setAccordionValue(value);
-        
+
         // Update the active plan based on which accordion item is opened
         if (value === 'item-1') {
             setActivePlanButton('free');
@@ -88,17 +91,43 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
 
     const activePlanDetails = planDetails[activePlanButton];
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        if (titleRef.current) titleRef.current.classList.add('animate');
+                        if (subtitleRef.current) subtitleRef.current.classList.add('animate');
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // FIX: Add small delay to ensure DOM is ready
+        const timeoutId = setTimeout(() => {
+            if (resultHeadRef.current) {
+                observer.observe(resultHeadRef.current);
+            }
+        }, 0);
+
+        return () => {
+            clearTimeout(timeoutId);
+            if (observer) observer.disconnect();
+        };
+    }, []);
+
     return (
         <>
             <section className="section hm-plans --bg-white relative z-[2]">
                 <div className="container">
                     <div className="plan-content-wrapper">
-                        <div className="plans-left">
-                            <h2 className="h3 plans-left-heading">{plansTitle}</h2>
+                        <div className="plans-left" ref={resultHeadRef}>
+                            <h2 className="h3 plans-left-heading slide-left" ref={titleRef}>{plansTitle}</h2>
 
-                            <p className="text-20 text-grey plan-sub-title">{plansSubtitle}</p>
+                            <p className="text-20 text-grey plan-sub-title slide-right" ref={subtitleRef}>{plansSubtitle}</p>
                         </div>
- 
+
                         <div className="plans-right">
                             {/* <p className="text-20 text-grey plan-title">{plansSubtitle}</p> */}
 
@@ -142,7 +171,7 @@ export default function PlansSection({plansTitle, plansSubtitle, freePlan, stand
                             </div>
                         </div>
 
-                        
+
 
                         <div className="plans-mobile-accordion">
                             <Accordion type="single" collapsible value={accordionValue} onValueChange={handleAccordionChange} className="plan-accordion-wrapper">

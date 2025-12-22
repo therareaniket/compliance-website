@@ -111,54 +111,56 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
 
     }, []);
 
-    // Animate heading, paragraph, image
     useEffect(() => {
-        const missionEl = missionRef.current;
         const cardsEl = missionCardsRef.current;
-        if (!missionEl || !cardsEl) return;
+        if (!cardsEl) return;
 
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                // Trigger heading/paragraph/image animation
-                missionEl.classList.add("animate");
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    // Stagger animate only the 4 cards
+                    const allCards = cardsEl.querySelectorAll('.mis-vis-card');
+                    allCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('animate-card');
+                        }, index * 200); // 200ms stagger between cards
+                    });
 
-                // Stagger card animations after heading animation finishes
-                setTimeout(() => {
-                    cardsEl.classList.add("animate-cards");
-                }, 1000); // delay matches heading animation duration
+                    observer.unobserve(cardsEl); // Animate once
+                }
+            },
+            { threshold: 0.3 }
+        );
 
-                observer.unobserve(missionEl);
-            }
-        }, { threshold: 0.3 });
-
-        observer.observe(missionEl);
+        observer.observe(cardsEl);
         return () => observer.disconnect();
     }, []);
 
+useEffect(() => {
+    const cardsEl = visionCardsRef.current;
+    if (!cardsEl) return;
 
-    useEffect(() => {
-        const visionEl = visionRef.current;
-        const cardsEl = visionCardsRef.current;
-        if (!visionEl || !cardsEl) return;
-
-        const observer = new IntersectionObserver(([entry]) => {
+    const observer = new IntersectionObserver(
+        ([entry]) => {
             if (entry.isIntersecting) {
-                // Animate heading/paragraph/image from right
-                visionEl.classList.add("animate");
-
-                // Animate cards from left after heading animation
-                setTimeout(() => {
-                    cardsEl.classList.add("animate-cards");
-                }, 1000); // matches heading animation duration
-
-                observer.unobserve(visionEl);
+                // Stagger animate only the 4 cards
+                const allCards = cardsEl.querySelectorAll('.mis-vis-card');
+                allCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('animate-card');
+                    }, index * 200); // 200ms stagger between cards
+                });
+                
+                observer.unobserve(cardsEl); // Animate once
             }
-        }, { threshold: 0.3 });
+        },
+        { threshold: 0.3 }
+    );
 
-        observer.observe(visionEl);
+    observer.observe(cardsEl);
+    return () => observer.disconnect();
+}, []);
 
-        return () => observer.disconnect();
-    }, []);
 
     useEffect(() => {
         const el = platformRef.current;

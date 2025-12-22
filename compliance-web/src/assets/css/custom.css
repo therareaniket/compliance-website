@@ -745,42 +745,7 @@ section { overflow: hidden; }
 
 .compliance-matters-card-list.animate-in .card-anim { opacity: 1; transform: translate3d(0, 0, 0); }
 
-.only-mis h2,
-.only-mis p,
-.only-mis .our-mis-img { 
-  opacity: 0; 
-  transform: translate3d(-140px, 0, 0) 
-  scale(0.98); 
-  transition-property: opacity, transform, filter; 
-  transition-duration: 3s; 
-  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); 
-  will-change: transform, opacity, filter;
-}
 
-.only-mis.animate h2 { opacity: 1; transform: translate3d(0, 0, 0) scale(1); transition-delay: 0.8s; }
-.only-mis.animate p { opacity: 1; transform: translate3d(0, 0, 0) scale(1); transition-delay: 2s; }
-.only-mis.animate .our-mis-img { opacity: 1; transform: translate3d(0, 0, 0) scale(1); transition-delay: 3s; }
-.mis-vis-cards { opacity: 0; transform: translateX(-40px); transition: all 3s cubic-bezier(0.16, 1, 0.3, 1); }
-.mis-vis-card-lists.animate-cards .mis-vis-cards:nth-child(1) { opacity: 1; transform: translateX(0); transition-delay: 3.5s; }
-.mis-vis-card-lists.animate-cards .mis-vis-cards:nth-child(2) { opacity: 1; transform: translateX(0); transition-delay: 4s; }
-.only-vis h2,
-.only-vis p,
-.only-vis .our-vis-img { 
-  opacity: 0; 
-  transform: translate3d(80px, 0, 0) 
-  scale(0.98); 
-  transition-property: opacity, transform; 
-  transition-duration: 3s; 
-  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-}
-
-.only-vis.animate h2 { opacity: 1; transform: translate3d(0, 0, 0) scale(1); transition-delay: 0.8s; }
-.only-vis.animate p { opacity: 1; transform: translate3d(0, 0, 0) scale(1); transition-delay: 2s; }
-.only-vis.animate .our-vis-img { opacity: 1; transform: translate3d(0, 0, 0) scale(1); transition-delay: 3s; }
-.vis-cards { opacity: 0; transform: translate3d(-40px, 0, 0); /* from left */ transition: all 3s cubic-bezier(0.16, 1, 0.3, 1); }
-.mis-vis-card-lists.animate-cards .vis-cards:nth-child(1) { opacity: 1; transform: translateX(0); transition-delay: 3.5s; }
-.mis-vis-card-lists.animate-cards .vis-cards:nth-child(2) { opacity: 1; transform: translateX(0); transition-delay: 4s; }
 .platform-info { opacity: 0; transform: translate3d(80px, 0, 0); transition: all 4s cubic-bezier(0.16, 1, 0.3, 1); will-change: transform, opacity; }
 .platform-info.animate { opacity: 1; transform: translate3d(0, 0, 0); }
 .info-block.slide-in { opacity: 0; transform: translateY(-60px); transition: transform 2.5s ease, opacity 0.8s ease; }
@@ -792,7 +757,7 @@ section { overflow: hidden; }
 .account-admin {
   width: max-content;
   height: max-content;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 20px;
   display: flex;
   overflow: hidden;
@@ -800,19 +765,19 @@ section { overflow: hidden; }
   justify-content: center;
 }
 .account-admin img { transition: transform 1s ease-in-out; }
-.account-admin:hover img { transform: scale(1.2); }
+.account-admin:hover img { transform: scale(1.137); }
 
 
 .role-anim-left,
 .role-anim-stagger > * { opacity: 0; transform: translateX(-60px); }
 .role-anim-left.active { opacity: 1; transform: translateX(0); transition: all 1s ease; }
-.role-anim-stagger > *.active { opacity: 1; transform: translateX(0); transition: all 2.5s ease; }
+.role-anim-stagger > *.active { opacity: 1; transform: translateX(0); transition: all 1.2s ease; }
 
 .role-anim-right,
 .role-anim-stagger-right > * { opacity: 0; transform: translateX(60px); }
 
 .role-anim-right.active { opacity: 1; transform: translateX(0); transition: all 1s ease; }
-.role-anim-stagger-right > *.active { opacity: 1; transform: translateX(0); transition: all 2.5s ease; }
+.role-anim-stagger-right > *.active { opacity: 1; transform: translateX(0); transition: all 1.2s ease; }
 
 .compliance-matters-card-list.compliance-card-anim { opacity: 0; transform: translateX(-100px); transition: all 1s cubic-bezier(0.1, 0.46, 0.45, 0.94); }
 .hipaa-card, .fda_card, .annex_11_card, .gdpr_card, .gcp_card, .cdsco_card { opacity: 1; }
@@ -840,10 +805,10 @@ section { overflow: hidden; }
 .slide-right {  transform: translateX(100%);  opacity: 0;  transition: all 0.8s ease 0.2s; }
 .slide-right.animate {  transform: translateX(0);  opacity: 1;  }
 
-.supported-compli-lists { overflow: hidden; }
+/* .supported-compli-lists { overflow: hidden; } */
 .slide-left-list {  transform: translateX(-100%); opacity: 0;  transition: all 1s ease 1s; }
 .slide-left-list.animate { transform: translateX(0); opacity: 1; }
-.compli-stats { overflow: hidden; }
+/* .compli-stats { overflow: hidden; } */
 .slide-right-stats {  transform: translateX(100%); opacity: 0;  transition: all 1.3s ease 1.3s; }
 .slide-right-stats.animate { transform: translateX(0); opacity: 1; }
 
@@ -854,3 +819,108 @@ section { overflow: hidden; }
 /* .category-btns { overflow: hidden;} */
 .scale-up-buttons {  transform: scale(0);  opacity: 0;  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s; }
 .scale-up-buttons.animate {  transform: scale(1);  opacity: 1; }
+
+
+.slide-why-right { transform: translateX(-100%); opacity: 0; transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.slide-why-right.animate { transform: translateX(0); opacity: 1; }
+
+
+/* Title slides from left */
+.compliance-matters-section h2.h3 { 
+    transform: translateX(-100%); 
+    opacity: 0; 
+    transition: all 1s ease; 
+}
+.compliance-matters-section h2.h3.animate { 
+    transform: translateX(0); 
+    opacity: 1; 
+}
+
+/* Paragraphs slide from right */
+.compliance-matters-section .matters-para1,
+.compliance-matters-section .matters-para2 { 
+    transform: translateX(100%); 
+    opacity: 0; 
+    transition: all 1s ease; 
+}
+.compliance-matters-section .matters-para1.animate,
+.compliance-matters-section .matters-para2.animate { 
+    transform: translateX(0); 
+    opacity: 1; 
+}
+
+
+/* Initial state - cards hidden off right */
+.surety-count-cards .card-1 {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Animate state - slide to center */
+.surety-count-cards .card-1.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* BASE - ALL cards start HIDDEN */
+.compliance-matters-card-list {
+    opacity: 0 !important;
+    transform: translateX(-100px) !important;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* SPECIFIC staggered animations - HIGH specificity */
+.compliance-matters-cards .compliance-matters-card-list.animate-1 {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.compliance-matters-cards .compliance-matters-card-list.animate-2 {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.compliance-matters-cards .compliance-matters-card-list.animate-3 {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+
+.path-img {
+    opacity: 0;
+    transform: scale(0.3);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.path-img.path-img-active {
+    opacity: 1;
+    transform: scale(1);
+}
+/* Mission cards initial state - hidden off left */
+.mis-vis-card {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Active animation state - slide to position */
+.mis-vis-card.animate-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Both Mission & Vision cards - slide from left */
+.mis-vis-card {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mis-vis-card.animate-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+

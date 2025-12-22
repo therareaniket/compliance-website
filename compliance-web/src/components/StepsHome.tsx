@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useRef } from 'react';
 // import { motion } from 'framer-motion'
 
 type stepsProps = {
@@ -8,29 +9,44 @@ type stepsProps = {
 }
 
 export default function StepsHome({ steps_title, steps_subTitle }: stepsProps) {
+    const resultHeadRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const subtitleRef = useRef<HTMLParagraphElement>(null);
+    
+        useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        if (titleRef.current) titleRef.current.classList.add('animate');
+                        if (subtitleRef.current) subtitleRef.current.classList.add('animate');
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-    // const stepsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    //     initialHeader: { opacity: 0, x: -100},
-    //     animateHeader: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+        // FIX: Add small delay to ensure DOM is ready
+        const timeoutId = setTimeout(() => {
+            if (resultHeadRef.current) {
+                observer.observe(resultHeadRef.current);
+            }
+        }, 0);
 
-    //     initialPara: { opacity: 0, x: -100},
-    //     animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 }},
-    // } : {
-    //     initialHeader: { opacity: 1, x: 0},
-    //     animateHeader: { opacity: 1, x: 0,},
-
-    //     initialPara: { opacity: 1, x: 0},
-    //     animatePara: { opacity: 1, x: 0, },
-    // }
+        return () => {
+            clearTimeout(timeoutId);
+            if (observer) observer.disconnect();
+        };
+    }, []);
 
     return(
         <>
             <section className="hm-compli-steps relative z-[2]">
                 <div className="container">
-                    <div className="steps-head">
-                        <h2 className="h3">{steps_title}</h2>
+                    <div className="steps-head"  ref={resultHeadRef}>
+                        <h2 className="h3 slide-left" ref={titleRef} >{steps_title}</h2>
 
-                        <p className="text-20 text-grey">{steps_subTitle}</p>
+                        <p className="text-20 text-grey slide-right" ref={subtitleRef}>{steps_subTitle}</p>
                     </div>
 
                     <div className="steps-video-wrapper site-radius-20 ">

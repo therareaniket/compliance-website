@@ -25,91 +25,113 @@ export default function ComplianceComponent({ complianceHeroTitle, complianceHer
 
     }, []);
 
+    // Replace the first useEffect (the one handling compliance-matters-section) with this:
     useEffect(() => {
         const section = document.querySelector('.compliance-matters-section');
         if (!section) return;
 
-        const observer1 = new IntersectionObserver(
-            (entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const h2 = section.querySelector('h2.h3');
-                        h2?.classList.add('animate-from-left');
+        // Refs for title and paragraphs (like the reference)
+        const titleRef = section.querySelector('h2.h3');
+        const para1Ref = section.querySelector('.matters-para1');
+        const para2Ref = section.querySelector('.matters-para2');
 
-                        const paras = section.querySelectorAll('.compli-para-anim');
-                        paras.forEach((p, index) => {
-                            setTimeout(() => p.classList.add('animate-from-right'), 700 * (index + 1));
-                        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate title from left
+                    if (titleRef) titleRef.classList.add('animate');
 
-                        obs.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-        observer1.observe(section);
+                    // Animate paragraphs from right with small delay
+                    setTimeout(() => {
+                        if (para1Ref) para1Ref.classList.add('animate');
+                        if (para2Ref) para2Ref.classList.add('animate');
+                    }, 100);
 
-        const secondPara = section.querySelectorAll('.compli-para-anim')[1];
-        if (!secondPara) return;
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
 
-        const observer2 = new IntersectionObserver(
-            (entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const cards = section.querySelectorAll('.surety-count-cards .card-1');
-                        cards.forEach((card, index) => {
-                            setTimeout(() => card.classList.add('animate-from-bottom'), 1300 * (index + 1));
-                        });
-                        obs.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 1.0 }
-        );
-        observer2.observe(secondPara);
+        // Small delay to ensure DOM ready (like reference)
+        const timeoutId = setTimeout(() => {
+            observer.observe(section);
+        }, 0);
+
+        return () => {
+            clearTimeout(timeoutId);
+            observer.disconnect();
+        };
     }, []);
 
     useEffect(() => {
-        const section = document.querySelector<HTMLElement>(
-            ".compliance-matters-cards"
-        );
+        const section = document.querySelector('.compliance-matters-section');
         if (!section) return;
 
-        const cardLists = section.querySelectorAll<HTMLElement>(
-            ".compliance-matters-card-list.compliance-card-anim"
-        );
+        const cardsContainer = section.querySelector('.surety-count-cards');
+        if (!cardsContainer) return;
 
-        cardLists.forEach((cardList) => {
-            cardList.style.opacity = "0";
-            cardList.style.transform = "translateX(-100px)";
-        });
+        const cards = cardsContainer.querySelectorAll('.card-1');
+        const para2Ref = section.querySelector('.matters-para2'); // Second paragraph
+        if (!para2Ref) return;
 
-        const observer = new IntersectionObserver(
-            (entries, obs) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        cardLists.forEach((cardList, index) => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Wait for paragraph animation to complete (1s + 100ms delay = ~1.1s)
+                    setTimeout(() => {
+                        // Animate cards from right with 500ms stagger
+                        cards.forEach((card, index) => {
                             setTimeout(() => {
-                                cardList.style.transition =
-                                    "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-                                cardList.style.opacity = "1";
-                                cardList.style.transform = "translateX(0)";
-                            }, index * 1000);
+                                card.classList.add('animate');
+                            }, 500 * index); // 0ms, 500ms, 1000ms
                         });
-                        obs.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.2,
-                rootMargin: "0px 0px -100px 0px",
-            }
-        );
+                    }, 1200); // Wait 1.2s after paragraphs start animating
 
-        observer.observe(section);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
 
-        return () => observer.disconnect();
+        const timeoutId = setTimeout(() => {
+            observer.observe(section);
+        }, 100);
+
+        return () => {
+            clearTimeout(timeoutId);
+            observer.disconnect();
+        };
     }, []);
+
+
+useEffect(() => {
+    const section = document.querySelector('.compliance-matters-cards');
+    if (!section) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Force staggered animation with unique classes
+                const cardLists = section.querySelectorAll('.compliance-matters-card-list');
+                cardLists.forEach((cardList, index) => {
+                    setTimeout(() => {
+                        // Remove any existing animate classes first
+                        cardList.classList.remove('animate-1', 'animate-2', 'animate-3');
+                        // Add specific staggered class
+                        cardList.classList.add(`animate-${index + 1}`);
+                    }, index * 800); // 0s, 800ms, 1600ms
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px"
+    });
+
+    setTimeout(() => observer.observe(section), 100);
+    return () => observer.disconnect();
+}, []);
+
 
 
     return (

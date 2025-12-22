@@ -5,7 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
 
+
 export default function ClientaleSlider() {
+
+
+
     return (
         <div className="clientale-main">
             <div className="container">

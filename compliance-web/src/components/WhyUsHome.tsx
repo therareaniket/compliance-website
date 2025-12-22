@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { motion } from 'framer-motion'
+import React, { useEffect, useState, useRef } from "react";
 
 type Card = {
     id: "why-c1" | "why-c2" | "why-c3" | "why-c4" | "why-c5";
@@ -46,6 +45,9 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
     const [cards, setCards] = useState<Card[]>(whyusCards);
     const [movingId, setMovingId] = useState<string | null>(null);
     const [activeImage, setActiveImage] = useState(0);
+    const whyUsHeadRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const subtitleRef = useRef<HTMLParagraphElement>(null);
 
 
     // Update this function to move the clicked card to the last position
@@ -73,19 +75,31 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
         }
     }, [cards]);
 
+    // Add IntersectionObserver for slide-in animation
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        if (titleRef.current) titleRef.current.classList.add('animate');
+                        if (subtitleRef.current) subtitleRef.current.classList.add('animate');
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-    // const whyUsAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    //     initialHead: { opacity: 0, x: -100},
-    //     animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
+        const timeoutId = setTimeout(() => {
+            if (whyUsHeadRef.current) {
+                observer.observe(whyUsHeadRef.current);
+            }
+        }, 0);
 
-    //     initialPara: { opacity: 0, x: -100},
-    //     animatePara: { opacity: 1, x: 0, transition: { duration: 1, delay: 2 }},
-    // } : {
-    //     initialHead: { opacity: 1, y: 0},
-    //     animateHead: { opacity: 1, y: 0, },
-    //     initialPara: { opacity: 1, y: 0},
-    //     animatePara: { opacity: 1, y: 0, },
-    // }
+        return () => {
+            clearTimeout(timeoutId);
+            if (observer) observer.disconnect();
+        };
+    }, []);
 
 
     return (
@@ -94,10 +108,10 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
                 <div className="container">
                     <div className="why-us-content-wrapper">
                         <div className="why-us-content">
-                            <div className="why-us-head">
-                                <h2 className="h3">{whyus_title}</h2>
+                            <div className="why-us-head" ref={whyUsHeadRef}>
+                                <h2 className="h3 slide-why-right" ref={titleRef}>{whyus_title}</h2>
 
-                                <p className="text-20 text-grey" >{whyus_subTitle}</p>
+                                <p className="text-20 text-grey slide-why-right" ref={subtitleRef}>{whyus_subTitle}</p>
                             </div>
 
                             <div className="images-group single">
