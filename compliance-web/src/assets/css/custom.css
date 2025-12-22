@@ -765,8 +765,7 @@ section { overflow: hidden; }
   justify-content: center;
 }
 .account-admin img { transition: transform 1s ease-in-out; }
-.account-admin:hover img { transform: scale(1.137); }
-
+.account-admin:hover img { transform: scale(1.08); }
 
 .role-anim-left,
 .role-anim-stagger > * { opacity: 0; transform: translateX(-60px); }
@@ -781,17 +780,35 @@ section { overflow: hidden; }
 
 .compliance-matters-card-list.compliance-card-anim { opacity: 0; transform: translateX(-100px); transition: all 1s cubic-bezier(0.1, 0.46, 0.45, 0.94); }
 .hipaa-card, .fda_card, .annex_11_card, .gdpr_card, .gcp_card, .cdsco_card { opacity: 1; }
-/* Initial state: hidden + shifted left */
-.hero-anim {
-  opacity: 0;
-  transform: translateX(-80px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* Existing animations */
+.hero-anim { 
+  opacity: 0; 
+  transform: translateX(-80px); 
+  transition: opacity 0.8s ease, transform 0.8s ease; 
 }
 .hero-anim-1 { transition-delay: 0s; }
 .hero-anim-2 { transition-delay: 1s; }
 .hero-anim-3 { transition-delay: 1.5s; }
-.hm-hero.hero-animate-active .hero-anim { opacity: 1; transform: translateX(0); }
+.hero-anim-4 { transition-delay: 2s; }
+.hero-anim-5 { transition-delay: 2.2s; }
 
+.hm-hero.hero-animate-active .hero-anim { 
+  opacity: 1; 
+  transform: translateX(0); 
+}
+
+/* Override for left image - slide from further left */
+.hm-hero.hero-animate-active .left-hero-home {
+  transform: translateX(0);
+}
+
+/* Override for right image - slide from right */
+.right-hero-home {
+  transform: translateX(100px);
+}
+.hm-hero.hero-animate-active .right-hero-home {
+  transform: translateX(0);
+}
 
 .slide-left { transform: translateX(-100%); opacity: 0; transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .slide-left.animate { transform: translateX(0); opacity: 1; }
@@ -805,122 +822,39 @@ section { overflow: hidden; }
 .slide-right {  transform: translateX(100%);  opacity: 0;  transition: all 0.8s ease 0.2s; }
 .slide-right.animate {  transform: translateX(0);  opacity: 1;  }
 
-/* .supported-compli-lists { overflow: hidden; } */
 .slide-left-list {  transform: translateX(-100%); opacity: 0;  transition: all 1s ease 1s; }
 .slide-left-list.animate { transform: translateX(0); opacity: 1; }
-/* .compli-stats { overflow: hidden; } */
 .slide-right-stats {  transform: translateX(100%); opacity: 0;  transition: all 1.3s ease 1.3s; }
 .slide-right-stats.animate { transform: translateX(0); opacity: 1; }
 
-
-/* .faq-head { overflow: hidden; } */
 .scale-up {  transform: scale(0);  opacity: 0;  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .scale-up.animate {  transform: scale(1); opacity: 1; }
-/* .category-btns { overflow: hidden;} */
 .scale-up-buttons {  transform: scale(0);  opacity: 0;  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s; }
 .scale-up-buttons.animate {  transform: scale(1);  opacity: 1; }
-
 
 .slide-why-right { transform: translateX(-100%); opacity: 0; transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .slide-why-right.animate { transform: translateX(0); opacity: 1; }
 
-
-/* Title slides from left */
-.compliance-matters-section h2.h3 { 
-    transform: translateX(-100%); 
-    opacity: 0; 
-    transition: all 1s ease; 
-}
-.compliance-matters-section h2.h3.animate { 
-    transform: translateX(0); 
-    opacity: 1; 
-}
-
-/* Paragraphs slide from right */
+.compliance-matters-section h2.h3 {  transform: translateX(-100%);  opacity: 0;  transition: all 1s ease;  }
+.compliance-matters-section h2.h3.animate {  transform: translateX(0);  opacity: 1;  }
 .compliance-matters-section .matters-para1,
-.compliance-matters-section .matters-para2 { 
-    transform: translateX(100%); 
-    opacity: 0; 
-    transition: all 1s ease; 
-}
+.compliance-matters-section .matters-para2 {  transform: translateX(100%);  opacity: 0;  transition: all 1s ease; }
 .compliance-matters-section .matters-para1.animate,
-.compliance-matters-section .matters-para2.animate { 
-    transform: translateX(0); 
-    opacity: 1; 
-}
+.compliance-matters-section .matters-para2.animate {  transform: translateX(0);  opacity: 1;  }
 
+.surety-count-cards .card-1 { transform: translateX(100%); opacity: 0; transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.surety-count-cards .card-1.animate { transform: translateX(0); opacity: 1; }
 
-/* Initial state - cards hidden off right */
-.surety-count-cards .card-1 {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+.path-img { opacity: 0; transform: scale(0.3); transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.path-img.path-img-active { opacity: 1; transform: scale(1); }
 
-/* Animate state - slide to center */
-.surety-count-cards .card-1.animate {
-    transform: translateX(0);
-    opacity: 1;
-}
+.mis-vis-card { opacity: 0; transform: translateX(100px); transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.mis-vis-card.animate-card { opacity: 1; transform: translateX(0); }
+.mis-vis-card { opacity: 0; transform: translateX(100px); transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.mis-vis-card.vis-card { transform: translateX(-100px);  }
+.mis-vis-card.animate-card { opacity: 1; transform: translateX(0); }
 
-/* BASE - ALL cards start HIDDEN */
-.compliance-matters-card-list {
-    opacity: 0 !important;
-    transform: translateX(-100px) !important;
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-}
-
-/* SPECIFIC staggered animations - HIGH specificity */
-.compliance-matters-cards .compliance-matters-card-list.animate-1 {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-}
-
-.compliance-matters-cards .compliance-matters-card-list.animate-2 {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-}
-
-.compliance-matters-cards .compliance-matters-card-list.animate-3 {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-}
-
-
-.path-img {
-    opacity: 0;
-    transform: scale(0.3);
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.path-img.path-img-active {
-    opacity: 1;
-    transform: scale(1);
-}
-/* Mission cards initial state - hidden off left */
-.mis-vis-card {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Active animation state - slide to position */
-.mis-vis-card.animate-card {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
-/* Both Mission & Vision cards - slide from left */
-.mis-vis-card {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.mis-vis-card.animate-card {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
+.compliance-matters-card-list { opacity: 0 !important; transform: translateX(-100px) !important; transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; }
+.compliance-matters-cards .compliance-matters-card-list.animate-1 { opacity: 1 !important; transform: translateX(0) !important; }
+.compliance-matters-cards .compliance-matters-card-list.animate-2 { opacity: 1 !important; transform: translateX(0) !important; }
+.compliance-matters-cards .compliance-matters-card-list.animate-3 { opacity: 1 !important; transform: translateX(0) !important; }

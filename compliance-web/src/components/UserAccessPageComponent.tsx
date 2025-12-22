@@ -5,7 +5,7 @@ import { Header } from './Header';
 import Image from 'next/image';
 // import Link from 'next/link';
 // import UserAccessAnimation from './UserAccessAnimations';
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 
 type UserAccessProps = {
@@ -47,7 +47,9 @@ export default function UserAccessComponent({
     onboardingTitle, onboardingSubtitle
 
 }: UserAccessProps) {
-
+    const resultHeadRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const subtitleRef = useRef<HTMLParagraphElement>(null);
     // const userAccessAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
     //     initialHead: { opacity: 0, x: -100, },
     //     animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
@@ -183,7 +185,31 @@ useEffect(() => {
     return () => observer.disconnect();
 }, []);
 
-
+        useEffect(() => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            if (titleRef.current) titleRef.current.classList.add('animate');
+                            if (subtitleRef.current) subtitleRef.current.classList.add('animate');
+                        }, 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            // FIX: Add small delay to ensure DOM is ready
+            const timeoutId = setTimeout(() => {
+                if (resultHeadRef.current) {
+                    observer.observe(resultHeadRef.current);
+                }
+            }, 0);
+    
+            return () => {
+                clearTimeout(timeoutId);
+                if (observer) observer.disconnect();
+            };
+        }, []);
 
     return (
         <>
@@ -342,10 +368,10 @@ useEffect(() => {
                 <section className='secure-portal-wrapper'>
                     <div className="container">
                         <div className='secure-portal-section'>
-                            <div className='secure-portal-text' >
-                                <h2 className='h3' >{onboardingTitle}</h2>
+                            <div className='secure-portal-text' ref={resultHeadRef} >
+                                <h2 className='h3 slide-left' ref={titleRef}>{onboardingTitle}</h2>
 
-                                <p className='text-20 text-rg text-grey' >{onboardingSubtitle}</p>
+                                <p className='text-20 text-rg text-grey slide-right' ref={subtitleRef}>{onboardingSubtitle}</p>
                             </div>
 
                             <div className='access-portal-path '>

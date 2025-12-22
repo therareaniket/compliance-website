@@ -76,30 +76,40 @@ export default function WhyUs({ whyus_title, whyus_subTitle }: WhyUSProps) {
     }, [cards]);
 
     // Add IntersectionObserver for slide-in animation
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        if (titleRef.current) titleRef.current.classList.add('animate');
-                        if (subtitleRef.current) subtitleRef.current.classList.add('animate');
-                    }, 100);
-                    observer.unobserve(entry.target);
+// Add IntersectionObserver for slide-in animation - FIXED
+useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // H2 first (immediate)
+                if (titleRef.current) {
+                    titleRef.current.classList.add('animate');
                 }
-            });
-        }, { threshold: 0.1 });
-
-        const timeoutId = setTimeout(() => {
-            if (whyUsHeadRef.current) {
-                observer.observe(whyUsHeadRef.current);
+                
+                // P after 300ms delay
+                setTimeout(() => {
+                    if (subtitleRef.current) {
+                        subtitleRef.current.classList.add('animate');
+                    }
+                }, 300);
+                
+                observer.unobserve(entry.target);
             }
-        }, 0);
+        });
+    }, { threshold: 0.1 });
 
-        return () => {
-            clearTimeout(timeoutId);
-            if (observer) observer.disconnect();
-        };
-    }, []);
+    const timeoutId = setTimeout(() => {
+        if (whyUsHeadRef.current) {
+            observer.observe(whyUsHeadRef.current);
+        }
+    }, 0);
+
+    return () => {
+        clearTimeout(timeoutId);
+        if (observer) observer.disconnect();
+    };
+}, []);
+
 
 
     return (

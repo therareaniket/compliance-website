@@ -66,7 +66,7 @@ export default function HeroSection({
           width={863}
           height={314}
           priority
-          className="left-hero-home"
+          className="left-hero-home hero-anim hero-anim-4"
         />
 
         <Image
@@ -75,7 +75,7 @@ export default function HeroSection({
           width={704}
           height={350}
           priority
-          className="right-hero-home"
+          className="right-hero-home hero-anim hero-anim-5"
         />
       </div>
 

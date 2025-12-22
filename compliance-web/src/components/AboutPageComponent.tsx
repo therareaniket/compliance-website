@@ -119,7 +119,7 @@ export default function AboutComponent({ aboutHeroTitle, aboutHeroSubtitle, miss
             ([entry]) => {
                 if (entry.isIntersecting) {
                     // Stagger animate only the 4 cards
-                    const allCards = cardsEl.querySelectorAll('.mis-vis-card');
+                    const allCards = cardsEl.querySelectorAll('.mis-vis-card'); 
                     allCards.forEach((card, index) => {
                         setTimeout(() => {
                             card.classList.add('animate-card');
@@ -144,7 +144,7 @@ useEffect(() => {
         ([entry]) => {
             if (entry.isIntersecting) {
                 // Stagger animate only the 4 cards
-                const allCards = cardsEl.querySelectorAll('.mis-vis-card');
+                const allCards = cardsEl.querySelectorAll('.mis-vis-card'); 
                 allCards.forEach((card, index) => {
                     setTimeout(() => {
                         card.classList.add('animate-card');
@@ -302,7 +302,7 @@ useEffect(() => {
 
                 <section className="abt-platforms section --bg-white">
                     <div className="container">
-                        <div className="platform-wrapper site-radius-10">
+                        <div className="platform-wrapper site-radius-10" >
                             <div className="left-gif-platform">
                                 {/* <Image src='/images/aboutUs/platform-side-img.webp' alt='platform-side-img' width={452} height={440} priority={false} className='platform-side-image site-radius-10'></Image> */}
 

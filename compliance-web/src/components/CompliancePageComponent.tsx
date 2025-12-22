@@ -104,33 +104,47 @@ export default function ComplianceComponent({ complianceHeroTitle, complianceHer
 
 
 useEffect(() => {
-    const section = document.querySelector('.compliance-matters-cards');
-    if (!section) return;
+    // Target each specific row individually
+    const row1 = document.querySelector('.compliance-card-row-1');
+    const row2 = document.querySelector('.compliance-card-row-2');
+    const row3 = document.querySelector('.compliance-card-row-3');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Force staggered animation with unique classes
-                const cardLists = section.querySelectorAll('.compliance-matters-card-list');
-                cardLists.forEach((cardList, index) => {
-                    setTimeout(() => {
-                        // Remove any existing animate classes first
-                        cardList.classList.remove('animate-1', 'animate-2', 'animate-3');
-                        // Add specific staggered class
-                        cardList.classList.add(`animate-${index + 1}`);
-                    }, index * 800); // 0s, 800ms, 1600ms
-                });
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { 
-        threshold: 0.2,
-        rootMargin: "0px 0px -100px 0px"
+    const rows = [row1, row2, row3];
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Add animate class to THIS specific row only
+                    const targetRow = entry.target;
+                    const rowIndex = rows.indexOf(targetRow);
+                    
+                    if (rowIndex !== -1) {
+                        setTimeout(() => {
+                            targetRow.classList.remove('animate-1', 'animate-2', 'animate-3');
+                            targetRow.classList.add(`animate-${rowIndex + 1}`);
+                        }, 100);
+                    }
+                    
+                    // Unobserve THIS row after it animates
+                    observer.unobserve(targetRow);
+                }
+            });
+        },
+        { 
+            threshold: 0.3,  // 30% visible
+            rootMargin: "0px 0px -20% 0px"  // Trigger when top enters viewport
+        }
+    );
+
+    // Observe each row individually
+    rows.forEach(row => {
+        if (row) observer.observe(row);
     });
 
-    setTimeout(() => observer.observe(section), 100);
     return () => observer.disconnect();
 }, []);
+
 
 
 
@@ -186,7 +200,7 @@ useEffect(() => {
                 <section className='section --bg-white'>
                     <div className="container">
                         <div className="compliance-matters-cards">
-                            <div className='compliance-matters-card-list compliance-card-anim'>
+                            <div className='compliance-matters-card-list compliance-card-row-1 compliance-card-anim'>
                                 <div className='hipaa-card site-radius-10' >
                                     <div className='compliace-card-heading-text'>
                                         <h2 className='h3'>HIPAA</h2>
@@ -208,7 +222,7 @@ useEffect(() => {
                                 </div>
                             </div>
 
-                            <div className='compliance-matters-card-list compliance-card-anim'>
+                            <div className='compliance-matters-card-list compliance-card-row-2 compliance-card-anim'>
                                 <div className='annex_11_card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
                                         <h2 className='h3'>EU Annex 11</h2>
@@ -230,7 +244,7 @@ useEffect(() => {
                                 </div>
                             </div>
 
-                            <div className='compliance-matters-card-list compliance-card-anim'>
+                            <div className='compliance-matters-card-list compliance-card-row-3 compliance-card-anim'>
                                 <div className='gcp_card site-radius-10'>
                                     <div className='compliace-card-heading-text'>
                                         <h2 className='h3'  >GCP</h2>

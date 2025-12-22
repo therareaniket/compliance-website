@@ -4,26 +4,57 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
-import { delay, motion } from 'framer-motion'
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+// import { useMemo, useState, useRef } from "react";
+
 
 
 export default function AboutUsSwiperComponents() {
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+        const resultHeadRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const subtitleRef = useRef<HTMLParagraphElement>(null);
+
+
+        useEffect(() => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            if (titleRef.current) titleRef.current.classList.add('animate');
+                            if (subtitleRef.current) subtitleRef.current.classList.add('animate');
+                        }, 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            // FIX: Add small delay to ensure DOM is ready
+            const timeoutId = setTimeout(() => {
+                if (resultHeadRef.current) {
+                    observer.observe(resultHeadRef.current);
+                }
+            }, 0);
+    
+            return () => {
+                clearTimeout(timeoutId);
+                if (observer) observer.disconnect();
+            };
+        }, []);
 
     return (
         <section className="--bg-white">
             <div className="container">
                 <div className="core-feature-section">
-                    <motion.div className="core-feature-heading">
-                        <motion.h2 className="h4">Core Features That Power Clinical Trials Compliance</motion.h2>
+                    <div className="core-feature-heading" ref={resultHeadRef}>
+                        <h2 className="h4 slide-left" ref={titleRef}>Core Features That Power Clinical Trials Compliance</h2>
 
-                        <motion.p className="core-feature-para text-20 text-rg">
+                        <p className="core-feature-para text-20 text-rg slide-right" ref={subtitleRef}>
                             Explore essential tools—from document control and training to real-time alerts and reporting—designed to keep your trial operations efficient, secure, and audit-ready.
-                        </motion.p>
-                    </motion.div>
+                        </p>
+                    </div>
 
                     {/* Swiper wrapper */}
                     <Swiper
