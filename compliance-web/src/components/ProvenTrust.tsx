@@ -1,54 +1,95 @@
 "use client"
 
-import { delay, motion, scale } from 'framer-motion'
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 type ProvenProps = {
     proven_title: string;
     proven_subTitle: string;
 }
 
-export default function ProvenHome( { proven_title, proven_subTitle } : ProvenProps) {
+export default function ProvenHome({ proven_title, proven_subTitle }: ProvenProps) {
+    const resultHeadRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
+    const subtitleRef = useRef<HTMLParagraphElement>(null);
+    const compliListRef = useRef<HTMLDivElement>(null);  // for supported-compli-lists
+    const compliStatsRef = useRef<HTMLDivElement>(null); // for compli-stats
 
-    // const provenAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    //     initialHead: { opacity: 0, x: -100},
-    //     animateHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 }},
 
-    //     initialSubHead: { opacity: 0, x: -100},
-    //     animateSubHead: { opacity: 1, x: 0, transition: { duration: 1, delay: 2, }},
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver((entries) => {
+    //         entries.forEach(entry => {
+    //             if (entry.isIntersecting) {
+    //                 setTimeout(() => {
+    //                     if (titleRef.current) titleRef.current.classList.add('animate');
+    //                     if (subtitleRef.current) subtitleRef.current.classList.add('animate');
+    //                 }, 100);
+    //                 observer.unobserve(entry.target);
+    //             }
+    //         });
+    //     }, { threshold: 0.1 });
 
-    //     initialList: { opacity: 0, x: -100 },
-    //     animateList: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.3 } },
+    //     // FIX: Add small delay to ensure DOM is ready
+    //     const timeoutId = setTimeout(() => {
+    //         if (resultHeadRef.current) {
+    //             observer.observe(resultHeadRef.current);
+    //         }
+    //     }, 0);
 
-    //     initialList2: { opacity: 0, x: 100 },
-    //     animateList2: { opacity: 1, x: 0, transition: { duration: 1, delay: 2.7 } },
+    //     return () => {
+    //         clearTimeout(timeoutId);
+    //         if (observer) observer.disconnect();
+    //     };
+    // }, []);
 
-    // } : {
-    //     initialHead: { opacity: 1, x: 0},
-    //     animateHead: { opacity: 1, x: 0, },
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 1. Title (already working)
+                    if (titleRef.current) titleRef.current.classList.add('animate');
+                    setTimeout(() => {
+                        if (subtitleRef.current) subtitleRef.current.classList.add('animate');
+                    }, 200);
 
-    //     initialSubHead: { opacity: 1, x: 0},
-    //     animateSubHead: { opacity: 1, x: 0, },
+                    // 2. Lists from LEFT (0.5s delay)
+                    setTimeout(() => {
+                        if (compliListRef.current) compliListRef.current.classList.add('animate');
+                    }, 500);
 
-    //     initialList: { opacity: 1, x: 0 },
-    //     animateList: { opacity: 1, x: 0, },
+                    // 3. Stats from RIGHT (0.8s delay)
+                    setTimeout(() => {
+                        if (compliStatsRef.current) compliStatsRef.current.classList.add('animate');
+                    }, 800);
 
-    //     initialList2: { opacity: 1, x: 0 },
-    //     animateList2: { opacity: 1, x: 0, },
-    // }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-    return(
+        setTimeout(() => {
+            if (resultHeadRef.current) {
+                observer.observe(resultHeadRef.current);
+            }
+        }, 100);
+
+        return () => observer.disconnect();
+    }, []);
+
+
+
+    return (
         <>
             <section className="section hm-proven-result relative z-[2]">
                 <div className="container">
-                    <div className="result-head">
-                        <h2 className="h3" >{proven_title}</h2>
+                    <div className="result-head" ref={resultHeadRef}>
+                        <h2 className="h3 slide-left" ref={titleRef} >{proven_title}</h2>
 
-                        <p className="text-20">{proven_subTitle}</p>
+                        <p className="text-20 slide-right" ref={subtitleRef} >{proven_subTitle}</p>
                     </div>
 
                     <div className="compli-list-stats">
-                        <div className="supported-compli-lists">
+                        <div className="supported-compli-lists slide-left-list" ref={compliListRef}>
                             <div className="supp-compli-list site-radius-10">
                                 <h3 className="h5">FDA 21 CFR Part 11</h3>
 
@@ -124,7 +165,7 @@ export default function ProvenHome( { proven_title, proven_subTitle } : ProvenPr
                             </div>
                         </div>
 
-                        <div className="compli-stats">
+                        <div className="compli-stats slide-right-stats" ref={compliStatsRef}>
                             <div className="rotate-eclipse">
                                 <div className="eclipse-wrapper">
                                     <Image src='/images/homepage/stat-eclipse-1.svg' alt='eclipse-1' width={432} height={506} className="rotating-eclipse-1"></Image>

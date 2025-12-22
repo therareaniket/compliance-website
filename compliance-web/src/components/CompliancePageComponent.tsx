@@ -1,9 +1,7 @@
 "use client"
 
 import Link from "next/link";
-// import ComplianceAnimations from "./ComplianceAnimations";
 import { Header } from "./Header";
-// import { motion } from 'framer-motion'
 import { useEffect } from "react";
 
 type ComplianceProps = {
@@ -21,10 +19,8 @@ export default function ComplianceComponent({ complianceHeroTitle, complianceHer
 
         if (!h1 || !p) return;
 
-        // Animate H1
         requestAnimationFrame(() => h1.classList.add("compliance-anim-active"));
 
-        // Animate P after H1
         setTimeout(() => p.classList.add("compliance-anim-active"), 800);
 
     }, []);
@@ -33,7 +29,6 @@ export default function ComplianceComponent({ complianceHeroTitle, complianceHer
         const section = document.querySelector('.compliance-matters-section');
         if (!section) return;
 
-        // Animate h2 and paragraphs
         const observer1 = new IntersectionObserver(
             (entries, obs) => {
                 entries.forEach(entry => {
@@ -54,7 +49,6 @@ export default function ComplianceComponent({ complianceHeroTitle, complianceHer
         );
         observer1.observe(section);
 
-        // Animate cards after second paragraph fully visible
         const secondPara = section.querySelectorAll('.compli-para-anim')[1];
         if (!secondPara) return;
 
@@ -70,72 +64,52 @@ export default function ComplianceComponent({ complianceHeroTitle, complianceHer
                     }
                 });
             },
-            { threshold: 1.0 } // second paragraph fully visible
+            { threshold: 1.0 }
         );
         observer2.observe(secondPara);
     }, []);
 
     useEffect(() => {
-        const lists = document.querySelectorAll('.compliance-card-anim');
+        const section = document.querySelector<HTMLElement>(
+            ".compliance-matters-cards"
+        );
+        if (!section) return;
 
-        if (!lists.length) return;
+        const cardLists = section.querySelectorAll<HTMLElement>(
+            ".compliance-matters-card-list.compliance-card-anim"
+        );
+
+        cardLists.forEach((cardList) => {
+            cardList.style.opacity = "0";
+            cardList.style.transform = "translateX(-100px)";
+        });
 
         const observer = new IntersectionObserver(
             (entries, obs) => {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        const index = Array.from(lists).indexOf(entry.target);
-
-                        setTimeout(() => {
-                            entry.target.classList.add('animate-in');
-                        }, index * 600); // stagger
-
+                        cardLists.forEach((cardList, index) => {
+                            setTimeout(() => {
+                                cardList.style.transition =
+                                    "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+                                cardList.style.opacity = "1";
+                                cardList.style.transform = "translateX(0)";
+                            }, index * 1000);
+                        });
                         obs.unobserve(entry.target);
                     }
                 });
             },
             {
                 threshold: 0.2,
-                rootMargin: '0px 0px -80px 0px'
+                rootMargin: "0px 0px -100px 0px",
             }
         );
 
-        lists.forEach(list => observer.observe(list));
+        observer.observe(section);
+
+        return () => observer.disconnect();
     }, []);
-
-
-    // const complyAnimations = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    //     initialHead: { opacity: 0, x: -100, },
-    //     animateHead: { opacity: 1, x: 0, transition: { delay: 1, duration: 1 } },
-
-    //     initialPara: { opacity: 0, x: -100, },
-    //     animatePara: { opacity: 1, x: 0, transition: { delay: 2, duration: 1 } },
-
-    //     initialNumbs1: { opacity: 0, x: 100 },
-    //     animateNumbs1: { opacity: 1, x: 0, transition: { delay: 3, duration: 1 } },
-
-    //     initialNumbs2: { opacity: 0, x: 100 },
-    //     animateNumbs2: { opacity: 1, x: 0, transition: { delay: 4, duration: 1 } },
-
-    //     initialNumbs3: { opacity: 0, x: 100 },
-    //     animateNumbs3: { opacity: 1, x: 0, transition: { delay: 5, duration: 1 } },
-
-    //     initialCardListUp1: { opacity: 0, x: -20 },
-    //     animateCardListUp1: { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } },
-    // } : {
-    //     initialHead: { opacity: 1, x: 0, },
-    //     animateHead: { opacity: 1, x: 0,  },
-    //     initialPara: { opacity: 1, x: 0, },
-    //     animatePara: { opacity: 1, x: 0, },
-    //     initialNumbs1: { opacity: 1, x: 0 },
-    //     animateNumbs1: { opacity: 1, x: 0,  },
-    //     initialNumbs2: { opacity: 1, x: 0 },
-    //     animateNumbs2: { opacity: 1, x: 0,  },
-    //     initialNumbs3: { opacity: 1, x: 0 },
-    //     animateNumbs3: { opacity: 1, x: 0, },
-    //     initialCardListUp1: { opacity: 1, x: 0 },
-    //     animateCardListUp1: { opacity: 1, x: 0, },
-    // }
 
 
     return (
@@ -191,25 +165,25 @@ export default function ComplianceComponent({ complianceHeroTitle, complianceHer
                     <div className="container">
                         <div className="compliance-matters-cards">
                             <div className='compliance-matters-card-list compliance-card-anim'>
-                                    <div className='hipaa-card site-radius-10' >
-                                        <div className='compliace-card-heading-text'>
-                                            <h2 className='h3'>HIPAA</h2>
+                                <div className='hipaa-card site-radius-10' >
+                                    <div className='compliace-card-heading-text'>
+                                        <h2 className='h3'>HIPAA</h2>
 
-                                            <p className='text-20 text-rg text-grey card-list-text'>Ensure the protection of sensitive patient health information through administrative, physical, and technical safeguards. Compliance is mandatory for healthcare providers, insurers, and their business associates.</p>
-                                        </div>
-
-                                        <Link href='/HIPPA' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                        <p className='text-20 text-rg text-grey card-list-text'>Ensure the protection of sensitive patient health information through administrative, physical, and technical safeguards. Compliance is mandatory for healthcare providers, insurers, and their business associates.</p>
                                     </div>
 
-                                    <div className='fda_card site-radius-10' >
-                                        <div className='compliace-card-heading-text'>
-                                            <h2 className='h3'>FDA 21 CFR Part 11</h2>
+                                    <Link href='/HIPPA' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                </div>
 
-                                            <p className='text-20 text-rg text-grey card-list-text'>Regulates electronic records and electronic signatures in FDA-regulated industries, ensuring that they are trustworthy, reliable, and equivalent to paper records.</p>
-                                        </div>
+                                <div className='fda_card site-radius-10' >
+                                    <div className='compliace-card-heading-text'>
+                                        <h2 className='h3'>FDA 21 CFR Part 11</h2>
 
-                                        <Link href='/FDA21CFR' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                        <p className='text-20 text-rg text-grey card-list-text'>Regulates electronic records and electronic signatures in FDA-regulated industries, ensuring that they are trustworthy, reliable, and equivalent to paper records.</p>
                                     </div>
+
+                                    <Link href='/FDA21CFR' title="learn-more" className="btn-primary btn-padding text-md text-18 site-radius-10">Learn More</Link>
+                                </div>
                             </div>
 
                             <div className='compliance-matters-card-list compliance-card-anim'>

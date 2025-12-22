@@ -197,7 +197,7 @@ export default function AboutUsSwiperComponents() {
                             <div ref={prevRef} className="swiper-button-prev-custom">
                                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2537_2904)">
-                                        <path d="M6.25 1.25L1.25 6.25L6.25 11.25" stroke="#6FB018" stroke-width="1.5" stroke-linecap="round" />
+                                        <path d="M6.25 1.25L1.25 6.25L6.25 11.25" stroke="#6FB018" strokeWidth="1.5" stroke-linecap="round" />
                                     </g>
                                     <defs>
                                         <clipPath id="clip0_2537_2904">
@@ -209,7 +209,7 @@ export default function AboutUsSwiperComponents() {
                             <div ref={nextRef} className="swiper-button-next-custom">
                                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2539_2908)">
-                                        <path d="M1 11L6.00204 6.00204L1.00407 1" stroke="#6FB018" stroke-width="1.5" stroke-linecap="round" />
+                                        <path d="M1 11L6.00204 6.00204L1.00407 1" stroke="#6FB018" strokeWidth="1.5" stroke-linecap="round" />
                                     </g>
                                     <defs>
                                         <clipPath id="clip0_2539_2908">

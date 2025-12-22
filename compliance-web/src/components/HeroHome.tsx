@@ -3,80 +3,131 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { motion } from 'framer-motion'
-
-
 
 type HeroProps = {
-    heroTitle: string;
-    heroSubtitle: string;
-    heroCta?: { url: string; title: string } | null;
-    heroCta2?: { url: string; title: string } | null;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroCta?: { url: string; title: string } | null;
+  heroCta2?: { url: string; title: string } | null;
 };
 
-export default function HeroSection({ heroTitle, heroSubtitle, heroCta, heroCta2, }: HeroProps) {
-    // === Refs for animation ===
-    const titleRef = useRef<HTMLHeadingElement | null>(null);
-    const subtitleRef = useRef<HTMLParagraphElement | null>(null);
-    const buttonsRef = useRef<HTMLDivElement | null>(null);
-    // const pathname = usePathname();
+export default function HeroSection({
+  heroTitle,
+  heroSubtitle,
+  heroCta,
+  heroCta2,
+}: HeroProps) {
+  const sectionRef = useRef<HTMLElement | null>(null);
 
-    // === Split last word of title ===
-    const plainText = heroTitle.replace(/<[^>]+>/g, "");
-    const words = plainText.trim().split(" ");
-    const lastWord = words.pop();
-    const firstPart = words.join(" ");
+  // Split last word of title
+  const plainText = heroTitle.replace(/<[^>]+>/g, "");
+  const words = plainText.trim().split(" ");
+  const lastWord = words.pop();
+  const firstPart = words.join(" ");
 
-    useEffect(() => {
-     // Hero HOMEPAGE
-        gsap.set(".left-hero-home, .right-hero-home, .hm-hero-content", { visibility: "visible" });
-        // gsap.from (titleRef.current,{ opacity: 0, x: -300, delay: 0, duration: 1, });
-        // gsap.from (subtitleRef.current,{ opacity: 0, x: -300, delay: 1, duration: 1, });
-        // gsap.from (buttonsRef.current,{ opacity: 0, scale: 0, delay: 1.5, duration: 1, });
-        // gsap.from (".left-hero-home", {opacity: 0, x: -100, delay: 2.2, duration: 1,});
-        // gsap.from (".right-hero-home", {opacity: 0, x: 100, delay: 2.7, duration: 1,});
-    
-    }, []);
-    
-    const homeHeroTextAnimation = {
-    }
+  useEffect(() => {
+    const sectionEl = sectionRef.current;
+    if (!sectionEl) return;
 
-    return (
-        <section className="hm-hero">
-            <div className="hm-hero-bg-setup">
-                <video src="/images/homepage/hero-home-video.mp4" loop autoPlay muted className="hero-video"></video>
-
-                <Image src="/images/homepage/left-image-hero-home.webp" alt="left-image-hero" width={863} height={314} priority className="left-hero-home" />
-
-                <Image src="/images/homepage/right-image-hero-home.webp" alt="right-image-hero" width={704} height={350} priority className="right-hero-home" />
-            </div>
-
-            <div className="container">
-                <div className="hm-hero-content">
-                    <h1 className="text-center" ref={titleRef}>
-                        {firstPart + " "}  
-                        <span className="h1-animation text-green-500">{lastWord}
-                            <Image src="/images/homepage/scanning-line-upgrad.svg" alt="scanning-line" width={26} height={60} priority={true} className="hero-scanning-line"></Image>
-                        </span>
-                    </h1>
-
-                    <p className="text-center text-20" ref={subtitleRef}> {heroSubtitle} </p>
-
-                    <div className="hm-hero-btns" ref={buttonsRef}>
-                        {heroCta?.url && (
-                            <Link href={heroCta.url} title={heroCta.title} className="btn-primary btn-padding text-md text-18 site-radius-10" >
-                                {heroCta.title}
-                            </Link>
-                        )}
-                        {heroCta2?.url && (
-                            <Link href={heroCta2.url} title={heroCta2.title} className="btn-white btn-padding text-md text-18 site-radius-10" >
-                                {heroCta2.title}
-                            </Link>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </section>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add class once and stop observing
+            sectionEl.classList.add("hero-animate-active");
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        threshold: 0.3, // adjust when animation should start
+      }
     );
+
+    observer.observe(sectionEl);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="hm-hero" ref={sectionRef}>
+      <div className="hm-hero-bg-setup">
+        <video
+          src="/images/homepage/hero-home-video.mp4"
+          loop
+          autoPlay
+          muted
+          className="hero-video"
+        ></video>
+
+        <Image
+          src="/images/homepage/left-image-hero-home.webp"
+          alt="left-image-hero"
+          width={863}
+          height={314}
+          priority
+          className="left-hero-home"
+        />
+
+        <Image
+          src="/images/homepage/right-image-hero-home.webp"
+          alt="right-image-hero"
+          width={704}
+          height={350}
+          priority
+          className="right-hero-home"
+        />
+      </div>
+
+      <div className="container">
+        <div className="hm-hero-content">
+          <h1
+            className="text-center hero-anim hero-anim-1"
+          >
+            {firstPart + " "}
+            <span className="h1-animation text-green-500">
+              {lastWord}
+              <Image
+                src="/images/homepage/scanning-line-upgrad.svg"
+                alt="scanning-line"
+                width={26}
+                height={60}
+                priority
+                className="hero-scanning-line"
+              />
+            </span>
+          </h1>
+
+          <p
+            className="text-center text-20 hero-anim hero-anim-2"
+          >
+            {heroSubtitle}
+          </p>
+
+          <div
+            className="hm-hero-btns hero-anim hero-anim-3"
+          >
+            {heroCta?.url && (
+              <Link
+                href={heroCta.url}
+                title={heroCta.title}
+                className="btn-primary btn-padding text-md text-18 site-radius-10"
+              >
+                {heroCta.title}
+              </Link>
+            )}
+            {heroCta2?.url && (
+              <Link
+                href={heroCta2.url}
+                title={heroCta2.title}
+                className="btn-white btn-padding text-md text-18 site-radius-10"
+              >
+                {heroCta2.title}
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

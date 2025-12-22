@@ -13,40 +13,40 @@ type UserAccessProps = {
     userAccessHeroSubtitle: string;
 
     rolesTitle: string;
-        adminSubtitle: string;
-        adminResponsibility1: string;
-        adminResponsibility2: string;
-        adminResponsibility3: string;
+    adminSubtitle: string;
+    adminResponsibility1: string;
+    adminResponsibility2: string;
+    adminResponsibility3: string;
 
-        officerSubtitle: string;
-        officerResponsibility1: string;
-        officerResponsibility2: string;
-        officerResponsibility3: string;
+    officerSubtitle: string;
+    officerResponsibility1: string;
+    officerResponsibility2: string;
+    officerResponsibility3: string;
 
-        contributorSubtitle: string;
-        contributorResponsibility1: string;
-        contributorResponsibility2: string;
-        contributorResponsibility3: string;
+    contributorSubtitle: string;
+    contributorResponsibility1: string;
+    contributorResponsibility2: string;
+    contributorResponsibility3: string;
 
-        auditorSubtitle: string;
-        auditorResponsibility1: string;
-        auditorResponsibility2: string;
-        auditorResponsibility3: string;
-    
+    auditorSubtitle: string;
+    auditorResponsibility1: string;
+    auditorResponsibility2: string;
+    auditorResponsibility3: string;
+
 
     onboardingTitle: string;
     onboardingSubtitle: string;
 }
 
-export default function UserAccessComponent ({
+export default function UserAccessComponent({
     userAccessHeroTitle, userAccessHeroSubtitle, rolesTitle,
     adminSubtitle, adminResponsibility1, adminResponsibility2, adminResponsibility3,
     officerSubtitle, officerResponsibility1, officerResponsibility2, officerResponsibility3,
-    contributorSubtitle, contributorResponsibility1,contributorResponsibility2, contributorResponsibility3,
+    contributorSubtitle, contributorResponsibility1, contributorResponsibility2, contributorResponsibility3,
     auditorSubtitle, auditorResponsibility1, auditorResponsibility2, auditorResponsibility3,
     onboardingTitle, onboardingSubtitle
 
-} : UserAccessProps) {
+}: UserAccessProps) {
 
     // const userAccessAnimation = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
     //     initialHead: { opacity: 0, x: -100, },
@@ -106,7 +106,7 @@ export default function UserAccessComponent ({
     //     hidden: { opacity: 0 },
     //     visible: { opacity: 1, transition: { staggerChildren: 1 } }
     //   };
-      
+
     //   const imageVariant = {
     //     hidden: { opacity: 0, scale: 0 },
     //     visible: {  opacity: 1,  scale: 1, transition: { duration: 1 } }
@@ -126,6 +126,52 @@ export default function UserAccessComponent ({
         setTimeout(() => p.classList.add("compliance-anim-active"), 800);
 
     }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+
+                        // LEFT animations
+                        if (entry.target.classList.contains('role-anim-left')) {
+                            entry.target.classList.add('active');
+                        }
+
+                        // RIGHT animations
+                        if (entry.target.classList.contains('role-anim-right')) {
+                            entry.target.classList.add('active');
+                        }
+
+                        // LEFT stagger
+                        if (entry.target.classList.contains('role-anim-stagger')) {
+                            [...entry.target.children].forEach((child, index) => {
+                                setTimeout(() => child.classList.add('active'), index * 300);
+                            });
+                        }
+
+                        // RIGHT stagger
+                        if (entry.target.classList.contains('role-anim-stagger-right')) {
+                            [...entry.target.children].forEach((child, index) => {
+                                setTimeout(() => child.classList.add('active'), index * 300);
+                            });
+                        }
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        document
+            .querySelectorAll(
+                '.role-anim-left, .role-anim-right, .role-anim-stagger, .role-anim-stagger-right'
+            )
+            .forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
+
     return (
         <>
             <div className="useraccessbody">
@@ -145,11 +191,11 @@ export default function UserAccessComponent ({
                 <section className='section roles-card-section --bg-white overflow-hidden'>
                     <div className="container">
                         <div className="roles-wrapper">
-                            <h2 className='h3 text-md'>{rolesTitle}</h2>
+                            <h2 className='h3 text-md role-anim-left'>{rolesTitle}</h2>
 
                             <div className="role-card-wrapper">
                                 <div className="role-account-admin admin-anim">
-                                    <div className="account-admin-main-text">
+                                    <div className="account-admin-main-text role-anim-stagger">
                                         <div className="account-admin-text">
                                             <h3 className='h4 text-md'>Account Admin</h3>
 
@@ -168,7 +214,9 @@ export default function UserAccessComponent ({
                                     </div>
 
                                     <div className='roles-images admin-anim-img'>
-                                        <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        <div className="account-admin">
+                                            <Image src='/images/userAccess/accountAdminImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        </div>
 
                                         <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
 
@@ -178,8 +226,8 @@ export default function UserAccessComponent ({
                                     </div>
                                 </div>
 
-                                <div className="role-account-admin card-row-reverse compli-officr-anim">
-                                    <div className="account-admin-main-text">
+                                <div className="role-account-admin card-row-reverse compli-officr-anim ">
+                                    <div className="account-admin-main-text role-anim-stagger-right">
                                         <div className="account-admin-text ">
                                             <h3 className='h4 text-md'>Compliance Officer</h3>
 
@@ -198,7 +246,9 @@ export default function UserAccessComponent ({
                                     </div>
 
                                     <div className="roles-images comp-ofcr-imgs" >
-                                        <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        <div className="account-admin">
+                                            <Image src='/images/userAccess/offerCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        </div>
 
                                         <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
 
@@ -209,7 +259,7 @@ export default function UserAccessComponent ({
                                 </div>
 
                                 <div className="role-account-admin compli-contri">
-                                    <div className="account-admin-main-text">
+                                    <div className="account-admin-main-text role-anim-stagger">
                                         <div className="account-admin-text ">
                                             <h3 className='h4 text-md'>Compliance Contributor</h3>
 
@@ -228,7 +278,9 @@ export default function UserAccessComponent ({
                                     </div>
 
                                     <div className="roles-images compli-contri-imgs">
-                                        <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        <div className="account-admin">
+                                            <Image src='/images/userAccess/contributionCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        </div>
 
                                         <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse'></Image>
 
@@ -239,8 +291,8 @@ export default function UserAccessComponent ({
                                 </div>
 
                                 <div className="role-account-admin card-row-reverse compli-auditor">
-                                    <div className="account-admin-main-text">
-                                        <div className="account-admin-text ">
+                                    <div className="account-admin-main-text role-anim-stagger-right">
+                                        <div className="account-admin-text">
                                             <h3 className='h4 text-md'>Compliance Auditor</h3>
 
                                             <p className='text-20 text-grey text-rg'>{auditorSubtitle}</p>
@@ -258,7 +310,9 @@ export default function UserAccessComponent ({
                                     </div>
 
                                     <div className='roles-images compli-auditor-imgs'>
-                                        <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        <div className="account-admin">
+                                            <Image src='/images/userAccess/auditorCardImg.webp' alt='account-admin' width={730} height={450} priority={false} className='role-img'></Image>
+                                        </div>
 
                                         <Image src='/images/userAccess/role-eclipse-1.svg' alt='role-eclipse-1' width={344} height={520} priority={true} className='role-eclipse eclipse-rev'></Image>
 
@@ -319,7 +373,6 @@ export default function UserAccessComponent ({
                 </section> */}
             </div>
 
-            {/* <UserAccessAnimation /> */}
         </>
     );
 }

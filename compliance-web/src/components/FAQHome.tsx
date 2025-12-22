@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef} from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
-import { delay, motion } from 'framer-motion';
+
 
 type FaqCategoryId = "general" | "support" | "other";
 type FAQData = { question: string; answer: string };
@@ -89,6 +89,8 @@ export default function FAQSection(props: FAQProps) {
 
     const [activeFaqCategoryButton, setActiveFaqCategoryButton] =
         useState<FaqCategoryId>("general");
+    const faqHeadRef = useRef<HTMLDivElement>(null);
+    const categoryBtnsRef = useRef<HTMLDivElement>(null);
 
     // Normalize props to categories once, re-compute only when props change
     const faqsByCategory = useMemo<
@@ -161,58 +163,68 @@ export default function FAQSection(props: FAQProps) {
     );
 
     const activeFAQDetails = faqsByCategory[activeFaqCategoryButton];
+useEffect(() => {
+    if (!faqHeadRef.current) return; // Early exit if ref not ready
 
-    // const FAQAnimate = (typeof window !== "undefined" && window.innerWidth >= 1100) ? {
-    //     initialBody: { opacity: 0, scale: 0 },
-    //     animateBody: { opacity: 1, scale: 1, transition: { delay: 1, duration: 1 } },
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (faqHeadRef.current) faqHeadRef.current.classList.add('animate');
+                    
+                    setTimeout(() => {
+                        if (categoryBtnsRef.current) categoryBtnsRef.current.classList.add('animate');
+                    }, 300);
 
-    //     initialBtn: { opacity: 0, scale: 0 },
-    //     animateBtn: { opacity: 1, scale: 1, transition: { delay: 2, duration: 1 } },
-    // } : {
-    
-    //     initialBody: { opacity: 1, scale: 1 },
-    //     animateBody: { opacity: 1, scale: 1, },
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
 
-    //     initialBtn: { opacity: 1, scale: 1 },
-    //     animateBtn: { opacity: 1, scale: 1, },
-    // }
+    observer.observe(faqHeadRef.current);
+
+    return () => observer.disconnect();
+}, [faqHeadRef, categoryBtnsRef]); // Add refs to deps
+
 
     return (
         <>
             <section className="section FAQs --bg-white relative z-[2]">
                 <div className="container">
-                    <div className="faq-head text-center" >
+                    <div className="faq-head text-center scale-up" ref={faqHeadRef} >
                         <h2 className="h3">{faqTitle}</h2>
                         <p className="text-20 text-grey">{faqSubtitle}</p>
                     </div>
 
-                    <div className="category-btns">
-                            <button
-                                className={`category-btn-new general-btn text-left site-radius-10 ${activeFaqCategoryButton === "general" ? "faq-active-new" : ""
-                                    }`}
-                                onClick={() => setActiveFaqCategoryButton("general")}
-                                type="button"
-                            >
-                                <p className="h6">General</p>
-                            </button>
+                    <div className="category-btns scale-up-buttons" ref={categoryBtnsRef}>
+                        <button
+                            className={`category-btn-new general-btn text-left site-radius-10 ${activeFaqCategoryButton === "general" ? "faq-active-new" : ""
+                                }`}
+                            onClick={() => setActiveFaqCategoryButton("general")}
+                            type="button"
+                        >
+                            <p className="h6">General</p>
+                        </button>
 
-                            <button
-                                className={`category-btn-new support-btn text-left site-radius-10 ${activeFaqCategoryButton === "support" ? "faq-active-new" : ""
-                                    }`}
-                                onClick={() => setActiveFaqCategoryButton("support")}
-                                type="button"
-                            >
-                                <p className="h6">Support</p>
-                            </button>
+                        <button
+                            className={`category-btn-new support-btn text-left site-radius-10 ${activeFaqCategoryButton === "support" ? "faq-active-new" : ""
+                                }`}
+                            onClick={() => setActiveFaqCategoryButton("support")}
+                            type="button"
+                        >
+                            <p className="h6">Support</p>
+                        </button>
 
-                            <button
-                                className={`category-btn-new others-btn text-left site-radius-10 ${activeFaqCategoryButton === "other" ? "faq-active-new" : ""
-                                    }`}
-                                onClick={() => setActiveFaqCategoryButton("other")}
-                                type="button"
-                            >
-                                <p className="h6">Other</p>
-                            </button>
+                        <button
+                            className={`category-btn-new others-btn text-left site-radius-10 ${activeFaqCategoryButton === "other" ? "faq-active-new" : ""
+                                }`}
+                            onClick={() => setActiveFaqCategoryButton("other")}
+                            type="button"
+                        >
+                            <p className="h6">Other</p>
+                        </button>
                     </div>
 
                     <div className="faq-list-category">
