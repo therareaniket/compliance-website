@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { fetchGraphQL } from '@/lib/graphql';
+import FooterLinks from './FooterLinks';
 
 type HomeData = {
     page: {
@@ -91,7 +92,7 @@ export async function Footer() {
                         </div>
 
                         <div className="footer-links">
-                            <div className='quick-links text-md'>
+                            {/* <div className='quick-links text-md'>
                                 <p className='text-16 text-md'>Quick Links</p>
                                 <ul>
                                     <li><Link href="/About" title='' className='text-16 text-rg'>About</Link></li>
@@ -107,7 +108,8 @@ export async function Footer() {
                                     <li><Link href="/PrivacyPolicy" title='' className='text-16 text-rg'>Privacy & Policy</Link></li>
                                     <li><Link href="/TermsandCondition" title='' className='text-16 text-rg'>Terms & Conditions</Link></li>
                                 </ul>
-                            </div>
+                            </div> */}
+                            <FooterLinks/>
 
                             <div className='quick-links contact-info  text-md'>
                                 <p className='text-16 text-md'>Contact Info</p>

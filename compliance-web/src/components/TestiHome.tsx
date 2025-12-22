@@ -30,7 +30,7 @@ export default function TestimHome({ testim_title, testim_subTitle } : TestimPro
             });
         };
 
-        observer = new IntersectionObserver(callback, { threshold: 0.1 });
+        observer = new IntersectionObserver(callback, { threshold: 0.05 });
 
         const timeoutId = setTimeout(() => {
             if (trustedLeadersRef.current) {

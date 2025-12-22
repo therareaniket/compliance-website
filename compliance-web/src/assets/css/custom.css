@@ -99,6 +99,7 @@ section { overflow: hidden; }
 .navbar-links ul li { position: relative; display: inline-block; cursor: pointer; transition: color 0.3s ease; }
 .navbar-links ul li:hover { color: var(--secondary); }
 .navbar-links a.active-link { color: var(--secondary); }
+.quick-links a.active-link { color: var(--secondary); }
 
 .navbar-links ul li::after {
     content: "";
